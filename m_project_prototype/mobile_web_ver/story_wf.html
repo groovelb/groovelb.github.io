@@ -140,13 +140,21 @@
 <script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
 <script>
 $(document).ready(function() {
+	set_position();
 	$('#fullpage').fullpage();
 	$('.tag_box').on("click",function(){
 		$('.product_page').attr("id","product_on");
 	});
 	$('.xbox').on("click",function(){
 		$('.product_page').attr("id","product_off");
-	})
+	});
+
+	function set_position(){
+		var margin = $('html').css("margin-left");
+		margin = parseInt(margin) + 8;
+		$('.xbox').css("left",margin);
+		$('.tag_box').css("right",margin);
+	}
 });
 </script>
 </body>
