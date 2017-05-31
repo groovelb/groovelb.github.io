@@ -20,38 +20,10 @@ html, body{
    max-height: 640px;
    height: 100%;
    width: 100%;
-   margin:0 auto !important;
+   margin:0;
    padding:0;
 }
-.button{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	font-family: NotoSansCJKkr-Thin;
-	font-size: 0.35em;
-	color: #ffffff;
-}
-.story_button{
-	margin-top: 15%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	font-family: NotoSansCJKkr-Thin;
-	font-size: 0.35em;
-	color: #222222;
-}
 
-
-.back{
-	 z-index: 999;
-	 position: fixed;
-	 top:10px;
-	 left: 8px;
-	 width: 30px;
-	 height: 24px;
-}
 .chapter{
 	display: flex;
 	width: 100%;
@@ -132,48 +104,45 @@ html, body{
 	background-position: center;
 	background-size: cover;
 }
-.profile_top{
-	margin-top: 0%;
-	height:18%;
-	width: 88%;
-	padding: 0 6%;
-	display: flex;
-	flex-direction: row;
-	align-items: flex-end;
-	justify-content: space-between;
-}
-.profile{
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	align-items: flex-end;
-	font-family: NotoSansCJKkr-Regular;
-	font-size: 0.7em;
-	color: #ffffff;
-}
+
 .highfive{
 	width:88%;
-	height:30%;
-	margin: 10% 0;
+	margin: 5% 0 2% 0;
 	padding:0 6%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	font-family: NotoSansCJKkr-Regular;
+	font-family: NotoSansCJKkr-Thin;
 	text-align: center;
-	font-size: 1em;
+	font-size: 0.8em;
 	color:#ffffff;
+}
+.highfive>img{
+	width: 100px;
+	height: 100px;
+	margin: 2% 0%;
+}
+.num{
+	font-family: NotoSansCJKkr-Bold;
+}
+.buttom_button{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	margin: 0 0 4% 0;
 }
 .related_story{
 	width:100%;
-	height:39%;
+	height: 41%;
 	display: flex;
 	flex-direction: column;
 }
 .section_title{
 	width:88%;
-	margin:0 6%;
+	margin:4% 6% 2% 6%;
+	padding: 1%;
 	display: flex;
 	flex-direction: row;
 	align-items: flex-start;
@@ -207,10 +176,11 @@ html, body{
 	z-index: 9999;
 	position: fixed;
 	top:0;
-	left:100%;
-	width: 88%;
+	left:360px;
+	transition: top 0.5s, left 0.5s;
+	width: 312px;
 	height: 100%;
-	padding:0 6%;
+	padding:0 24px;
  	display: flex;
  	flex-direction: column;
  	align-self: center;
@@ -218,14 +188,12 @@ html, body{
  	background-color: #ffffff;
 }
 #product_on{
-	top: 0%;
-	left: 0%;
+	top: 0px;
+	left: 0px;
 	transition: top 0.5s, left 0.5s;
 }
 #product_off{
-	top: 0%;
-	left: 100%;
-	transition: top 0.5s, left 0.5s;
+	
 }
 .tag_box{
 	position: absolute;
@@ -300,24 +268,6 @@ html, body{
 	align-self: center;
 	justify-content: space-around;
 }
-.big_button{
-	display: flex;
-	padding: 2%;
-	font-family: NotoSansCJKkr-Regular;
-	font-size: 1em;
-	border-radius: 10px;
-}
-#pos{
-	border: 2px solid #33383E;
-	color: #33383E;
-}
-#neg{
-	background-color: #33383E;
-	color:#ffffff;
-}
-
-
-
 
 
 

@@ -63,18 +63,10 @@
 <script src="js/jquery-3.2.1.min.js"></script>
 <script>
 	$(document).ready(function(){
-
-		set_position();
+		
 		$('#menu-icon').click(function(){
 			$(this).toggleClass('open');
 		});
-
-		function set_position(){
-			var margin = $('html').css("margin-left");
-			margin = parseInt(margin) + 8;
-			$('#menu-icon').css("left",margin);
-			$('#search').css("right",margin);
-		}
 	});
 </script>
 </html>

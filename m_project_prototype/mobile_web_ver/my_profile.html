@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/nav.css">
+	<link rel="stylesheet" type="text/css" href="css/my_profile.css">
+	<link rel="stylesheet" type="text/css" href="css/structure.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+<body>    
+	<div class="header">
+		<div class="header_back">
+			<a href="main_magazine_wf.html">
+				<img src="img/back_dark.svg">
+			</a>
+		</div>
+		<h2>MY PROFILE</h2>
+	</div>
+	<div class="user_profile">
+		<img src="img/profile.svg" width=100 height=100>
+		username
+	</div>
+	<h2 class="section">STYLE CLOUD</h2>
+	<div class="wide_item"></div>
+
+	<h2 class="section">COLLECTION</h2>
+	<div class="container" id="two_by">
+		<div class="item">
+			<h2 class="item_title">콜렉션 타이틀 </h2>
+		</div>
+		<div class="item">
+			<h2 class="item_title">콜렉션 타이틀 </h2>
+		</div>
+		<div class="item">
+			<h2 class="item_title">콜렉션 타이틀 </h2>
+		</div>
+		<div class="item">
+			<h2 class="item_title">콜렉션 타이틀 </h2>
+		</div>
+	</div>
+	<div class="container">
+		<div class="small_button" id="neg">see more</div>
+	</div>
+	
+	<h2 class="section">PUCHASED</h2>
+	<div class="container" id="two_by">
+		<div class="item">
+			<h2 class="item_title">구입한 제품 이름</h2>
+		</div>
+		<div class="item">
+			<h2 class="item_title">구입한 제품 이름</h2>
+		</div>
+		<div class="item">
+			<h2 class="item_title">구입한 제품 이름</h2>
+		</div>
+		<div class="item">
+			<h2 class="item_title">구입한 제품 이름</h2>
+		</div>
+	</div>
+	<div class="container">
+		<div class="small_button" id="neg">see more</div>
+	</div>
+	
+	<h2 class="section">SIMILAR USERS</h2>
+	<div class="container" id="row">
+		<img id="profile_svg" src="img/profile.svg">
+		<img id="profile_svg" src="img/profile.svg">
+		<img id="profile_svg" src="img/profile.svg">
+		<img id="profile_svg" src="img/profile.svg">
+	</div>
+	<div class="container">
+		<div class="small_button" id="neg">see more</div>
+	</div>
+</body>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$('#menu-icon').click(function(){
+			$(this).toggleClass('open');
+			$('.menu').toggleClass('menu_on');
+		});
+		
+	});
+</script>
+</html>

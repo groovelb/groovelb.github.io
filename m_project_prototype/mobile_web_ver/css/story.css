@@ -20,7 +20,7 @@ html, body{
    max-height: 640px;
    height: 100%;
    width: 100%;
-   margin:0 auto !important;
+   margin:0;
    padding:0;
 }
 .button{
@@ -222,10 +222,10 @@ html, body{
 	z-index: 9999;
 	position: fixed;
 	top:0;
-	left:100%;
-	width: 88%;
+	left:360px;
+	width: 312px;
 	height: 100%;
-	padding:0 6%;
+	padding:0 24px;
  	display: flex;
  	flex-direction: column;
  	align-self: center;
@@ -233,13 +233,13 @@ html, body{
  	background-color: #ffffff;
 }
 #product_on{
-	top: 0%;
-	left: 0%;
+	top: 0px;
+	left: 0px;
 	transition: top 0.5s, left 0.5s;
 }
 #product_off{
-	top: 0%;
-	left: 100%;
+	top: 0px;
+	left: 360px;
 	transition: top 0.5s, left 0.5s;
 }
 .tag_box{

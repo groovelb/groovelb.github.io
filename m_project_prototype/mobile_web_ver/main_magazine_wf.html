@@ -3,12 +3,12 @@
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/nav.css">
-	<link rel="stylesheet" type="text/css" href="css/main_magazine_wf.css">
+	<link rel="stylesheet" type="text/css" href="css/structure.css">
+    <link rel="stylesheet" type="text/css" href="css/main_magazine_wf.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 </head>
-<body>
-	    
+<body>    
 	<div class="nav">
 		<div id="menu-icon">
 		  <span></span>
@@ -21,6 +21,21 @@
 			<img src="img/search.svg">
 		</div>
 	</div>
+	<div class="menu">
+		<a href="my_profile.html" id="top_item">
+		<div class="menu_item">
+			MY PAGE
+		</div>
+		</a>
+		<a href="style_feed.html">
+		<div class="menu_item">
+			STYLE FEED
+		</div>
+		</a>
+		<div class="menu_item">
+			REGISTER
+		</div>
+	</div>
 	<a href="story_wf.html">
 	<div class="wide_item">
 		<h2 class="item_title">
@@ -28,7 +43,7 @@
 		</h2>
 	</div>
 	</a>
-	<div class="container_two_by">
+	<div class="container" id="two_by">
 		<div class="item">
 			<h2 class="item_title">스토리 타이틀 </h2>
 		</div>
@@ -65,17 +80,11 @@
 <script src="js/jquery-3.2.1.min.js"></script>
 <script>
 	$(document).ready(function(){
-		set_position();
 		$('#menu-icon').click(function(){
 			$(this).toggleClass('open');
+			$('.menu').toggleClass('menu_on');
 		});
-
-		function set_position(){
-			var margin = $('html').css("margin-left");
-			margin = parseInt(margin) + 8;
-			$('#menu-icon').css("left",margin);
-			$('#search').css("right",margin);
-		}
+		
 	});
 </script>
 </html>

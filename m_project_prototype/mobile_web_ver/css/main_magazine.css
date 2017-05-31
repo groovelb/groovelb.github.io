@@ -22,20 +22,20 @@ html,body {
    max-height: 640px;
    height: 100%;
    width: 100%;
-   margin:0 auto;
+   margin:0;
    padding:0;
 }
 
 /*Navigation*/
 .nav {
 	display: flex;
+	width:360px;
 	position: fixed;
 	color: #FFFFFF;
 	align-items: center;
 	justify-content: center;
 	top:0;
 	left:0;
-	width: 100%;
 	height:48px;
 	-webkit-flex-direction: row;
     flex-direction: row;
