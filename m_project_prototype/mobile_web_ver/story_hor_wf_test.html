@@ -3,7 +3,7 @@
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/nav.css">
-	<link rel="stylesheet" type="text/css" href="css/story_wf.css">
+	<link rel="stylesheet" type="text/css" href="css/story_hor_wf.css">
 	<link rel="stylesheet" type="text/css" href="css/structure.css">
 	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
@@ -53,7 +53,6 @@
 				<div class="title_text">스토리의 전반적인 내용을 알려주는 머릿말. 인플루언서가 직접 작성한다.</div>	
 			</div>
 		</div>
-		
 		<div class="slide">
 			<div class="chapter">
 				<div class="image" id="chapter1">
@@ -63,30 +62,21 @@
 				</div>	
 			</div>
 		</div>
-		
 		<div class="slide">
 			<div class="chapter">
-				<div class="image" id="chapter2"></div>
+				<div class="image" id="chapter1">
+				</div>
 				<div class="text">
-					각 챕터별로 해당되는 글. 인플루언서가 직접 작성한다.
+					 각 챕터별로 해당되는 글. 인플루언서가 직접 작성한다.
 				</div>	
 			</div>
 		</div>
-		
 		<div class="slide">
 			<div class="chapter">
-				<div class="image" id="chapter3"></div>
+				<div class="image" id="chapter1">
+				</div>
 				<div class="text">
-					각 챕터별로 해당되는 글. 인플루언서가 직접 작성한다.
-				</div>	
-			</div>
-		</div>
-		
-		<div class="slide">
-			<div class="chapter">
-				<div class="image" id="chapter4"></div>
-				<div class="text">
-					각 챕터별로 해당되는 글. 인플루언서가 직접 작성한다.
+					 각 챕터별로 해당되는 글. 인플루언서가 직접 작성한다.
 				</div>	
 			</div>
 		</div>
@@ -152,7 +142,14 @@
 <script>
 $(document).ready(function() {
 
-	$('#fullpage').fullpage();
+	$('#fullpage').fullpage({
+		loopBottom: false,
+		scrollHorizontally: true,
+		slidesNavigation: false,
+		controlArrows: false,
+		loopHorizontal: false,
+		easing: 'easeInOutCubic'
+	});
 	$('.tag_box').on("click",function(){
 		$('#product').toggleClass("fullpage_on");
 	});
