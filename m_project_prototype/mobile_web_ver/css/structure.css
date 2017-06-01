@@ -28,6 +28,7 @@ html,body {
 
 
 /*Division*/
+/*섹션 구분을 위한 헤드라인*/
 h2.section{
 	width: 100%;
 	margin: 15% 0 2% 0;
@@ -36,6 +37,10 @@ h2.section{
 	font-size: 0.8em;
 	color: #222222;
 }
+.no_padding{
+	padding:0% !important;
+}
+/*매거진 상에서 큰 아이템*/
 .wide_item{
 	display: flex;
 	width: 96%;
@@ -47,6 +52,7 @@ h2.section{
 	background-color: #dddddd;
 	outline: 1px solid #222222;
 }
+/*마진, 패딩이 없는  큰 아이템*/
 .wide_item_full{
 	display: flex;
 	width: 100%;
@@ -58,10 +64,10 @@ h2.section{
 	background-color: #dddddd;
 	outline: 1px solid #222222;
 }
+/*아이템 컨테이너*/
 .container{
 	display: flex;
 }
-
 #one_by{
 	width: 100%;
 	height: 50%;
@@ -80,6 +86,39 @@ h2.section{
 	justify-content: center;
 	align-items: center;
 }
+
+
+/*Full page*/
+.fullpage_slide{
+	z-index: 9999;
+	position: fixed;
+	top:0;
+	left:360px;
+	transition: top 0.5s, left 0.5s;
+	width: 312px;
+	height: 100%;
+	padding:0 24px;
+ 	display: flex;
+ 	flex-direction: column;
+ 	align-self: center;
+ 	justify-content: flex-start;
+ 	background-color: #ffffff;
+}
+.fullpage_on{
+	top: 0px !important;
+	left: 0px !important;
+	transition: top 0.5s, left 0.5s;
+}
+.xbox{
+	display: flex; 
+	position:absolute;
+	top: 10px;
+	left:8px;
+	flex-direction: row;
+	align-self: center;
+	justify-content: flex-start;
+}
+
 
 .item{
 	display: flex;
@@ -183,13 +222,13 @@ h2.item_title{
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	width:100%;
+	margin: 0 -24px;	
 	border-width: 0 0 1px 0;
 	border-style: solid;
 	border-color: #aaaaaa;
 }
 .header>h2{
-	margin:4% 0 2% 0;
+	margin:2.5% 0;
 	font-family: NotoSansCJKkr-Regular;
 	font-size: 1em;
 	color: #222222;

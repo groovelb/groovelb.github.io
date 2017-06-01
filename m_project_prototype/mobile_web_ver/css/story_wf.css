@@ -172,41 +172,10 @@ html, body{
 	background-color: #eeeeee;
 }
 
-.product_page{
-	z-index: 9999;
-	position: fixed;
-	top:0;
-	left:360px;
-	transition: top 0.5s, left 0.5s;
-	width: 312px;
-	height: 100%;
-	padding:0 24px;
- 	display: flex;
- 	flex-direction: column;
- 	align-self: center;
- 	justify-content: flex-start;
- 	background-color: #ffffff;
-}
-#product_on{
-	top: 0px;
-	left: 0px;
-	transition: top 0.5s, left 0.5s;
-}
-#product_off{
-	
-}
 .tag_box{
 	position: absolute;
 	top:5%;
 	left:-45px;
-}
-.xbox{
-	display: flex;
-	width:100%;
-	margin-top: 3%;
-	flex-direction: row;
-	align-self: center;
-	justify-content: flex-start;
 }
 .display{
 	display: flex;

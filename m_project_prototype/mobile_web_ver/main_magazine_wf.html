@@ -5,6 +5,8 @@
 	<link rel="stylesheet" type="text/css" href="css/nav.css">
 	<link rel="stylesheet" type="text/css" href="css/structure.css">
     <link rel="stylesheet" type="text/css" href="css/main_magazine_wf.css">
+    <link rel="stylesheet" type="text/css" href="css/explore.css">
+    <link rel="stylesheet" type="text/css" href="css/style_cloud.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 </head>
@@ -37,6 +39,19 @@
 			REGISTER
 		</div>
 		</a>
+	</div>
+	<div class="fullpage_slide" id="explore">
+		<div class="header">
+			<div class="xbox">
+				<img src="img/xbox.svg" width=30 height=24>
+			</div>
+			<h2>EXPLORE</h2>
+		</div>
+		<h2 class="section no_padding">keyword</h2>
+		<input type="text" id="fname" name="firstname" placeholder="Please type keyword">
+		<h2 class="section no_padding">style tag</h2>
+		<div class="style_cloud">
+		</div>
 	</div>
 	<a href="story_wf.html">
 	<div class="wide_item">
@@ -86,7 +101,17 @@
 			$(this).toggleClass('open');
 			$('.menu').toggleClass('menu_on');
 		});
+
+		$('#search').click(function(){
+			$('#explore').toggleClass('fullpage_on');
+		});
+
+		$('.xbox').click(function(){
+			$('#explore').toggleClass('fullpage_on');
+		});
 		
 	});
 </script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script type="text/javascript" src="js/style_cloud_explore.js"></script>
 </html>
