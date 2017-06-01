@@ -25,3 +25,16 @@ input{
 	font-size: 0.6em;
 	text-anchor: middle;
 }
+.magic_search_button{
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+	margin: 5% 0 0 0;
+	font-family: NotoSansCJKkr-Regular;
+	font-size: 0.85em;
+	color: #222222;
+}
+.magic_search_button>img{
+	width: 80px;
+	height: 80px;
+}

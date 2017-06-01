@@ -7,3 +7,15 @@
 line{
 	stroke: #aaaaaa;
 }
+.tag_title{
+	font-family: NotoSansCJKkr-Regular;
+	fill: #444444;
+	font-size: 0.6em;
+	text-anchor: middle;
+}
+.selector{
+	cursor: pointer;
+}
+.selected{
+	fill: #55AACC !important;
+}

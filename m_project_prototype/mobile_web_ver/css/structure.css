@@ -240,5 +240,13 @@ h2.item_title{
 	left:2%;
 }
 
+/*text*/
+.exp{
+	font-family: NotoSansCJKkr-Thin;
+	color: #cccccc;
+	font-size: 0.85em;
+	text-align: center;
+}
+
 
 
