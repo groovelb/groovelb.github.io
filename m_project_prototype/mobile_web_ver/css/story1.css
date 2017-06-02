@@ -1,12 +1,20 @@
-.title{
-
+#title{
+	background-image: url(../img/influencer/story1/thumbnail.jpg);
 }
-.c1{
-
+#chapter1{
+	background-image: url(../img/influencer/story1/c1.jpg);
 }
-.c2{
-
+#chapter2{
+	background-image: url(../img/influencer/story1/c2.jpg);
 }
-.c3{
-	
+#chapter3{
+	background-image: url(../img/influencer/story1/c3.jpg);
+}
+#chapter4{
+	background-image: url(../img/influencer/story1/c4.jpg);
+}
+#story_end_back{
+	background-image: url(../img/influencer/story1/thumbnail.jpg);
+	background-position: center;
+	background-size: cover;
 }

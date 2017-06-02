@@ -116,8 +116,6 @@ h2.section{
 	align-self: center;
 	justify-content: flex-start;
 }
-
-
 .item{
 	display: flex;
 	width: 46%;
@@ -127,6 +125,14 @@ h2.section{
     flex-direction: column;
     justify-content: flex-end;
     background-color: #eeeeee;
+}
+a.box_link{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-end;
 }
 .align_top{
 	justify-content: flex-start !important;
@@ -138,7 +144,8 @@ h2.item_title{
 	letter-spacing: 0.05em;
 	color: #ffffff;
 	margin: 1em 0 0.83em 0;
-	background-color:rgba(8,8,8,0.75);
+	/*background-color:rgba(8,8,8,0.75);*/
+	text-shadow: 2px 2px 2px #222222;
 	padding:1.5%;
 }
 .big_title{
