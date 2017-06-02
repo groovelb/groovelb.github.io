@@ -15,7 +15,7 @@
 		<img src="img/back.svg">
 	</a>
 </div>
-<div class="fullpage_slide" id="product">
+<div class="product_slide" id="product">
 	<div class="tag_box">
 		<img src="img/tag.svg" width=45 height=45>
 	</div>
@@ -151,10 +151,10 @@ $(document).ready(function() {
 		easing: 'easeInOutCubic'
 	});
 	$('.tag_box').on("click",function(){
-		$('#product').toggleClass("fullpage_on");
+		$('#product').toggleClass("product_on");
 	});
 	$('.xbox').on("click",function(){
-		$('#product').toggleClass("fullpage_on");
+		$('#product').toggleClass("product_on");
 	});
 
 });

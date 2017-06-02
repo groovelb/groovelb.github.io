@@ -190,9 +190,25 @@ html, body{
 	align-items: center;
 	justify-content: center;
 }
-#product{
-	top:640px !important;
-	left:0px !important;
+.product_slide{
+	z-index: 9999;
+	position: fixed;
+	top:640px;
+	left:0px;
+	transition: top 0.5s, left 0.5s;
+	width: 312px;
+	height: 100%;
+	padding:0 24px;
+ 	display: flex;
+ 	flex-direction: column;
+ 	align-self: center;
+ 	justify-content: flex-start;
+ 	background-color: #ffffff;
+}	
+.product_on{
+	top:0px;
+	left:0px;
+	transition: top 0.5s, left 0.5s;
 }
 .product_image{
 	width:200px;
