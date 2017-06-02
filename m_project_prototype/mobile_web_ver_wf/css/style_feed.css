@@ -1,0 +1,23 @@
+.list{
+	display: flex;
+	flex-direction: row;
+	width:100%;
+	height:20%;
+	outline: 1px solid #222222;
+	align-items: flex-start;
+}
+.list_profile{
+	display: flex;
+	width:30%;
+	height:100%;
+	background-color: #cccccc;
+}
+.list_item{
+	display: flex;
+	width:70%;
+	height:100%;
+	background-color: #ffffff;
+}
+#top_list{
+	margin-top: 15%;
+}

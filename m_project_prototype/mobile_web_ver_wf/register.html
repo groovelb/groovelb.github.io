@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/nav.css">
+	<link rel="stylesheet" type="text/css" href="css/structure.css">
+	<link rel="stylesheet" type="text/css" href="css/register.css">
+	<link rel="stylesheet" type="text/css" href="css/style_cloud.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+<body>
+<div class="header">
+<div class="header_back">
+		<a href="main_magazine_wf.html">
+			<img src="img/back_dark.svg">
+		</a>
+	</div>
+	<h2>REGISTER</h2>
+</div>
+<div class="wide_item_full style_cloud" id="top_item">
+</div>
+<div class="log_in">
+	<div class="big_button" id="neg">페이스북으로 시작하기</div>
+	<div class="big_button" id="neg">네이버로 시작하기</div>	
+</div>
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script type="text/javascript" src="js/style_cloud_register.js"></script>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+	var count = 0;
+	$(document).ready(function(){
+		$(".selector").on("click",function(){
+			$(this).toggleClass("selected");
+			var check = $(this).hasClass("selected");
+			
+			if(check==true){
+				count++;
+			}
+
+			if(count<3){
+				$(".log_in").removeClass("show");
+			}
+			else{
+				$(".log_in").addClass("show");
+			}
+
+
+		});	
+	});
+</script>
+</body>
+</html>

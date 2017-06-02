@@ -50,7 +50,6 @@ h2.section{
     flex-direction: column;
 	justify-content: flex-end;
 	background-color: #dddddd;
-	outline: 1px solid #222222;
 }
 /*마진, 패딩이 없는  큰 아이템*/
 .wide_item_full{
@@ -62,7 +61,6 @@ h2.section{
     flex-direction: column;
 	justify-content: flex-end;
 	background-color: #dddddd;
-	outline: 1px solid #222222;
 }
 /*아이템 컨테이너*/
 .container{
@@ -129,7 +127,6 @@ h2.section{
     flex-direction: column;
     justify-content: flex-end;
     background-color: #eeeeee;
-    outline: 1px solid #222222;
 }
 .align_top{
 	justify-content: flex-start !important;
