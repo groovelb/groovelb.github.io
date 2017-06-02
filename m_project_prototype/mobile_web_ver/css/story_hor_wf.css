@@ -200,7 +200,7 @@ html, body{
 .product_slide{
 	z-index: 9999;
 	position: absolute;
-	top:640px;
+	top:100%;
 	transition: top 0.5s;
 	width: 312px;
 	height: 100%;
