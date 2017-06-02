@@ -9,17 +9,17 @@
 	background-size: cover;
 }
 #story3{
-	background-image: url(../img/influencer/story2/thumbnail.png);
-	background-position: center;
-	background-size: cover;
-}
-#story4{
 	background-image: url(../img/influencer/story3/thumbnail.jpg);
 	background-position: center;
 	background-size: cover;
 }
-#story5{
+#story4{
 	background-image: url(../img/influencer/story4/thumbnail.jpg);
+	background-position: center;
+	background-size: cover;
+}
+#story5{
+	background-image: url(../img/influencer/story2/thumbnail.png);
 	background-position: center;
 	background-size: cover;
 }

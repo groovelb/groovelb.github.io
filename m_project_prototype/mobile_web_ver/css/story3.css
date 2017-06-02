@@ -1,0 +1,29 @@
+#title{
+	background-image: url(../img/influencer/story3/thumbnail.jpg);
+}
+#chapter1{
+	background-image: url(../img/influencer/story3/c1.jpg);
+}
+#chapter2{
+	background-image: url(../img/influencer/story3/c2.jpg);
+}
+#chapter3{
+	background-image: url(../img/influencer/story3/c3.jpg);
+}
+#chapter4{
+	background-image: url(../img/influencer/story3/c4.jpg);
+}
+#chapter5{
+	background-image: url(../img/influencer/story3/c5.jpg);
+}
+#chapter6{
+	background-image: url(../img/influencer/story3/c6.jpg);
+}
+#chapter7{
+	background-image: url(../img/influencer/story3/c7.jpg);
+}
+#story_end_back{
+	background-image: url(../img/influencer/story3/thumbnail.jpg);
+	background-position: center;
+	background-size: cover;
+}

@@ -111,6 +111,11 @@ html, body{
 	background-size: 100%;
 	background-repeat: no-repeat;
 }
+.full_image{
+	height: !important;
+	background-color: !important #000000;
+	background-position: center top !important;
+}
 #chapter1{
 	 background-image: url(../img/story2.jpg);
 }

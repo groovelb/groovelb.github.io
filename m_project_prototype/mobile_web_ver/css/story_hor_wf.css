@@ -85,7 +85,12 @@ html, body{
 	background-repeat: no-repeat;
 	background-position: center;
 }
-
+.full_image{
+	height: 100% !important;
+	background-color: !important #000000;
+	background-position: center !important;
+	background-size: cover !important;
+}
 .text{
 	display: flex;
 	align-items: center;
