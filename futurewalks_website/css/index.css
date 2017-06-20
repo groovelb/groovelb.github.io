@@ -2,13 +2,10 @@
 body{
 	font-family: NotoSans-Regular;
 	font-size:18px;
-	background: linear-gradient(240deg, #AABB7a, #2bbdce);
-	background-size: 400% 400%;
+	color: #ffffff;
+	background-image: url(../img/background_small.jpg);
+	background-size: cover;
 	background-position: center;
-
-	-webkit-animation: gradientAnimation 23s ease infinite;
-	-moz-animation: gradientAnimation 23s ease infinite;
-	animation: gradientAnimation 23s ease infinite;
 }
 
 /*ANIMAITON*/
@@ -48,14 +45,13 @@ body{
 
 /*TYPOGRAPHY*/
 h1.title{
-	margin:1% 0 2% 0;
+	margin:0% 0 1% 0;
 	font-family: Lato-BlackItalic;
 	font-style: italic;
 	font-size:2.2em;
 	text-align: center;
-	color: #FFFFFF;
 	/*animation: textAnimaiton 2s;*/
-	letter-spacing: 0.15em;
+	letter-spacing: 0.09em;
 }
 @media screen and (max-width: 640px){
 	h1.title{
@@ -66,7 +62,7 @@ h3.message{
 	font-family: NotoSansCJKkr-Thin;
 	font-weight: lighter;
 	font-size: 1.2em;
-	color: #FFFFFF;
+	margin:1% 0 5%;
 }
 
 /*SECTION*/
@@ -78,6 +74,10 @@ h3.message{
 	align-items: center;
 	justify-content: center;
 }
+@media screen and (max-width: 640px){
+	
+}
+
 .top>img{
 	width:280px;
 	height: auto;
@@ -122,7 +122,6 @@ h3.message{
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	font-family:NotoSansCJKkr-Thin;
-	color: #eeeeee;
 }
 @media screen and (max-width: 640px){
 	.item{
@@ -133,7 +132,7 @@ h3.message{
 }
 .footer{
 	width:95%;
-	margin:25% 2.5% 1% 2.5%;
+	margin:15% 2.5% 1% 2.5%;
 	height: auto;
 	display: flex;
 	flex-direction: column;
@@ -142,7 +141,6 @@ h3.message{
 }
 p.footer_copy{
 	font-family:NotoSansCJKkr-Thin;
-	color: #eeeeee;
 	font-size: 0.7em;
 }
 @media screen and (max-width:640px){
