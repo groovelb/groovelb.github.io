@@ -3,6 +3,9 @@ body{
 	font-family: NotoSans-Regular;
 	font-size:18px;
 	color: #333a3e;
+	background-image: url(../img/background.jpg);
+	background-size: cover;
+	background-position: center;
 }
 
 /*ANIMAITON*/
@@ -71,6 +74,10 @@ h3.message{
 	align-items: center;
 	justify-content: center;
 }
+@media screen and (max-width: 640px){
+	
+}
+
 .top>img{
 	width:280px;
 	height: auto;
