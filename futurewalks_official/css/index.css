@@ -63,15 +63,15 @@ body{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width:450px;
 	height:124px;
 	font-family: 'Oswald', sans-serif;
-	font-size: 84px;
+	font-size: 83px;
 	font-weight: 500;
 	letter-spacing: -1.4px;
 	text-align: center;
 	color: #1e1a1b;
-	background-color: rgba(256,256,256,0.6);
+	opacity: 0.65;
+	background-color: rgba(256,256,256,0.8);
 }
 
 @media screen and (max-width: 450px){

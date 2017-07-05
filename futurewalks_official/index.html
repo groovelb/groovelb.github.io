@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="css/bg_images.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes">
 	<title>
-		FUTURE WALKS
+		FUTUREWALKS
 	</title>
 </head>
 <body>
@@ -39,24 +39,51 @@
 <script src="js/jquery-3.2.1.min.js"></script>
 <script>
 	$(document).ready(function(){
+		var interval;
 		var count=1;
 		var time = 2000;
-
-		setInterval(function(){ 
-
-//			if(time<1000){
-//				time = +20;
-//			}
-		
+		var time_change=0;
+		var direction="fast";
 
 
+		image_transition();
+
+		function image_transition(){
+
+			time+= time_change;
+			interval = setInterval(function(){ 
+
+			if(direction=="fast"){
+				if(100<time){
+					time_change=-100;
+				}
+				else{
+					direction="slow";
+				}
+			}
+			clearInterval(interval);
+				image_transition();
+				console.log(time);
+				}, time);
+
+
+			if(direction=="slow"){
+				if(time<2000){
+					time_change=100;
+				}else{
+					direction="fast";
+				}
+			}
+			
 			var i = count%9 + 1;
 			$(".bg_image").removeClass("show");
 			$("#bg_" + i).addClass("show");
 			count++;
-			//time+ = time_change;
 
-				}, time);
+		}
+
+
+
 	});
 </script>
 </html>
