@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/filter.css">
+	<link rel="stylesheet" type="text/css" href="css/multirange.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+</head>
+<body>
+<div class="filter">
+	<div class="section-row">
+		<div id="age"></div>
+	</div>
+	<input type="range" multiple value="0,100" class="multirange original">
+	<input type="range" multiple value="0,100" class="multirange ghost" style="--low:1%; --high:99%">
+</div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+<script type="text/javascript" src="js/multirange.js"></script>
+<script type="text/javascript" src="js/filter.js"></script>
+<script type="text/javascript">
+</script>
+
+</html>

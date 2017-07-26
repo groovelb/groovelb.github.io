@@ -1,0 +1,47 @@
+body{
+	background-color: "#ffffff";
+}
+
+/*DIV*/
+.filter{
+	display: flex;
+	flex-direction: column;
+	width: 414px;
+	align-content: flex-start;
+	justify-content: center;
+}
+.section-col{
+	display: flex;
+	flex-direction: column;
+	width:100%;
+}
+.section-row{
+	display: flex;
+	flex-direction: row;
+	width:100%;
+}
+
+/*SVG Element*/
+.age_line{
+	stroke-width: 2px;
+	stroke:#222222;
+}
+
+
+
+
+/*Range Selector*/
+.ui-slider .ui-btn-inner {
+    padding: 4px 0 0 0 !important;
+}
+ 
+.ui-slider-popup {
+    position: absolute !important;
+    width: 64px;
+    height: 64px;
+    text-align: center;
+    font-size: 36px;
+    padding-top: 14px;
+    z-index: 100;
+    opacity: 0.8;
+}
