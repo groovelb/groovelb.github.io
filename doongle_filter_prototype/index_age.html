@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/filter.css">
+	<link rel="stylesheet" type="text/css" href="css/slider.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+	<meta charset="UTF-8"> 
+</head>
+<body>
+<div class="filter">
+	<div class="header">
+		Doongling Filter
+	</div>
+	<div class="section-row">
+		<h2>Select Nation</h2>
+		<div class="options">
+			<img src="img/c120.png">
+			<img src="img/c972.png">
+		</div>
+	</div>
+	<div class="section-col">
+		<h2>Select Language (Max 5)</h2>
+		<div class="options" id="lang">한국어, English, Spanish, Italian, Germany</div>
+	</div>
+	<div class="section-row">
+		<h2>Gender</h2>
+		<div class="options"><form action="">
+			  <input class="radio" type="radio" name="gender" value="male">남성
+			  <input class="radio" type="radio" name="gender" value="female">여성
+			</form></div>
+	</div>
+	<div class="section-col">
+		<div>
+			<h2>Age</h2>
+		<div>
+		<div id="div_age"></div>
+		<div  class="slider_div">
+			<input class="range" type="range" min="13" max="60" step="1">
+		</div>
+	</div>
+	<div class="section-row">
+		<h2>User Status</h2>
+		<div class="options">
+			<form action="">
+			  <input class="radio" type="radio" name="status" value="online">Online
+			  <input class="radio" type="radio" name="status" value="all">All
+			</form>
+		</div>
+	</div>
+	<div class="doongling">
+		<span class="total_num">34125</span>
+		<span class="lets">Let&#39;s Doongling!</span>
+	</div>
+</div>
+</body>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+<script type="text/javascript" src="js/filter.js"></script>
+<script>
+$(document).ready(function(){
+	var radio_value;
+	var min;
+	$(".radio").on("change",function(){
+		radio_value = this.value;
+		filterPop(radio_value);
+		console.log(min);
+		//popAge(min,60);
+	});
+	$(".range").on("change",function(){
+		min = +this.value;
+		min = parseInt(min);
+		popAge(min,60);
+	});
+});
+</script>
+</html>

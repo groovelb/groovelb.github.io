@@ -4,14 +4,47 @@
 	<link rel="stylesheet" type="text/css" href="css/filter.css">
 	<link rel="stylesheet" type="text/css" href="css/multirange.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+	<meta charset="UTF-8"> 
 </head>
 <body>
 <div class="filter">
-	<div class="section-row">
-		<div id="age"></div>
+	<div class="section-row" id="nation">
+		<h2>Select Nations</h2>
+		<div>
+			<img src="img/c120.png">
+			<img src="img/c972.png">
+		</div>
 	</div>
-	<input type="range" multiple value="0,100" class="multirange original">
-	<input type="range" multiple value="0,100" class="multirange ghost" style="--low:1%; --high:99%">
+	<div class="section-col" id="lang">
+		<div>
+			<h2>Select Language (Max 5)</h2>
+			<div>한국어, Enlgish, Spanish, Italian, Germany</div>
+		</div>
+	</div>
+	<div class="section-col">
+		<h2>Gender</h2>
+		<form action="">
+		  <input type="radio" name="gender" value="male">남성
+		  <input type="radio" name="gender" value="female">여성
+		</form>
+	</div>
+	<div class="section-row">
+		<h2>Age</h2>
+		<div id="div_age"></div>
+	</div>
+	<div class="section-col">
+		<h2>User Status</h2>
+		<div>
+			<form action="">
+			  <input type="radio" name="status" value="male">Online
+			  <input type="radio" name="status" value="female">All
+			</form>
+		</div>
+	</div>
+	<div class="doongling">
+		<span class="num">34125</span><br>
+		Let&#39;s Doongling!
+	</div>
 </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
