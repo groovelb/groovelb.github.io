@@ -1,0 +1,13 @@
+/*logo*/
+#header_logo{
+	width: 150px;
+	height: 32px;
+	margin-right: 64px;
+}
+
+/*icon in textbox*/
+.icon{
+	width: 24px;
+	height: 24px;
+	margin-right: 8px;
+}
