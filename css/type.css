@@ -9,3 +9,20 @@
 	letter-spacing: -0.02em;
 	line-height: 64px;
 }
+.middle_text{
+	margin: 8px;
+	font-family: 'Noto Sans CJK KR';
+	font-size: 36px;
+	font-weight: 500;
+	text-align: center;
+	line-height: 64px;
+}
+.hightlight_black{
+	color: #262626;
+}
+.medium_emphasize{
+	color: #9b9b9b;
+}
+.highlight_white{
+	color: #ffffff;
+}

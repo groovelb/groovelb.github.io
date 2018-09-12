@@ -17,7 +17,6 @@ body{
 .top_background{
 	width:100%;
 	height:512px;
-	width: 100%;
 	background-color: #00d0bf;
 }
 /*상단 헤더 및 서치박스가 포함된 영역*/
@@ -45,7 +44,7 @@ body{
 
 
 
-/*헤더 레이아웃*/
+/***헤더 레이아웃***/
 .header{
 	/*Type*/
 	display: flex;
@@ -55,7 +54,7 @@ body{
 	height:64px;
 	padding:0 calc(50% - 590px);
 	/*position*/
-	position: fixed;
+	position: absolute;
 	top:0px;
 	left:0px;
 	z-index: 999;
@@ -100,4 +99,21 @@ body{
 	border-width: 0 0 4px 0;
 	border-style: solid;
 	border-color: #ffffff;
+}
+
+/*** 콘텐츠 ***/
+.white_area{
+	display: flex;
+	flex-direction: column;
+	width: 1180px;
+	height:512px;
+	padding:64px calc(50% - 590px);
+}
+.dark_area{
+	display: flex;
+	flex-direction: column;
+	width: 1180px;
+	height:512px;
+	padding:64px calc(50% - 590px);
+	background-color: #00606f;
 }
