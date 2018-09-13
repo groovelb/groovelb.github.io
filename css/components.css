@@ -45,7 +45,7 @@
 }
 .highlight_btt{
 	color: #00606f;
-	background-color: #00d890;
+	background-color: #00FFAA;
 }
 
 /***텍스트필드***/
@@ -83,7 +83,7 @@
 	margin-top: 96px;
 	width: 528px;
 	padding: 32px;
-	background-color: #00606f;
+	background-color: #00606F;
 	border-radius: 4px;
 	height: calc(378px - 64px);
 }

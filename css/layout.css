@@ -17,7 +17,7 @@ body{
 .top_background{
 	width:100%;
 	height:512px;
-	background-color: #00d0bf;
+	background-color: #21E8A2;
 }
 /*상단 헤더 및 서치박스가 포함된 영역*/
 .top{
@@ -95,7 +95,7 @@ body{
 #selected{
 	height: calc(100% - 4px);
 	padding-top: 4px;
-	font-weight: bold !important;
+	font-weight: 500 !important;
 	border-width: 0 0 4px 0;
 	border-style: solid;
 	border-color: #ffffff;
