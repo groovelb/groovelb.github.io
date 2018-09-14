@@ -10,6 +10,7 @@
 	line-height: 64px;
 }
 .middle_text{
+	width: 100%;
 	margin: 8px;
 	font-family: 'Noto Sans CJK KR';
 	font-size: 36px;
@@ -17,12 +18,15 @@
 	text-align: center;
 	line-height: 64px;
 }
-.hightlight_black{
+.highlight_black{
+	
 	color: #262626;
 }
 .medium_emphasize{
+	width: 100%;
 	color: #9b9b9b;
 }
 .highlight_white{
+	width: 100%;
 	color: #ffffff;
 }

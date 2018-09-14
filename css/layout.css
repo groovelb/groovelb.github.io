@@ -11,13 +11,19 @@ body{
 	flex-direction: row;
 }
 
+/*포지션 정렬*/
+.center{
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
 
 /***상단영역 레이아웃***/
 /*상단 영역의 배경*/
 .top_background{
 	width:100%;
+	min-width: 1180px;
 	height:512px;
-	background-color: #21E8A2;
+	background-color: #00D890;
 }
 /*상단 헤더 및 서치박스가 포함된 영역*/
 .top{
@@ -28,10 +34,10 @@ body{
 	height:512px;
 	padding:0 calc(50% - 590px);
 	/*Gradient*/
-	background-image: -webkit-radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(18,09,86,0.15) 100%);
-	background-image: -moz-radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(18,09,86,0.15) 100%);
-	background-image: -o-radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(18,09,86,0.15) 100%);
-	background-image: radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(18,09,86,0.15) 100%);
+	background-image: -webkit-radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(18,09,86,0.2) 120%);
+	background-image: -moz-radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(18,09,86,0.2) 120%);
+	background-image: -o-radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(18,09,86,0.2) 120%);
+	background-image: radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(18,09,86,0.2) 120%);
 }
 .top_half{
 	width: 480px;
@@ -101,19 +107,55 @@ body{
 	border-color: #ffffff;
 }
 
-/*** 콘텐츠 ***/
-.white_area{
+/*** 콘텐츠 영역 ***/
+.content_area{
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
 	width: 1180px;
-	height:512px;
 	padding:64px calc(50% - 590px);
 }
-.dark_area{
+.dark_bg{
+	background-color: #00606f;
+	color: #ffffff;
+}
+.white_bg{
+	background-color: #ffffff;
+	color: #262626;
+}
+/*콘텐츠 블록*/
+.contents_block_3{
 	display: flex;
 	flex-direction: column;
+	width: calc(1180px/3 - 8px);
+	height: calc((1180px/3 - 8px)*3/4);
+	margin: 32px 0;
+	background-color: #eeeeee;
+}
+.contents_block_4{
+	display: flex;
+	flex-direction: column;
+	width: calc(1180px/4 - 8px);
+	height: calc(1180px/4 - 8px);
+	margin: 32px 0;
+	background-color: #eeeeee;
+}
+
+/*footer*/
+footer{
+	display: inline;
 	width: 1180px;
-	height:512px;
-	padding:64px calc(50% - 590px);
+	padding:0 calc(50% - 590px);
 	background-color: #00606f;
+}
+.sitemap_col{
+	float: left;
+	width: 242px;
+	color: #ffffff;
+}
+.link{
+	float: right;
+	width: 304px;
+	height: 96px;
 }

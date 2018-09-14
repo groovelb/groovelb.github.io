@@ -43,6 +43,13 @@
 	border-color: #ffffff;
 	background-color: #ffffff;
 }
+.border_btt{
+	border-style: solid;
+	border-width: 1px;
+	font-weight: 300;
+	border-color: #262626;
+	color: #262626;
+}
 .highlight_btt{
 	color: #00606f;
 	background-color: #00FFAA;
@@ -83,7 +90,7 @@
 	margin-top: 96px;
 	width: 528px;
 	padding: 32px;
-	background-color: #00606F;
+	background-color: #00606f;
 	border-radius: 4px;
 	height: calc(378px - 64px);
 }
