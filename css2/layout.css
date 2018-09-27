@@ -3,6 +3,7 @@ body{
 	margin: 0;
 	padding: 0;
 	width:100%;
+	overflow-x: hidden;
 }
 
 /*공통*/
@@ -22,30 +23,22 @@ body{
 .top_background{
 	width:100%;
 	min-width: 1180px;
-	height:512px;
-	background-color: #00D890;
+	background-image: url(../img/00DF9A.png);
+	background-size: cover;
 }
 /*상단 헤더 및 서치박스가 포함된 영역*/
 .top{
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	width: 1180px;
-	height:512px;
 	padding:0 calc(50% - 590px);
 	/*Gradient*/
 	background-image: -webkit-radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(18,09,86,0.2) 120%);
 	background-image: -moz-radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(18,09,86,0.2) 120%);
 	background-image: -o-radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(18,09,86,0.2) 120%);
 	background-image: radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(18,09,86,0.2) 120%);
-}
-.top_half{
-	width: 496px;
-	height: 424px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-between;
 }
 
 
@@ -105,6 +98,26 @@ body{
 	border-width: 0 0 4px 0;
 	border-style: solid;
 	border-color: #ffffff;
+}
+
+/*** USP메세지 롤링 ***/
+.slide_containner{
+	position: absolute;
+	top:0;
+	left:0;
+	display: flex;
+	width:300%;
+	height: 380px;
+	/*animation-name:slider_move;
+	animation-duration:6.5s;
+	animation-delay:1.5s;*/
+}
+.slide{
+	display: flex;
+	flex-direction: column;
+	width: 33.3%;
+	min-width: 1180px;
+	align-content: center;
 }
 
 /*** 콘텐츠 영역 ***/

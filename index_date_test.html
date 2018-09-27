@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="720kb">
 <head>
 	<title></title>
 	<meta charset="UTF-8">
@@ -7,9 +7,11 @@
 	<link rel="stylesheet" type="text/css" href="css/components.css">
 	<link rel="stylesheet" type="text/css" href="css/type.css">
 	<link rel="stylesheet" type="text/css" href="css/img.css">
-	<link href="src/css/angular-datepicker.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="src/css/angular-datepicker.css">
+    <link rel="stylesheet" type="text/css" href="css/custom_date_picker.css">
 </head>
-<body>
+<body ng-controller="TestController as ctrl">
 	<!-- 헤더 -->
 	<div class="header">
 		<div class="header_item" id="left">
@@ -33,14 +35,14 @@
 			<div class="search_box">
 				<!-- 여행지 -->
 				<div class="headline sb_full_size">여행지</div>
-				<div class="text_field sb_full_size white_bg_txt">
+				<div class="text_field sb_full_size white_bg_txt active_color">
 					<img class="icon" src="img/icon_action_search_24px-3x.png">
 					도시 또는 호텔명을 검색해 보세요
 				</div>
 				<!-- 날짜 -->
 				<div class="headline sb_half_size">체크인</div>
 				<div class="headline sb_half_size">체크아웃</div>
-				<div class="text_field sb_half_size white_bg_txt">
+				<div datepicker datepicker-class="custom-calender" date-typer="true" class="text_field sb_half_size white_bg_txt">
 					<img class="icon" src="img/icon_action_calendar_today_24px-3x.png">
 				</div>
 				<div class="text_field sb_half_size white_bg_txt">

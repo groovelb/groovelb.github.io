@@ -3,21 +3,21 @@
 <head>
 	<title></title>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="css/layout.css">
-	<link rel="stylesheet" type="text/css" href="css/components.css">
-	<link rel="stylesheet" type="text/css" href="css/type.css">
-	<link rel="stylesheet" type="text/css" href="css/img.css">
-	<link href="src/css/angular-datepicker.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="css2/layout.css">
+	<link rel="stylesheet" type="text/css" href="css2/components.css">
+	<link rel="stylesheet" type="text/css" href="css2/type.css">
+	<link rel="stylesheet" type="text/css" href="css2/color.css">
+	<link rel="stylesheet" type="text/css" href="css2/img.css">
+	<link rel="stylesheet" type="text/css" href="css2/animation.css">
+	<script src="https://d3js.org/d3.v5.min.js"></script>
 </head>
 <body>
 	<!-- 헤더 -->
 	<div class="header">
 		<div class="header_item" id="left">
-			<img id="header_logo" src="img/logo_ver2.png">
+			<img id="header_logo" src="img/logo_simple_white.png">
 			<div class="text_menu" id="selected">호텔</div>
-			<div class="text_menu">투룸</div>
-			<div class="text_menu">항공</div>
-			<div class="text_menu">렌탈</div>
+			<div class="text_menu">커뮤니티</div>
 		</div>
 		<div class="header_item" id="right">
 			<div class="text_menu">FAQ</div>
@@ -29,41 +29,49 @@
 	<div class="top_background">
 		<!-- 탑 컨텐츠 -->
 		<div class="top">
-			<!-- 서치박스 -->
-			<div class="search_box">
-				<!-- 여행지 -->
-				<div class="headline sb_full_size">여행지</div>
-				<div class="text_field sb_full_size white_bg_txt">
-					<img class="icon" src="img/icon_action_search_24px-3x.png">
-					도시 또는 호텔명을 검색해 보세요
+			<div class="slide_containner">
+				<div class="slide" id="usp1">
+					<div class="main_message">
+						호텔 체크인 당일 10% 캐쉬백<br>여행을 풍족하게!
+					</div>
+					<object id="svg_usp2" type="image/svg+xml">
+					</object>
 				</div>
-				<!-- 날짜 -->
-				<div class="headline sb_half_size">체크인</div>
-				<div class="headline sb_half_size">체크아웃</div>
-				<div class="text_field sb_half_size white_bg_txt">
-					<img class="icon" src="img/icon_action_calendar_today_24px-3x.png">
+				<div class="slide" id="usp2">
+					<div class="main_message">
+						혼자하는 여행 계획 NO<br>목적지가 같다면 함께해요!
+					</div>
+					<img class="usp_svg" src="img/svg_usp2.svg">
 				</div>
-				<div class="text_field sb_half_size white_bg_txt">
-					<img class="icon" src="img/icon_action_calendar_today_24px-3x.png">
-				</div>
-				<!-- 인원 -->
-				<div class="headline sb_full_size">인원</div>
-				<div class="text_field sb_half_size white_bg_txt">
-					<img class="icon" src="img/icon_social_people_24px-3x.png">
-				</div>
-				<div class="big_button highlight_btt">검색</div>
-			</div>
-			<!-- 서치박스 닫힘 -->
-			<!-- 메인 메세지 -->
-			<div class="top_half">
-				<div class="main_message">
-					체크인 당일 10% 캐시백 여행을 풍족하게
-				</div>
-				<div class= "flex_row" style="width: 496px; justify-content: space-between;">
-					<div class="big_button white_bg_btt">가입하고 혜택받기</div>
-					<div class="big_button white_border_btt">더 알아보기</div>
+				<div class="slide" id="usp3">
+					<div class="main_message">
+						친구 초대하고 얻은 포인트<br>여행경비에 보태쓰세요!
+					</div>
+					<img class="usp_svg" src="img/svg_usp1.svg">
 				</div>
 			</div>
+
+		<!-- 서치박스 -->
+		<div class="search_box">
+			<div class="sb_input_area">
+				<div class="text_field body_text highlight" id="city">
+					<img class="icon" src="img/icon_search.png">
+					도시 또는 호텔명
+				</div>
+				<div class="text_field body_text highlight" id="check-in">
+					<img class="icon" src="img/icon_checkin.png">
+					체크인
+				</div>
+				<div class="text_field body_text highlight" id="check-out">
+					<img class="icon" src="img/icon_checkout.png">
+					체크아웃
+				</div>
+				<div class="text_field body_text highlight" id="guest">
+					<img class="icon" src="img/icon_guest.png">
+					성인2명
+				</div>
+			</div>
+			<div class="big_button highlight_btt" style="width:88px;">검색</div>
 		</div>
 	</div>
 	<!-- 탑 영역 닫힘 -->
@@ -150,9 +158,20 @@
 		</div>
 	</footer>
 </body>
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular-route.min.js"></script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.6.0/angular-locale_es.js"></script>
-<script type="text/javascript" src="src/js/angular-datepicker.js"></script>
-<script type="text/javascript" src="assets/js/index.js"></script>
+<script>
+fetch('img/svg_usp2.svg')
+  .then(r => r.blob())
+  .then(b => obj.data = URL.createObjectURL(b));
+
+ obj.onload = function(){
+ 	console.log("load");
+ }
+
+/*window.onload=function() {
+  console.log("load");
+  var svg_usp2 = document.getElementById("svg_usp2");
+  var svgDocument = svg_usp2.contentDocument;
+  console.log(svgDocument);
+};*/
+</script>
 </html>
