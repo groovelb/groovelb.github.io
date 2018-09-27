@@ -159,12 +159,30 @@
 	</footer>
 </body>
 <script>
-fetch('img/svg_usp2.svg')
+fetch('https://groovelb.github.io/img/svg_usp2.svg')
   .then(r => r.blob())
-  .then(b => obj.data = URL.createObjectURL(b));
+  .then(b => svg_usp2.data = URL.createObjectURL(b));
 
- obj.onload = function(){
+ svg_usp2.onload = function(){
  	console.log("load");
+
+ 	var svg_usp2 = this;
+ 	var svg = d3.select(svg_usp2.contentDocument).select("svg");
+ 	console.log(svg);
+ 	var user1 = svg.selectAll(".user1");
+ 	var user2 = svg.selectAll(".user2");
+ 	var user3 = svg.selectAll(".user3");
+ 	var profile = svg.selectAll(".profile");
+
+ 	user1.style("opacity",0);
+ 	user2.style("opacity",0);
+ 	user3.style("opacity",0);
+
+ 	user1.transition().delay(0).duration(300).style("opacity",1);
+ 	user2.transition().delay(300).duration(300).style("opacity",1);
+ 	user3.transition().delay(600).duration(300).style("opacity",1);
+
+ 	profile.transition().delay(900).duration(300).style("opacity",0);
  }
 
 /*window.onload=function() {
