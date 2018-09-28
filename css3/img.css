@@ -1,0 +1,19 @@
+/*logo*/
+#header_logo{
+	width: auto;
+	height: 40px;
+	margin-top: 8px;
+	margin-right: 64px;
+}
+
+/*icon in textbox*/
+.icon{
+	width: 24px;
+	height: 24px;
+	margin-right: 8px;
+}
+
+/*SVG animation*/
+.usp_svg{
+	margin:16px 0;
+}
