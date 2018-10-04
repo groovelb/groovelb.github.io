@@ -49,6 +49,10 @@ h2.normal_size{
 	font-weight: 400;
 	line-height: 18px;
 }
+.caption > span{
+	color: #EA80FC;
+	font-weight: 500;
+}
 .highlight_black{	
 	color: #262626;
 }
@@ -60,7 +64,7 @@ h2.normal_size{
 	color: #ffffff;
 }
 .text_shadow{
-	text-shadow: 0px 1px 2px #000000;
+	text-shadow: 0px 0px 6px rgba(0,0,0,0.4);
 }
 
 .number{

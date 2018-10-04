@@ -5,6 +5,7 @@
 	justify-content: center; 
 }
 .flex_centered{
+	display: flex;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
@@ -13,9 +14,17 @@
 	display: flex;
 	align-items: center;
 }
+.flex_item_start{
+	display: flex;
+	justify-content: flex-start;
+}
 .flex_item_end{
 	display: flex;
 	justify-content: flex-end;
+}
+.flex_item_space_between{
+	display: flex;
+	justify-content: space-between;
 }
 
 /*포지션 정렬*/

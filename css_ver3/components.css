@@ -13,7 +13,20 @@
 	font-size: 16px;
 	font-weight: 500;
 	letter-spacing: 0.01em;
-
+}
+.s_button{
+	display: flex;
+	margin: 4px 8px;
+	padding:0 8px;
+	align-items: center;
+	justify-content: center;
+	height: 24px;
+	border-radius: 4px;
+	min-width: 48px;
+	font-family: 'Noto Sans CJK KR';
+	font-size: 12px;
+	font-weight: 500;
+	letter-spacing: 0.01em;
 }
 /*큰 버튼*/
 .search_button{
@@ -45,6 +58,12 @@
 	font-size: 24px;
 	font-weight: 500;
 	letter-spacing: 0.01em;
+}
+.square_button{
+	width: 48px;
+	height: 48px;
+	border-radius: 8px;
+	background-color: #f8f8f8;
 }
 /*버튼 스타일*/
 .white_border_btt{
@@ -83,25 +102,7 @@
 	box-shadow: 0px 0px 8px 0px rgba(64,64,64,0.8);
 }
 
-/***텍스트필드***/
-/*텍스트 필드*/
-.text_field{
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	width: 100%;
-	height: 48px;
-	padding-left: 16px;
-	border-radius: 4px;
-	font-family: 'Noto Sans CJK KR';
-	font-size: 16px;
-	text-align: left;
-	letter-spacing: 0.01em;
-	line-height: 32px;
-	margin:0 0 16px 0 !important;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-}
+
 .active_color{
 	color: #9b9b9b !important;
 }
@@ -216,6 +217,24 @@
 }
 #kul{
 	background-image: url(../img/city_image/kul2.jpg);
+}
+#ny{
+	background-image: url(../img/city_image/ny.jpeg);
+}
+#ld{
+	background-image: url(../img/city_image/london.jpeg);
+}
+#la{
+	background-image: url(../img/city_image/la.jpeg);
+}
+#hw{
+	background-image: url(../img/city_image/hawaii.jpeg);
+}
+#sf{
+	background-image: url(../img/city_image/sf.jpeg);
+}
+#fkk{
+	background-image: url(../img/city_image/fkk.jpeg);
 }
 
 /*시티*/
@@ -400,6 +419,7 @@
 	margin-right: 4px;
 	border-radius: 50%;
 	background-size: cover;
+	border: solid 2px #fff;
 }
 #location > img{
 	margin-right: 4px;
@@ -422,4 +442,150 @@
 }
 #pf4{
 	background-image: url(../img/profile_img/pf4.jpg);
+}
+
+/*커뮤니티 & 여행계획*/
+.big_card:before{
+	content: "";
+    display: block;
+    background: rgba(0,0,0,0.45);
+    width: 356px;
+    height: 203px;
+    border-radius: 4px;
+    position:absolute;
+}
+
+.big_card{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 356px;
+	height: 203px;
+	border-radius: 4px;
+	background-color: #eeeeee;
+	margin: 8px 16px 8px 0px;
+	background-size: cover;
+}
+.big_card > *{
+	z-index: 1;
+}
+.big_card > h2{
+	margin: 16px 0;
+}
+.big_card > p{
+	font-weight: 400;
+	margin: 8px 0;
+}
+.big_card2{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 356px;
+	height: 203px;
+	border-radius: 4px;
+	background-color: #eeeeee;
+	margin: 8px 16px 8px 0px;
+	background-size: cover;
+}
+.middle_card{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	width: 324px;
+	border-radius: 4px;
+	margin: 8px 16px 64px 8px;
+	background-size: cover;
+}
+.middle_card > *{
+	z-index: 1;
+}
+.middle_card > h2{
+	margin: 16px 0;
+}
+.middle_card > p{
+	font-weight: 400;
+	margin: 8px 0;
+}
+.middle_card > #user_list_thum{
+	margin-left: 18px;
+}
+.middle_card2{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 356px;
+	height: 203px;
+	border-radius: 4px;
+	margin: 8px 16px 8px 0px;
+	background-size: cover;
+}
+
+.card_community{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	color: #383838;
+	margin:16px 16px 32px 0;
+}
+.community_img:before{
+	content: "";
+    display: block;
+    background: rgba(0,0,0,0.45);
+    width: 324px;
+    height: 208px;
+    border-radius: 4px;
+    position:absolute;
+}
+.community_img{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 324px;
+	height: 208px;
+	background-size:cover;
+	background-origin: content-box;
+	border-radius: 4px;
+	margin-bottom: 16px;
+}
+.community_img > *{
+	z-index: 1;
+}
+.community_info >h3{
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 22px;
+	letter-spacing: 0.2px;
+	margin:4px 0;
+}
+.community_info >p{
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 18px;
+}
+#user_list{
+	margin-left: 27px;
+}
+#user_list_thum > .profile_pic{
+	width: 36px;
+	height: 36px;
+	margin-left: -18px;
+}
+#map{
+	 background-image:url(../img/city_image/map_thumb_sg.png);
+}
+.plan_msg{
+	text-align: center;
+	padding: 16px;
+	border-radius: 4px;
+}
+
+#user_list_visited > .profile_pic{
+	width: 48px;
+	height: 48px;
 }

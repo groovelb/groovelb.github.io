@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title></title>
+	<title></title>
 	<link rel="stylesheet" type="text/css" href="css_ver3/layout_common.css">
 	<link rel="stylesheet" type="text/css" href="css_ver3/layout_community.css">
 	<link rel="stylesheet" type="text/css" href="css_ver3/components.css">
@@ -16,7 +17,7 @@
 <!-- 헤더 -->
 <div class="header_white_bg">
 	<div class="header_item" id="left">
-		<img id="header_logo" src="img/logo_simple_violet.png">
+		<img id="header_logo" src="img/logo_ver3.svg">
 		<div class="text_menu" style="border-color: #262626;">호텔</div>
 		<div class="text_menu">커뮤니티</div>
 	</div>
@@ -49,42 +50,29 @@
 	</div>
 	<!--컨텐츠-->
 	<div class="content_col">
-		<img class="center" src="img/my_profile_black.svg" style="width:118px; height: 118px;">
-		<p class="body_size" style="text-align: center; font-weight: 500; margin-bottom: 32px;">username</p>
-		<!--내 여행 섹션 -->
-		<div class="contents_block_1_row" 티tyle="margin:16px auto; width: 776px;">
-			<h2 class="normal_size">내 여행</h2>
-			<div class="card_travel">
-				<div class="travel_img" id="sg">
-				</div>
-				<div class="travel_info">
-					<h3>싱가폴 여행</h3>
-					<p>OCT 30 ~ NOV 12, 2018</p>
-				</div>
-			</div>
-			<div class="card_travel">
-				<div class="travel_img" id="kul">
-				</div>
-				<div class="travel_info">
-					<h3>쿠알라룸프르 여행</h3>
-					<p>OCT 30 ~ NOV 12, 2018</p>
-				</div>
-			</div>
-			<div class="card_travel" style="margin-right: 0">
-				<div class="add_travel">
-					<img src="img/ic_add.svg" style="width:48px; height:48px">
-				</div>
-				<div class="travel_info">
-					<h3 style="margin-top: 4px;">새로운 계획을 추가하세요!</h3>
-				</div>
-			</div>
-		</div>
-		<!--내 여행 섹션 종료-->
 		<!--내 트래블 로그 섹션 -->
-		<div class="contents_block_1_row" style="margin:16px 0; width: 796px;">
-			<div class="section_top contents_block_1_row">
-				<h2 class="normal_size">내 트래블 로그</h2>
-				<div class="button border_btt"><img src="img/ic_write.svg">트래블로그 쓰기</div>
+		<div class="contents_block_1_row" style="margin:16px auto; width: 796px;">
+			<h2 class="big_size" style="text-align: left; width:100%; font-weight: 700; margin-top: 0">싱가폴 커뮤니티</h2>
+			<div class="section_top contents_block_1_row" style="margin:8px 0 16px 0">
+				<div class="flex_row flex_item_center" id="filter">
+					<label class="checkbox_container caption">트래블 로그
+					  <input type="checkbox" checked="checked">
+					  <span class="checkmark"></span>
+					</label>
+					<label class="checkbox_container caption">질문
+					  <input type="checkbox">
+					  <span class="checkmark"></span>
+					</label>
+					<label class="checkbox_container caption">동행 찾기
+					  <input type="checkbox">
+					  <span class="checkmark"></span>
+					</label>
+					<label class="checkbox_container caption">모두보기
+					  <input type="checkbox">
+					  <span class="checkmark"></span>
+					</label>
+				</div>
+				<div class="button border_btt"><img src="img/ic_write.svg">포스트 쓰기</div>
 			</div>
 			<div class="contents_block_1_row">
 				<div class="contents_block_3">
@@ -174,12 +162,9 @@
 					</div>
 				</div>
 			</div>
-
 		</div>
 		<!--내 트래블 로그 섹션 종료-->
-
 	</div>
-<div>
 </div>
 </body>
 </html>

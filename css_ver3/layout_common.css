@@ -3,6 +3,7 @@ body{
 	margin: 0;
 	padding: 0;
 	width:100%;
+	color: #383838;
 }
 li{
 	list-style: none;
@@ -24,7 +25,15 @@ hr{
 	background: #c0c0c0;
 }
 
-
+/*Flex Box*/
+.flex_row{
+	display: flex;
+	flex-wrap: wrap;
+}
+.flex_col{
+	display: flex;
+	flex-direction: column;
+}
 
 
 /***헤더 레이아웃***/
@@ -121,6 +130,7 @@ hr{
 	letter-spacing: 0.4px;
 }
 
+
 /*** 콘텐츠 영역 ***/
 .content_area{
 	display: flex;
@@ -159,11 +169,11 @@ hr{
     height: 100%;
 }
 
+
 /*콘텐츠 블록*/
 .contents_block_2{
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 	width: 50%;
 }
 .contents_block_1_col{
@@ -193,6 +203,29 @@ hr{
 	width: calc(50% - 48px);
 }
 
+
+/*테이블*/
+.table{
+	width: 100%;
+}
+.table td, table th{
+	text-align: center;
+	height: 32px;
+}
+.table th{
+	font-weight: 500;
+	color: #ffffff;
+	background-color: rgba(136,125,255,0.85);
+}
+.table td{
+	font-weight: 300;
+	color: #686868;
+}
+a.letter_link{
+	font-weight: 500;
+	color: #887DFF;
+	text-decoration: none;
+}
 
 /*** 콘텐츠 슬라이더 ***/
 .content_slide{
@@ -233,4 +266,46 @@ hr{
 }
 #slider_right{
 	right:0;
+}
+
+
+/*footer*/
+footer{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 1080px;
+	padding:0 calc(50% - 540px);
+	color: #383838;
+	background-color: #f9f9f9;
+}
+.sitemap_col{
+	display: flex;
+	flex-direction: column;
+	float: left;
+	width: 242px;
+	margin-top: 32px;
+	color: #383838;
+	font-weight: 300;
+}
+a.footer_item{
+	width: 100%;
+	margin:0 0 16px 0;
+	text-decoration: none;
+	font-weight: 500;
+	color: #383838 !important;
+}
+.link{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-top: 32px;
+	width: 304px;
+	height: 96px;
+}
+.link_item{
+	width: 48px;
+	height: 48px;
+	margin-right: 16px;
+	border-radius: 24px;
 }
