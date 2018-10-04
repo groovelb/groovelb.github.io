@@ -1,7 +1,7 @@
 /*logo*/
 #header_logo{
 	width: auto;
-	height: 40px;
+	height: 32px;
 	margin-right: 64px;
 }
 
@@ -9,5 +9,8 @@
 .icon{
 	width: 24px;
 	height: 24px;
+	margin-right: 8px;
+}
+.button>img{
 	margin-right: 8px;
 }

@@ -4,12 +4,22 @@
 	align-items: center;
 	justify-content: center; 
 }
-p.center{
-	text-align: center !important;
-	margin:8px 0px !important;
-}
-.centerd_align{
+.flex_centered{
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+}
+.flex_item_center{
+	display: flex;
+	align-items: center;
+}
+.flex_item_end{
+	display: flex;
+	justify-content: flex-end;
+}
+
+/*포지션 정렬*/
+.center{
+	margin-left: auto !important;
+	margin-right: auto !important;
 }

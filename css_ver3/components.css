@@ -89,15 +89,18 @@
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	width: 100%;
 	height: 48px;
 	padding-left: 16px;
 	border-radius: 4px;
 	font-family: 'Noto Sans CJK KR';
-	font-size: 18px;
+	font-size: 16px;
 	text-align: left;
 	letter-spacing: 0.01em;
 	line-height: 32px;
 	margin:0 0 16px 0 !important;
+	border: 1px solid #ccc;
+	border-radius: 4px;
 }
 .active_color{
 	color: #9b9b9b !important;
@@ -295,4 +298,128 @@
 }
 #rk{
 	background-image: url(../img/accom_img/rk.jpg);
+}
+/*트래블 섹션*/
+.card_travel{
+	display: flex;
+	flex-direction: column;
+	width: 248px;
+	color: #383838;
+	margin:16px 16px 32px 0;
+}
+.travel_img{
+	width: 248px;
+	height: 208px;
+	background-size:cover;
+	background-origin: content-box;
+	border-radius: 4px;
+}
+.travel_info >h3{
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 22px;
+	letter-spacing: 0.2px;
+	margin:4px 0;
+}
+.travel_info >p{
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 18px;
+}
+.add_travel{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 248px;
+	height: 208px;
+	border-radius: 4px;
+	background-color: #eeeeee;
+}
+
+/*트래블 로그 포스트*/
+.card_post{
+	display: flex;
+	flex-direction: column;
+	width: 248px;
+	color: #383838;
+	margin:8px 0;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+}
+.post_img{
+	width: 248px;
+	margin-bottom: 8px;
+	background-size:cover;
+	background-origin: center;
+	background-size:cover;
+	border-radius: 4px 4px 0 0;
+	background-origin: content-box;
+}
+#trv1{
+	background-image: url(../img/travel_img/trv1.jpg);
+}
+#trv2{
+	background-image: url(../img/travel_img/trv2.jpg);
+}
+#trv3{
+	background-image: url(../img/travel_img/trv3.jpg);
+}
+#trv4{
+	background-image: url(../img/travel_img/trv4.jpg);
+}
+#trv5{
+	background-image: url(../img/travel_img/trv5.jpg);
+}
+#trv6{
+	background-image: url(../img/travel_img/trv6.jpg);
+}
+.long{
+	height: 248px;
+}
+.middle{
+	height: 208px;
+}
+.short{
+	height: 176px
+}
+.post_info{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	padding: 0 8px 8px 8px;
+}
+.post_info>h3{
+	margin: 0;
+	font-weight: 700;
+}
+.profile_pic{
+	width: 24px;
+	height: 24px;
+	margin-right: 4px;
+	border-radius: 50%;
+	background-size: cover;
+}
+#location > img{
+	margin-right: 4px;
+}
+#userprofile{
+	margin-top: 32px;
+}
+#username{
+	color: #686868;
+	font-weight: 500;
+}
+#pf1{
+	background-image: url(../img/profile_img/pf1.jpg);
+}
+#pf2{
+	background-image: url(../img/profile_img/pf2.jpg);
+}
+#pf3{
+	background-image: url(../img/profile_img/pf3.jpg);
+}
+#pf4{
+	background-image: url(../img/profile_img/pf4.jpg);
 }

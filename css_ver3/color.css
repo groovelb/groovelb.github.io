@@ -2,7 +2,10 @@
 	color: #383838 !important;
 }
 .medium_empasize{
-	color: #484848 !important;
+	color: #686868 !important;
+}
+.low_empasize{
+	color: #9b9b9b !important;
 }
 .white{
 	color: #ffffff;
@@ -14,4 +17,8 @@
 .primary_bg{
 	color: #ffffff;
 	background-color:#887dff;
+}
+.white_bg{
+	color: #262626;
+	background-color:#ffffff;
 }
