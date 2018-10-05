@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css_ver3/layout_common.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/layout_community.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/components.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/form.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/align.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/margin.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/type.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/color.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/img.css">
+</head>
+<body>
+<!-- 헤더 -->
+<div class="header_white_bg">
+	<div class="header_item" id="left">
+		<img id="header_logo" src="img/logo_ver3.svg">
+		<div class="text_menu" style="border-color: #262626;">호텔</div>
+		<div class="text_menu">커뮤니티</div>
+	</div>
+	<div class="header_item" id="right">
+		<div class="text_menu">FAQ</div>
+		<div class="text_menu">캐시백 신청</div>
+		<div class="text_menu">메세지</div>
+		<div class="my_menu" style="margin:0 0 0 16px;">
+			<img src="img/my_profile_black.svg"">
+			<p class="caption" id="my_menu_id" style="margin-top:6px">groovelb</p>
+			<p class="caption" id="point" style="margin-bottom:6px">63,653₩</p>
+		</div>
+	</div>
+</div>
+<div class="content_area_row" style="padding-top: 96px;">
+	<!--슬라이드 메뉴-->
+	<div class="slide_menu">
+		<a href="my_page.html">
+			<div class="slide_item">
+				<img src="img/ic_my_profile.svg">
+				내 프로필
+			</div>
+		</a>
+		<a href="my_travel.html">
+			<div class="slide_item">
+				<img src="img/ic_my_travel.svg">
+				내 여행
+			</div>
+		</a>
+		<a href="reward.html">
+			<div class="slide_item" id="selected_slide_item">
+				<img src="img/ic_reward_white.svg">
+				리워드
+			</div>
+		</a>
+		<div class="slide_menu extend_item">
+			<div class="slide_item" id="selected_extend_item">
+				<img src="img/ic_cashback_selected.svg">
+				캐시백 신청
+			</div>
+			<div class="slide_item">
+				<img src="img/ic_find_point.svg">
+				적립금 찾기
+			</div>
+			<div class="slide_item">
+				<img src="img/ic_invite_earn.svg">
+				초대하기
+			</div>
+		</div>
+	</div>
+	<div class="content_col content_col_narrow">
+		<h2 class="middle_size">적립금</h2>
+		<div class="yellow_bg" style="padding:16px; border-radius:4px">
+			<p class="number big_size center" style="margin:0">20,000₩</p>
+		</div>
+		<h2 class="normal_size">최근 포인트 적립 내역</h2>
+		<table class="table caption">
+			<tr>
+				<th>지급일</th>
+				<th>호텔명</th>
+				<th>예약금액</th>
+				<th>적립금액</th>
+				<th>상태</th>
+			</tr>
+			<tr>
+				<td>2018.06.20</td>
+				<td>Holiday Inn Macao Cotail Central</td>
+				<td>520,0000₩ (10%)</td>
+				<td>적립</td>
+			</tr>
+		</table>
+
+		<h2 class="normal_size">적립금 캐시백 신청</h2>
+		<form class="flex_row" style="justify-content: space-between;" action="">
+			<input class="text_field half" type="text" id="name" name="name" placeholder="이름">
+			<input class="text_field half" type="text" id="account_num" name="account_num" placeholder="은헹/계좌번호">
+			<input class="text_field half" type="text" id="email" name="email" placeholder="이메일">
+			<input class="text_field half" type="text" id="전화번호" name="전화번호" placeholder="전화번호">
+			<div class="button primary_bg" style="width: 100%; margin:8px 0">캐시백 신청하기</div>
+			<p class="caption">
+				1. 캐시백은 총 누적 적립금액 5만원 이상일 때 신청 가능 (무통장계좌이체)<br> 
+				2. 캐시백은 숙소 체크인 기준으로 2일이내 신청인 개인계좌로 이체<br>
+				3. 적립 금액은 예약 30분 이내 확인 가능. 단, 새벽 예약의 경우 익일 환율 고시후 예정금액 조회 가능<br>
+				4. 정글리안 아이디의 명의와 은행 계좌번호 명의가 일치해야 캐시백 가능
+			</p>
+		</form>
+		<h2 class="normal_size">캐시백 내역</h2>
+		<table class="table caption">
+			<tr>
+				<th>신청일</th>
+				<th>지급일</th>
+				<th>캐시백</th>
+				<th>상태</th>
+			</tr>
+			<tr>
+				<td>2018.06.20</td>
+				<td>2018.08.04</td>
+				<td>100,000₩</td>
+				<td>완료</td>
+			</tr>
+			<tr>
+				<td>2018.06.20</td>
+				<td>2018.08.04</td>
+				<td>100,000₩</td>
+				<td>완료</td>
+			</tr>
+			<tr>
+				<td>2018.06.20</td>
+				<td>2018.08.04</td>
+				<td>100,000₩</td>
+				<td>완료</td>
+			</tr>
+		</table>
+</body>
+</html>

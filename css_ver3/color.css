@@ -11,7 +11,7 @@
 	color: #ffffff;
 }
 .primary{
-	color:#887dff;
+	color:#7c4dff;
 }
 
 .primary_bg{
@@ -22,4 +22,8 @@
 .white_bg{
 	color: #262626;
 	background-color:#ffffff;
+}
+.yellow_bg{
+	color: #ffffff;
+	background-color: #FFC400;
 }

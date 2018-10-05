@@ -6,22 +6,33 @@
 .slide_item{
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 	width: calc(100% - 16px);
 	height: calc(64px - 16px);
 	margin:8px;
 	border-radius: 4px;
 	align-items: center;
 }
+.extend_item{
+	margin-left: 32px;
+}
+.extend_item> .slide_item{
+	width: 144px !important;
+	margin: 8px 0;
+}
 #selected_slide_item{
 	color: #ffffff;
-	background-color: #887dff;
 	background-color: #7c4dff;
+	
+}
+#selected_extend_item{
+	color: #7c4dff;
 	
 }
 .slide_item>img{
 	width: 24px;
 	height: 24px;
-	margin: 0 16px;
+	margin: 0 8px 0 16px;
 }
 .slide_text{
 	font-family: 'Noto Sans CJK KR';

@@ -72,7 +72,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 100%;
+    width: calc(100% - 16px);
     height: 48px;
     padding-left: 16px;
     border-radius: 4px;
@@ -84,4 +84,16 @@
     margin:0 0 16px 0 !important;
     border: 1px solid #ccc;
     border-radius: 4px;
+}
+.half{
+    width:calc(50% - 8px - 18px) !important;
+}
+
+.input_no_style{
+    width: calc(100% - 24px - 16px) !important;
+    height: calc(100% - 2px);
+    margin:0 !important;
+    padding:0 !important;
+    border-width: 0 !important;
+    background-color: none !important;
 }

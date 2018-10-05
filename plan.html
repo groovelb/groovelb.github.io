@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css_ver3/layout_common.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/layout_community.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/components.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/form.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/align.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/margin.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/type.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/color.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/img.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/map.css">
+</head>
+<body>
+<!-- 헤더 -->
+<div class="header_map">
+	Jungle Map
+</div>
+<div class="map_toggle caption primary_bg">
+	<div class="map_toggle_item flex_centered primary_bg toggle_selected" id=map_toggle_left>모두 보기</div>
+	<div class="map_toggle_item flex_centered" id=map_toggle_right>내 일정</div>
+
+</div>
+<!--슬라이더-->
+<div class="plan_slider" id="slider">
+	<div class="slide_toggle" id="slide_toggle">
+		<img src="img/ic_toggle_arrow.svg" class="arrow" id="arrow">
+	</div>
+	<div class="search_bar_containner">
+		<div class="text_field white_bg">
+			<input class="text_field input_no_style" type="text" id="user_id" name="user_id" placeholder="장소를 검색해보세요">
+			<img src="img/ic_search.svg">
+		</div>
+	</div>
+	<!--일정 아이템-->
+	<div class="list day">
+		<div class="flex_item_center" id="date">
+			<h2 class="normal_size" style="margin:0">Day1</h2><p class="caption low_empasize">SAT 10/9</p>
+		</div>
+		<p class="flex_item_center caption" id="location" style="width:calc(100% - 24px)"><img src="img/ic_location.svg">"리틀 인디아"를 포함한 3개의 장소</p><img src="img/ic_down.svg">
+	</div>
+	<!--일정 아이템-->
+	<div class="list day">
+		<div class="flex_item_center" id="date">
+			<h2 class="normal_size" style="margin:0">Day2</h2><p class="caption low_empasize">SAT 10/10</p>
+		</div>
+		<p class="flex_item_center caption" id="location" style="width:calc(100% - 24px)"><img src="img/ic_location.svg">"0개의 장소</p><img src="img/ic_down.svg">
+	</div>
+	<!--일정 아이템-->
+	<div class="list day">
+		<div class="flex_item_center" id="date">
+			<h2 class="normal_size" style="margin:0">Day3</h2><p class="caption low_empasize">SAT 10/11</p>
+		</div>
+		<p class="flex_item_center caption" id="location" style="width:calc(100% - 24px)"><img src="img/ic_location.svg">0개의 장소</p><img src="img/ic_down.svg">
+	</div>
+	<!--일정 아이템-->
+	<div class="list day">
+		<div class="flex_item_center" id="date">
+			<h2 class="normal_size" style="margin:0">Day4</h2><p class="caption low_empasize">SAT 10/9</p>
+		</div>
+		<p class="flex_item_center caption" id="location" style="width:calc(100% - 24px)"><img src="img/ic_location.svg">0개의 장소</p><img src="img/ic_down.svg">
+	</div>
+	<!--일정 아이템-->
+	<div class="list day">
+		<div class="flex_item_center" id="date">
+			<h2 class="normal_size" style="margin:0">Day5</h2><p class="caption low_empasize">SAT 10/9</p>
+		</div>
+		<p class="flex_item_center caption" id="location" style="width:calc(100% - 24px)"><img src="img/ic_location.svg">0개의 장소</p><img src="img/ic_down.svg">
+	</div>
+	<!--일정 아이템-->
+	<div class="list day">
+		<div class="flex_item_center" id="date">
+			<h2 class="normal_size" style="margin:0">Day6</h2><p class="caption low_empasize">SAT 10/9</p>
+		</div>
+		<p class="flex_item_center caption" id="location" style="width:calc(100% - 24px)"><img src="img/ic_location.svg">0개의 장소</p><img src="img/ic_down.svg">
+	</div>
+	<!--일정 아이템-->
+	<div class="list day">
+		<div class="flex_item_center" id="date">
+			<h2 class="normal_size" style="margin:0">Day7</h2><p class="caption low_empasize">SAT 10/9</p>
+		</div>
+		<p class="flex_item_center caption" id="location" style="width:calc(100% - 24px)"><img src="img/ic_location.svg">0개의 장소소</p><img src="img/ic_down.svg">
+	</div>
+</div>
+<div id="map">
+</div>
+<script>
+  function initMap() {
+    var myLatLng = {lat: 1.356, lng: 103.820};
+
+    // Create a map object and specify the DOM element
+    // for display.
+    var map = new google.maps.Map(document.getElementById('map'), {
+      center: myLatLng,
+      zoom: 12
+    });
+
+    // Create a marker and set its position.
+    var marker = new google.maps.Marker({
+      map: map,
+      position: myLatLng,
+      title: 'Hello World!'
+    });
+  }
+
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCj04BGKKuMBA-uNFbuLAvwCvkgA3cNpEE&callback=initMap" async defer></script>
+<script>
+document.getElementById("slide_toggle").addEventListener("click", function(){
+	console.log("slide_toggle!");
+	document.getElementById("slider").classList.toggle("plan_slider_off");
+	document.getElementById("arrow").classList.toggle("arrow_flip");
+});
+document.getElementById("map_toggle_left").addEventListener("click", function(){
+	console.log("map_toggle!");
+	map_mode_switch();
+
+});
+document.getElementById("map_toggle_right").addEventListener("click", function(){
+	console.log("map_toggle!");
+	map_mode_switch();
+
+});
+function map_mode_switch(){
+	document.getElementById("map_toggle_left").classList.toggle("toggle_selected");
+	document.getElementById("map_toggle_right").classList.toggle("toggle_selected");
+}
+</script>
+</body>
+</html>

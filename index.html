@@ -18,13 +18,17 @@
 <!-- 헤더 -->
 	<div class="header white">
 		<div class="header_item" id="left">
-			<img id="header_logo" src="img/logo_simple_white.png">
+			<img id="header_logo" src="img/logo_ver3_white.svg">
 			<div class="text_menu" id="selected">호텔</div>
-			<div class="text_menu">커뮤니티</div>
+			<div class="text_menu">
+				<a href="community_main.html">커뮤니티</a>
+			</div>
 		</div>
 		<div class="header_item" id="right">
 			<div class="text_menu">FAQ</div>
-			<div class="button white_border_btt" style="margin-right:0">로그인</div>
+			<a href="index_logedin.html">
+				<div class="button white_border_btt" style="margin-right:0">로그인</div>
+			</a>
 		</div>
 	</div>
 	<!-- 탑 영역, 서치박스 메인 문구 -->
@@ -41,21 +45,21 @@
 				<!-- 서치박스 -->
 				<div class="search_box">
 					<div class="search_input_full highlight">
-						<img class="icon" src="img/icon_search.png">
+						<img class="icon" src="img/ic_search.svg">
 						싱가폴
 					</div>
 					<div class="search_input_full highlight" style="width:100%; padding-left: 0px;">
 						<div class="input_divider">
-							<img class="icon" src="img/icon_checkin.png">
+							<img class="icon" src="img/ic_calendar.svg">
 							2018.11.01
 						</div>
 						<div class="input_divider">
-							<img class="icon" src="img/icon_checkout.png">
+							<img class="icon" src="img/ic_calendar.svg">
 							2018.11.12
 						</div>
 					</div>
 					<div class="search_input_half highlight">
-						<img class="icon" src="img/icon_guest.png">
+						<img class="icon" src="img/ic_guest.svg">
 						성인2명
 					</div>
 					<div class="search_button">검색</div>
@@ -83,7 +87,7 @@
 					<div class="flex_c_center" id="reward_cash">
 						<p class="normal_size center">체크인 당일 캐시백</p>
 						<p class=" number big_size center" style="margin:0">10%</p>
-						<div class="button white_border_btt">자세히 보기</div>
+						<div class="button white_border_btt" id="detail_link">자세히 보기</div>
 					</div>
 					<div class="flex_c_center" id="reward_community">
 						<p class="normal_size center">커뮤니티에 참여하고 지원금 받기</p>
@@ -342,5 +346,18 @@
 			<p class="low_empasize" style="width:50%; margin:8px 0;">Copyright ⓒ 주식회사 레저벤처 All Rights Reserved.// 사업자등록번호 : 731-87-00594 통신판매업신고 : 제 2017-서울마포-0045호, 서울 강남구 월드컵북로2길 16, 3층 (대표자 : 심영준)</p>
 		</div>
 	</footer>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+
+			$( "#calculator" ).scroll(function() {
+			  	$( "#log" ).append( "<div>Handler for .scroll() called.</div>" );
+			});
+			$("#detail_link").on("click", function(){
+				console.log("click!");
+				$("#calculator").scroll();
+			});
+		});
+	</script>
 </body>
 </html>
