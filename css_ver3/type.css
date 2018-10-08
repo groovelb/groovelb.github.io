@@ -17,7 +17,7 @@ h3.big_size{
 	font-weight: 100;
 }
 .middle_size{
-	width: calc(100% - 16px);
+	/*width: calc(100% - 16px);*/
 	margin: 4px;
 	font-family: 'Noto Sans KR', sans-serif;
 	font-size: 24px;
@@ -48,6 +48,7 @@ h2.normal_size{
 	font-size: 12px;
 	font-weight: 400;
 	line-height: 18px;
+	letter-spacing: 0.15px;
 }
 .caption > span{
 	color: #EA80FC;

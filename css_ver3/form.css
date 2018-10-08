@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     position: relative;
-    padding-left: 35px;
+    padding-left: 32px;
     height: 25px;
     margin-right: 32px;
     /*margin-bottom: 12px;*/
@@ -70,8 +70,8 @@
 /*텍스트 필드*/
 .text_field{
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    justify-content:  center;
     width: calc(100% - 16px);
     height: 48px;
     padding-left: 16px;
@@ -85,6 +85,24 @@
     border: 1px solid #ccc;
     border-radius: 4px;
 }
+.text_area{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:  flex-start;
+    width: calc(100% - 32px);
+    height: auto;
+    padding: 16px;
+    border-radius: 4px;
+    font-family: 'Noto Sans CJK KR';
+    font-size: 16px;
+    text-align: left;
+    letter-spacing: 0.01em;
+    line-height: 32px;
+    margin:0 0 16px 0 !important;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
 .half{
     width:calc(50% - 8px - 18px) !important;
 }

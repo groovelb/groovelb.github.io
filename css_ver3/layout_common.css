@@ -203,8 +203,8 @@ a{
 .contents_block_3{
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	width: 33%;
+	margin:0 8px;
+	width: calc(33% - 16px);
 }
 .caculator_item{
 	display: flex;

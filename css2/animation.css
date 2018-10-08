@@ -1,8 +1,0 @@
-@keyframes slider_move {
-	0%	{left:0;}
-	10%	{left:-100%;}
-	40%	{left:-100%;}
-	50%	{left:-200%;}
-	80%	{left:-200%;}
-	90%{left:0;}
-}

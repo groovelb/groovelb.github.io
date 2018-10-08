@@ -23,7 +23,7 @@ html, body{
 	position:absolute;
 	top:0;
 	left:0;
-	width: 320px;
+	width: 384px;
 	height: calc(100% - 32px);
 	padding-top:32px;
 	color: #383838;
@@ -32,9 +32,27 @@ html, body{
 	box-shadow: 0px 0px 12px 0px rgba(64,64,64,0.2);
 	transition: left 0.2s;
 	transition-timing-function: ease-out;
+	overflow-x: visible;
+}
+.slide{
+	position: absolute;
+	top:0;
+	left:-384px;
+	padding-top: 32px;
+	width:100%;
+	height:100%;
+	background-color: #ffffff;
+	transition: left 0.05s;
+	transition-timing-function: ease-out;
+}
+.slide_on{
+	z-index: 1;
+	left: 0px !important;
+	transition: left 0.05s;
+	transition-timing-function: ease-out;
 }
 .plan_slider_off{
-	left:-320px;
+	left:-384px;
 	transition: left 0.2s;
 	transition-timing-function: ease-out;
 }
@@ -74,7 +92,7 @@ html, body{
 .slide_toggle{
 	position: absolute;
 	top:48px;
-	left:320px;
+	left:384px;
 	display: flex;
 	width:32px;
 	height:48px;
@@ -98,17 +116,67 @@ html, body{
 	padding:16px;
 	background-color: #f0f0f0;
 }
-.list{
-	display: flex;
-	flex-direction: row;
-	align-items: flex-end;
-	flex-wrap: wrap;
-	width: calc(100% - 32px);
-	height:64px;
-	padding:16px;
-	border: solid 0.5px #eeeeee;
-	border-width: 0 0 0.5px 0;
-}
 #date > p{
 	margin: 3px 0 0 4px;
+}
+
+
+/*장소 정보*/
+.place_img{
+	width: 384px;
+	height: 180px;
+	background-image: url(../img/place_img1.jpg);
+	background-size:cover;
+}
+.place_info{
+	display: flex;
+	align-items: center;
+	padding: 8px;
+}
+.place_info>img{
+	margin:0 8px;
+}
+.place_thumb{
+	width: 96px;
+	height: 80px;
+	background-size:cover;
+	border-radius: 2px;
+}
+.place_meta{
+	margin-left: 8px;
+}
+.place_meta>h2{
+	margin:4px 0;
+}
+.place_meta>p{
+	color: #686868;
+}
+#plc_img1{
+	background-image: url(../img/place_img1.jpg);
+}
+#plc_img2{
+	background-image: url(../img/place_img2.jpg);
+}
+#plc_img3{
+	background-image: url(../img/place_img3.jpg);
+}
+#plc_img4{
+	background-image: url(../img/place_img4.jpg);
+}
+#plc_img5{
+	background-image: url(../img/place_img5.jpg);
+}
+#plc_img6{
+	background-image: url(../img/place_img6.jpg);
+}
+
+.plan_save{
+	position: absolute;
+	bottom:32px;
+	left:0;
+	display: flex;
+	flex-direction: column;
+	padding: 16px 0 32px 0;
+	width: 100%;
+	background-color: #ffffff;
 }
