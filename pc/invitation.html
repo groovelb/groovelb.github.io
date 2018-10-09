@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css_ver3/layout_common.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/layout_community.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/components.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/form.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/align.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/margin.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/type.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/color.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/img.css">
+</head>
+<body>
+<!-- 헤더 -->
+<div class="header_white_bg">
+	<div class="header_item" id="left">
+		<img id="header_logo" src="img/logo_ver3.svg">
+		<div class="text_menu" style="border-color: #262626;">호텔</div>
+		<div class="text_menu">커뮤니티</div>
+	</div>
+	<div class="header_item" id="right">
+		<div class="text_menu">FAQ</div>
+		<div class="text_menu">캐시백 신청</div>
+		<div class="text_menu">메세지</div>
+		<div class="my_menu" style="margin:0 0 0 16px;">
+			<img src="img/my_profile_black.svg"">
+			<p class="caption" id="my_menu_id" style="margin-top:6px">groovelb</p>
+			<p class="caption" id="point" style="margin-bottom:6px">63,653₩</p>
+		</div>
+	</div>
+</div>
+<div class="content_area_row" style="padding-top: 96px;">
+	<!--슬라이드 메뉴-->
+	<div class="slide_menu">
+		<a href="my_page.html">
+			<div class="slide_item">
+				<img src="img/ic_my_profile.svg">
+				내 프로필
+			</div>
+		</a>
+		<a href="my_travel.html">
+			<div class="slide_item">
+				<img src="img/ic_my_travel.svg">
+				내 여행
+			</div>
+		</a>
+		<a href="reward.html">
+			<div class="slide_item" id="selected_slide_item">
+				<img src="img/ic_reward_white.svg">
+				리워드
+			</div>
+		</a>
+		<div class="slide_menu extend_item">
+			<a href="reward.html">
+				<div class="slide_item">
+					<img src="img/ic_cashback.svg">
+					캐시백 신청
+				</div>
+			</a>
+			<a href="find_point.html">
+				<div class="slide_item">
+					<img src="img/ic_find_point.svg">
+					적립금 찾기
+				</div>
+			</a>
+			<a href="invitation.html">
+				<div class="slide_item" id="selected_extend_item">
+					<img src="img/ic_invite_earn_selected.svg">
+					초대하기
+				</div>
+			</a>
+		</div>
+	</div>
+	<div class="content_col">
+		<h2 class="big_size" style="margin:32px 0; font-weight: 400; text-align: left;">정글리안으로 친구들을 초대하세요</h2>
+		<div class="contents_block_1_row" style="margin-bottom: 16px;" id="exp">
+			<style>
+				#exp>div>h3{ margin:4px 0; font-weight: 500; text-align: left;} 
+				#exp{
+					width: 55%;
+				}
+			</style>
+			<div class="contents_block_3 caption">
+				<h3 class="caption">친구 초대하기</h3>
+				친구에게 groovelb님의 추천 링크를 보냅니다
+			</div>
+			<div class="contents_block_3 caption">
+				<h3 class="caption">친구의 가입&예약</h3>
+				추천링크를 통해 친구가 가입후 예약을 완료합니다.
+			</div>
+			<div class="contents_block_3 caption">
+				<h3 class="caption">친구의 체크인</h3>
+				친구가 체크인이 확인되면 ₩20,000이 적립됩니다.
+			</div>
+		</div>
+		<div class="contents_block_1_row" style="margin: 32px 0 64px 0;" id="board">
+			<style>#board>.contents_block_3{padding:48px 0; border:solid 1px #9b9b9b;; border-radius: 4px;} </style>
+			<h2 class="normal_size" style="width: 100%;">나의 추천 현황</h2>
+			<div class="contents_block_3 flex_centered">
+				<p class="caption">총 초대수</p>
+				<h2 class="middle_size">2</h2>
+			</div>
+			<div class="contents_block_3 flex_centered">
+				<p class="caption">총 예약수</p>
+				<h2 class="middle_size">3</h2>
+			</div>
+			<div class="contents_block_3 flex_centered">
+				<p class="caption">누적 적립금</p>
+				<h2 class="middle_size">₩40,000</h2>
+			</div>
+		</div>
+		<form class="flex_row" action="">
+			<h2 class="normal_size" style="width: 100%;">추천 링크</h2>
+			<input class="text_field half" style="margin-bottom:64px !important;" type="text" id="link" name="link" value="https://www.junglian.com/?referral_code=Gsd21Z">
+			<div class="big_button primary_bg" style="margin-left:8px;">링크 복사</div>
+			<h2 class="normal_size" style="width: 100%;">초대 이메일</h2>
+			<input class="text_field half" type="text" id="email" name="email" placeholder="친구의 이메일을 입력하세요.">
+			<div class="big_button primary_bg" style="margin-left:8px;">초대장 보내기</div>
+		</form>
+		<h2 class="normal_size">추천인 내역</h2>
+		<table class="table caption">
+			<tr>
+				<th>유저명</th>
+				<th>호텔명</th>
+				<th>체크인</th>
+				<th>캐시백</th>
+				<th>상태</th>
+			</tr>
+			<tr>
+				<td>김철수</td>
+				<td>하이야트 런던</td>
+				<td>2018.09,20</td>
+				<td>₩20,000</td>
+				<td>지급</td>
+			</tr>
+			<tr>
+				<td>김철수</td>
+				<td>하이야트 런던</td>
+				<td>2018.09,20</td>
+				<td>₩20,000</td>
+				<td>지급</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+.highlight{
+	color: #383838 !important;
+}
+.medium_empasize{
+	color: #686868 !important;
+}
+.low_empasize{
+	color: #9b9b9b !important;
+}
+.white{
+	color: #ffffff;
+}
+.primary{
+	color:#7c4dff;
+}
+.light_primary_bg{
+	color: #ffffff;
+	background-color:#887dff;
+}
+.primary_bg{
+	color: #ffffff;
+	background-color: #7c4dff;
+	/*background-color:#887dff;*/
+}
+.white_bg{
+	color: #262626;
+	background-color:#ffffff;
+}
+.yellow_bg{
+	color: #ffffff;
+	background-color: #FFC400;
+}

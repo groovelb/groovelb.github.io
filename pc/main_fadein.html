@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css3/layout.css">
+	<link rel="stylesheet" type="text/css" href="css3/components.css">
+	<link rel="stylesheet" type="text/css" href="css3/type.css">
+	<link rel="stylesheet" type="text/css" href="css3/color.css">
+	<link rel="stylesheet" type="text/css" href="css3/img.css">
+	<link rel="stylesheet" type="text/css" href="css3/animation.css">
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+<body>
+	<!-- 헤더 -->
+	<div class="header body_text">
+		<div class="header_item" id="left">
+			<div class="text_menu" id="selected">호텔</div>
+			<div class="text_menu">커뮤니티</div>
+		</div>
+		<div class="header_item" id="right">
+			<div class="text_menu">FAQ</div>
+			<div class="button white_border_btt">로그인</div>
+		</div>
+	</div>
+	<!-- 탑 영역, 서치박스 메인 문구 -->
+	<!-- 탑 배경 -->
+	<div class="top_background">
+		<!-- 탑 컨텐츠 -->
+		<div class="top">
+			<div class="slide_containner">
+				<img src="img/logo_shiny.png" style="margin-top:64px; width:256px; height:auto;">
+				<div class="slide_dots">
+					<div class="dot" id="dot1"></div>
+					<div class="dot" id="dot2"></div>
+					<div class="dot" id="dot3"></div>
+				</div>
+				<div class="slide" id="usp1">
+					<div class="main_message">
+						호텔 체크인 당일 10% 캐쉬백<br>여행을 풍족하게!
+					</div>
+					<div class="svg_containner">
+						<img class="usp_svg" src="img/svg_usp1.svg">
+					</div>
+				</div>
+				<div class="slide" id="usp2">
+					<div class="main_message">
+						혼자하는 여행 계획 NO<br>목적지가 같다면 함께해요!
+					</div>
+					<div class="svg_containner">
+						<object class="usp_svg" style="width:190px; height: 124px;" id="svg_usp2" type="image/svg+xml">
+						</object>
+					</div>
+				</div>
+				<div class="slide" id="usp3">
+					<div class="main_message">
+						친구 초대하고 얻은 포인트<br>여행경비에 보태쓰세요!
+					</div>
+					<div class="svg_containner">
+						<object class="usp_svg" style="width:128px; height: 120px;" id="svg_usp3" type="image/svg+xml">
+						</object>
+					</div>
+				</div>
+			</div>
+
+		<!-- 서치박스 -->
+		<div class="search_box">
+			<div class="sb_input_area">
+				<div class="text_field body_text highlight" id="city">
+					<img class="icon" src="img/icon_search.png">
+					도시 또는 호텔명
+				</div>
+				<div class="text_field body_text highlight" id="check-in">
+					<img class="icon" src="img/icon_checkin.png">
+					체크인
+				</div>
+				<div class="text_field body_text highlight" id="check-out">
+					<img class="icon" src="img/icon_checkout.png">
+					체크아웃
+				</div>
+				<div class="text_field body_text highlight" id="guest">
+					<img class="icon" src="img/icon_guest.png">
+					성인2명
+				</div>
+			</div>
+			<div class="big_button highlight_btt" style="width:88px;">검색</div>
+		</div>
+	</div>
+	<!-- 탑 영역 닫힘 -->
+	<div class="content_area white_bg">
+		<h2 class="middle_text highlight_black">
+			JUNGLIAN STORY
+		</h2>
+		<div class="contents_block_1" id="video_bg">
+			<div class="player highlight_white text_shadow">
+				<h2 class="middle_text">계획부터 동행까지, 정글리안이 말하는 여행</h2>
+				<img style="width:48px; height:48px; margin:auto" src="img/btt_play.png">
+				<div class="body_text highlight_white">
+				영상 소개글. 예약, 캐시백, 계획까지. 정글이안을 통한 현명한 여행, 즐거운 여행기를 소개합니다. 영상 소개글. 예약, 캐시백, 계획까지. 정글이안을 통한 현명한 여행, 즐거운 여행기를 소개합니다.
+			</div>
+			</div>
+		</div>
+	</div>
+	<div class="content_area dark_bg leave_bg">
+		<h2 class="middle_text highlight_white">
+			부킹닷컴 혜택 + 10% 캐시백
+		</h2>
+		<div class="contents_block_3">
+			<div class="img_box">
+				<img src="img/IC_Trust-2x.png" style="width: 96px; height: auto">
+			</div>
+			<p class="normal_text">
+				신뢰할 수 있는 Booking.com
+			</p>
+			<p class="body_text">
+				Booking.com의 지니어스 해택을 동시에 누릴 수 있습니다!<br>&nbsp;
+			</p>
+		</div>
+		<div class="contents_block_3">
+			<div class="img_box">
+				<img src="img/IC_Cashback-2x.png" style="width: 96px; height: auto">
+			</div>
+			<p class="normal_text">
+				체크인 당일날 10% 캐시백
+			</p>
+			<p class="body_text">
+				호텔 예약 후 계좌번호를 등록하고 체크인날 캐시백을 받으세요!
+			</p>
+		</div>
+		<div class="contents_block_3">
+			<div class="img_box">
+				<img src="img/IC_Price-2x.png" style="width: 96px; height: auto">
+			</div>
+			<p class="normal_text">
+				전세계 모든 호텔 최저가 보상
+			</p>
+			<p class="body_text">
+				호텔 예약 후 정글리안에서 계좌번호를 등록하고 체크인날 캐시백을 받으세요!
+			</p>
+		</div>
+	</div>
+	<div class="content_area white_bg">
+		<h2 class="middle_text highlight_black">
+			숙소별 타입 찾기
+		</h2>
+		<div class="contents_block_4"></div>
+		<div class="contents_block_4"></div>
+		<div class="contents_block_4"></div>
+		<div class="contents_block_4"></div>
+	</div>
+	<footer>
+		<p class="sitemap_col" id="introduction">
+			<a class="footer_item" href="">Junglian 소개</a>
+			<a class="footer_item" href="">소객 센터</a>
+			<a class="footer_item" href="">개인정보처리 방침</a>
+			<a class="footer_item" href="">이용약관</a>
+		</p>
+		<p class="sitemap_col" id="info">
+			<a class="footer_item" href="">FAQ</a>
+			<a class="footer_item" href="">공지사항</a>
+			<a class="footer_item" href="">이벤트</a>
+		</p>
+		<div class="link">
+			<p style="width:100%; margin:0 0 32px 0;">Follow us</p>
+			<p class="link_item"></p>
+			<p class="link_item"></p>
+			<p class="link_item"></p>
+			<p class="link_item"></p>
+			<p class="link_item" style="margin-right:0;"></p>
+		</div>
+	</footer>
+</body>
+<script src="js/usp2_animation.js"></script>
+<script src="js/usp3_animation.js"></script>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css_ver3/layout_common.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/layout_community.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/components.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/form.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/align.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/margin.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/type.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/color.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/img.css">
+</head>
+<body>
+<!-- 헤더 -->
+<div class="header_white_bg">
+	<div class="header_item" id="left">
+		<img id="header_logo" src="img/logo_ver3.svg">
+		<div class="text_menu" style="border-color: #262626;">호텔</div>
+		<div class="text_menu">커뮤니티</div>
+	</div>
+	<div class="header_item" id="right">
+		<div class="text_menu">FAQ</div>
+		<div class="text_menu">캐시백 신청</div>
+		<div class="text_menu">메세지</div>
+		<div class="my_menu" style="margin:0 0 0 16px;">
+			<img src="img/my_profile_black.svg"">
+			<p class="caption" id="my_menu_id" style="margin-top:6px">groovelb</p>
+			<p class="caption" id="point" style="margin-bottom:6px">63,653₩</p>
+		</div>
+	</div>
+</div>
+<div class="content_area_row" style="padding-top: 96px;">
+	<!--슬라이드 메뉴-->
+	<div class="slide_menu">
+		<a href="my_page.html">
+			<div class="slide_item">
+				<img src="img/ic_my_profile.svg">
+				내 프로필
+			</div>
+		</a>
+		<a href="my_travel.html">
+			<div class="slide_item">
+				<img src="img/ic_my_travel.svg">
+				내 여행
+			</div>
+		</a>
+		<a href="reward.html">
+			<div class="slide_item" id="selected_slide_item">
+				<img src="img/ic_reward_white.svg">
+				리워드
+			</div>
+		</a>
+		<div class="slide_menu extend_item">
+			<a href="reward.html">
+				<div class="slide_item">
+					<img src="img/ic_cashback.svg">
+					캐시백 신청
+				</div>
+			</a>
+			<a href="find_point.html">
+				<div class="slide_item" id="selected_extend_item">
+					<img src="img/ic_find_point_selected.svg">
+					적립금 찾기
+				</div>
+			</a>
+			<a href="invitation.html">
+				<div class="slide_item">
+					<img src="img/ic_invite_earn.svg">
+					초대하기
+				</div>
+			</a>
+		</div>
+	</div>
+	<div class="content_col content_col_narrow">
+		<h2 class="normal_size">잃어버린 적립금 찾기</h2>
+		<p class="caption" style="margin:8px 0;">
+			가입전 정글리안을 경유한 예약건에 대한 포인트를 찾을 수있습니다.<br>
+			예약확인서를 참고하여 예약번호와 PIN 코드를 입력하세요.
+		</p>
+		<form class="flex_row" style="justify-content: space-between;" action="">
+			<input class="text_field half" type="text" id="email" name="email" placeholder="이메일">
+			<input class="text_field half" type="text" id="phone_num" name="phone_num" placeholder="전화번호">
+			<input class="text_field half" type="text" id="book_num" name="book_num" placeholder="예약번호">
+			<input class="text_field half" type="text" id="pin" name="pin" placeholder="핀번호">
+		</form>
+		<div class="button primary_bg" style=" margin:8px 0">캐시백 신청하기
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css_ver3/layout.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/components.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/align.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/margin.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/type.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/color.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/img.css">
+	<link href="src/css/angular-datepicker.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<!-- 헤더 -->
+	<div class="header">
+		<div class="header_item" id="left">
+			<img id="header_logo" src="img/logo_simple_white.png">
+			<div class="text_menu" id="selected">호텔</div>
+			<div class="text_menu">커뮤니티</div>
+		</div>
+		<div class="header_item" id="right">
+			<div class="text_menu">FAQ</div>
+			<div class="button white_border_btt" style="margin-right:0">로그인</div>
+		</div>
+	</div>
+	<!-- 탑 영역, 서치박스 메인 문구 -->
+	<!-- 탑 배경 -->
+	<div class="top_background">
+		<!-- 탑 컨텐츠 -->
+		<div class="top white">
+			<!-- 왼쪽 섹션 -->
+			<div class="top_left">
+				<h2 class="normal_size">
+					호텔검색
+				</h2>
+				<p class="body_size">190개국 1천만개의 직거래 숙소를 실시간으로 찾을 수 있습니다.</p>
+				<!-- 서치박스 -->
+				<div class="search_box">
+					<div class="search_input_full highlight">
+						<img class="icon" src="img/icon_search.png">
+						싱가폴
+					</div>
+					<div class="search_input_full highlight" style="width:100%; padding-left: 0px;">
+						<div class="input_divider">
+							<img class="icon" src="img/icon_checkin.png">
+							2018.11.01
+						</div>
+						<div class="input_divider">
+							<img class="icon" src="img/icon_checkout.png">
+							2018.11.12
+						</div>
+					</div>
+					<div class="search_input_half highlight">
+						<img class="icon" src="img/icon_guest.png">
+						성인2명
+					</div>
+					<div class="search_button">검색</div>
+				</div>
+				<!-- 서치박스 종료 -->
+				<!-- 탑 행선지 -->
+				<div class="popular_list">
+					<p class="caption popular_item" style="font-weight:500; color:#262626;">인기 여행지</p>
+					<p class="popular_item caption">싱가폴</p>
+					<p class="popular_item caption">발리</p>
+					<p class="popular_item caption">쿠알라룸프르</p>
+					<p class="popular_item caption">암스테르담</p>
+					<p class="popular_item caption">마드리드</p>
+					<p class="popular_item caption">바르셀로나</p>
+					<p class="popular_item caption">뮌헨</p>
+					<p class="popular_item caption">제주도</p>
+					<p class="popular_item caption">평양</p>
+				</div>
+			</div>
+			<!-- 오른쪽 섹션 -->
+			<div class="top_right">
+				<h2 class="normal_size">리워드 프로그램</h2>
+				<p class="body_size">정글리안은 다방면으로 여러분의 여행을 지원합니다.</p>
+				<div style="display: flex; margin-top: 8px; justify-content: space-between;">
+					<div class="flex_c_center" id="reward_cash">
+						<p class="normal_size center">체크인 당일 캐시백</p>
+						<p class=" number big_size center" style="margin:0">10%</p>
+						<div class="button white_border_btt">자세히 보기</div>
+					</div>
+					<div class="flex_c_center" id="reward_community">
+						<p class="normal_size center">커뮤니티에 참여하고 지원금 받기</p>
+						<p class="number big_size center" style="margin:0">20,000₩</p>
+						<div class="button white_border_btt">자세히 보기</div>
+					</div>
+				</div>
+				<div class="button white_bg_btt center" style="margin-top: 16px;">가입하고 혜택받기</div>
+			</div>
+		</div>
+	</div>
+	<!-- 탑 영역 종료 -->
+	<!-- 커뮤니티 퀵 엑세스-->
+	<div class="content_area white_bg" style="padding-top: 32px;">
+		<h2 class="normal_size">커뮤니티</h2>
+		<p class="body_size medium_empasize">각 도시별 커뮤니티에서 여행계획을 공유하고 여행친구도 찾으세요.</p>
+		<div class="containner" style="width:100%; height:220px; margin: 16px 0 64px 0;">
+				<div class="slider_button sd_button_comm" id="slider_left">
+					<div class="FAB_circle white_bg_btt" style="margin-left:calc(100% - 24px)">
+						<img src="img/arrow_prev.svg">
+					</div>
+				</div>
+				<div class="slider_button sd_button_comm" id="slider_right">
+					<div class="FAB_circle white_bg_btt" style="margin-left:-24px;">
+						<img src="img/arrow_next.svg">
+					</div>
+				</div>
+			<div class="content_slide">
+				<li>
+					<div class="community_thumb" id="sg">
+						<h2 class="normal_size white" style="text-align: center">싱가폴</h2>
+						<p class="body_size white">3200명 방문. 16번 동행</p>
+					</div>
+				</li>
+				<li>
+					<div class="community_thumb" id="bkk">
+						<h2 class="normal_size white" style="text-align: center">방콕</h2>
+						<p class="body_size white">3200명 방문. 16번 동행</p>
+					</div>
+				</li>
+				<li>
+					<div class="community_thumb" id="bali">
+						<h2 class="normal_size white" style="text-align: center">발리</h2>
+						<p class="body_size white">3200명 방문. 16번 동행</p>
+					</div>
+				</li>
+				<li>
+					<div class="community_thumb" id="danang">
+						<h2 class="normal_size white" style="text-align: center">다낭</h2>
+						<p class="body_size white">3200명 방문. 16번 동행</p>
+					</div>
+				</li>
+				<li>
+					<div class="community_thumb" id="kul">
+						<h2 class="normal_size white" style="text-align: center">쿠알라룸프르</h2>
+						<p class="body_size white">3200명 방문. 16번 동행</p>
+					</div>
+				</li>
+			</div>
+		</div>
+	</div>
+	<!-- 커뮤니티 퀵 엑세스 종료-->
+	<!-- 계산기 영역 -->
+	<div class="content_area dark_bg" id="calculator">
+		<h2 class="big_size">정글리안 리워드 프로그램</h2>
+		<h3 class="big_size">"이번 여행에서 얼마를 지원받을 수 있을까요?"</h3>
+		<div class="calculator contents_block_1_row white_bg center">
+			<!-- 계산식 -->
+			<div class="contents_block_2 centerd_align">
+				<h2 class="normal_size primary">숙박료 7% 캐시백</h2>
+				<img src="img/ic_hotel.svg" style="width:64px; height:56px">
+				<div class="contents_block_1_row centerd_align">
+					<div class="caculator_item">
+						<form action="">
+							<input class="calculator_value" type="text" id="days" value="6">
+						</form>
+						<p class="caption medium_empasize">숙박일</p>
+					</div>
+					<img src="img/ic_times.svg" style="width:32px; height:32px;">
+					<div class="caculator_item">
+						<form action="">
+							<input class="calculator_value" type="text" id="days" value="60,000₩">
+						</form>
+						<p class="caption medium_empasize">숙박일</p>
+					</div>
+				</div>
+			</div>
+			<div class="contents_block_2 centerd_align">
+				<h2 class="normal_size primary">친구초대 리워드</h2>
+				<img src="img/ic_invite.svg" style="width:64px; height:56px;">
+				<div class="contents_block_1_row centerd_align">
+					<div class="caculator_item">
+						<form action="">
+							<input class="calculator_value" type="text" id="days" value="6">
+						</form>
+						<p class="caption medium_empasize">여행을 사랑하는 친구수</p>
+					</div>
+					<img src="img/ic_times.svg" style="width:32px; height:32px;">
+					<div class="caculator_item">
+						<form action="">
+							<input class="calculator_value" type="text" id="days" value="60,000₩">
+						</form>
+						<p class="caption medium_empasize">초대 커미션</p>
+					</div>
+				</div>
+			</div>
+			<!-- 계산식 종료 -->
+			<div class="contents_block_1_col primary_bg" style="margin-top: 32px; padding:16px;">
+				<h2 class="big_size">105,200₩</h2>
+				<div class="button white_bg_btt">가입하고 혜택받기</div>
+			</div>
+		</div>
+	</div>
+	<!-- 정글리안 초이스 -->
+	<div class="content_area white_bg">
+		<h2 class="big_size">정글리안 초이스</h2>
+		<h3 class="big_size">"정글리안이 추천하는 커뮤니티에서 여행계획을 세우세요"</h3>
+
+		<!-- 인기여행지 -->
+		<div class="containner" style="width:100%; margin: 64px 0 8px 0;">
+			<h2 class="normal_size">인기 여행지</h2>
+			<p class="body_size">각 도시별 커뮤니티에서 여행 계획을 공유하고 여행 친구도 찾으세요.</p>
+		</div>
+		<div class="containner" style="width:100%; height:336px; margin: 0px 0 32px 0;">
+			<div class="slider_button sd_button_city" id="slider_left">
+				<div class="FAB_circle white_bg_btt" style="margin-left:calc(100% - 24px)">
+					<img src="img/arrow_prev.svg">
+				</div>
+			</div>
+			<div class="slider_button sd_button_city" id="slider_right">
+				<div class="FAB_circle white_bg_btt" style="margin-left:-24px;">
+					<img src="img/arrow_next.svg">
+				</div>
+			</div>
+			<div class="content_slide">
+				<li>
+					<div class="city_thumb" id="sg">
+						<h2 class="middle_size white" style="text-align: center">싱가폴</h2>
+						<p class="body_size white">3200명 방문. 16번 동행</p>
+						<div class="button white_bg_btt" id="community_btt">커뮤니티 방문</div>
+						<div class="button white_border_btt">숙소 검색</div>
+					</div>
+				</li>
+				<li>
+					<div class="city_thumb" id="bkk">
+						<h2 class="middle_size white" style="text-align: center">방콕</h2>
+						<p class="body_size white">3200명 방문. 16번 동행</p>
+						<div class="button white_bg_btt" id="community_btt">커뮤니티 방문</div>
+						<div class="button white_border_btt">숙소 검색</div>
+					</div>
+				</li>
+				<li>
+					<div class="city_thumb" id="bali">
+						<h2 class="middle_size white" style="text-align: center">발리</h2>
+						<p class="body_size white">3200명 방문. 16번 동행</p>
+						<div class="button white_bg_btt" id="community_btt">커뮤니티 방문</div>
+						<div class="button white_border_btt">숙소 검색</div>
+					</div>
+				</li>
+				<li>
+					<div class="city_thumb" id="danang">
+						<h2 class="middle_size white" style="text-align: center">다낭</h2>
+						<p class="body_size white">3200명 방문. 16번 동행</p>
+						<div class="button white_bg_btt" id="community_btt">커뮤니티 방문</div>
+						<div class="button white_border_btt">숙소 검색</div>
+					</div>
+				</li>
+			</div>
+		</div>
+		<!-- 인기여행지 종료-->
+		<!-- 숙소별 타입 -->
+		<div class="containner" style="width:100%; margin: 32px 0 8px 0;">
+			<h2 class="normal_size">숙소별 타입</h2>
+			<p class="body_size">여러분의 여행 스타일에 맞는 숙소타입을 검색해보세요.</p>
+		</div>
+		<div class="containner" style="width:100%; height:274px; margin: 0 0 64px 0;">
+			<div class="slider_button sd_button_acc_type" id="slider_left">
+				<div class="FAB_circle white_bg_btt" style="margin-left:calc(100% - 24px)">
+					<img src="img/arrow_prev.svg">
+				</div>
+			</div>
+			<div class="slider_button sd_button_acc_type" id="slider_right">
+				<div class="FAB_circle white_bg_btt" style="margin-left:-24px;">
+					<img src="img/arrow_next.svg">
+				</div>
+			</div>
+			<div class="content_slide">
+				<li>
+					<div class="accom_type_thumb" id="apt">
+						<p class="body_size">지역 000개의</p>
+						<h2 class="middle_size">아파트</h2>
+					</div>
+				</li>
+				<li>
+					<div class="accom_type_thumb" id="hst">
+						<p class="body_size">지역 000개의</p>
+						<h2 class="middle_size">호스텔</h2>
+					</div>
+				</li>
+				<li>
+					<div class="accom_type_thumb" id="rst">
+						<p class="body_size">지역 000개의</p>
+						<h2 class="middle_size">리조트</h2>
+					</div>
+				</li>
+				<li>
+					<div class="accom_type_thumb" id="rk">
+						<p class="body_size">지역 000개의</p>
+						<h2 class="middle_size">료칸</h2>
+					</div>
+				</li>
+			</div>
+		</div>
+		<!-- 숙소별 타입 종료-->
+	</div>
+	<!-- Footer -->
+	<footer>
+		<p class="sitemap_col" id="introduction">
+			<a class="footer_item caption" href="">Junglian 소개</a>
+			<a class="footer_item caption" href="">소객 센터</a>
+			<a class="footer_item caption" href="">개인정보처리 방침</a>
+			<a class="footer_item caption" href="">이용약관</a>
+		</p>
+		<p class="sitemap_col" id="info">
+			<a class="footer_item caption" href="">FAQ</a>
+			<a class="footer_item caption" href="">공지사항</a>
+			<a class="footer_item caption" href="">이벤트</a>
+		</p>
+		<p class="sitemap_col" id="info">
+			<a class="footer_item caption" href="">커뮤니티 가이드라인</a>
+			<a class="footer_item caption" href="">리워드 프로그램</a>
+		</p>
+		<div class="link">
+			<p style="width:100%; margin:0 0 32px 0;">Follow us</p>
+			<p class="link_item"></p>
+			<p class="link_item"></p>
+			<p class="link_item"></p>
+			<p class="link_item"></p>
+			<p class="link_item" style="margin-right:0;"></p>
+		</div>
+	</footer>
+</body>
+</html>

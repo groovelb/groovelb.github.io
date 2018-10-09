@@ -1,0 +1,15 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 187.48 89">
+	<g class="map">
+		<defs>
+			<style>.cls-1,.cls-4{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3{fill:#058667;}.cls-4{stroke:#00df9a;stroke-miterlimit:10;stroke-width:2px;}</style>
+			<clipPath id="clip-path" transform="translate(-1.47 -13.29)">
+				<path class="cls-1" d="M173.65,56.55,131.4,67.33,82.94,51.58l26-37.29h51.71ZM14.44,62.77,29.31,14.29H109l-26,37.29L131.4,67.33l42.26-10.78,13.73,44.74H2.61L14.44,62.77l68.5-11.19Z"/>
+			</clipPath>
+		</defs>
+		<title>map</title>
+		<g class="cls-2">
+			<path class="cls-3" d="M173.65,56.55,131.4,67.33,82.94,51.58l26-37.29h51.71ZM14.44,62.77,29.31,14.29H109l-26,37.29L131.4,67.33l42.26-10.78,13.73,44.74H2.61L14.44,62.77l68.5-11.19Z" transform="translate(-1.47 -13.29)"/>
+		</g>
+		<path class="cls-4" d="M173.86,56.55,131.61,67.33,83.15,51.58l26-37.29H160.9ZM14.64,62.77,29.52,14.29h79.67l-26,37.29,48.46,15.75,42.26-10.78,13.73,44.74H2.82L14.64,62.77l68.5-11.19Z" transform="translate(-1.47 -13.29)"/>
+	</g>
+</svg>

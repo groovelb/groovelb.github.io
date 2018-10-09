@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css_ver3/layout_common.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/layout_community.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/components.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/form.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/align.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/margin.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/type.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/color.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/img.css">
+</head>
+<body>
+<!-- 헤더 -->
+<div class="header_white_bg">
+	<div class="header_item" id="left">
+		<img id="header_logo" src="img/logo_ver3.svg">
+		<a href="index_logedin.html">
+			<div class="text_menu">호텔</div>
+		</a>
+		<div class="text_menu" id="selected">
+			<a href="community_main.html">커뮤니티</a>
+		</div>
+	</div>
+	<div class="header_item" id="right">
+		<div class="text_menu">FAQ</div>
+		<div class="text_menu">캐시백 신청</div>
+		<div class="text_menu">메세지</div>
+		<a href="my_page.html">
+			<div class="my_menu" style="margin:0 0 0 16px;">
+				<img src="img/my_profile_black.svg"">
+				<p class="caption" id="my_menu_id" style="margin-top:6px">groovelb</p>
+				<p class="caption" id="point" style="margin-bottom:6px">63,653₩</p>
+			</div>
+		</a>
+	</div>
+</div>
+<div class="content_area_row" style="padding-top: 96px;">
+	<!--슬라이드 메뉴-->
+	<div class="slide_menu">
+		<div class="slide_item">
+			<img src="img/ic_my_profile.svg">
+			내 프로필
+		</div>
+		<div class="slide_item" id="selected_slide_item">
+			<img src="img/ic_my_travel_white.svg">
+			내 여행
+		</div>
+		<div class="slide_item">
+			<img src="img/ic_reward.svg">
+			리워드
+		</div>
+	</div>
+	<!--컨텐츠-->
+	<div class="content_col">
+		<!--내 트래블 로그 섹션 -->
+		<div class="contents_block_1_row" style="margin:16px auto; width: 796px;">
+			<h2 class="big_size" style="text-align: left; width:100%; font-weight: 700; margin-top: 0">싱가폴 커뮤니티</h2>
+			<div class="section_top contents_block_1_row" style="margin:8px 0 16px 0">
+				<div class="flex_row flex_item_center" id="filter">
+					<label class="checkbox_container caption">트래블 로그
+					  <input type="checkbox" checked="checked">
+					  <span class="checkmark"></span>
+					</label>
+					<label class="checkbox_container caption">질문
+					  <input type="checkbox">
+					  <span class="checkmark"></span>
+					</label>
+					<label class="checkbox_container caption">동행 찾기
+					  <input type="checkbox">
+					  <span class="checkmark"></span>
+					</label>
+					<label class="checkbox_container caption">모두보기
+					  <input type="checkbox">
+					  <span class="checkmark"></span>
+					</label>
+				</div>
+				<div class="button border_btt" id="write"><img src="img/ic_write.svg">포스트 쓰기</div>
+			</div>
+			<div class="contents_block_1_row">
+				<div class="contents_block_3">
+					<!--포스트-->
+					<div class="card_post post" id="post">
+						<div class="post_img short" id="trv1">
+						</div>
+						<div class="post_info ">
+							<h3 class="body_size">포스트 첫문장 한줄로 텍스트 워핑</h3>
+
+							<p class="flex_item_center body_size" id="location"><img src="img/ic_location.svg">City, Country</p>
+							<div class="flex_item_center caption" id="userprofile">
+								<div class="profile_pic" id="pf1"></div>
+								<p id="username">username</p>
+							</div>
+						</div>
+					</div>
+					<!--잘문-->
+					<div class="card_post question" id="question">
+						<div class="q_mark">
+							Q
+						</div>
+						<div class="post_info ">
+							<h3 class="body_size">리틀인디아에서 로컬 향신료가게 추천부탁드립니다.</h3>
+
+							<p class="flex_item_center body_size" id="location"><img src="img/ic_location.svg">City, Country</p>
+							<div class="flex_item_center caption" id="userprofile">
+								<div class="profile_pic" id="pf1"></div>
+								<p id="username">username</p>
+							</div>
+						</div>
+					</div>
+					<!--포스트-->
+					<div class="card_post post" id="post">
+						<div class="post_img long" id="trv2">
+						</div>
+						<div class="post_info ">
+							<h3 class="body_size">포스트 첫문장 한줄로 텍스트 워핑</h3>
+
+							<p class="flex_item_center body_size" id="location"><img src="img/ic_location.svg">City, Country</p>
+							<div class="flex_item_center caption" id="userprofile">
+								<div class="profile_pic" id="pf2"></div>
+								<p id="username">username</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="contents_block_3">
+					<!--포스트-->
+					<div class="card_post post" id="post">
+						<div class="post_img middle" id="trv3">
+						</div>
+						<div class="post_info ">
+							<h3 class="body_size">포스트 첫문장 한줄로 텍스트 워핑</h3>
+							<p class="flex_item_center body_size" id="location"><img src="img/ic_location.svg">City, Country</p>
+							<div class="flex_item_center caption" id="userprofile">
+								<div class="profile_pic" id="pf3"></div>
+								<p id="username">username</p>
+							</div>
+						</div>
+					</div>
+					<!--포스트-->
+					<div class="card_post mating" id="mating">
+						<div class="post_img middle" id="trv3">
+							<div class="mating_info">
+								<p class="caption">동행찾기</p>
+								<p class="caption">10/31 2018</p>
+							</div>
+						</div>
+						<div class="post_info ">
+							<h3 class="body_size">10/31 Zouk같이 가실분~?</h3>
+							<p class="flex_item_center body_size" id="location"><img src="img/ic_location.svg">Zouk, Singapore</p>
+							<div class="flex_item_center caption" id="userprofile">
+								<div class="profile_pic" id="pf3"></div>
+								<p id="username">username</p>
+							</div>
+						</div>
+					</div>
+					<!--포스트-->
+					<div class="card_post post" id="post">
+						<div class="post_img long" id="trv4">
+						</div>
+						<div class="post_info ">
+							<h3 class="body_size">포스트 첫문장 한줄로 텍스트 워핑</h3>
+							<p class="flex_item_center body_size" id="location"><img src="img/ic_location.svg">City, Country</p>
+							<div class="flex_item_center caption" id="userprofile">
+								<div class="profile_pic" id="pf4"></div>
+								<p id="username">username</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="contents_block_3">
+					<!--포스트-->
+					<div class="card_post post" id="post">
+						<div class="post_img short" id="trv5">
+						</div>
+						<div class="post_info ">
+							<h3 class="body_size">포스트 첫문장 한줄로 텍스트 워핑</h3>
+							<p class="flex_item_center body_size" id="location"><img src="img/ic_location.svg">City, Country</p>
+							<div class="flex_item_center caption" id="userprofile">
+								<div class="profile_pic" id="pf1"></div>
+								<p id="username">username</p>
+							</div>
+						</div>
+					</div>
+					<!--포스트-->
+					<div class="card_post post" id="post">
+						<div class="post_img short" id="trv6">
+						</div>
+						<div class="post_info ">
+							<h3 class="body_size">포스트 첫문장 한줄로 텍스트 워핑</h3>
+							<p class="flex_item_center body_size" id="location"><img src="img/ic_location.svg">City, Country</p>
+							<div class="flex_item_center caption" id="userprofile">
+								<div class="profile_pic" id="pf2"></div>
+								<p id="username">username</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--내 트래블 로그 섹션 종료-->
+	</div>
+</div>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+$(document).ready(function(){
+	/*쓰기 버튼 이벤트 핸들러*/
+	$("#write").on("click",function(){
+		console.log("click button");
+		$("body").append("<div class='dialog_bg'></div>");
+		$(".dialog_bg").append($("#wrt_dialog"));
+	});
+
+	$(".dialog_bg").on("click",function(){
+		console.log("click");
+		$("body").append($("#wrt_dialog"));
+		$(".dialog_bg").remove();
+	});
+
+	/*포스트 자세히 보기 이벤트 핸들러*/
+	$(".post").on("click", function(){
+		console.log("post click");
+		$("body").append("<div class='dialog_bg'></div>");
+		$(".dialog_bg").append($("#travel_log_detail"));
+	});
+
+	/*질문 자세히 보기 이벤트 핸들러*/
+	$(".question").on("click", function(){
+		console.log("post click");
+		$("body").append("<div class='dialog_bg'></div>");
+		$(".dialog_bg").append($("#question_detail"));
+	});
+
+	/*질문 자세히 보기 이벤트 핸들러*/
+	$(".mating").on("click", function(){
+		console.log("post click");
+		$("body").append("<div class='dialog_bg'></div>");
+		$(".dialog_bg").append($("#mating_detail"));
+	});
+
+
+	/*쓰기 다이얼로그 탭 이동*/
+	$(".tab_item").on("click",function(){
+		$(".tab_item").removeClass("tab_selected");
+		$(this).addClass("tab_selected");
+
+		var id = $(this).attr("id");
+		var current_cont = $("#wrt_dialog").find(".tabbed_content");
+
+		$("#out_of_screen").append(current_cont);
+		if(id=="tab_trv"){
+			$("#wrt_dialog").append($("#wrt_travel_log"));
+		}
+		else if(id=="tab_qna"){
+			$("#wrt_dialog").append($("#wrt_qna"));
+		}
+		else if(id=="tab_mating"){
+			$("#wrt_dialog").append($("#wrt_mating"));
+		}
+	});
+
+	/*다이얼로그 제거*/
+	$("#dg_xbox1").on("click",function(){
+		$("body").append($("#wrt_dialog"));
+		$(".dialog_bg").remove();
+	});
+
+	$("#dg_xbox2").on("click",function(){
+		$("body").append($("#travel_log_detail"));
+		$(".dialog_bg").remove();
+	});
+
+	$("#dg_xbox3").on("click",function(){
+		$("body").append($("#question_detail"));
+		$(".dialog_bg").remove();
+	});
+
+	$("#dg_xbox4").on("click",function(){
+		$("body").append($("#mating_detail"));
+		$(".dialog_bg").remove();
+	});
+});
+</script> 
+</body>
+<div class="dialog write_dialog" id="wrt_dialog">
+	<img class="xbox" src="img/ic_close.svg" id="dg_xbox1">
+	<div class="tab3 flex_row body_size" style="justify-content: space-between; width: 100%;">
+		<div class="tab_item tab_selected" id="tab_trv">트래블 로그</div>
+		<div class="tab_item" id="tab_qna">Q&A</div>
+		<div class="tab_item" id="tab_mating">동행찾기</div>
+	</div>
+	<div class="flex_row tabbed_content" id="wrt_travel_log">
+		<style>.square_button{margin-right: 16px;}</style>
+		<div class="text_area">
+			<!--구글 플레이스 연동부분-->
+			<p class="flex_item_center caption medium_empasize" id="location" style="margin-bottom:8px;"><img src="img/ic_location.svg">싱가폴</p>
+			<textarea placeholder="여행기를 적어주세요." class="body_size" style="border-width: 0; height: 104px;"></textarea>
+		</div>
+		<div class="square_button square_button_big" id="trv1">
+		</div>
+		<div class="square_button square_button_big">
+			<img src="img/ic_add.svg" style="width:48px; height:48px">
+		</div>
+		<div class="button primary_bg" style="margin-left: calc(100% - 132px);">올리기</div>
+	</div>
+</div>
+
+
+
+<!-- 포스트 자세히 보기 다아얼로그 -->
+<div class="dialog content_dialog" id="travel_log_detail">
+	<img class="xbox" src="img/ic_close.svg" id="dg_xbox2">
+	<h2 class="normal_size center">트래플 로그</h2>
+	<!--유저정보-->
+	<div class="profile_pic_middle center" id="pf3"></div>
+	<h3 class="body_size center">username</h3>
+	<p class="caption center">30/10 2018</p>
+	<div class="flex_row">
+		<!--사진-->
+		<div class="square_button square_button_big" id="trv1"></div>
+		<div class="square_button square_button_big" id="trv2"></div>
+		<div class="square_button square_button_big" id="trv3"></div>
+	</div>
+	<!--내용-->
+	<p class="flex_item_center caption medium_empasize" id="location" style="margin-bottom:8px;"><img src="img/ic_location.svg">싱가폴</p>
+	<p class="body_size">Do something crazy with your friends and get out from your comfort zone. Bali is a perfect place for you who need to escape from your daily routine. Tag your friends who need more holiday!</p>
+	<!--코멘트 섹션-->
+	<div class="flex_row flex_item_center" style="margin-bottom: 8px;">
+		<img src="img/ic_comments.svg" style="margin-right:8px;">
+		<h3 class="caption medium_empasize" style="font-weight: 500;">코멘트</h3>
+	</div>
+	<!--코멘트-->
+	<div class="flex_col" id="comment_item">
+		<p class="body_size" id="comment">
+			Bali is a perfect place for you who need to escape from your daily routine. Tag your friends who need more holiday!
+		</p>
+		<!--유저인포-->
+		<style>#user_info{margin:4px 0 8px 0;}</style>
+		<div class="flex_row caption" id="user_info">
+			<div class="flex_item_center">
+				<div class="profile_pic" id="pf3"></div>
+			</div>
+			<div class="flex_col" id="comment_info">
+				<p id="username">username</p>
+				<p id="date">09:00 pm</p>
+			</div>
+		</div>
+	</div>
+	<!--코멘트-->
+	<div class="flex_col" id="comment_item">
+		<p class="body_size" id="comment">
+			Bali is a perfect place for you who need to escape from your daily routine. Tag your friends who need more holiday!
+		</p>
+		<!--유저인포-->
+		<style>#user_info{margin:4px 0 8px 0;}#comment_item{margin:8px 0 16px 0;}.text_field{width: calc(100% - 16px - 54px - 8px); }</style>
+		<div class="flex_row caption" id="user_info">
+			<div class="flex_item_center">
+				<div class="profile_pic" id="pf2"></div>
+			</div>
+			<div class="flex_col" id="comment_info">
+				<p id="username">username</p>
+				<p id="date">09:00 pm</p>
+			</div>
+		</div>
+	</div>
+	<!--코멘트 입력폼-->
+	<!--메시지 인풋-->
+	<div class="flex_row">
+		<textarea  type="textarea" class="text_field" id="msg_input"></textarea>
+		<div class="profile_pic_middle" id="pf2" style="margin-left: 4px;"></div>
+		<div class="button primary_bg" style="margin-left:0">코멘트 달기</div>
+	</div>
+</div>
+
+
+<!-- 질문 자세히 보기 다아얼로그 -->
+<div class="dialog content_dialog" id="question_detail">
+	<img class="xbox" src="img/ic_close.svg" id="dg_xbox3">
+	<h2 class="normal_size center">트래플 로그</h2>
+	<!--유저정보-->
+	<div class="profile_pic_middle center" id="pf3"></div>
+	<h3 class="body_size center">username</h3>
+	<p class="caption center">30/10 2018</p>
+	<div class="flex_row">
+		<!--질문-->
+		<p class="q_mark">Q</p>
+		<h3 class="middle_size" style="font-weight: 500; margin-left:8px">리틀인디아에서 로컬 향신료가게 추천부탁드립니다.</h3>
+	</div>
+	<!--대답 섹션-->
+	<div class="flex_row flex_item_center" style="margin-bottom: 8px;">
+		<p class="a_mark">A</p>
+	</div>
+	<!--대답-->
+	<div class="flex_col" id="comment_item">
+		<p class="body_size" id="comment">
+			Bali is a perfect place for you who need to escape from your daily routine. Tag your friends who need more holiday!
+		</p>
+		<!--유저인포-->
+		<style>#user_info{margin:4px 0 8px 0;}</style>
+		<div class="flex_row caption" id="user_info">
+			<div class="flex_item_center">
+				<div class="profile_pic" id="pf3"></div>
+			</div>
+			<div class="flex_col" id="comment_info">
+				<p id="username">username</p>
+				<p id="date">09:00 pm</p>
+			</div>
+		</div>
+	</div>
+	<!--코멘트-->
+	<div class="flex_col" id="comment_item">
+		<p class="body_size" id="comment">
+			Bali is a perfect place for you who need to escape from your daily routine. Tag your friends who need more holiday!
+		</p>
+		<!--유저인포-->
+		<style>#user_info{margin:4px 0 8px 0;}#comment_item{margin:8px 0 16px 0;}.text_field{width: calc(100% - 16px - 54px - 8px); }</style>
+		<div class="flex_row caption" id="user_info">
+			<div class="flex_item_center">
+				<div class="profile_pic" id="pf2"></div>
+			</div>
+			<div class="flex_col" id="comment_info">
+				<p id="username">username</p>
+				<p id="date">09:00 pm</p>
+			</div>
+		</div>
+	</div>
+	<!--코멘트 입력폼-->
+	<!--답변 인풋-->
+	<div class="flex_row">
+		<textarea  type="textarea" class="text_field" id="msg_input"></textarea>
+		<div class="profile_pic_middle" id="pf2" style="margin-left: 4px;"></div>
+		<div class="button primary_bg" style="margin-left:0">답변 달기</div>
+	</div>
+</div>
+
+<!-- 동행 자세히 보기 다아얼로그 -->
+<div class="dialog content_dialog" id="mating_detail">
+<img class="xbox" src="img/ic_close.svg" id="dg_xbox4">
+	<h2 class="normal_size center">동행찾기</h2>
+	<!--유저정보-->
+	<div class="profile_pic_middle center" id="pf3"></div>
+	<h3 class="body_size center">username</h3>
+	<p class="caption center">30/10 2018</p>
+	<div class="flex_row" style="justify-content: center; margin:32px 0 8px 0">
+		<!--사진-->
+		<div class="mating_pic" id="place_img"></div>
+		<div class="mating_location" id="location_img"></div>
+	</div>
+	<!--내용-->
+	<div class="flex_row" style="margin:8px 0 32px 0;">
+		<p class="flex_centered caption highlight" id="location" style="margin-bottom:8px; width: calc(50% - 32px)"><img src="img/ic_location.svg">Zouk, Singapore</p>
+		<p class="flex_centered caption highlight" id="location" style="margin-bottom:8px; width: calc(50% - 32px)"><img src="img/ic_calendar.svg">10/31 2018</p>
+	</div>
+	<h3 class="middle_size center" style="width:640px; font-weight: 400; text-align: left; line-height: 36px;">"31일날 zouk 같이가실뿐 구해요. 같이 여행온 친구가 클럽 안좋아해서 혼자가기 뻘쭘하네요"</h3>
+	<div class="big_button primary_bg center" style="width: 144px; margin-top: 16px">동행 신청하기</div>
+	<p class="caption center medium_empasize" style="margin-top:8px;">동행 신청결과는 메세지에서 확인가능합니다.</p>
+	<!--코멘트 섹션-->
+	<div class="flex_row flex_item_center" style="margin-bottom: 8px;">
+		<img src="img/ic_comments.svg" style="margin-right:8px;">
+		<h3 class="caption medium_empasize" style="font-weight: 500;">코멘트</h3>
+	</div>
+	<!--코멘트-->
+	<div class="flex_col" id="comment_item">
+		<p class="body_size" id="comment">
+			몇시까지 계실건가요? 호텔이 좀 멀리 있어서...
+		</p>
+		<!--유저인포-->
+		<style>#user_info{margin:4px 0 8px 0;}</style>
+		<div class="flex_row caption" id="user_info">
+			<div class="flex_item_center">
+				<div class="profile_pic" id="pf3"></div>
+			</div>
+			<div class="flex_col" id="comment_info">
+				<p id="username">username</p>
+				<p id="date">09:00 pm</p>
+			</div>
+		</div>
+	</div>
+	<!--코멘트-->
+	<div class="flex_col" id="comment_item">
+		<p class="body_size" id="comment">
+			처음 가보시는건가요? 궁금하긴한데 시간이 애매하네요
+		</p>
+		<!--유저인포-->
+		<style>#user_info{margin:4px 0 8px 0;}#comment_item{margin:8px 0 16px 0;}.text_field{width: calc(100% - 16px - 54px - 8px); }</style>
+		<div class="flex_row caption" id="user_info">
+			<div class="flex_item_center">
+				<div class="profile_pic" id="pf2"></div>
+			</div>
+			<div class="flex_col" id="comment_info">
+				<p id="username">username</p>
+				<p id="date">09:00 pm</p>
+			</div>
+		</div>
+	</div>
+	<!--코멘트 입력폼-->
+	<!--메시지 인풋-->
+	<div class="flex_row">
+		<textarea  type="textarea" class="text_field" id="msg_input"></textarea>
+		<div class="profile_pic_middle" id="pf2" style="margin-left: 4px;"></div>
+		<div class="button border_btt" style="margin-left:0">코멘트 달기</div>
+	</div>
+</div>
+
+
+<!-- 팝업에 쓰일 다이얼로그, 컴퍼넌트들, 평소에는 보이지 않음 -->
+<div id="out_of_screen" style="position: fixed; top:-100%; left:-100%">
+	<!-- 쓰기 다일알로그 탭 -->
+	<div class="flex_row tabbed_content" id="wrt_qna">
+		<style>.square_button{margin-right: 16px;} textarea{width: 100%;}</style>
+		<div class="text_area">
+			<!--구글 플레이스 연동부분-->
+			<p class="flex_item_center caption medium_empasize" id="location" style="margin-bottom:8px;"><img src="img/ic_location.svg">싱가폴</p>
+			<textarea placeholder="질문을 적어주세요." class="body_size" style="border-width: 0; height: 104px;"></textarea>
+		</div>
+		<div class="button primary_bg" style="margin-left: calc(100% - 132px);">올리기</div>
+	</div>
+	<div class="flex_row tabbed_content" id="wrt_mating">
+		<style>.square_button{margin-right: 16px;}</style>
+		<div class="text_area">
+			<!--구글 플레이스 연동부분-->
+			<p class="flex_item_center caption medium_empasize" id="location" style="margin-bottom:8px; width: calc(50% - 32px)"><img src="img/ic_location.svg">장소 찾기</p>
+			<p class="flex_item_center caption medium_empasize" id="location" style="margin-bottom:8px; width: calc(50% - 32px)"><img src="img/ic_calendar.svg">날짜 지정</p>
+			<textarea placeholder="동행 일정을 적어주세요." class="body_size" style="border-width: 0; height: 104px;"></textarea>
+		</div>
+		<div class="button primary_bg" style="margin-left: calc(100% - 132px);">올리기</div>
+	</div>	
+</div>
+
+</html>
