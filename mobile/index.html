@@ -11,12 +11,26 @@
 	<link rel="stylesheet" type="text/css" href="css_ver3/type.css">
 	<link rel="stylesheet" type="text/css" href="css_ver3/color.css">
 	<link rel="stylesheet" type="text/css" href="css_ver3/align.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/menu_transition.css">
 </head>
 <body id="body">
 <!-- 헤더 -->
 <div class="header white">
-	<img id="menu" src="img/ic_menu.svg">
+	<div id="menu">
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	</div>
 	<img id="logo" src="img/logo_ver3_white.svg">
+</div>
+<!--슬라이드 메뉴-->
+<div class="slide_menu">
+	<div class="menu_list">
+		<div class="button primary_bg">로그인</div>
+	</div>
+	<div class="menu_list">
+	</div>
 </div>
 <!-- 탑 배경 -->
 <div class="img_background" id="top_bg">
@@ -243,7 +257,7 @@
 		<a class="footer_item caption" href="">리워드 프로그램</a>
 	</p>
 	<div class="link">
-		<p class="caption" style="width:100%; margin:0 0 0px 0;">Follow us</p>
+		<p class="caption" style="width:100%; margin:0 0 0px 0; font-weight: 500;">Follow us</p>
 		<p class="link_item">
 			<img src="img/link_fb.svg">
 		</p>
@@ -258,10 +272,24 @@
 		</p>
 		<p class="link_item" style="margin-right:0;"></p>
 	</div>
-	<div class="caption" style="width: 100%; margin:16px 0 8px 0; font-weight: 500;">
+	<div class="caption" style="width: 100%; margin:16px 0 8px 0;">
 		<hr>
 		<p class="low_empasize" style="margin:8px 0;">Copyright ⓒ 주식회사 레저벤처 All Rights Reserved.// 사업자등록번호 : 731-87-00594 통신판매업신고 : 제 2017-서울마포-0045호, 서울 강남구 월드컵북로2길 16, 3층 (대표자 : 심영준)</p>
 	</div>
 </footer>
 </body>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+		$(document).ready(function(){
+			$("#menu").on("click",function(){
+				$(".slide_menu").toggleClass("slide_menu_on");
+				$(this).toggleClass('open');
+				$("#logo").toggleClass("logo_hide");
+			});
+			$("#xbox").on("click",function(){
+				$(".slide_menu").toggleClass("slide_menu_on");
+			});
+		});
+</script>
 </html>
