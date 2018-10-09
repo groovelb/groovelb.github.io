@@ -26,10 +26,15 @@
 </div>
 <!--슬라이드 메뉴-->
 <div class="slide_menu">
+	<div class="menu_list center">
+		<div class="button primary_bg" style="width: calc(100% - 32px - 16px);">로그인</div>
+	</div>
+	<hr style="width: calc(100% - 64px);">
 	<div class="menu_list">
-		<div class="button primary_bg">로그인</div>
+		커뮤니티
 	</div>
 	<div class="menu_list">
+		FAQ
 	</div>
 </div>
 <!-- 탑 배경 -->
@@ -282,10 +287,18 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script>
 		$(document).ready(function(){
+			var menu_on = false;
 			$("#menu").on("click",function(){
+				menu_on = (!menu_on);
 				$(".slide_menu").toggleClass("slide_menu_on");
 				$(this).toggleClass('open');
-				$("#logo").toggleClass("logo_hide");
+				if(menu_on){
+					$("#logo").attr("src","img/logo_ver3.svg");
+				}
+				else{
+					$("#logo").attr("src","img/logo_ver3_white.svg");
+				}
+				
 			});
 			$("#xbox").on("click",function(){
 				$(".slide_menu").toggleClass("slide_menu_on");

@@ -174,9 +174,12 @@ a{
 	transition-timing-function: ease-out;
 }
 .menu_list{
-	width: calc(100% - 32px);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: calc(100% - 64px);
 	height: 48px;
-	padding:16px;
+	padding:8px 32px;
 }
 .slide_menu_on{
 	top:0;
