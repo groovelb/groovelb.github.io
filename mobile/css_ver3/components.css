@@ -96,14 +96,14 @@
 .button{
 	display: flex;
 	margin: 8px 16px;
-	padding:0 18px;
+	padding:0 8px;
 	align-items: center;
 	justify-content: center;
 	height: 36px;
 	border-radius: 4px;
 	min-width: 96px;
 	font-family: 'Noto Sans CJK KR';
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: 500;
 	letter-spacing: 0.01em;
 	cursor: pointer;
@@ -372,8 +372,8 @@
 	content: "";
     display: block;
     background: rgba(0,0,0,0.3);
-    width: 258px;
-    height: 320px;
+    width: 132px;
+    height: 198px;
     border-radius: 4px;
     position: absolute;
 }
@@ -382,25 +382,24 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	width: 258px;
-    height: 320px;
+	width: 132px;
+    height: 198px;
     border-radius: 4px;
 	background-color: #eeeeee;
-	margin: 8px 16px 8px 0px;
+	margin: 4px 8px 4px 0px;
 	background-size: cover;
 }
 .city_thumb > .button{
-	width: 144px;
 	margin: 4px;
 }
 .city_thumb > *{
 	z-index: 1;
 }
 .city_thumb > h2{
-	margin-top: 80px;
+	margin-top: 64px !important;
 }
 .city_thumb > .white_bg_btt{
-	margin-top: 80px;
+	margin-top: 16px !important;
 }
 
 /*숙소타입*/
@@ -408,8 +407,8 @@
 	content: "";
     display: block;
     background: rgba(0,0,0,0.2);
-    width: 258px;
-    height: 258px;
+    width: 132px;
+    height: 132px;
     border-radius: 4px;
     position: absolute;
 }
@@ -418,20 +417,20 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
-	width: 258px;
-	height: 258px;
+	width: 132px;
+	height: 132px;
 	border-radius: 4px;
 	background-color: #eeeeee;
-	margin: 8px 16px 8px 0px;
+	margin: 4px 8px 4px 0px;
 	color: #ffffff;
 	background-size: cover;
 }
 .accom_type_thumb > h2{
-	margin: 0 0 16px 16px;
+	margin: 0 0 8px 8px !important;
 	text-align: left;
 }
 .accom_type_thumb > p{
-	margin:0 0 0 16px;
+	margin:0 0 0 8px;
 }
 .accom_type_thumb > *{
 	z-index: 1;
