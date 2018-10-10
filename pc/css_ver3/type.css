@@ -3,7 +3,7 @@
 
 body{
 	font-family: 'Noto Sans KR', sans-serif;
-	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
 }
 .big_size{
 	font-size: 36px;
