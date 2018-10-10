@@ -45,6 +45,7 @@
 	margin-left: 48px;
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 }
 #reward_cash{
 	width: calc(220px - 32px);
