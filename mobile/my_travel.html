@@ -65,21 +65,14 @@
 <style>.section_top>.button{margin-right: 0}</style>
 <div class="content_col">
 	<!--내 프로필-->
-	<div class="contents_block_1_row flex_item_center flex_item_space_between" style="margin:16px 0;">
-		<div class="flex_row flex_item_center">
-			<div href="my_page.html" class="profile_pic" id="pf2" style="width:64px; height:64px; border-width: 2px;">
-			</div>
-			<div>
-				<h2 class="normal_size" style="width: auto; font-weight: 500; margin:0">username</h2>
-				<p class="body_size low_empasize" style="margin:0; font-weight: 500;">54,123₩</p>
-			</div>
+	<div class="contents_block_1_col flex_item_center flex_item_space_between" style="margin:16px 0;">
+		<div class="profile_pic" id="pf2" style="width:64px; height:64px; border-width: 2px;">
 		</div>
-		<div class="s_button border_btt" style="margin-right: 0">프로필 수정</div>
+		<h2 class="normal_size" style="width: auto; font-weight: 500; margin:0">username</h2>
 	</div>
 	<!--내 여행-->
 	<div class="section_top contents_block_1_row" style="margin:32px 0 0 0;">
 		<h2 class="normal_size">내 여행</h2>
-		<div class="button border_btt"><img src="img/ic_my_travel.svg">내여행 전체보기</div>
 	</div>
 	<!--내 여행 섹션 -->
 	<div class="contents_block_1_col" style="margin:0 auto;">
@@ -106,28 +99,70 @@
 			</div>
 		</div>
 	</div>
-	<!--리워드-->
-	<div class="section_top contents_block_1_row" style="margin:32px 0 0 0;">
-		<h2 class="normal_size">리워드</h2>
-	</div>
-	<div class="contents_block_1_col" style="margin:0 auto;">
-		<div class="yellow_bg" style="width:calc(100% - 32px); padding:16px; border-radius:4px; margin:8px 0">
-			<h2 class="highlight body_size" style="text-align: center;">적립금</h2>
-			<p class="number big_size center" style="margin:0">123,123₩</p>
-			<div class="button primary_bg">캐시백 신청</div>
+	<!--내 트래블 로그 섹션 -->
+	<div class="contents_block_1_row" style="margin:16px 0;">
+		<div class="section_top contents_block_1_row">
+			<h2 class="normal_size">내 트래블 로그</h2>
+			<div class="button border_btt"><img src="img/ic_write.svg">트래블로그 쓰기</div>
 		</div>
-	</div>
-	<div class="section_top contents_block_1_row" style="margin:8px 0 0 0;">
-		<style>.square_button{width:calc(50% - 8px - 32px); height:auto; padding:16px;}</style>
-		<div class="square_button light_primary_bg" id="invitation">
-			<h2 class="highlight body_size white" style="text-align: center; margin:8px 0">초대하기</h2>
-			<img src="img/ic_invite_earn_white.svg" style="width:48px; height: 48px;">
-			<p class="number normal_size center" style="margin:0">20,000₩ 적립</p>
-		</div>
-		<div class="square_button border_btt" id="find_point">
-			<h2 class="highlight body_size white" style="text-align: center; margin:8px 0">포인트 찾기</h2>
-			<img src="img/ic_find_point.svg" style="width:48px; height: 48px;">
-			<p class="number normal_size center" style="margin:0">가입전 예약</p>
+		<style></style>
+		<div class="contents_block_1_row">
+			<div class="contents_block_2">
+				<!--포스트-->
+				<div class="card_post">
+					<div class="post_img middle" id="trv3">
+					</div>
+					<div class="post_info ">
+						<h3 class="body_size">포스트 첫문장 한줄로 텍스트 워핑</h3>
+						<p class="flex_item_center body_size" id="location"><img src="img/ic_location.svg">City, Country</p>
+						<div class="flex_item_center caption" id="userprofile">
+							<div class="profile_pic" id="pf3"></div>
+							<p id="username">username</p>
+						</div>
+					</div>
+				</div>
+				<!--포스트-->
+				<div class="card_post">
+					<div class="post_img long" id="trv4">
+					</div>
+					<div class="post_info ">
+						<h3 class="body_size">포스트 첫문장 한줄로 텍스트 워핑</h3>
+						<p class="flex_item_center body_size" id="location"><img src="img/ic_location.svg">City, Country</p>
+						<div class="flex_item_center caption" id="userprofile">
+							<div class="profile_pic" id="pf4"></div>
+							<p id="username">username</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="contents_block_2">
+				<!--포스트-->
+				<div class="card_post">
+					<div class="post_img short" id="trv5">
+					</div>
+					<div class="post_info ">
+						<h3 class="body_size">포스트 첫문장 한줄로 텍스트 워핑</h3>
+						<p class="flex_item_center body_size" id="location"><img src="img/ic_location.svg">City, Country</p>
+						<div class="flex_item_center caption" id="userprofile">
+							<div class="profile_pic" id="pf1"></div>
+							<p id="username">username</p>
+						</div>
+					</div>
+				</div>
+				<!--포스트-->
+				<div class="card_post">
+					<div class="post_img short" id="trv6">
+					</div>
+					<div class="post_info ">
+						<h3 class="body_size">포스트 첫문장 한줄로 텍스트 워핑</h3>
+						<p class="flex_item_center body_size" id="location"><img src="img/ic_location.svg">City, Country</p>
+						<div class="flex_item_center caption" id="userprofile">
+							<div class="profile_pic" id="pf2"></div>
+							<p id="username">username</p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

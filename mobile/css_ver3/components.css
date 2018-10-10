@@ -512,7 +512,7 @@
 .card_post{
 	display: flex;
 	flex-direction: column;
-	width: 248px;
+	width: calc(100% - 4px);
 	color: #383838;
 	margin:8px 0;
 	border-radius: 4px;
@@ -522,7 +522,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 248px;
+	width: 100%;
 	margin-bottom: 8px;
 	background-size:cover;
 	background-origin: center;
@@ -580,13 +580,13 @@
 	background-image: url(../img/travel_img/trv6.jpg);
 }
 .long{
-	height: 248px;
+	height: 176px;
 }
 .middle{
-	height: 208px;
+	height: 144px;
 }
 .short{
-	height: 176px
+	height: 128px
 }
 .post_info{
 	display: flex;
@@ -632,12 +632,16 @@
 #location > img{
 	margin-right: 4px;
 }
-#userprofile{
-	margin-top: 32px;
+.post_info> #userprofile{
+	margin-top: 8px;
+}
+.post_info> #location{
+	margin: 8px 0;
 }
 #username{
 	color: #686868;
 	font-weight: 500;
+	margin:0;
 }
 #pf1{
 	background-image: url(../img/profile_img/pf1.jpg);

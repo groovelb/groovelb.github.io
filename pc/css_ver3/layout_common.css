@@ -1,5 +1,4 @@
 body{
-	font-family: 'Noto Sans KR', sans-serif;
 	margin: 0;
 	padding: 0;
 	width:100%;
@@ -100,7 +99,6 @@ a{
 	align-items: center;
 	margin: 0 16px;
 	height: 100%;
-	font-family: 'Noto Sans CJK KR';
 	font-size: 14px;
 	font-weight: 300;
 	text-align: center;
