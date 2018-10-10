@@ -17,7 +17,9 @@
   transition: .5s ease-in-out;
   cursor: pointer;
 }
-
+.menu_dark > span{
+  background: #262626 !important;
+}
 #menu span{
   display: block;
   position: absolute;

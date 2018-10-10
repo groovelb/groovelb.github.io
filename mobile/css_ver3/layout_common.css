@@ -56,6 +56,10 @@ a{
 	/*feature*/
 	align-items: center;
 }
+.white_bg_header{
+	background-color: #ffffff;
+	box-shadow: 0px 0px 8px 0px rgba(32,32,32,0.65);
+}
 #menu{
 	position: absolute;
 	top:0;
@@ -73,7 +77,7 @@ a{
 	height: 100%;
 }
 #logo{
-	height: 24px;
+	height: 22px;
 	width: auto;
 	margin: 0 auto;
 	/*margin-left: calc(50% - 40px - 55px);*/
@@ -109,6 +113,11 @@ a{
 
 
 /*헤더에 포함될 텍스트 메뉴*/
+.menu_item{
+	width: 24px;
+	height: 24px;
+	padding:12px;
+}
 .text_menu{
 	/*Type*/
 	display: flex;
@@ -137,17 +146,19 @@ a{
 }
 /*헤더에 포함될 마이 메뉴*/
 .my_menu{
-	width: 140px;
+	position: absolute;
+	right: 16px;
+	width: auto;
+	display: flex;
+	align-items: center;
 	height: 48px;
-	display: inline-block;
 }
 .my_menu>p{
 
 }
 .my_menu>img{
-	width: 48px;
-	height: 48px;
-	float: left;
+	width: 24px;
+	height: 24px;
 }
 #my_menu_id{
 	font-weight: 500;
