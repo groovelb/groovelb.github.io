@@ -30,7 +30,8 @@
 	background-image: linear-gradient(rgba(3,64,36,0.85) 0%, rgba(3,64,36,0.48) 38%, rgba(3,64,36,0.48) 52%, rgba(3,64,36,0.65) 100%);*/
 }
 .bg_filter{
-	background-color: rgb(22,20,42.5,0.6);
+	background-color: rgba(22,20,42.5,0.6);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#4cffffff', endColorstr='#4cffffff'); /* IE */
 	color: #ffffff;
 }
 /*상단 컨텐츠 영역*/
