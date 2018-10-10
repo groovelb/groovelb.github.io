@@ -83,6 +83,9 @@
 }
 .content_col>h2{
 	color: #262626;
-	margin:32px 0 16px 0;
+	margin:16px 0 4px 0;
+}
+.content_col>p{
+	margin:4px 0;
 }
 

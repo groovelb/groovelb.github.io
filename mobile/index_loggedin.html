@@ -32,7 +32,7 @@
 	</div>
 </div>
 <!--슬라이드 메뉴-->
-<div class="slide_menu">
+<div class="main_menu">
 	<div class="menu_list">
 		마이페이지
 	</div>
@@ -309,7 +309,7 @@
 			var menu_on = false;
 			$("#menu").on("click",function(){
 				menu_on = (!menu_on);
-				$(".slide_menu").toggleClass("slide_menu_on");
+				$(".main_menu").toggleClass("main_menu_on");
 				$(this).toggleClass('open');
 				if(menu_on){
 					$("#logo").attr("src","img/logo_ver3.svg");
@@ -320,7 +320,7 @@
 				
 			});
 			$("#xbox").on("click",function(){
-				$(".slide_menu").toggleClass("slide_menu_on");
+				$(".main_menu").toggleClass("main_menu_on");
 			});
 		});
 </script>
