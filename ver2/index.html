@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/layout_common.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_main.css">
+	<link rel="stylesheet" type="text/css" href="css/type.css">
+	<link rel="stylesheet" type="text/css" href="css/color.css">
+	<link rel="stylesheet" type="text/css" href="css/components.css">
+	<link rel="stylesheet" type="text/css" href="css/img.css">
+	<style>
+		.card{
+			box-shadow: 0 4px 16px 0 rgba(0,0,0,.12), 0 0 8px 0 rgba(0,0,0,.12);
+		}
+	</style>
+</head>
+<body class="black_highlight">
+<!-- 헤더 -->
+<div class="header flex_row live_area white_highlight" id="header">
+	<div class="flex_row col2  align_center justify_start" id="left">
+		<img id="header_logo" src="img/logo_ver3_white.svg">
+		<div class="text_menu flex_row align_center hor_margin_2x" id="selected">
+			<a href="index.html">호텔</a>
+		</div>
+		<div class="text_menu flex_row align_center body_size hor_margin_2x">
+			<a href="community_main.html">커뮤니티</a>
+		</div>
+	</div>
+	<div class="flex_row col2 align_center justify_end" id="right">
+		<a class="text_menu flex_row align_center body_size hor_margin_2x">FAQ</a>
+			<div class="button white_border hor_margin_2x" id="log_in" style="margin-right:0">
+			로그인
+		</div>
+	</div>
+</div>
+<!-- 탑 영역 -->
+<div class="white_highlight col1" id="top_bg">
+	<div class="col1 bg_filter" id="top_content_area">
+		<!--탑영역 2개섹션-->
+		<div class="flex_row live_area section_ver_padding space_between">
+			<!--호텔검색-->
+			<div class="flex_col col2" id="top_left">
+				<h2 class="middle_size">호텔검색</h2>
+				<p class="body_size ver_bottom_2x">
+					190개국 1천만개의 직거래 숙소를 실시간으로 찾으세요.
+				</p>
+				<!--서치박스-->
+				<div class="search_box flex_row middle_emphasis">
+					<div class="searchfield body_size tf_full border_bottom">
+						<img class="icon" src="img/ic_search.svg">
+						싱가폴
+					</div>
+					<div class="searchfield body_size tf_half border_right">
+						<img class="icon" src="img/ic_calendar.svg">
+						2018.11.01 - 11.20
+					</div>
+					<div class="searchfield body_size tf_half">
+						<img class="icon" src="img/ic_guest.svg">
+						성인 2명
+					</div>
+				</div>
+				<!--버튼-->
+				<div class="search_button btt_shadow btt_fullsize middle_size ver_margin_1x">
+					검색
+				</div>
+				<!--인기 검색지-->
+				<div class="card_full flex_row caption white_middle white_bg" id="popular_list">
+					<p>인기 여행지</p> 
+					<p>싱가폴</p>
+					<p>다낭</p>
+					<p>쿠알라 룸프르</p>
+					<p>방콕</p>
+					<p>바르셀로나</p>
+					<p>런던</p>
+					<p>뉴욕</p>
+					<p>괌</p>
+					<p>서울</p>
+				</div>
+			</div>
+			<!--호텔검색 종료-->
+			<!--리워드 프로그램-->
+			<div class="flex_col col2" id="top_right">
+				<h2 class="middle_size">리워드 프로그램</h2>
+				<p class="body_size ver_bottom_2x">
+					정글리안은 다방면으로 여러분의 여행을 지원합니다.
+				</p>
+				<div class="flex_row col1 card_full flex_center" id="reward" style="width:100%; margin:0 0">
+					<div class="flex_col col2">
+						<div class="flex_col card_full flex_center padding_ver_32" id="cashback">
+							<p class="middle_thin">체크인 당일 캐시백</p>
+							<p class=" number big_size center">10%</p>
+							<div class="s_button caption white_middle">자세히 보기</div>
+						</div>
+					</div>
+					<div class="flex_col col2">
+						<div class="flex_col card_full flex_center padding_ver_32" id="invitation">
+							<p class="middle_thin">친구 초대 커미션</p>
+							<p class=" number big_size center">20,000₩</p>
+							<div class="s_button caption white_middle">자세히 보기</div>
+						</div>
+					</div>
+					<!--가입버튼-->
+					<div class="button btt_shadow body_medium white_bg ver_margin_1x">가입하고 혜택받기</div>
+				</div>
+			</div>
+			<!--리워드 프로그램 종료-->
+		</div>
+	</div>
+</div>
+<!-- 탑 영역 종료 -->
+<!-- 인기 커뮤니티-->
+<div class="live_area white_highlight" style="margin-top: -144px">
+	<h2 class="middle_size">도시별 커뮤니티</h2>
+	<p class="body_size요 ver_bottom_2x">각 도시별 커뮤니티에서 여행계획을 공유하고 여행친구도 찾으세요.</p>
+</div>
+<div class="slider flex_row col1" id="section1">
+	<style>#community_list>.s_card>h2{text-align: center;}</style>
+	<div class="flex_row col1" id="community_list">
+		<div class="FAB_circle" id="slide_arrow_left">
+			<img id="arrow" src="img/arrow_prev.svg">
+		</div>
+		<div class="FAB_circle" id="slide_arrow_right">
+			<img id="arrow" src="img/arrow_next.svg">
+		</div>
+		<!--섬네일-->
+		<div class="card s_card flex_col flex_center margin_r_driection" id="sg">
+			<h2 class="middle_size">싱가폴</h2>
+			<p class="caption white_middle">2122명 방문</p>
+			<p class="caption white_middle">212장소 등록</p>
+		</div>
+		<!--섬네일-->
+		<div class="card s_card flex_col flex_center margin_r_driection" id="bkk">
+			<h2 class="middle_size">싱가폴</h2>
+			<p class="caption white_middle">2122명 방문</p>
+			<p class="caption white_middle">212장소 등록</p>
+		</div>
+		<!--섬네일-->
+		<div class="card s_card flex_col flex_center margin_r_driection" id="bali">
+			<h2 class="middle_size">싱가폴</h2>
+			<p class="caption white_middle">2122명 방문</p>
+			<p class="caption white_middle">212장소 등록</p>
+		</div>
+		<!--섬네일-->
+		<div class="card s_card flex_col flex_center margin_r_driection" id="ny">
+			<h2 class="middle_size">싱가폴</h2>
+			<p class="caption white_middle">2122명 방문</p>
+			<p class="caption white_middle">212장소 등록</p>
+		</div>
+		<!--섬네일-->
+		<div class="card s_card flex_col flex_center margin_r_driection" style="margin-right: 0" id="kul">
+			<h2 class="middle_size">싱가폴</h2>
+			<p class="caption white_middle">2122명 방문</p>
+			<p class="caption white_middle">212장소 등록</p>
+		</div>
+	</div>
+	<div class="button priamry2">모두보기(16)></div>
+</div>
+<!-- USP요약-->
+<div class="live_area flex_row justify_center ver_margin_2x section_ver_padding">
+	<h2 class="big_light primary text_center ver_margin_2x">"현명한 여행객들의 커뮤니티 정글리안"</h2>
+	<div class="flex_col col3 align_center">
+		<img src="img/usp1_svg.svg" id="usp">
+		<h2 class="body_bold text_center ">Booking.com가격에 7% 캐시백</h2>
+		<p class="body_size text_center hor_margin_2x">최저가를 보장하는 부킹닷컴의 숙소에<br>캐시백 혜택을 누리세요.</p>
+	</div>
+	<div class="flex_col col3 align_center">
+		<img src="img/usp2_svg.svg" id="usp">
+		<h2 class="body_bold text_center">가장 빠르고 확실한 캐시백</h2>
+		<p class="body_size text_center hor_margin_2x">누구보다 빠릅니다!<br>체크인 당일 캐시백을 받아가세요.</p>
+	</div>
+	<div class="flex_col col3 align_center">
+		<img src="img/usp3_svg.svg" id="usp">
+		<h2 class="body_bold text_center">커뮤니티와 함께하는 여행계획</h2>
+		<p class="body_size text_center hor_margin_2x">혼자하는 여행계획 No!<br> 커뮤니티와 알찬 여행 계획을 세우세요.</p>
+	</div>
+</div>
+<!-- USP끝-->
+<!-- 계산기 섹션 -->
+<div class="white_highlight col1 ver_margin_8x" id="calculator_bg">
+	<div class="col1 bg_filter" id="bg_filter">
+		<div class="live_area flex_row justify_center section_ver_padding">
+			<h2 class="big_size text_center">정글리안 리워드 프로그램</h2>
+			<h2 class="middle_thin text_center">"이번 여행에서 얼마를 지원받을 수 있을까요?"</h2>
+			<!--계산기-->
+			<div class="flex_row col1 white_bg ver_margin_4x" id="calculator">
+				<div class="flex_col col2 align_center ver_margin_4x">
+					<h2 class="middle_size ver_margin_1x primary text_center">숙박료 7%캐시백</h2>
+					<img src="img/ic_hotel.svg" style="width:64px; height:56px;">
+					<!--계산식-->
+					<div class="flex_row col1 justify_center">
+						<div class="calculate_item">
+							<form action="">
+								<input class="calculator_value" type="text" id="days" value="6">
+							</form>
+							<p class="caption medium_empasize">숙박일</p>
+						</div>
+						<img src="img/ic_times.svg" style="width:32px; height:32px;">
+						<div class="calculate_item">
+							<form action="">
+								<input class="calculator_value number" type="text" id="days" value="60,000₩">
+							</form>
+							<p class="caption medium_empasize">숙박일</p>
+						</div>
+					</div>
+					<!--계산식 종료-->
+				</div>
+				<div class="flex_col col2 align_center ver_margin_4x">
+					<h2 class="middle_size ver_margin_1x primary text_center">친구초대 리워드</h2>
+					<img src="img/ic_invite.svg" style="width:64px; height:56px;">
+					<!--계산식-->
+					<div class="flex_row col1 justify_center">
+						<div class="calculate_item">
+							<form action="">
+								<input class="calculator_value" type="text" id="days" value="6">
+							</form>
+							<p class="caption medium_empasize">여행 계획중인 친구수</p>
+						</div>
+						<img src="img/ic_times.svg" style="width:32px; height:32px;">
+						<div class="calculate_item">
+							<form action="">
+								<input class="calculator_value number" type="text" id="days" value="60,000₩">
+							</form>
+							<p class="caption medium_empasize">초대 커미션</p>
+						</div>
+					</div>
+					<!--계산식 종료-->
+				</div>
+				<div class="flex_col col1 align_center grd1_bg ver_padding_2x" id="calcuator_result">
+					<h2 class="number big_size white_highlight text_center">105,200₩</h2>
+					<div class="button white_bg btt_shadow">가입하고 혜택받기</div>
+				</div>
+			</div>
+			<!--종료-->
+		</div>
+	</div>
+</div>
+<!-- 계산기 섹션 끝 -->
+<!-- 정글리안 초이스 -->
+<div class="col1 ver_margin_8x section_ver_padding">
+	<div class="flex_col live_area">
+		<h2 class="big_size text_center">
+			정글리안 초이스
+		</h2>
+		<h2 class="middle_thin text_center">
+			"정글리안이 추천하는 커뮤니티에서 여행계획을 세우세요"
+		</h2>
+	</div>
+	<div class="slider flex_row col1 ver_margin_4x" id="popular_cities">
+		<style>
+			#city_list>.m_card{justify-content: space-between;}
+			#city_list>.FAB_circle{margin-top:calc(160px - 24px);}
+			#city_info>h2{text-align: center; margin:64px 0 8px 0;}
+			#city_buttons>.button{margin:8px 0;}
+		</style>
+		<!--인기여행지-->
+		<h2 class="middle_size">인기 여행지</h2>
+		<p class="body_size ver_bottom_2x">
+			각 도시별 커뮤니티에서 여행 계획을 공유하고 여행 친구도 찾으세요.
+		</p>
+		<div class="flex_row col1 ver_margin_1x ver_bottom_8x" id="city_list">
+			<div class="FAB_circle" id="slide_arrow_left">
+				<img id="arrow" src="img/arrow_prev.svg">
+			</div>
+			<div class="FAB_circle" id="slide_arrow_right">
+				<img id="arrow" src="img/arrow_next.svg">
+			</div>
+			<!--섬네일-->
+			<div class="card m_card flex_col flex_center margin_r_driection" id="sg">
+				<div class="ver_margin_2x text_center" id="city_info">
+					<h2 class="middle_size">싱가폴</h2>
+					<p class="caption white_middle">2122명 방문</p>
+					<p class="caption white_middle">212장소 등록</p>
+				</div>
+				<div class="flex_row" id="city_buttons">
+					<div class="button">숙소 검색</div>
+					<div class="button white_bg">커뮤니티 방문</div>
+				</div>
+			</div>
+			<!--섬네일-->
+			<div class="card m_card flex_col flex_center margin_r_driection" id="bkk">
+				<div class="ver_margin_2x text_center" id="city_info">
+					<h2 class="middle_size">싱가폴</h2>
+					<p class="caption white_middle">2122명 방문</p>
+					<p class="caption white_middle">212장소 등록</p>
+				</div>
+				<div class="flex_row" id="city_buttons">
+					<div class="button">숙소 검색</div>
+					<div class="button white_bg">커뮤니티 방문</div>
+				</div>
+			</div>
+			<!--섬네일-->
+			<div class="card m_card flex_col flex_center margin_r_driection" id="bali">
+				<div class="ver_margin_2x text_center" id="city_info">
+					<h2 class="middle_size">싱가폴</h2>
+					<p class="caption white_middle">2122명 방문</p>
+					<p class="caption white_middle">212장소 등록</p>
+				</div>
+				<div class="flex_row" id="city_buttons">
+					<div class="button">숙소 검색</div>
+					<div class="button white_bg">커뮤니티 방문</div>
+				</div>
+			</div>
+			<!--섬네일-->
+			<div class="card m_card flex_col flex_center margin_r_driection" id="ny" style="margin-right: 0;">
+				<div class="ver_margin_2x text_center" id="city_info">
+					<h2 class="middle_size">싱가폴</h2>
+					<p class="caption white_middle">2122명 방문</p>
+					<p class="caption white_middle">212장소 등록</p>
+				</div>
+				<div class="flex_row" id="city_buttons">
+					<div class="button body_size">숙소 검색</div>
+					<div class="button white_bg body_size">커뮤니티 방문</div>
+				</div>
+			</div>
+		</div>
+		<!--인기여행지-->
+		<h2 class="middle_size">숙소별 타입</h2>
+		<p class="body_size ver_bottom_2x">
+			여러분의 여행 스타일에 맞는 숙소타입을 검색해보세요.
+		</p>
+		<style>
+			#accom_list> .m_square:before{margin-left: -16px; margin-top: 16px;}
+			#coom_list> .FAB_circle{margin-top:calc(130px - 24px);}
+		</style>
+		<div class="flex_row col1 ver_margin_1x" id="accom_list">
+			<div class="FAB_circle" id="slide_arrow_left">
+				<img id="arrow" src="img/arrow_prev.svg">
+			</div>
+			<div class="FAB_circle" id="slide_arrow_right">
+				<img id="arrow" src="img/arrow_next.svg">
+			</div>
+			<!--섬네일-->
+			<div class="card m_square flex_col justify_end margin_r_driection" id="apt">
+				<p class="body_size">00지역 000개의</p>
+				<h2 class="middle_size">아파트</h2>
+			</div>
+			<!--섬네일-->
+			<div class="card m_square flex_col justify_end margin_r_driection" id="hst">
+				<p class="body_size">00지역 000개의</p>
+				<h2 class="middle_size">호스텔</h2>
+			</div>
+			<!--섬네일-->
+			<div class="card m_square flex_col justify_end margin_r_driection" id="rst">
+				<p class="body_size">00지역 000개의</p>
+				<h2 class="middle_size">리조트</h2>
+			</div>
+			<!--섬네일-->
+			<div class="card m_square flex_col justify_end margin_r_driection" id="rk" style="margin-right: 0;">
+				<p class="body_size">00지역 000개의</p>
+				<h2 class="middle_size">료칸</h2>
+			</div>
+		</div>
+	</div>
+</div>
+<footer class="flex_row col1 padding_ver_32">
+	<style>
+		.link_item>img{width: 48px; height: 48px;}
+		.footer_item{margin:16px 0;}
+		.link>{margin-top: 16px;}
+		.link_item{margin-right: 16px;}
+	</style>
+	<div class="live_area flex_row">
+		<p class="flex_col col4" id="introduction">
+			<a class="footer_item body_medium middle_emphasis" href="">Junglian 소개</a>
+			<a class="footer_item body_medium middle_emphasis" href="">고객 센터</a>
+			<a class="footer_item body_medium middle_emphasis" href="">개인정보처리 방침</a>
+			<a class="footer_item body_medium middle_emphasis" href="">이용약관</a>
+		</p>
+		<p class="flex_col col4" id="info">
+			<a class="footer_item body_medium middle_emphasis" href="">FAQ</a>
+			<a class="footer_item body_medium middle_emphasis" href="">공지사항</a>
+			<a class="footer_item body_medium middle_emphasis" href="">이벤트</a>
+		</p>
+		<p class="flex_col col4" id="info">
+			<a class="footer_item body_medium middle_emphasis" href="">커뮤니티 가이드라인</a>
+			<a class="footer_item body_medium middle_emphasis" href="">리워드 프로그램</a>
+		</p>
+		<div class="link flex_row col4">
+			<p class="footer_item body_medium middle_emphasis" style="width:100%;">Follow us</p>
+			<p class="link_item">
+				<img src="img/link_fb.svg">
+			</p>
+			<p class="link_item">
+				<img src="img/link_ig.svg">
+			</p>
+			<p class="link_item">
+				<img src="img/link_kakao.svg">
+			</p>
+			<p class="link_item">
+				<img src="img/link_naver.svg">
+			</p>
+			<p class="link_item" style="margin-right:0;"></p>
+		</div>
+		<div class="caption" style="width: 100%; margin:32px 0 64px 0">
+			<hr>
+			<p class="low_empasize" style="width:50%; margin:8px 0;">Copyright ⓒ 주식회사 레저벤처 All Rights Reserved.// 사업자등록번호 : 731-87-00594 통신판매업신고 : 제 2017-서울마포-0045호, 서울 강남구 월드컵북로2길 16, 3층 (대표자 : 심영준)</p>
+		</div>
+	</div>
+</footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

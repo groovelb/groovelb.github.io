@@ -1,0 +1,60 @@
+/*사이드 메뉴*/
+.slide_menu{
+	display: flex;
+	flex-direction: column;
+	width: 196px;
+}
+.slide_item{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: calc(100% - 16px);
+	height: calc(64px - 16px);
+	margin:8px;
+	border-radius: 4px;
+	align-items: center;
+}
+.extend_item{
+	margin-left: 32px;
+}
+.extend_item> .slide_item{
+	width: 144px !important;
+	margin: 8px 0;
+}
+#selected_slide_item{
+	color: #ffffff;
+	background-color: #7c4dff;
+	
+}
+#selected_extend_item{
+	color: #7c4dff;
+	
+}
+.slide_item>img{
+	width: 24px;
+	height: 24px;
+	margin: 0 8px 0 16px;
+}
+.slide_text{
+	font-family: 'Noto Sans CJK KR';
+	font-size: 14px;
+	font-weight: 300;
+	text-align: center;
+	letter-spacing: 0.01em;
+	line-height: 32px;
+}
+
+.content_col{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-content: flex-start;
+	align-items: flex-start;
+	width: calc(100% - 196px - 64px);
+	padding-left: 64px;
+}
+.content_col_narrow{
+	width: 544px;
+	padding:0;
+	margin:0 auto;
+}

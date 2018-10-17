@@ -1,0 +1,456 @@
+/*header*/
+.header{
+	height: 64px;
+	position: absolute;
+	top:0;
+	left:0;
+	z-index: 999;
+}
+.box_shadow{
+	box-shadow: 0 4px 16px 0 rgba(0,0,0,.12), 0 0 8px 0 rgba(0,0,0,.12);
+}
+
+#header_logo{
+	height: 36px;
+	width: auto;
+	margin-right: 64px;
+}
+.text_menu{
+	height: 64px;
+	font-size: 14px;
+	font-family: notosans_cjk_medium;
+}
+.text_menu_selected{
+	padding-top: 4px;
+	font-weight: 500 !important;
+	border-width: 0 0 2px 0;
+	border-style: solid;
+	border-color: #ffffff;
+}
+
+
+/***form***/
+/*text field*/
+.searchfield{
+	height: 64px;
+	padding-left: 16px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.searchfield>img{
+	width: 24px;
+	height: 24px;
+	margin-right: 16px;
+}
+.textfield{
+	height: 48px;
+	padding-left: 16px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	flex-wrap: wrap;
+	border: 1px solid #ccc;
+    border-radius: 4px;
+	border-radius: 4px;
+	margin-bottom: 16px;
+	font-family: notosans_cjk_regular;
+}
+.textfield>img{
+	width: 24px;
+	height: 24px;
+	margin-right: 16px;
+}
+/* The checkbox_container */
+.checkbox_container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 32px;
+    height: 25px;
+    margin-right: 32px;
+    /*margin-bottom: 12px;*/
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox_container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox_container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox_container input:checked ~ .checkmark {
+    background-color: #7c4dff;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox_container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox_container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+
+/*테이블*/
+.table{
+	width: 100%;
+}
+.table td, table th{
+	text-align: center;
+	height: 36px;
+}
+.table th{
+	font-weight: 400;
+	color: #ffffff;
+	background-color: rgba(136,125,255,0.85);
+}
+.table td{
+	font-weight: 300;
+	color: #686868;
+}
+a.letter_link{
+	width: 64px;
+	margin:0 auto;
+	font-weight: 500;
+	/*color: #887DFF;*/
+	text-decoration: none;
+}
+
+/*custom select*/
+select.styled-select{
+   background: transparent;
+   border: none;
+   font-size: 14px;
+   height: 29px;
+   padding: 5px; /* If you add too much padding here, the options won't show in IE */
+   width: 128px;
+   height: 52px;
+   border: 1px solid #ccc;
+   font-family: notosans_cjk_regular;
+}
+
+
+.tf_full{
+ 	width: calc(100% - 16px);
+}
+.tf_half{
+	width: calc(50% - 17px);
+}
+.border_bottom{
+	border: solid 1px #e5e5e5;
+	border-width: 0 0 1px 0;
+}
+.border_right{
+	border: solid 1px #e5e5e5;
+	border-width: 0 1px 0 0;
+}
+
+/*Button*/
+.button{
+	display: flex;
+	padding:0 16px;
+	align-items: center;
+	justify-content: center;
+	min-width: 64px;
+	height: 36px;
+	border-radius: 4px;
+	cursor: pointer;
+	font-family: notosans_cjk_regular;
+}
+.big_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    padding: 0 32px;
+    border-radius: 4px;
+    font-family: 'Noto Sans CJK KR';
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    cursor: pointer;
+}
+.s_button{
+	display: flex;
+	padding:0 16px;
+	align-items: center;
+	justify-content: center;
+	height: 24px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.button>img{
+	margin-right: 4px;
+}
+.btt_shadow{
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,.22), 0 0 4px 0 rgba(0,0,0,.22);
+}
+.search_button{
+	display: flex;
+	padding:0 16px;
+	align-items: center;
+	justify-content: center;
+	height: 56px;
+	border-radius: 4px;
+	cursor: pointer;
+	background-color: #00E676;
+}
+.FAB_circle{
+	z-index: 999;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	width: 48px;
+	height: 48px;
+	border-radius: 24px;
+	background-color: rgba(255,255,255,0.85);
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,.12), 0 0 4px 0 rgba(0,0,0,.12);
+}
+
+.btt_fullsize{
+	width: calc(100% - 32px);
+}
+.black_border{
+	border: solid 1px;
+	color: #383838 !important;
+	border-color: #686868 !important;
+}
+.white_border{
+	border: solid 1px;
+	color: #ffffff;
+	border-color: #ffffff;
+}
+.white_bg{
+	color: #383838;
+	background-color: #ffffff;
+	border-width: 0;
+}
+
+/**Card**/
+.card_full{
+	border-radius: 4px;
+	margin:8px;
+	width:calc(100% - 16px);
+}
+.padding_ver_32{
+	padding-top:32px;
+	padding-bottom:32px;
+}
+.card{
+	display: flex;
+	flex-direction: column;
+	border-radius: 4px;
+	background-size: cover;
+	align-content: flex-start;
+	/*box-shadow: 0 4px 16px 0 rgba(0,0,0,.12), 0 0 8px 0 rgba(0,0,0,.12);*/
+}
+.card_img>#date{
+	width:42px;
+	margin-left: 8px;
+	position: absolute;
+	align-self: flex-start;
+}
+.card>#date{
+	width:42px;
+	margin-top: 8px;
+	margin-left: 8px;
+	align-self: flex-start;
+}
+
+.card_border{
+	border:solid 1px #ccc;
+}
+.top_radious{
+	border-radius: 4px 4px 0 0;
+}
+.bottom_radious{
+	border-radius: 0 0 4px 4px;
+}
+.card > *{
+	z-index: 1;
+}
+.card_3{
+	width: calc((100% - 32px)/3);
+}
+/*card size*/
+/*small*/
+.s_card{
+	width: 203px;
+	height: 203px;
+}
+.s_card:before{
+	content: "";
+    display: block;
+    background: rgba(0,0,0,0.32);
+    width: 203px;
+    height: 203px;
+    border-radius: 4px;
+    position: absolute;
+}
+/*middle*/
+.m_card{
+	width: calc(258px);
+	height: calc(320px);
+}
+.m_card:before{
+	width: calc(258px);
+	height: calc(320px);
+	content: "";
+    display: block;
+    background: rgba(0,0,0,0.32);
+    border-radius: 4px;
+    position: absolute;
+}
+.b_card{
+	width: 340px;
+	height: 203px;
+}
+.b_card:before{
+	width: 340px;
+	height: 203px;
+	content: "";
+    display: block;
+    background: rgba(0,0,0,0.32);
+    border-radius: 4px;
+    position: absolute;
+}
+/*square*/
+.m_square{
+	width: calc(258px - 32px);
+	height: calc(258px - 32px);
+	padding:16px;
+}
+.m_square:before{
+	width: calc(258px);
+	height: calc(258px);
+	content: "";
+    display: block;
+    background: rgba(0,0,0,0.32);
+    border-radius: 4px;
+    position: absolute;
+}
+
+/*Card_image*/
+.card_img{
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	width: 100%;
+	padding: 8px 0 calc(75% - 8px - 34px) 0;
+	background-size:cover;
+	background-origin: center;
+	background-size:cover;
+	border-radius: 4px 4px 0 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.card_img>#userprofile{
+	margin-left: 8px;
+	color: #ffffff;
+	text-shadow: 1px 1px 2px #383838;
+}
+#mating>.card_img{
+	border-radius: 4px 4px 0 0;
+}
+#mating>#mating_info{
+	border-radius: 0 0 4px 4px;
+}
+/*image sizes*/
+/*user info height: 34px*/
+.long{
+	padding: 8px 0 calc(125% - 8px - 34px) 0;
+}
+.middle{
+	padding: 8px 0 calc(100% - 8px - 34px) 0;
+}
+
+/*List*/
+.list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 80px;
+}
+.full_border{
+	 border: solid 0.5px #eeeeee;
+}
+.under_border{
+	 border: solid 0.5px #eeeeee;
+	 border-width: 0 0 0.5px 0;
+}
+
+/*Profiel pic*/
+.profile_pic_s{
+	width: 34px;
+	height: 34px;
+	border-radius: 50%;
+	background-size: cover;
+	border: solid 2px #f0f0f0;
+}
+.profile_pic_middle{
+	width: 64px;
+	height: 64px;
+	border-radius: 50%;
+	background-size: cover;
+	border: solid 2px #f0f0f0;
+}
+.profile_pic_big{
+	width: 128px;
+	height: 128px;
+	border-radius: 50%;
+	background-size: cover;
+	border: solid 2px #f0f0f0;
+}
+
+/*Chips*/
+.chip{
+	display: flex;
+	flex-direction: row;
+	padding:8px;
+	height: 16px;
+	border-radius: 4px;
+}
+
+
+#user_list_thum>.profile_pic_s{margin-left: -18px;}
+

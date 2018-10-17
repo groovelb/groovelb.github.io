@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/layout_common.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_main.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_community.css">
+	<link rel="stylesheet" type="text/css" href="css/type.css">
+	<link rel="stylesheet" type="text/css" href="css/color.css">
+	<link rel="stylesheet" type="text/css" href="css/components.css">
+	<link rel="stylesheet" type="text/css" href="css/img.css">
+	<style>
+		.card_img{border-radius: 4px;}
+	</style>
+</head>
+<body class="black_highlight">
+<!-- 헤더 -->
+<div class="header flex_row live_area black_highlight box_shadow" id="header">
+	<div class="flex_row col2  align_center justify_start" id="left">
+		<img id="header_logo" src="img/logo_ver3.svg">
+		<div class="text_menu flex_row align_center hor_margin_2x body_size" id="selected">
+			<a href="index.html">호텔</a>
+		</div>
+		<div class="text_menu flex_row align_center body_size hor_margin_2x">
+			<a href="community_main.html">커뮤니티</a>
+		</div>
+	</div>
+	<div class="flex_row col2 align_center justify_end" id="right">
+		<a class="text_menu flex_row align_center body_size hor_margin_2x">FAQ</a>
+		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="reward.html">캐시백 신청</a>
+		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="message_main.html">메세지</a>
+		<a class="flex_row align_center hor_margin_2x" id="user_info" style="margin-right: 0" href="my_page.html">
+			<div class="profile_pic_s" id="pf1"></div>
+			<div class="flex_col">
+				<p class="body_bold hor_margin_tiny">username</p>
+				<p class="caption hor_margin_tiny">23,112₩</p>
+			</div>
+		</a>
+	</div>
+</div>
+<!--컨텐츠 영역-->
+<div class="live_area" style="padding-top: 128px;">
+	<div class="flex_row col1">
+		<div class="slide_menu">
+			<a href="my_page.html" class="slide_item">
+				<img src="img/ic_my_profile.svg">
+				내 프로필
+			</a>
+			<a href="my_travel.html" class="slide_item" id="selected_slide_item">
+				<img src="img/ic_my_travel_white.svg">
+				내 여행
+			</a>
+			<a  href="reward.html" class="slide_item">
+				<img src="img/ic_reward.svg">
+				리워드
+			</a>
+		</div>
+		<div class="content_col" style="align-items: center;">
+			<!--소개-->
+			<div class="flex_col col1 ver_bottom_4x align_center" style="width:60%; margin-left:20%; margin-right: 20%;">
+				<div class="profile_pic_big" id="pf1"></div>
+				<h2 class="middle_size margin_1x ver_bottom_2x" style="width: auto">Username</h2>
+				<p class="body_size black_highlight text_center">
+					휴양지 전문 여행가입니다. 남미, 남유럽, 미주 12개 도시 휴향지 탐방기 구경하세요! 11/01 ~ 11/23 아르헨티나 여행 예정!
+				</p>
+				<div class="flex_row col1 justify_center ver_margin_2x" id="user_meta">
+					<p class="flex_row middle_emphasis align_center margin_1x" id="cities"><img src="img/ic_city.svg">12개 도시 방문</p>
+				<p class="flex_row middle_emphasis align_center margin_1x" id="locations"><img src="img/ic_location.svg">25개 장소 등록</p>
+				</div>
+			</div>
+			
+			<!--내 여행 섹션 -->
+			<div class="flex_row col1 space_between ver_bottom_8x">
+				<div class="flex_row col1 space_between align_center ver_bottom_2x">
+					<h2 class="middle_size" style="width:auto">내 여행</h2>
+					<select class="styled-select body_size black_border" name="public_setting" style="width:80px; height: 38px;">
+					    <option value="open">공개</option>
+					    <option value="closed">비공개</option>
+				  </select>
+				</div>
+				<a class="card card_3" href="travel_page.html">
+					<div class="card_img" id="sg">
+					</div>
+					<div class="travel_info margin_1x">
+						<h2 class="body_bold">싱가폴 여행</h2>
+						<p class="caption middle_emphasis">OCT 30 ~ NOV 12, 2018</p>
+					</div>
+				</a>
+				<div class="card card_3">
+					<div class="card_img" id="kul">
+					</div>
+					<div class="travel_info margin_1x">
+						<h2 class="body_bold">쿠알라룸프르 여행</h2>
+						<p class="caption middle_emphasis">OCT 30 ~ NOV 12, 2018</p>
+					</div>
+				</div>
+				<div class="card card_3" style="margin-right: 0">
+					<div class="add_travel">
+						<img src="img/ic_add_2ndp.svg" style="width:96px; height:96px; padding:calc(37.5% - 48px - 17px)  calc(50% - 48px)">
+					</div>
+					<div class="travel_info margin_1x">
+						<h2 class="body_size text_center low_emphasis">새로운 계획을 추가하세요!</h2>
+					</div>
+				</div>
+			</div>
+			<!--내 여행 섹션 종료-->
+			<!--내 트래블 로그 섹션 -->
+			<div class="flex_row col1">
+				<div class="flex_row col1 space_between align_center ver_bottom_2x">
+					<h2 class="middle_size" style="width:auto">내 트래블 로그</h2>
+					<div class="flex_row">
+						<select class="styled-select body_size black_border" name="public_setting" style="width:80px; height: 38px; margin-right: 16px;">
+						    <option value="open">공개</option>
+						    <option value="closed">비공개</option>
+					  </select>
+					  <div class="button black_border"><img src="img/ic_write.svg">트래블로그 쓰기</div>
+					</div>
+				</div>
+				<div class="flex_row col1">
+					<div class="flex_col col3">
+						<!--포스트-->
+						<style>#location>img{width: 16px; height:16px ; margin-left:-4px;}</style>
+						<div class="card card_full">
+							<div class="card_img short" id="trv1">
+							</div>
+							<div class="post_info margin_1x">
+								<h2 class="body_size">포스트 첫문장 한줄로 텍스트 워핑</h2>
+								<p class="flex_row align_center caption middle_emphasis" id="location"><img src="img/ic_location.svg">Location, City</p>
+							</div>
+						</div>
+						<!--포스트-->
+						<div class="card card_full">
+							<div class="card_img long" id="trv2">
+							</div>
+							<div class="post_info margin_1x">
+								<h2 class="body_size">포스트 첫문장 한줄로 텍스트 워핑</h2>
+
+								<p class="flex_row align_center caption middle_emphasis ver_margin_tiny" id="location"><img src="img/ic_location.svg">Location, City</p>
+							</div>
+						</div>
+					</div>
+					<div class="flex_col col3">
+						<!--포스트-->
+						<div class="card card_full">
+							<div class="card_img middle" id="trv3">
+							</div>
+							<div class="post_info margin_1x">
+								<h2 class="body_size">포스트 첫문장 한줄로 텍스트 워핑</h2>
+								<p class="flex_row align_center caption middle_emphasis ver_margin_tiny" id="location"><img src="img/ic_location.svg">Location, City</p>
+							</div>
+						</div>
+						<!--포스트-->
+						<div class="card card_full">
+							<div class="card_img long" id="trv4">
+							</div>
+							<div class="post_info margin_1x">
+								<h2 class="body_size">포스트 첫문장 한줄로 텍스트 워핑</h2>
+								<p class="flex_row align_center caption middle_emphasis ver_margin_tiny" id="location"><img src="img/ic_location.svg">Location, City</p>
+							</div>
+						</div>
+					</div>
+					<div class="flex_col col3">
+						<!--포스트-->
+						<div class="card card_full">
+							<div class="card_img short" id="trv5">
+							</div>
+							<div class="post_info margin_1x">
+								<h2 class="body_size">포스트 첫문장 한줄로 텍스트 워핑</h2>
+								<p class="flex_row align_center caption middle_emphasis ver_margin_tiny" id="location"><img src="img/ic_location.svg">Location, City</p>
+							</div>
+						</div>
+						<!--포스트-->
+						<div class="card card_full">
+							<div class="card_img short" id="trv6">
+							</div>
+							<div class="post_info margin_1x">
+								<h2 class="body_size">포스트 첫문장 한줄로 텍스트 워핑</h2>
+								<p class="flex_row align_center caption middle_emphasis ver_margin_tiny" id="location"><img src="img/ic_location.svg">Location, City</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--트래블로그 섹션끝-->
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/layout_common.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_main.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_community.css">
+	<link rel="stylesheet" type="text/css" href="css/type.css">
+	<link rel="stylesheet" type="text/css" href="css/color.css">
+	<link rel="stylesheet" type="text/css" href="css/components.css">
+	<link rel="stylesheet" type="text/css" href="css/img.css">
+</head>
+<body class="black_highlight">
+<!-- 헤더 -->
+<div class="header flex_row live_area black_highlight box_shadow" id="header">
+	<div class="flex_row col2  align_center justify_start" id="left">
+		<img id="header_logo" src="img/logo_ver3.svg">
+		<div class="text_menu flex_row align_center hor_margin_2x body_size" id="selected">
+			<a href="index.html">호텔</a>
+		</div>
+		<div class="text_menu flex_row align_center body_size hor_margin_2x">
+			<a href="community_main.html">커뮤니티</a>
+		</div>
+	</div>
+	<div class="flex_row col2 align_center justify_end" id="right">
+		<a class="text_menu flex_row align_center body_size hor_margin_2x">FAQ</a>
+		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="reward.html">캐시백 신청</a>
+		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="message_main.html">메세지</a>
+		<a class="flex_row align_center hor_margin_2x" id="user_info" style="margin-right: 0" href="my_page.html">
+			<div class="profile_pic_s" id="pf1"></div>
+			<div class="flex_col">
+				<p class="body_bold hor_margin_tiny">username</p>
+				<p class="caption hor_margin_tiny">23,112₩</p>
+			</div>
+		</a>
+	</div>
+</div>
+<!--컨텐츠 영역-->
+<div class="live_area" style="padding-top: 128px;">
+	<div class="flex_row col1">
+		<div class="slide_menu">
+			<a href="my_page.html" class="slide_item" id="selected_slide_item">
+				<img src="img/ic_my_profile_white.svg">
+				내 프로필
+			</a>
+			<a href="my_travel.html" class="slide_item">
+				<img src="img/ic_my_travel.svg">
+				내 여행
+			</a>
+			<a  href="reward.html" class="slide_item">
+				<img src="img/ic_reward.svg">
+				리워드
+			</a>
+		</div>
+		<div class="content_col content_col_narrow" style="align-items: center;">
+			<div class="profile_pic_big" id="pf1"></div>
+			<p class="caption_bold center ver_bottom_4x priamry2">사진바꾸기</p>
+			<h2 class="body_bold">기본정보</h2>
+			<form class="flex_col col1 ver_bottom_4x" action="">
+				<label class="label body_size ver_margin_1x">아이디</label>
+				<input class="textfield body_size" type="text" id="user_id" name="user_id" placeholder="아이디 입력해주세요">
+				<label class="label body_size ver_margin_1x">이름</label>
+				<input class="textfield body_size" type="text" id="name" name="name" placeholder="이름을 입력해주세요">
+				<label class="label body_size ver_margin_1x">소개</label>
+				<input class="textfield body_size" type="text" id="name" name="name" placeholder="어떤 여행을 좋아하는지 소개해주세요">
+			</form>
+			<h2 class="body_bold">개인정보</h2>
+			<p class="caption low_emphasis ver_margin_1x" style="width:100%;">아래의 개인정보는 다른 정글리안들에게 공개되지 않습니다.</p>
+			<form class="flex_col col1 ver_bottom_4x" action="">
+				<label class="label body_size ver_margin_1x">전화번호</label>
+				<input class="textfield body_size" type="text" id="name" name="name" placeholder="전화번호를 입력해주세요">
+				<label class="label body_size ver_margin_1x">이메일</label>
+				<input class="textfield body_size" type="text" id="name" name="name" placeholder="이메일을 입력해주세요">
+				<label class="label body_size ver_margin_1x">계좌번호</label>
+				<div class="flex_row col1 space_between">
+					<select class="styled-select body_size" name="bank">
+					    <option value="bankname">우리</option>
+					    <option value="bankname">국민</option>
+					    <option value="bankname">신한</option>
+					    <option value="bankname">농협</option>
+				  </select>
+					<input class="textfield body_size" type="text" id="name" name="name" placeholder="계좌번호을 입력해주세요" style="width:calc(100% - 128px - 16px - 16px);">
+				</div>
+			</form>
+			<div class="button primary_bg white_highlight" style="width: 144px; align-self: flex-end; margin-right:0">저장하기</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
