@@ -17,7 +17,7 @@
 	<div class="flex_row col2  align_center justify_start" id="left">
 		<img id="header_logo" src="img/logo_ver3.svg">
 		<div class="text_menu flex_row align_center hor_margin_2x body_size" id="selected">
-			<a href="index.html">호텔</a>
+			<a href="index_loggedin.html">호텔</a>
 		</div>
 		<div class="text_menu flex_row align_center body_size hor_margin_2x">
 			<a href="community_main.html">커뮤니티</a>
@@ -97,9 +97,20 @@
 
 		<h2 class="middle_size ver_bottom_2x">적립금 캐시백 신청</h2>
 		<form class="flex_row col1" style="justify-content: space-between;" action="">
-			<style>input.col2 {width: calc(50% - 16px - 2px - 8px);}</style>
+			<style>
+				input.col2{width: calc(50% - 16px - 2px - 8px);}
+				#account_field{width: calc(50% - 8px);}
+			</style>
 			<input class="textfield body_size col2" type="text" id="name" name="name" placeholder="이름">
-			<input class="textfield body_size col2" type="text" id="account_num" name="account_num" placeholder="은헹/계좌번호">
+			<div class="flex_row col2 space_between" id="account_field">
+				<select class="styled-select body_size" name="bank">
+				    <option value="bankname">우리</option>
+				    <option value="bankname">국민</option>
+				    <option value="bankname">신한</option>
+				    <option value="bankname">농협</option>
+			  </select>
+				<input class="textfield body_size" type="text" id="name" name="name" placeholder="계좌번호을 입력해주세요" style="width:calc(100% - 64px - 8px - 16px);">
+			</div>
 			<input class="textfield body_size col2" type="text" id="email" name="email" placeholder="이메일">
 			<input class="textfield body_size col2" type="text" id="전화번호" name="전화번호" placeholder="전화번호">
 			<div class="button primary_bg ver_bottom_2x white_highlight box_shadow" style="width: 100%">캐시백 신청하기</div>

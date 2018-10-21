@@ -22,6 +22,9 @@
 body{
 	font-family: notosans_cjk_light;
 }
+h2{
+	display: inline-block;
+}
 
 /*Roboto*/
 @font-face{
@@ -54,8 +57,15 @@ body{
 	font-weight: 300;
 }
 .middle_size{
-	font-size: 22px;
+	font-size: 18px;
 	font-family: notosans_cjk_medium;
+	font-weight: 500;
+	line-height: 32px;
+	letter-spacing: 0.28px;
+}
+.middle_regular{
+	font-size: 18px;
+	font-family: notosans_cjk_regular;
 	font-weight: 500;
 	line-height: 32px;
 	letter-spacing: 0.28px;
@@ -76,7 +86,7 @@ body{
 	font-weight: 300;
 }
 .middle_thin{
-	font-size: 22px;
+	font-size: 18px;
 	font-family: notosans_cjk_thin;
 	font-weight: 100;
 	line-height: 28px;
@@ -84,7 +94,13 @@ body{
 .big_size{
 	font-size: 36px;
 	font-family: notosans_cjk_medium;
-	line-height: 64px;
+	line-height: 48px;
+	font-weight: 500;
+}
+.big_bold{
+	font-size: 36px;
+	font-family: notosans_cjk_bold;
+	line-height: 48px;
 	font-weight: 500;
 }
 .q_mark{
@@ -97,7 +113,7 @@ body{
 .big_light{
 	font-size: 36px;
 	font-family: notosans_cjk_light;
-	line-height: 64px;
+	line-height: 48px;
 	font-weight: 100;
 }
 .big_thin{
@@ -122,6 +138,10 @@ body{
 }
 .alphabet{
 	font-family: roboto_regular !important;
+}
+.big_alphabet{
+	font-size: 48px;
+	font-family: roboto_bold !important;
 }
 
 .card>h2{

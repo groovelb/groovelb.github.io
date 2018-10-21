@@ -1,8 +1,14 @@
 /*사이드 메뉴*/
 .slide_menu{
+	margin-top: -32px;
 	display: flex;
 	flex-direction: column;
-	width: 196px;
+	width: 194px;
+	border-right: 1px solid #eeeeee;
+}
+.slide_menu>.slide_menu{
+	margin-top: 0 !important;
+	border-right: 0 !important; 
 }
 .slide_item{
 	display: flex;
@@ -57,4 +63,11 @@
 	width: 544px;
 	padding:0;
 	margin:0 auto;
+}
+
+.q_textarea{
+	
+	padding: 8px;
+	width: calc(100% - 16px);
+	
 }

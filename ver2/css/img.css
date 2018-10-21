@@ -1,6 +1,7 @@
-/*리워드 프로그램*/
-#checkin{
-	background-image: url(../img/img_checkin.jpg);
+/*아이콘 스몰*/
+.icon_s{
+	width: 24px;
+	height: 24px
 }
 
 /*커뮤니티 썸네일*/
@@ -125,11 +126,23 @@
 #trv14{
 	background-image: url(../img/travel_img/trv14.jpg);
 }
+#little_india{
+	background-image: url(../img/little_india.jpeg);
+}
 
 
 /*맵*/
-#map{
+#map_thumb{
+	background-image: url(../img/map_thumb.png);
+}
+#map_img{
 	 background-image:url(../img/city_image/map_thumb_sg.png);
 	 width: 356px;
 	 height: 203px;
+}
+#mating_location{
+	background-image:url(../img/img_location.png);
+}
+#place_img{
+	background-image:url(../img/img_zouk.jpg);
 }

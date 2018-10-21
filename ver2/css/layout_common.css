@@ -32,6 +32,7 @@ hr{
 	display: flex;
 	flex-direction: column;
 	align-content: flex-start;
+	flex-shrink: 0;
 	/*justify-content: flex-start;*/
 }
 .flex_col>*{
@@ -45,6 +46,9 @@ hr{
 }
 .justify_center{
 	justify-content: center;
+}
+.align_end{
+	align-items: flex-end;
 }
 .space_between{
 	justify-content: space-between;
@@ -121,6 +125,9 @@ hr{
 	margin-top: 8px !important;
 	margin-bottom: 8px !important;
 }
+.ver_top_1x{
+	margin-top: 8px;
+}
 .ver_bottom_1x{
 	margin-bottom: 8px;
 }
@@ -139,11 +146,20 @@ hr{
 .hor_margin_tiny{
 	margin-left:8px;
 }
+.hor_margin_2x{
+	margin-left:16px;
+}
 .padding_1x{
 	padding:16px;
 }
+.padding_2x{
+	padding:32px;
+}
 .padding_tinny{
 	padding:8px;
+}
+.ver_padding_tinny{
+	padding: 8px 0;
 }
 .ver_padding_1x{
 	padding: 16px 0;

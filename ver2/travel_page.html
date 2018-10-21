@@ -20,7 +20,7 @@
 	<div class="flex_row col2  align_center justify_start" id="left">
 		<img id="header_logo" src="img/logo_ver3.svg">
 		<div class="text_menu flex_row align_center hor_margin_2x body_size" id="selected">
-			<a href="index.html">호텔</a>
+			<a href="index_loggedin.html">호텔</a>
 		</div>
 		<div class="text_menu flex_row align_center body_size hor_margin_2x">
 			<a href="community_main.html">커뮤니티</a>
@@ -51,6 +51,20 @@
 				<img src="img/ic_my_travel_white.svg">
 				내 여행
 			</a>
+			<div class="slide_menu extend_item">
+				<a href="my_travel.html">
+					<div class="slide_item" id="selected_extend_item">
+						<img src="img/ic_calendar_p.svg">
+						내 여행계획
+					</div>
+				</a>
+				<a href="my_community.html">
+					<div class="slide_item">
+						<img src="img/ic_community_black.svg">
+						커뮤니티
+					</div>
+				</a>
+			</div>
 			<a  href="reward.html" class="slide_item">
 				<img src="img/ic_reward.svg">
 				리워드
@@ -126,7 +140,7 @@
 				<div class="flex_col col2">
 					<h2 class="middle_size">여행 계획</h2>
 					<p class="body_size ver_bottom_2x">언제 어디갈지 정글리안과 함께 기록하세요.</p>
-					<div class="card card_full flex_center" id="map">
+					<a class="card card_full flex_center" id="map_img" href="plan.html">
 						<div class="flex_col padding_1x primary2_bg box_shadow" id="plan">
 							<div class="flex_row justify_center">
 								<img src="img/ic_add_location.svg">
@@ -135,7 +149,7 @@
 							</div>
 							<p class="body_size">12일간의 일정을 함께 계획하세요!</p>
 						</div>
-					</div>
+					</a>
 				</div>
 				<!--여행계획 끝-->
 			</div>
