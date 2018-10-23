@@ -11,7 +11,7 @@ li{
 input[type=text].calculator_value{
 	width: 90%;
 	background-color: rgba(0,0,0,0);
-	border-color: #4b4b4b;
+	border-color: #cccccc;
 	border-width: 0 0 1px 0;
 	font-family: 'Noto Sans KR', sans-serif;
 	font-size: 18px;
