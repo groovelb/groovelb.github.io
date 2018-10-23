@@ -370,6 +370,27 @@ select.styled-select{
 	align-content: flex-start;
 	/*box-shadow: 0 4px 16px 0 rgba(0,0,0,.12), 0 0 8px 0 rgba(0,0,0,.12);*/
 }
+.sr_card{
+	width: 100%;
+}
+.sr_card>.content{
+	width: 100%;
+	height: 100%;
+	padding: 32px 0;
+	background: rgba(0,0,0,0.32);
+}
+.card>.content{
+	width: 100%;
+	height: 100%;
+	padding: 32px 0;
+	background: rgba(0,0,0,0.32);
+}
+.card_full>.content{
+	width: 100%;
+	height: 100%;
+	padding: 32px 0;
+	background: rgba(0,0,0,0.32);
+}
 .card_img>#date{
 	width:42px;
 	margin-left: 8px;
@@ -575,7 +596,7 @@ select.styled-select{
 	/*padding-top: 36px;*/
 	position:fixed;
 	top: 20%;
-	width:60%;
+	width:calc(1080px * 0.6);
 	z-index: -999;
 	display: none;
 }
@@ -586,6 +607,9 @@ select.styled-select{
     position: absolute;
     top: 8px;
     right: 8px;
+}
+.m_dialog{
+	width:calc(1080px * 0.3);
 }
 .s_dialog{
 	position: absolute !important;
