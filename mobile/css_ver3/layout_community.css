@@ -47,6 +47,8 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
+	align-content: flex-start;
+	align-items: flex-start;
 	width: calc(100% - 32px);
 	padding: 64px 16px 0px 16px;
 }
@@ -80,10 +82,6 @@
 }
 .info_field > input{
 	width: calc(100% - 16px) !important;
-}
-.content_col>h2{
-	color: #262626;
-	margin:16px 0 4px 0;
 }
 .content_col>p{
 	margin:4px 0;

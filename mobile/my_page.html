@@ -5,13 +5,14 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css_ver3/layout_main.css">
-	<link rel="stylesheet" type="text/css" href="
-	css_ver3/layout_common.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/layout_common.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_common.css">
 	<link rel="stylesheet" type="text/css" href="css_ver3/layout_community.css">
-	<link rel="stylesheet" type="text/css" href="css_ver3/components.css">
+	<link rel="stylesheet" type="text/css" href="css/components.css">
+	<link rel="stylesheet" type="text/css" href="css/img.css">
 	<link rel="stylesheet" type="text/css" href="css_ver3/form.css">
-	<link rel="stylesheet" type="text/css" href="css_ver3/type.css">
-	<link rel="stylesheet" type="text/css" href="css_ver3/color.css">
+	<link rel="stylesheet" type="text/css" href="css/type.css">
+	<link rel="stylesheet" type="text/css" href="css/color.css">
 	<link rel="stylesheet" type="text/css" href="css_ver3/align.css">
 	<link rel="stylesheet" type="text/css" href="css_ver3/menu_transition.css">
 </head>
@@ -29,103 +30,106 @@
 		<div class=menu_item>
 			<img src="img/ic_message_black.svg">
 		</div>
-		<a href="my_page.html" class="profile_pic" id="pf2" style="width:24px; height:24px;">
+		<a href="my_page.html" class="profile_pic_s" id="pf2" style="width:24px; height:24px;">
 		</a>
 	</div>
 </div>
 <!--슬라이드 메뉴-->
 <div class="main_menu">
-	<div class="menu_list">
+	<a href="my_page.html" class="menu_list">
 		마이페이지
-	</div>
-	<div class="menu_list">
+	</a>
+	<a href="profile.html" class="menu_list">
 		내 프로필
-	</div>
-	<div class="menu_list">
+	</a>
+	<a href="my_travel.html" class="menu_list">
 		내 여행
-	</div>
-	<div class="menu_list">
+	</a>
+	<a href="chashback.html" class="menu_list">
 		리워드
-	</div>
-	<div class="menu_list">
+	</a>
+	<a href="community.html" class="menu_list">
 		커뮤니티
-	</div>
-	<div class="menu_list">
+	</a>
+	<a href="cashback.html" class="menu_list">
 		캐시백 신청
-	</div>
-	<div class="menu_list">
+	</a>
+	<a class="menu_list">
 		FAQ
-	</div>
+	</a>
 	<hr style="width: calc(100% - 64px);">
-	<div class="menu_list center">
+	<a class="menu_list center">
 		<div class="button border_btt" style="width: calc(100% - 16px); margin:0;">로그아웃</div>
-	</div>
+	</a>
 </div>
 <!--컨텐츠-->
 <style>.section_top>.button{margin-right: 0}</style>
 <div class="content_col">
 	<!--내 프로필-->
-	<div class="contents_block_1_row flex_item_center flex_item_space_between" style="margin:16px 0;">
-		<div class="flex_row flex_item_center">
-			<div href="my_page.html" class="profile_pic" id="pf2" style="width:64px; height:64px; border-width: 2px;">
+	<div class="flex_row col1 align_center space_between" style="margin:16px 0;">
+		<div class="flex_col col1 align_center">
+			<div href="my_page.html" class="profile_pic_middle" id="pf2" style="width:64px; height:64px; border-width: 2px;">
 			</div>
-			<div>
-				<h2 class="normal_size" style="width: auto; font-weight: 500; margin:0">username</h2>
-				<p class="body_size low_empasize" style="margin:0; font-weight: 500;">54,123₩</p>
-			</div>
+			<a href="profile.html" class="s_button black_border caption ver_bottom_tinny" style="align-self: flex-end; margin-top: -68px; margin-bottom: 44px">프로필 수정</a>
+			<p class="body_bold ver_bottom_tinny">username</p>
+			<p class="caption middle_emphasis ver_bottom_1x" style="width:calc(100% - 80px);">휴양지 전문 여행가입니다. 남미, 남유럽, 미주 12개 도시 휴향지 탐방기 구경하세요! 11/01 ~ 11/23 아르헨티나 여행 예정! 자기소개 몇줄까지 할지 300자이상?</p>
 		</div>
-		<a href="profile.html">
-			<div class="s_button border_btt" style="margin-right: 0">프로필 수정</div>
-		</a>
+		<div class="flex_row col1 ver_bottom_tinny justify_center">
+			<p class="flex_row caption_bold middle_emphasis align_center" id="cities"><img class="icon_s" src="img/ic_city.svg">12개 도시 방문</p>
+			<p class="flex_row caption_bold middle_emphasis align_center hor_margin_tiny" id="locations"><img class="icon_s" src="img/ic_location.svg">25개 장소 등록</p>
+		</div>
+		<div class="flex_row col1 justify_center ver_bottom_1x" id="user_meta">
+			<style> #user_meta>.chip{margin-right: 4px;} </style>
+			<div class="chip">맛집 탐방</div>
+			<div class="chip">와인 여행</div>
+			<div class="chip">언어교환</div>
+			<div class="chip">로드 트립</div>
+		</div>
 	</div>
 	<!--내 여행-->
-	<div class="section_top contents_block_1_row" style="margin:32px 0 0 0;">
-		<h2 class="normal_size">내 여행</h2>
-		<a href="my_travel.html">
-			<div class="button border_btt" style="margin-right: 0"><img src="img/ic_my_travel.svg">내여행 전체보기</div>
-		</a>
+	<div class="flex_row col1 align_center ver_bottom_1x">
+		<p class="body_bold">내 여행</p>
 	</div>
 	<!--내 여행 섹션 -->
-	<div class="containner" style="width:100%; height:148px; margin: 4px 0 16px 0;">
+	<div class="containner" style="width:100%; height:144px;">
 		<div class="content_slide">
-			<li>
-				<div class="community_thumb" id="sg">
-					<h2 class="normal_size white" style="text-align: center">싱가폴</h2>
+			<a class="margin_r_driection" href="my_travel.html">
+				<div class="card_img middle full_radious" id="sg">
 				</div>
 				<div>
+					<p class="body_bold">Sinapore</p>
 					<p class="caption">Holiday Centeral외 3개장소</p>
 					<p class="caption">OCT 30 ~ NOV 12, 2018</p>
 				</div>
-			</li>
-			<li>
-				<div class="community_thumb" id="kul">
-					<h2 class="normal_size white" style="text-align: center">쿠알라룸프르</h2>
-					<p class="caption white">Holiday Centeral 예약됨</p>
+			</a>
+			<a class="margin_r_driection">
+				<div class="card_img middle full_radious" id="kul">
+				</div>
+				<div>
+					<p class="body_bold">Kualalumpur</p>
+					<p class="caption">Holiday Centeral외 3개장소</p>
 					<p class="caption">OCT 30 ~ NOV 12, 2018</p>
 				</div>
-			</li>
+			</a>
 		</div>
 	</div>
+	<a href="my_travel.html" class="button body_size black_border ver_bottom_2x" style="align-self: center"><img src="img/ic_my_travel.svg">내여행 모두 보기</a>
 	<!--리워드-->
-	<div class="section_top contents_block_1_row" style="margin:32px 0 0 0;">
-		<h2 class="normal_size">리워드</h2>
+	<h2 class="body_bold ver_bottom_1x">리워드</h2>
+	<div class="flex_col yellow_bg full_radious padding_1x align_center ver_bottom_2x" style="width:calc(100% - 32px)">
+		<h2 class="highlight body_size ver_bottom_1x" style="text-align: center;">적립금</h2>
+		<p class="number big_size ver_bottom_1x">123,123₩</p>
+		<div class="button primary_bg" style="width:calc(100% - 16px)">캐시백 신청</div>
 	</div>
-	<div class="contents_block_1_col" style="margin:0 auto;">
-		<div class="yellow_bg" style="width:calc(100% - 32px); padding:16px; border-radius:4px; margin:8px 0">
-			<h2 class="highlight body_size" style="text-align: center;">적립금</h2>
-			<p class="number big_size center" style="margin:0">123,123₩</p>
-			<div class="button primary_bg">캐시백 신청</div>
-		</div>
-	</div>
-	<div class="section_top contents_block_1_row" style="margin:8px 0 0 0;">
-		<style>.square_button{width:calc(50% - 8px - 32px); height:auto; padding:16px;}</style>
-		<div class="square_button light_primary_bg" id="invitation">
-			<h2 class="highlight body_size white" style="text-align: center; margin:8px 0">초대하기</h2>
+	<div class="flex_row col1 space_between">
+		<style>#invitation, #find_point{ width:calc(50% - 8px); }</style>
+		<div class="flex_col col2 ver_padding_1x flex_center primary2_bg full_radious" id="invitation">
+			<p class="highlight body_size white">초대하기</p>
 			<img src="img/ic_invite_earn_white.svg" style="width:48px; height: 48px;">
 			<p class="number normal_size center" style="margin:0">20,000₩ 적립</p>
 		</div>
-		<div class="square_button border_btt" id="find_point">
-			<h2 class="highlight body_size white" style="text-align: center; margin:8px 0">포인트 찾기</h2>
+		<div class="flex_col col2 ver_padding_1x flex_center black_border white_middle_bg full_radious" id="find_point">
+			<p class="highlight body_size white">포인트 찾기</p>
 			<img src="img/ic_find_point.svg" style="width:48px; height: 48px;">
 			<p class="number normal_size center" style="margin:0">가입전 예약</p>
 		</div>
