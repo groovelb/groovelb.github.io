@@ -1,7 +1,8 @@
 /*아이콘 스몰*/
 .icon_s{
-	width: 24px;
-	height: 24px
+	width: 24px !important;
+	height: 24px !important;
+	margin-right: 4px;
 }
 
 /*커뮤니티 썸네일*/

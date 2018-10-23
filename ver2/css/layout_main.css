@@ -45,22 +45,6 @@
 	transition: opacity 0.3s;
 }
 
-
-/*서치박스*/
-.search_box{
-	border-radius: 4px;
-	/*background-color: #ffffff;*/
-	overflow: hidden;
-	width: 100%;
-	/*box-shadow: 0 4px 16px 0 rgba(0,0,0,.22), 0 0 8px 0 rgba(0,0,0,.22);*/
-}
-.search_box>.textfield{
-	height: 64px;
-}
-.search_box>div>.textfield{
-	height: 64px;
-	border-width: 0;
-}
 #popular_list{
 	width: calc(100% - 16px);
 	padding: 8px;
@@ -96,9 +80,6 @@
 	border-bottom: solid 4px #fafafa;
 	opacity: 1 !important;
 }
-
-
-
 
 
 /**섹션2**/

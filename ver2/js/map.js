@@ -6,7 +6,6 @@ function initMap() {
     var places = [	
     				/*Left top*/
     				{lat: 1.4307, lng: 101.7033},
-    				{lat: 1.4007, lng: 102.8043},
     				{lat: 1.3647, lng: 103.6649},
     				{lat: 1.3207, lng: 102.7253},
     				{lat: 1.3327, lng: 102.9259},
@@ -17,7 +16,6 @@ function initMap() {
     				/*left bottom*/
     				{lat: 1.3073, lng: 102.8062},
     				{lat: 1.3473, lng: 103.8562},
-    				{lat: 1.3673, lng: 103.8662},
     				{lat: 1.3973, lng: 103.8262},
     				{lat: 1.4073, lng: 102.8862},
     				{lat: 1.3273, lng: 103.8462},
@@ -37,9 +35,6 @@ function initMap() {
     				{lat: 1.3005, lng: 103.6914},
     				{lat: 1.3119, lng: 103.7089},
     				{lat: 1.3401, lng: 103.7189},
-    				{lat: 1.3619, lng: 103.7489},
-    				{lat: 1.3819, lng: 103.6389},
-    				{lat: 1.2957, lng: 103.8168},
     				{lat: 1.3023, lng: 103.6089},
     				{lat: 1.3129, lng: 103.5389},
 
@@ -49,6 +44,11 @@ function initMap() {
                     {lat: 1.4005, lng: 103.7914},
                     {lat: 1.3419, lng: 103.6889},
                     {lat: 1.3501, lng: 103.61089},
+                    {lat: 1.3673, lng: 103.8662},
+                    {lat: 1.3819, lng: 103.6389},
+                    {lat: 1.4007, lng: 102.8043},
+                    {lat: 1.3619, lng: 103.7489},
+                    {lat: 1.2957, lng: 103.8168}
     ];
 
     // Create a map object and specify the DOM element
@@ -85,7 +85,7 @@ function initMap() {
 
         marker.addListener('click', function(){
             console.log("marker" + i + " click!");
-            document.getElementById("place_info").classList.add("slide_on");
+            document.getElementById("place_info_tab").classList.add("slide_on");
         });
     });
   }

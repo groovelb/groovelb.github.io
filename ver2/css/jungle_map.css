@@ -85,13 +85,14 @@ html, body{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	width:144px;
+	width:260px;
 	height:32px;
 	border: solid 2px #7c4dff;
 	border-radius: 4px;
 }
 .map_toggle_item{
-	width:71px;
+	text-align: center;
+	width:128px;
 	height: 32px;
 	color: #383838;
 	background-color: #ffffff;

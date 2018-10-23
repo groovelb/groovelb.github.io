@@ -18,8 +18,8 @@
 </head>
 <body>
 <!--맵 토글-->
-<div class="map_toggle caption primary_bg">
-	<div class="map_toggle_item flex_row flex_center primary_bg toggle_selected" id=map_toggle_left>정글리안 픽</div>
+<div class="map_toggle body_size primary_bg">
+	<div class="map_toggle_item flex_row flex_center primary_bg toggle_selected" id=map_toggle_left>정글리안 추천장소</div>
 	<div class="map_toggle_item flex_row flex_center" id=map_toggle_right>내 일정 보기</div>
 </div>
 <!--슬라이더-->
@@ -155,7 +155,7 @@
 				<!--날짜별 장소리스트-->
 				<div class="col1 place_list_day">
 					<!--장소 리스트-->
-					<div class="list padding_tinny place_list align_cen place1t id="place1"er">
+					<div class="list padding_tinny place_list align_cen place1 id="place1">
 						<div class="place_thumb" id="plc_img3"></div>
 						<div class="place_meta">
 							<h2 class="body_bold">Little India</h2>
@@ -163,7 +163,7 @@
 						</div>
 					</div>
 					<!--장소 리스트-->
-					<div class="list padding_tinny place_list align_cen place1t id="place1"er">
+					<div class="list padding_tinny place_list align_cen place1 id="place1">
 						<div class="place_thumb" id="trv3"></div>
 						<div class="place_meta">
 							<h2 class="body_bold">Place1</h2>
@@ -171,7 +171,7 @@
 						</div>
 					</div>
 					<!--장소 리스트-->
-					<div class="list padding_tinny place_list align_cen place1t id="place1"er">
+					<div class="list padding_tinny place_list align_cen place1 id="place1">
 						<div class="place_thumb" id="trv5"></div>
 						<div class="place_meta">
 							<h2 class="body_bold">Place2</h2>
@@ -356,7 +356,7 @@
 
 		$(".date_item").on("click",function(){
 			$(this).toggleClass("date_item_select");
-		})
+		});
 
 		$("#dg_xbox1").on("click",function(){
 			console.log("click");
@@ -410,7 +410,7 @@ function map_mode_switch(){
 /*장소 정보 슬라이드 끄기*/
 document.getElementById("back").addEventListener("click", function(){
 	document.getElementById("place_info_tab").classList.toggle("slide_on");
-	document.getElementById("search_result").classList.toggle("slide_on");
+	//document.getElementById("search_result").classList.toggle("slide_on");
 });
 
 /*검색바 슬라이드*/
