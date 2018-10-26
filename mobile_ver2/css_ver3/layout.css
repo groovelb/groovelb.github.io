@@ -1,0 +1,358 @@
+body{
+	font-family: 'Noto Sans KR', sans-serif;
+	margin: 0;
+	padding: 0;
+	width:100%;
+}
+li{
+	list-style: none;
+}
+input[type=text].calculator_value{
+	width: 90%;
+	background-color: rgba(0,0,0,0);
+	border-color: #4b4b4b;
+	border-width: 0 0 1px 0;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 24px;
+	font-weight: 700;
+	text-align: center;
+	line-height: 24px;
+}
+hr{
+	height: 1px;
+	border:0;
+	background: #c0c0c0;
+}
+
+
+
+
+/***상단영역 레이아웃***/
+/*상단 영역의 배경*/
+.img_background{
+	width:100%;
+	min-width: 1080px;
+	background-position: center center;
+	background-origin: content-box;
+	background-size: cover;
+}
+#top_bg{
+	background-image: url(../img/bg_community.jpg);
+}
+#calculator_bg{
+	background-image: url(../img/calculator_bg.jpg);
+	background-size: cover;
+}
+/*상단 헤더 및 서치박스가 포함된 영역*/
+.top{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 1080px;
+	padding:0 calc(50% - 540px);
+	padding-top: 96px;
+	/*Gradient*/
+	/*background-image: -webkit-linear-gradient(rgba(3,64,36,0.85) 0%, rgba(3,64,36,0.48) 38%, rgba(3,64,36,0.48) 52%, rgba(3,64,36,0.65) 100%);
+	background-image: -moz-linear-gradient(rgba(3,64,36,0.85) 0%, rgba(3,64,36,0.48) 38%, rgba(3,64,36,0.48) 52%, rgba(3,64,36,0.65) 100%);
+	background-image: -o-linear-gradient(rgba(3,64,36,0.85) 0%, rgba(3,64,36,0.48) 38%, rgba(3,64,36,0.48) 52%, rgba(3,64,36,0.65) 100%);
+	background-image: linear-gradient(rgba(3,64,36,0.85) 0%, rgba(3,64,36,0.48) 38%, rgba(3,64,36,0.48) 52%, rgba(3,64,36,0.65) 100%);*/
+}
+.bg_filter{
+	background-color: rgb(22,20,42.5,0.6);
+	color: #ffffff;
+}
+/*상단 컨텐츠 영역*/
+.top_left{
+	width: 446px;
+	display: flex;
+	flex-direction: column;
+}
+.top_right{
+	/*width: 532px;*/
+	margin-left: 48px;
+	display: flex;
+	flex-direction: column;
+}
+#reward_cash{
+	width: calc(220px - 32px);
+	height: calc(220px - 32px);
+	border-radius: 4px;
+	padding:16px;
+	margin-right: 8px;
+	background-color: rgba(136,125,255,0.85)
+}
+#reward_community{
+	width: calc(296px - 32px);
+	height: calc(220px - 32px);
+	border-radius: 4px;
+	padding:16px;
+	margin-left: 8px;
+	background-color: rgba(77, 163, 250, 0.85);
+	
+}
+.popular_list{
+	display: flex;
+	flex-direction: row;
+	width: calc(100% - 32px);
+	margin: 16px 0 32px 0;
+	flex-wrap: wrap;
+	padding:8px 16px;
+	flex-direction: row;
+	background-color: #ffffff;
+	border-radius: 2px;
+}
+.popular_item{
+	margin:8px 0;
+	margin-right: 32px;
+	color: #0091EA;
+	font-weight:500 !important;
+}
+
+/***헤더 레이아웃***/
+.header{
+	/*Type*/
+	display: flex;
+	flex-direction: row;
+	/*size*/
+	width:1080px;
+	height:64px;
+	padding:0 calc(50% - 540px);
+	/*position*/
+	position: absolute;
+	top:0px;
+	left:0px;
+	z-index: 999;
+	/*feature*/
+	align-items: center;
+}
+/*좌우측 헤더 아이템*/
+.header_item{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 50%;
+	height: 100%;
+}
+#left{
+	justify-content: flex-start;
+}
+#right{
+	justify-content: flex-end;
+}
+.header_white_bg{
+	/*Type*/
+	display: flex;
+	flex-direction: row;
+	/*size*/
+	width:1080px;
+	height:64px;
+	padding:0 calc(50% - 540px);
+	/*position*/
+	position: absolute;
+	top:0px;
+	left:0px;
+	z-index: 999;
+	/*feature*/
+	align-items: center;
+	color: #383838;
+	box-shadow: 0px 0px 6px 0px rgba(64,64,64,0.8);
+}
+
+
+/*헤더에 포함될 텍스트 메뉴*/
+.text_menu{
+	/*Type*/
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin: 0 16px;
+	height: 100%;
+	font-family: 'Noto Sans CJK KR';
+	font-size: 14px;
+	font-weight: 300;
+	text-align: center;
+	letter-spacing: 0.01em;
+	line-height: 32px;
+}
+#selected{
+	height: calc(100% - 4px);
+	padding-top: 4px;
+	font-weight: 500 !important;
+	border-width: 0 0 2px 0;
+	border-style: solid;
+	border-color: #ffffff;
+}
+/*헤더에 포함될 마이 메뉴*/
+.my_menu{
+	width: 140px;
+	height: 48px;
+	display: block;
+}
+.my_menu>img{
+	width: 48px;
+	height: 48px;
+	float: left;
+}
+#id{
+	font-weight: 500;
+	letter-spacing: 0.4px;
+}
+#point{
+	font-weight: 300;
+	letter-spacing: 0.4px;
+}
+
+/*** 콘텐츠 영역 ***/
+.content_area{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	width: 1080px;
+	padding:64px calc(50% - 540px) 96px calc(50% - 540px);
+}
+.content_area_row{
+	display: flex;
+	flex-wrap: wrap;
+	width: 1080px;
+	padding:64px calc(50% - 540px) 96px calc(50% - 540px);
+}
+.dark_bg{
+	background-color: #262626;
+	color: #ffffff;
+}
+.white_bg{
+	background-color: #ffffff;
+	color: #383838;
+}
+.img_bg{
+	color: #ffffff;
+}
+.img_bg:bofore{
+	content: "";
+    display: block;
+    background: rgba(0,0,0,0.2);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/*콘텐츠 블록*/
+.contents_block_2{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 50%;
+}
+.contents_block_1_col{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+.contents_block_1_row{
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+}
+.contents_block_3{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 33%;
+}
+.caculator_item{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: calc(50% - 48px);
+}
+
+
+/*** 콘텐츠 슬라이더 ***/
+.content_slide{
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+}
+.slide_navi{
+	position: absolute;
+	display: flex;
+	z-index: 9999;
+	left: 0;
+	width:100%;
+	height:100%;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.slider_button{
+	z-index: 9999;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: calc((100% - 1080px)/2);
+	background-color: #ffffff;
+}
+.sd_button_comm{
+	height: 220px;
+}
+.sd_button_city{
+	height: 336px;
+}
+.sd_button_acc_type{
+	height: 274px;
+}
+#slider_left{
+	left:0;
+}
+#slider_right{
+	right:0;
+}
+
+/*** 계산기 ***/
+.calculator{
+	width: 800px;
+	margin-top: 32px;
+	padding-top: 32px;
+}
+
+/*footer*/
+footer{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 1080px;
+	padding:0 calc(50% - 540px);
+	color: #383838;
+	background-color: #f9f9f9;
+}
+.sitemap_col{
+	display: flex;
+	flex-direction: column;
+	float: left;
+	width: 242px;
+	margin-top: 32px;
+	color: #383838;
+	font-weight: 300;
+}
+a.footer_item{
+	width: 100%;
+	margin:0 0 16px 0;
+	text-decoration: none;
+	font-weight: 500;
+	color: #383838 !important;
+}
+.link{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-top: 32px;
+	width: 304px;
+	height: 96px;
+}
+.link_item{
+	width: 48px;
+	height: 48px;
+	margin-right: 16px;
+	border-radius: 24px;
+}

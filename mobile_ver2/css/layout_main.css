@@ -1,0 +1,171 @@
+/*리워드 프로그램*/
+#checkin{
+	margin:8px 4px 8px 8px;
+	width: calc(100% - 12px);
+	background-image: url(../img/img_checkin2.jpg);
+	background-size: cover;
+}
+#invite{
+	margin:8px 8px 8px 4px;
+	width: calc(100% - 12px);
+	background-image: url(../img/img_friend2.jpg);
+	background-size: cover;
+}
+#top_bg{
+	z-index: -1;
+	background-image: url(../img/bg_community3.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.bg_filter{
+	background-color: rgba(36,20,42.5,0.4);
+}
+#top_content_area{
+	padding-top: 80px !important;
+	padding-bottom: 96px;
+}
+#top_left{
+	width:calc(50% - 32px);
+}
+#top_right{
+	width:calc(50% - 16px);
+}
+/*이벤트 탭 큰트롤*/
+.tab_content{
+	opacity:0;
+	display: none !important;
+	transition: opacity 0.3s;
+}
+.tab_show{
+	opacity:1;
+	display: flex !important;
+	transition: opacity 0.3s;
+}
+
+#popular_list{
+	width: calc(100% - 16px);
+	padding: 8px;
+	margin: 32px 0 16px 0;
+}
+#popular_list>p{
+	margin: 8px 12px 8px 4px;
+}
+/*리워드 프로그램 카드색*/
+#reward{
+	background-color: rgba(136, 125, 255, 0.85);
+	box-shadow: 0 4px 16px 0 rgba(0,0,0,.22), 0 0 8px 0 rgba(0,0,0,.22);
+}
+#cashback{
+	background-color: #7c4dff;
+}
+#invitation{
+	background-color: #4da3fa;
+}
+
+
+/*이벤트탭*/
+.event_tab> img{
+	margin-right: 4px;
+}
+.event_tab{
+	opacity: 0.65;
+	cursor: pointer;
+	height: 32px;
+}
+
+.selected_evt_tab{
+	border-bottom: solid 4px #fafafa;
+	opacity: 1 !important;
+}
+
+
+/**섹션2**/
+img#usp{
+	width: 144px;
+	height: 144px;
+}
+/*슬라이더*/
+.slider{
+	width: calc(1080px);
+	margin:0 calc(50% - 540px - 16px);
+	padding:16px;
+	border-radius: 8px;
+	background-color: #ffffff;
+}
+#slide_arrow_left{
+	position: absolute;
+	margin-top: 96px;
+	left:0;
+}
+#slide_arrow_right{
+	position: absolute;
+	margin-top: 96px;
+	right:0;
+}
+#event_slide{
+	animation: rolling 5s infinite ease-in-out;
+}
+@keyframes rolling{
+	0%{
+		left:0%;
+	}
+	48%{
+		left:0%;
+	}
+	50%{
+		left: -100%;
+	}
+	98%{
+		left: -100%;
+	}
+	100%{
+		left: 0%;
+	}
+}
+#event_slide>.event{
+	width: calc(50% - 32px) !important;
+	margin:0 16px !important;
+}
+/**섹션3**/
+#calculator_bg{
+	z-index: -1;
+	background-image: url(../img/travel_budget.jpg);
+	background-size: cover;
+}
+#calculator{
+	width: calc(100% - 32px);
+	margin-left: 16px;
+	margin-right: 16px;
+	border-radius: 8px;
+	box-shadow: 0 4px 16px 0 rgba(0,0,0,.22), 0 0 8px 0 rgba(0,0,0,.22);
+	overflow: hidden;
+}
+.calculate_item{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: calc(50% - 48px);
+}
+
+input[type=text].calculator_value{
+	width: 90%;
+	margin-left:5%;
+	background-color: rgba(0,0,0,0);
+	border-color: #4b4b4b;
+	border-width: 0 0 1px 0;
+	font-family: roboto_bold;
+	font-size: 36px;
+	font-weight: 500;
+	text-align: center;
+	line-height: 24px;
+}
+
+/*섹션4*/
+#city_buttons{
+	width: 100%;
+	display: flex;
+	background-color: #ffffff;
+	border-radius: 0 0 4px 4px;
+	justify-content: space-around;
+}

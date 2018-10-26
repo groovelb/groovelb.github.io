@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css_ver3/layout_main.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/layout_common.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_common.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/layout_community.css">
+	<link rel="stylesheet" type="text/css" href="css/components.css">
+	<link rel="stylesheet" type="text/css" href="css/img.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/form.css">
+	<link rel="stylesheet" type="text/css" href="css/type.css">
+	<link rel="stylesheet" type="text/css" href="css/color.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/align.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/menu_transition.css">
+</head>
+<body>
+<!-- 헤더 -->
+<div class="header">
+	<div class="menu_dark" id="menu">
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	</div>
+	<img id="logo" src="img/logo_ver3.svg">
+	<div class="my_menu">
+		<a href="message_main.html" class="menu_item">
+			<img src="img/ic_comments.svg">
+		</a>
+		<a href="my_page.html" class="profile_pic_s" id="pf2" style="width:24px; height:24px;">
+		</a>
+	</div>
+</div>
+<!--슬라이드 메뉴-->
+<div class="main_menu">
+	<a href="my_page.html" class="menu_list">
+		<div class="profile_pic_s menu_icon" id="pf2" style="width:24px; height:24px;">
+		</div>
+		마이페이지
+	</a>
+	<a href="profile.html" class="menu_list menu_list_indent">
+		<img class="menu_icon" src="img/ic_my_profile.svg">
+		내 프로필
+	</a>
+	<a href="my_travel.html" class="menu_list menu_list_indent">
+		<img class="menu_icon" src="img/ic_my_travel.svg">
+		내 여행
+	</a>
+	<a href="chashback.html" class="menu_list menu_list_indent">
+		<img class="menu_icon" src="img/ic_reward.svg">
+		리워드
+	</a>
+	<a href="community.html" class="menu_list">
+		<img class="menu_icon" src="img/ic_community_black.svg">
+		커뮤니티
+	</a>
+	<a href="cashback.html" class="menu_list">
+		<img class="menu_icon" src="img/ic_cashback.svg">
+		캐시백 신청
+	</a>
+	<a class="menu_list">
+		FAQ
+	</a>
+	<hr style="width: calc(100% - 64px);">
+	<a class="menu_list center">
+		<div class="button primary_border" style="width: calc(100% - 16px); margin:0;">로그아웃</div>
+	</a>
+</div>
+<!--컨텐츠-->
+<style>.section_top>.button{margin-right: 0}</style>
+<div class="content_col">
+	<!--내 프로필-->
+	<div class="flex_row col1 align_center space_between" style="margin:16px 0;">
+		<div class="flex_col col1 align_center">
+			<div href="my_page.html" class="profile_pic_middle" id="pf2" style="width:64px; height:64px; border-width: 2px;">
+			</div>
+			<a href="profile.html" class="s_button black_border caption ver_bottom_tinny" style="align-self: flex-end; margin-top: -68px; margin-bottom: 44px">프로필 수정</a>
+			<p class="body_bold ver_bottom_tinny">username</p>
+			<p class="caption middle_emphasis ver_bottom_1x" style="width:calc(100% - 80px);">휴양지 전문 여행가입니다. 남미, 남유럽, 미주 12개 도시 휴향지 탐방기 구경하세요! 11/01 ~ 11/23 아르헨티나 여행 예정! 자기소개 몇줄까지 할지 300자이상?</p>
+		</div>
+		<div class="flex_row col1 ver_bottom_tinny justify_center">
+			<p class="flex_row caption_bold middle_emphasis align_center" id="cities"><img class="icon_s" src="img/ic_city.svg">12개 도시 방문</p>
+			<p class="flex_row caption_bold middle_emphasis align_center hor_margin_tiny" id="locations"><img class="icon_s" src="img/ic_location.svg">25개 장소 등록</p>
+		</div>
+		<div class="flex_row col1 justify_center ver_bottom_1x" id="user_meta">
+			<style> #user_meta>.chip{margin-right: 4px;} </style>
+			<div class="chip">맛집 탐방</div>
+			<div class="chip">와인 여행</div>
+			<div class="chip">언어교환</div>
+			<div class="chip">로드 트립</div>
+		</div>
+	</div>
+	<!--내 여행-->
+	<div class="flex_row col1 align_center ver_bottom_1x">
+		<p class="body_bold">내 여행</p>
+	</div>
+	<!--내 여행 섹션 -->
+	<div class="containner" style="width:100%; height:144px;">
+		<div class="content_slide">
+			<a class="margin_r_driection" href="my_travel.html">
+				<div class="card_img middle full_radious" id="sg">
+				</div>
+				<div>
+					<p class="body_bold">Sinapore</p>
+					<p class="caption">Holiday Centeral외 3개장소</p>
+					<p class="caption">OCT 30 ~ NOV 12, 2018</p>
+				</div>
+			</a>
+			<a class="margin_r_driection">
+				<div class="card_img middle full_radious" id="kul">
+				</div>
+				<div>
+					<p class="body_bold">Kualalumpur</p>
+					<p class="caption">Holiday Centeral외 3개장소</p>
+					<p class="caption">OCT 30 ~ NOV 12, 2018</p>
+				</div>
+			</a>
+		</div>
+	</div>
+	<a href="my_travel.html" class="button body_size black_border ver_bottom_2x" style="align-self: center"><img src="img/ic_my_travel.svg">내여행 모두 보기</a>
+	<!--리워드-->
+	<h2 class="body_bold ver_bottom_1x">리워드</h2>
+	<div class="flex_col yellow_bg full_radious padding_1x align_center ver_bottom_2x" style="width:calc(100% - 32px)">
+		<h2 class="highlight body_size ver_bottom_1x" style="text-align: center;">적립금</h2>
+		<p class="number big_size ver_bottom_1x">123,123₩</p>
+		<div class="button primary_bg" style="width:calc(100% - 16px)">캐시백 신청</div>
+	</div>
+	<div class="flex_row col1 space_between">
+		<style>#invitation, #find_point{ width:calc(50% - 8px); }</style>
+		<div class="flex_col col2 ver_padding_1x flex_center primary2_bg full_radious" id="invitation">
+			<p class="highlight body_size white">초대하기</p>
+			<img src="img/ic_invite_earn_white.svg" style="width:48px; height: 48px;">
+			<p class="number normal_size center" style="margin:0">20,000₩ 적립</p>
+		</div>
+		<div class="flex_col col2 ver_padding_1x flex_center black_border white_middle_bg full_radious" id="find_point">
+			<p class="highlight body_size white">포인트 찾기</p>
+			<img src="img/ic_find_point.svg" style="width:48px; height: 48px;">
+			<p class="number normal_size center" style="margin:0">가입전 예약</p>
+		</div>
+	</div>
+</div>
+</body>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+		$(document).ready(function(){
+			var menu_on = false;
+			$("#menu").on("click",function(){
+				menu_on = (!menu_on);
+				$(".main_menu").toggleClass("main_menu_on");
+				$(this).toggleClass('open');
+				$(".header").toggleClass("no_box_shadow");
+				if(menu_on){
+					$(".my_menu").hide();
+				}
+				else{
+					$(".my_menu").show();
+				}
+				
+			});
+			$("#xbox").on("click",function(){
+				$(".main_menu").toggleClass("main_menu_on");
+			});
+		});
+</script>
+</html>
