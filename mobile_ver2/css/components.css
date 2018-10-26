@@ -31,7 +31,7 @@
 .search_box{
 	border-radius: 8px;
 	padding: 6px;
-	background-color: #8480f7;
+	background-color: #8480f7a0;
 	/*background-color: #ffffff;*/
 	overflow: hidden;
 	width: calc(100% - 12px);
@@ -264,7 +264,7 @@ select.styled-select{
 }
 .s_button{
 	display: flex;
-	padding:0 8px;
+	padding:0 8px !important;
 	align-items: center;
 	justify-content: center;
 	height: 24px;

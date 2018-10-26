@@ -21,8 +21,8 @@
 	background-color: rgba(36,20,42.5,0.4);
 }
 #top_content_area{
-	padding-top: 80px !important;
-	padding-bottom: 96px;
+	padding-top: 64px !important;
+	padding-bottom: 128px;
 }
 #top_left{
 	width:calc(50% - 32px);
@@ -77,6 +77,10 @@
 	border-bottom: solid 4px #fafafa;
 	opacity: 1 !important;
 }
+#event_slide_containner{
+	border-radius: 8px;
+	/*border: solid 6px #ffffff;*/
+}
 
 
 /**섹션2**/
@@ -103,23 +107,17 @@ img#usp{
 	right:0;
 }
 #event_slide{
-	animation: rolling 5s infinite ease-in-out;
+	animation: rolling 3s ease-in-out;
 }
 @keyframes rolling{
 	0%{
 		left:0%;
 	}
-	48%{
+	97%{
 		left:0%;
-	}
-	50%{
-		left: -100%;
-	}
-	98%{
-		left: -100%;
-	}
+	}	
 	100%{
-		left: 0%;
+		left: -100%;
 	}
 }
 #event_slide>.event{

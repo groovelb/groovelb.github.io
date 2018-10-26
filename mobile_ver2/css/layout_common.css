@@ -119,14 +119,20 @@ li{
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
+	flex-wrap: wrap;
 	align-items: center;
 	width: calc(100% - 64px);
-	height: 36px;
+	height: 32px;
 	padding:8px 32px;
 	font-weight: 500;
 	font-family: notosans_cjk_medium;
 	font-size: 14px;
 	color: #383838;
+}
+.menu_list>hr{
+	width: calc(100%);
+	height: 1px;
+	background: #e0e0e0;
 }
 .menu_list_indent{
 	width: calc(100% - 96px);
@@ -139,6 +145,8 @@ li{
 	transition-timing-function: ease-out;
 }
 .menu_icon{
+	width: 24px;
+	height: 24px;
 	margin-right: 4px;
 }
 /*좌우측 헤더 아이템*/

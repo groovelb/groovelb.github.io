@@ -93,7 +93,7 @@ h2{
 	line-height: 28px;
 }
 .big_size{
-	font-size: 28px;
+	font-size: 24px;
 	font-family: notosans_cjk_medium;
 	line-height: 32px;
 	font-weight: 500;
@@ -112,15 +112,15 @@ h2{
 	line-height: 36px;
 }
 .big_light{
-	font-size: 36px;
+	font-size: 24px;
 	font-family: notosans_cjk_light;
-	line-height: 48px;
+	line-height: 32px;
 	font-weight: 100;
 }
 .big_thin{
-	font-size: 36px;
+	font-size: 24px;
 	font-family: notosans_cjk_thin;
-	line-height: 64px;
+	line-height: 32px;
 	font-weight: 100;
 }
 .caption{
