@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="css_ver3/layout_common.css">
 	<link rel="stylesheet" type="text/css" href="css/layout_common.css">
 	<link rel="stylesheet" type="text/css" href="css_ver3/layout_community.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_community.css">
 	<link rel="stylesheet" type="text/css" href="css/components.css">
 	<link rel="stylesheet" type="text/css" href="css/img.css">
 	<link rel="stylesheet" type="text/css" href="css_ver3/form.css">
@@ -79,26 +80,48 @@
 		<div class="button body_size black_border" style="align-self: center"><img src="img/ic_add.svg">새여행 추가</div>
 	</div>
 	<!--내 여행 섹션 -->
-	<div class="flex_row col1 ver_bottom_4x" id="travel_list">
-		<style>#travel_list>.col2{width:calc(50% - 8px);}</style>
-		<a class="margin_r_driection col2" href="my_travel.html">
-			<div class="card_img middle full_radious" id="sg">
+	<div class="flex_col col1 ver_bottom_4x" style="height: 176px">
+		<div class="containner" id="my_travel" style="position:absolute; width:calc(100% - 16px); height:176px; margin: 0px 0 0 0; overflow: hidden;">
+			<div class="FAB_circle" id="slide_arrow_left" style="left: -8px;">
+				<img id="arrow" src="img/arrow_prev.svg">
 			</div>
-			<div>
-				<p class="body_bold">Sinapore</p>
-				<p class="caption">Holiday Centeral외 3개장소</p>
-				<p class="caption">OCT 30 ~ NOV 12, 2018</p>
+			<div class="FAB_circle" id="slide_arrow_right" style="right: -8px;">
+				<img id="arrow" src="img/arrow_next.svg">
 			</div>
-		</a>
-		<a class="margin_r_driection col2">
-			<div class="card_img middle full_radious" id="kul">
+			<style>
+				.content_slide{width: auto !important;}
+				.content_slide>.col2{width: 158px;}
+			</style>
+			<div class="content_slide">
+				<a class="margin_r_driection col2" href="travel_page.html">
+					<div class="card_img middle full_radious" id="sg">
+					</div>
+					<div>
+						<p class="body_bold">Sinapore</p>
+						<p class="caption">Holiday inn외 3개장소</p>
+						<p class="caption">10/31 ~ 11/12</p>
+					</div>
+				</a>
+				<a class="margin_r_driection col2">
+					<div class="card_img middle full_radious" id="kul">
+					</div>
+					<div>
+						<p class="body_bold">Kualalumpur</p>
+						<p class="caption">Holiday inn외 3개장소</p>
+						<p class="caption">10/31 ~ 11/12</p>
+					</div>
+				</a>
+				<a class="margin_r_driection col2">
+					<div class="card_img middle full_radious" id="bkk">
+					</div>
+					<div>
+						<p class="body_bold">Bangkok</p>
+						<p class="caption">124명의 회원</p>
+						<p class="caption">54개 장소 등록</p>
+					</div>
+				</a>
 			</div>
-			<div>
-				<p class="body_bold">Kualalumpur</p>
-				<p class="caption">Holiday Centeral외 3개장소</p>
-				<p class="caption">OCT 30 ~ NOV 12, 2018</p>
-			</div>
-		</a>
+		</div>
 	</div>
 	<!--트레블 로그-->
 	<div class="flex_row space_between col1 ver_bottom_1x align_center">
@@ -110,6 +133,8 @@
 			<!--포스트-->
 			<style>
 				#location>img{width: 16px; height:16px;margin-left:-4px;}
+				#left>.card_full{width:calc(100% - 4px); margin-left: 0; margin-right: 4px;}
+				#right>.card_full{width:calc(100% - 4px); margin-right: 0; margin-left: 4px;}
 			</style>
 			<div class="post card card_full">
 				<div class="card_img short" id="trv1">
@@ -156,7 +181,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="flex_col col2">
+		<div class="flex_col col2" id="right">
 			<!--포스트-->
 			<div class="post card card_full">
 				<div class="card_img middle" id="trv3">

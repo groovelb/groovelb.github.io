@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css_ver3/layout_main.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/layout_common.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_common.css">
+	
+	<link rel="stylesheet" type="text/css" href="css/layout_community.css">
+	<link rel="stylesheet" type="text/css" href="css/components.css">
+	<link rel="stylesheet" type="text/css" href="css/img.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/form.css">
+	<link rel="stylesheet" type="text/css" href="css/type.css">
+	<link rel="stylesheet" type="text/css" href="css/color.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/align.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/menu_transition.css">
+</head>
+<body>
+<!-- 헤더 -->
+<div class="header">
+	<div class="menu_dark" id="menu">
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	</div>
+	<img id="logo" src="img/logo_ver3.svg">
+	<div class="my_menu">
+		<a href="message_main.html" class="menu_item">
+			<img src="img/ic_comments.svg">
+		</a>
+		<a href="my_page.html" class="profile_pic_s" id="pf2" style="width:24px; height:24px;">
+		</a>
+	</div>
+</div>
+<!--슬라이드 메뉴-->
+<div class="main_menu">
+	<a href="my_page.html" class="menu_list">
+		<div class="profile_pic_s menu_icon" id="pf2" style="width:24px; height:24px;">
+		</div>
+		마이페이지
+	</a>
+	<a href="profile.html" class="menu_list menu_list_indent">
+		<img class="menu_icon" src="img/ic_my_profile.svg">
+		내 프로필
+	</a>
+	<a href="my_travel.html" class="menu_list menu_list_indent">
+		<img class="menu_icon" src="img/ic_my_travel.svg">
+		내 여행
+	</a>
+	<a href="chashback.html" class="menu_list menu_list_indent">
+		<img class="menu_icon" src="img/ic_reward.svg">
+		리워드
+	</a>
+	<a href="community.html" class="menu_list">
+		<img class="menu_icon" src="img/ic_community_black.svg">
+		커뮤니티
+	</a>
+	<a href="cashback.html" class="menu_list">
+		<img class="menu_icon" src="img/ic_cashback.svg">
+		캐시백 신청
+	</a>
+	<a class="menu_list">
+		<img class="menu_icon" src="img/ic_faq.svg">
+		FAQ
+	</a>
+	<hr>
+	<a class="menu_list center">
+		<div class="button primary_border" style="width: calc(100% - 16px); margin:0;">로그아웃</div>
+	</a>
+</div>
+<!--적립금-->
+<!--컨텐츠 영역-->
+<div class="content_col" style="align-items: center;">
+	<h2 class="big_size ver_top_4x primary ver_bottom_4x">친구들을 초대하고 적립금 쌓자!</h2>
+	<h2 class="middle_size ver_bottom_1x">추천 형황</h2>
+	<div class="flex_row col1 space_between ver_bottom_4x" id="dashboard">
+		<style>
+			.flex_col>h2{width: auto;}
+			#dashboard>.card{width:calc(33% - 4px);padding: 16px 0;}
+		</style>
+		<div class="flex_col padding_ver_1x col3 card flex_center primary_bg">
+			<p class="caption">총 초대수</p>
+			<h2 class="number big_size">2</h2>
+		</div>
+		<div class="flex_col col3 card flex_center primary2_bg">
+			<p class="caption">총 예약수</p>
+			<h2 class="number big_size">4</h2>
+		</div>
+		<div class="flex_col col3 card flex_center yellow_bg">
+			<p class="caption">누적 적립금</p>
+			<h2 class="number big_size">40,000₩</h2>
+		</div>
+	</div>
+	<h2 class="middle_size ver_bottom_1x">추천 링크</h2>
+	<style>.big_button{margin-left: 16px}</style>
+	<div class="flex_row col1 ver_bottom_4x justify_end">
+		<input class="textfield body_size col1" value="https://www.junglian.com/?referral_code=Gsd21Z">
+		<div class="button primary_bg body_medium box_shadow"><img class="icon_s" src="img/ic_link_white.svg">고유링크 복사</div>
+	</div>
+	<h2 class="middle_size ver_bottom_1x">초대장 보내기</h2>
+	<div class="flex_row col1 ver_bottom_4x justify_end">
+		<input class="textfield body_size col1" placeholder="이메일을 입력해주세요.">
+		<div class="button primary_bg body_medium box_shadow"><img class="icon_s" src="img/ic_send_invite_white.svg">초대장 보내기</div>
+	</div>
+</div>
+</body>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+		$(document).ready(function(){
+			var menu_on = false;
+			$("#menu").on("click",function(){
+				menu_on = (!menu_on);
+				$(".main_menu").toggleClass("main_menu_on");
+				$(this).toggleClass('open');
+				$(".header").toggleClass("no_box_shadow");
+				if(menu_on){
+					$(".my_menu").hide();
+				}
+				else{
+					$(".my_menu").show();
+				}
+				
+			});
+			$("#xbox").on("click",function(){
+				$(".main_menu").toggleClass("main_menu_on");
+			});
+		});
+</script>
+</html>

@@ -1,0 +1,149 @@
+/*아이콘 스몰*/
+.icon_s{
+	width: 24px !important;
+	height: 24px !important;
+	margin-right: 4px;
+}
+
+/*커뮤니티 썸네일*/
+#sg{
+	background-image: url(../img/city_image/sg2.jpg);
+}
+#bkk{
+	background-image: url(../img/city_image/bkk2.jpg);
+}
+#bali{
+	background-image: url(../img/city_image/bali2.jpg);
+}
+#danang{
+	background-image: url(../img/city_image/danang2.jpg);
+}
+#kul{
+	background-image: url(../img/city_image/kul2.jpg);
+}
+#ny{
+	background-image: url(../img/city_image/ny.jpeg);
+}
+#ld{
+	background-image: url(../img/city_image/london.jpeg);
+}
+#la{
+	background-image: url(../img/city_image/la.jpeg);
+}
+#hw{
+	background-image: url(../img/city_image/hawaii.jpeg);
+}
+#sf{
+	background-image: url(../img/city_image/sf.jpeg);
+}
+#fkk{
+	background-image: url(../img/city_image/fkk.jpeg);
+}
+
+
+/*숙박*/
+#apt{
+	background-image: url(../img/accom_img/apt.jpg);
+}
+#hst{
+	background-image: url(../img/accom_img/hst.jpg);
+}
+#rst{
+	background-image: url(../img/accom_img/rst.jpg);
+}
+#rk{
+	background-image: url(../img/accom_img/rk.jpg);
+}
+
+/*프로필*/
+#pf1{
+	background-image: url(../img/profile_img/pf1.jpg);
+}
+#pf2{
+	background-image: url(../img/profile_img/pf2.jpg);
+}
+#pf3{
+	background-image: url(../img/profile_img/pf3.jpg);
+}
+#pf4{
+	background-image: url(../img/profile_img/pf4.jpg);
+}
+#pf5{
+	background-image: url(../img/profile_img/pf5.jpg);
+}
+#pf6{
+	background-image: url(../img/profile_img/pf6.jpg);
+}
+#pf7{
+	background-image: url(../img/profile_img/pf7.jpg);
+}
+#pf8{
+	background-image: url(../img/profile_img/pf8.jpg);
+}
+#pf9{
+	background-image: url(../img/profile_img/pf8.jpg);
+}
+
+/*여행 사진*/
+#trv1{
+	background-image: url(../img/travel_img/trv1.jpg);
+}
+#trv2{
+	background-image: url(../img/travel_img/trv2.jpg);
+}
+#trv3{
+	background-image: url(../img/travel_img/trv3.jpg);
+}
+#trv4{
+	background-image: url(../img/travel_img/trv4.jpg);
+}
+#trv5{
+	background-image: url(../img/travel_img/trv5.jpg);
+}
+#trv6{
+	background-image: url(../img/travel_img/trv6.jpg);
+}
+#trv7{
+	background-image: url(../img/travel_img/trv7.jpg);
+}
+#trv8{
+	background-image: url(../img/travel_img/trv8.jpg);
+}
+#trv9{
+	background-image: url(../img/travel_img/trv9.jpg);
+}
+#trv10{
+	background-image: url(../img/travel_img/trv10.jpg);
+}
+#trv11{
+	background-image: url(../img/travel_img/trv11.jpg);
+}
+#trv12{
+	background-image: url(../img/travel_img/trv12.jpg);
+}
+#trv13{
+	background-image: url(../img/travel_img/trv13.jpg);
+}
+#trv14{
+	background-image: url(../img/travel_img/trv14.jpg);
+}
+#little_india{
+	background-image: url(../img/little_india.jpeg);
+}
+
+
+/*맵*/
+#map_thumb{
+	background-image: url(../img/map_thumb.png);
+}
+#map_img{
+	 background-image:url(../img/city_image/map_thumb_sg.png);
+	 width: 356px;
+	 height: 203px;
+}
+#mating_location{
+	background-image:url(../img/img_location.png);
+}
+#place_img{
+	background-image:url(../img/img_zouk.jpg);
+}

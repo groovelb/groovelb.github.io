@@ -31,7 +31,7 @@
 .search_box{
 	border-radius: 8px;
 	padding: 6px;
-	background-color: #8480f7a0;
+	background-color: #ffffff60;
 	/*background-color: #ffffff;*/
 	overflow: hidden;
 	width: calc(100% - 12px);
@@ -212,11 +212,27 @@ select.styled-select{
    height: 29px;
    padding: 5px; /* If you add too much padding here, the options won't show in IE */
    width: 64px;
-   height: 52px;
+   height: 40px;
    border: 1px solid #ccc;
    font-family: notosans_cjk_regular;
 }
 
+
+/*프로그래스 닷*/
+.dot{
+	background-color: #ffffff;
+	width: 8px;
+	height: 8px;
+	border-radius: 4px;
+	margin:0 2px;
+	opacity: 0.65;
+}
+.current_dot{
+	width: 10px !important;
+	height: 10px !important;
+	border-radius: 5px !important;
+	opacity: 1 !important;
+}
 
 .tf_full{
  	width: calc(100% - 16px);
@@ -245,7 +261,7 @@ select.styled-select{
 	justify-content: center;
 	min-width: 64px;
 	height: 36px;
-	border-radius: 4px;
+	border-radius: 6px;
 	cursor: pointer;
 	font-family: notosans_cjk_regular;
 }
@@ -270,6 +286,7 @@ select.styled-select{
 	height: 24px;
 	border-radius: 4px;
 	cursor: pointer;
+	border-width: 1.5px !important;
 }
 .chip{
 	display: flex;
@@ -331,9 +348,50 @@ select.styled-select{
 	background-color: rgba(255,255,255,0.85);
 	box-shadow: 0 2px 4px 0 rgba(0,0,0,.12), 0 0 4px 0 rgba(0,0,0,.12);
 }
+#my_travel>.FAB_circle{
+	margin-top: 48px;
+}
 #arrow{
 	width:16px;
 	height: 32px;
+}
+/*슬라이더*/
+.slider{
+	width: calc(1080px);
+	margin:0 calc(50% - 540px - 16px);
+	padding:16px;
+	border-radius: 8px;
+	background-color: #ffffff;
+}
+#slide_arrow_left{
+	position: absolute;
+	left:8px;
+}
+#slide_arrow_right{
+	position: absolute;
+	right:8px;
+}
+#event_slide{
+	/*animation: rolling 3s ease-in-out;
+	animation-iteration-count: 1;*/
+}
+@keyframes rolling{
+	0%{
+		left:-100;
+	}
+	1%{
+		left:0%;
+	}
+	98%{
+		left:0%;
+	}	
+	100%{
+		left: -100%;
+	}
+}
+#event_slide>.event{
+	width: calc(50% - 32px) !important;
+	margin:0 16px !important;
 }
 
 .btt_fullsize{
@@ -347,10 +405,10 @@ select.styled-select{
 .primary_border{
 	border: solid 1px;
 	border-color: #7c4dff !important;
-	border-width: 1px !important;
+	border-width: 2px !important;
 }
 .white_border{
-	border: solid 1px;
+	border: solid 2px;
 	color: #ffffff;
 	border-color: #ffffff;
 }
@@ -472,7 +530,7 @@ select.styled-select{
     position: absolute;
 }
 .b_card{
-	width: 340px;
+	width: 328px;
 	height: 203px;
 }
 .b_card:before{
@@ -561,8 +619,8 @@ select.styled-select{
 	border: solid 2px #f0f0f0;
 }
 .profile_pic_middle{
-	width: 64px;
-	height: 64px;
+	width: 48px;
+	height: 48px;
 	border-radius: 50%;
 	background-size: cover;
 	border: solid 2px #f0f0f0;

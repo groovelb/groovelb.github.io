@@ -43,29 +43,6 @@
 	line-height: 32px;
 }
 
-.content_col{
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-content: flex-start;
-	align-items: flex-start;
-	width: calc(100% - 32px);
-	padding: 64px 16px 0px 16px;
-}
-.content_col_narrow{
-	width: 544px;
-	padding:0;
-	margin:0 auto;
-}
-.section_top{
- 	justify-content: space-between;
- 	align-items: center;
-}
-.section_top > h2{
-	width: auto;
-	margin: 0px !important;
-}
-
 /*마이페이지*/
 /*프로필 정보 텍스트 필드*/
 .info_field{

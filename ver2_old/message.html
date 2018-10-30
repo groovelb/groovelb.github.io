@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/layout_common.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_main.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_community.css">
+	<link rel="stylesheet" type="text/css" href="css/type.css">
+	<link rel="stylesheet" type="text/css" href="css/color.css">
+	<link rel="stylesheet" type="text/css" href="css/components.css">
+	<link rel="stylesheet" type="text/css" href="css/img.css">
+</head>
+<body>
+<!-- 헤더 -->
+<div class="header flex_row live_area black_highlight box_shadow" id="header">
+	<div class="flex_row col2  align_center justify_start" id="left">
+		<img id="header_logo" src="img/logo_ver3.svg">
+		<div class="text_menu flex_row align_center hor_margin_2x body_size" id="selected">
+			<a href="index_loggedin.html">호텔</a>
+		</div>
+		<div class="text_menu flex_row align_center body_size hor_margin_2x">
+			<a href="community_main.html">커뮤니티</a>
+		</div>
+	</div>
+	<div class="flex_row col2 align_center justify_end" id="right">
+		<a class="text_menu flex_row align_center body_size hor_margin_2x">FAQ</a>
+		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="reward.html">캐시백 신청</a>
+		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="message_main.html">메세지</a>
+		<a class="flex_row align_center hor_margin_2x" id="user_info" style="margin-right: 0" href="my_page.html">
+			<div class="profile_pic_s" id="pf1"></div>
+			<div class="flex_col">
+				<p class="body_bold hor_margin_tiny">username</p>
+				<p class="caption hor_margin_tiny">23,112₩</p>
+			</div>
+		</a>
+	</div>
+</div>
+<!--컨텐츠 영역-->
+<div class="live_area_narrow" style="padding-top: 128px;">
+	<div class="flex_row col1" style="align-items: flex-end;">
+		<!--메세지 상대 정보-->
+		<div class="flex_col" style="width:250px">
+			<div class="card_full flex_col border_full flex_center padding_1x card_border" style="position:absolute; width: 218px; overflow: hidden;">
+				<div class="profile_pic_big" id="pf3"></div>
+				<h2 class="body_bold" style="width:auto;">username</h2>
+				<p class="caption" id="trv_status">싱가폴 여행중</p>
+				<p class="caption ver_bottom_4x" id="trv_status">14 OCT ~ 12 NOV</p>
+				<h2 class="body_size ver_bottom_1x">진행중인 동행</h2>
+				<!--동행 슬라이더-->
+				<div class="flex_row col1" style="height:219px; overflow: hidden;">
+					<div class="flex_row" style="position:absolute; width:446px;">
+						<div class="FAB_circle" id="slide_arrow_left" style="left:calc(203px - 8px)">
+							<img id="arrow" src="img/arrow_next.svg">
+						</div>
+						<!--동행아이템-->
+						<div class="card s_card box_shadow flex_col align_center space_between margin_r_driection" id="trv13">
+							<div class="card align_center padding_tinny white_bg" id="date">
+								<p class="body_bold primary">31</p>
+								<p class="caption">OCT</p>
+							</div>
+							<div class="col1 white_bg bottom_radious">
+								<p class="body_bold padding_tinny text_center">"같이 클럽 zouk가실분 찾아요...."</p>
+							</div>
+						</div>
+						<!--동행아이템-->
+						<div class="card s_card box_shadow flex_col align_center space_between margin_r_driection" id="trv13">
+							<div class="card align_center padding_tinny white_bg" id="date">
+								<p class="body_bold primary">31</p>
+								<p class="caption">OCT</p>
+							</div>
+							<div class="col1 white_bg bottom_radious">
+								<p class="body_bold padding_tinny text_center">"같이 클럽 zouk가실분 찾아요...."</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--동행 슬라이더 끝-->
+				<div class="button primary_bg box_shadow" id="btt_mating">동행 신청하기</div>
+			</div>
+		</div>
+	</div>
+	<!--메세지 영역-->
+	<style>
+	.textfield{width: calc(100% - 16px - 68px - 16px); height: auto;}
+	.msg{width: 100%; justify-content: space-between;}
+	#time{width: 100%;}
+	#my_msg>.textfield{background-color: #f0f0f0}
+	#msg_btt{margin-right: calc(68px + 8px)}
+	</style>
+	<div class="flex_col" style="width:calc(100% - 252px - 80px); margin-left: calc(252px + 80px);">
+		<!--메시지 인풋-->
+		<div class="flex_row msg">
+			<textarea  type="textarea" class="textfield body_size padding_tinny" id="msg_input"></textarea>
+			<div class="profile_pic_middle" id="pf1"></div>
+		</div>
+		<div class="big_button primary2_bg" id="msg_btt" style="align-self: flex-end !important;">보내기</div>
+		<hr style="margin-top: 64px;">
+		<p class="body_size middle_emphasis" style="width:224px; margin: -18px auto 8px auto; text-align: center; background-color: #ffffff;">
+			정글리안 커뮤니티 가이드라인
+		</p>
+		<p class="caption middle_emphasis" style="text-align: center ; font-weight: 300; margin-bottom: 64px;">
+			1.동행신청 후 일방적으로 약속을 취소하면 불이익을 받을 수 있습니다.<br>2.동행중 부적절한 행동을할시 법적 책임을 물 수 있습니다.
+		</p>
+		<!--동행 수락-->
+		<div class="flex_row msg" id="msg_mating2" style="display: none;">
+			<div class="profile_pic_middle" id="pf3"></div>
+			<div class="textfield body_size padding_tinny ver_bottom_1x justify_start" style="border-width: 0;">
+				<p>username님이 동행 신청을 수락하였습니다.</p>
+				<p class="caption" id="time">pm 09:00</p>
+				<!--동행아이템-->
+				<div class="card s_card box_shadow flex_col align_center space_between ver_margin_1x" id="trv13">
+					<div class="card align_center padding_tinny white_bg" id="date">
+						<p class="body_bold primary">31</p>
+						<p class="caption">OCT</p>
+					</div>
+					<div class="profile_pic_s" id="pf1"></div>
+					<div class="col1 white_bg bottom_radious">
+						<p class="body_bold padding_tinny text_center">"같이 클럽 zouk가실분 찾아요...."</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--동행 신청-->
+		<div class="flex_row msg" id="msg_mating1" style="display: none;">
+			<div class="textfield body_size padding_tinny ver_bottom_1x justify_end" style="border-width: 0;">
+				<p>username님이 동행 신청을 하셨습니다.</p>
+				<p class="caption" id="time" style="text-align: right">pm 09:00</p>
+				<!--동행아이템-->
+				<div class="card s_card box_shadow flex_col align_center space_between ver_margin_1x" id="trv13">
+					<div class="card align_center padding_tinny white_bg" id="date">
+						<p class="body_bold primary">31</p>
+						<p class="caption">OCT</p>
+					</div>
+					<div class="col1 white_bg bottom_radious">
+						<p class="body_bold padding_tinny text_center">"같이 클럽 zouk가실분 찾아요...."</p>
+					</div>
+				</div>
+			</div>
+			<div class="profile_pic_middle" id="pf1"></div>
+		</div>
+		<div class="flex_row msg" id="my_msg">
+			<div class="textfield body_size padding_tinny">
+				꼭 가보고싶은 파인 다이닝 레스토랑 있는데 혼자라서 고민중이었어요. 싱가폴은 처음이신가요?
+				<p class="caption" id="time"> pm 09:00</p>
+			</div>
+			<div class="profile_pic_middle" id="pf1"></div>
+		</div>
+		<div class="flex_row msg" id="opp_msg">
+			<div class="profile_pic_middle" id="pf3">
+			</div>
+			<div class="textfield body_size padding_tinny">
+				오차로드에서 모하실건가요? 저희는 지금 남자 2이서 여행중이에요
+				<p class="caption" id="time"> pm 09:00</p>
+			</div>
+		</div>
+	</div>
+</div>	
+</body>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	/*동행 신청 이벤트 핸들러*/
+	$("#btt_mating").on("click",function(){
+			$("body").append("<div class='dialog_bg'></div>");
+			$(".dialog_bg").append($("#mating_dialog"));
+		
+		$("#confirm_mating").on("click",function(){
+			$("body").append($("#mating_dialog"));
+			$(".dialog_bg").remove();
+
+			$("#btt_mating").text("동행신청 보냄");
+			$("#btt_mating").removeClass("primary_bg");
+			$("#btt_mating").addClass("primary_dark_border primary_dark");
+			$("#msg_mating1").delay(300).css("display","flex");
+			$("#msg_mating2").delay(1200).css("display","flex");	
+		});
+	});
+
+	$("#dg_xbox1").on("click",function(){
+			console.log("click");
+			$("body").append($("#mating_dialog"));
+			$(".dialog_bg").remove();
+	});
+});
+
+</script>
+<div class="flex_col align_center s_dialog dialog padding_1x white_bg" id="mating_dialog">
+	<img class="xbox" src="img/ic_close.svg" id="dg_xbox1">
+	<h2 class="body_bold ver_bottom_2x text_center">동행신청</h2>
+	<p class="body_size text_center ver_margin_1x" style="width:100%;">동행신청후 동행이 성사되면 20,000₩이 적립됩니다. 기타 안내 메세지...</p>
+	<div class="button primary_bg ver_margin_2x" id="confirm_mating">확인</div>
+</div>
+</html>

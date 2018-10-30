@@ -1,13 +1,15 @@
+body{
+	color: #383838;
+}
 .white_highlight{
 	color: #ffffff;
 }
 .white_middle{
-	color: #f0f0f0;
+	color: #fafafa;
 }
 .white_middle_bg{
-	background-color: #f0f0f0;
+	background-color: #fafafa;
 }
-
 .search_bg{
 	background-color: #00E676;
 }
@@ -44,6 +46,10 @@
 .primary2{
 	color: #4da3fa !important;
 }
+.primary2_border{
+	border-color: #4da3fa !important;
+}
+
 .primary2_bg{
 	background-color: #4da3fa;
 	color: #ffffff;
@@ -66,10 +72,12 @@
     color: #ffffff;
     background-color: #FFC400;
 }
+.yellow{
+	color: #FFCC00;
+}
 .unread{
 	background-color: #FAF6FF;
 }
-
 #primary_filter{
 	background-color: rgba(64,38,128,0.45);
 }

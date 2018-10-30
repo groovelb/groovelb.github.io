@@ -9,13 +9,12 @@
 	<link rel="stylesheet" type="text/css" href="css/color.css">
 	<link rel="stylesheet" type="text/css" href="css/components.css">
 	<link rel="stylesheet" type="text/css" href="css/img.css">
-	<link rel="stylesheet" type="text/css" href="css/test.css">
 </head>
 <body class="black_highlight">
 <!-- 헤더 -->
 <div class="header flex_row live_area white_highlight" id="header">
 	<div class="flex_row col2  align_center justify_start" id="left">
-		<img id="header_logo" src="img/logo_ver3_white.svg">
+		<a href="index_loggedin.html"><img id="header_logo" src="img/logo_ver3_white.svg"></a>
 		<div class="text_menu flex_row align_center hor_margin_2x body_size" id="selected">
 			<a href="index_loggedin.html">호텔</a>
 		</div>
@@ -24,16 +23,23 @@
 		</div>
 	</div>
 	<div class="flex_row col2 align_center justify_end" id="right">
-		<a class="text_menu flex_row align_center body_size hor_margin_2x">FAQ</a>
+		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="faq.html">FAQ</a>
 		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="reward.html">캐시백 신청</a>
 		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="message_main.html">메세지</a>
-		<a class="flex_row align_center hor_margin_2x" id="user_info" style="margin-right: 0" href="my_page.html">
+		<div class="flex_row align_center hor_margin_2x dropdown" id="my_menu" style="margin-right: 0; cursor: pointer;">
+			<div class="dropdown-content caption_bold">
+				<img src="img/ic_arrow_up.svg" style="position:absolute; top:-6px; margin-left:8px; width:16px; height:8px">
+			    <a href="my_page.html">내 프로필</a>
+			    <a href="my_travel.html">내 여행</a>
+			    <a href="reward.html">리워드</a>
+			    <a href="#" class="primary2" style="text-align: right">로그아웃</a>
+		  	</div>
 			<div class="profile_pic_s" id="pf1"></div>
 			<div class="flex_col">
 				<p class="body_bold hor_margin_tiny">username</p>
 				<p class="caption hor_margin_tiny">23,112₩</p>
 			</div>
-		</a>
+		</div>
 	</div>
 </div>
 <!-- 탑 영역 -->
@@ -45,7 +51,7 @@
 			<!--호텔검색-->
 			<div class="flex_col col2" id="top_left">
 				<p class="middle_regular ver_bottom_2x">호텔 검색</p>
-				<p class="body_size ver_bottom_1x">190개국 1천만개의 직거래 숙소를 실시간으로 찾으세요.</p>
+				<p class="body_size ver_bottom_1x">전 세계 70개국 29,043,810개의 숙소를 실시간으로 찾으세요.</p>
 				<!--서치박스-->
 				<div class="search_box flex_row middle_emphasis space_between box_shadow">
 					<div class="textfield white_bg body_size tf_full">
@@ -170,7 +176,7 @@
 <!-- 인기 커뮤니티-->
 <div class="live_area white_highlight" style="margin-top: -144px">
 	<h2 class="middle_size">도시별 커뮤니티</h2>
-	<p class="body_size요 ver_bottom_2x">각 도시별 커뮤니티에서 여행계획을 공유하고 여행친구도 찾으세요.</p>
+	<p class="body_size요 ver_bottom_2x">각 도시별 커뮤니티에서 내 여행계획을 공유하고 함께 할 동행도 찾고, 2만원의 적립금 혜택도 받아보세요.</p>
 </div>
 <div class="slider flex_row" id="section1">
 	<style>#community_list>.s_card>h2{text-align: center;}</style>
@@ -215,22 +221,22 @@
 	</div>
 </div>
 <!-- USP요약-->
-<div class="live_area flex_row justify_center ver_margin_2x padding_2x">
-	<h2 class="big_light primary text_center ver_margin_2x">"현명한 여행객들의 커뮤니티 정글리안"</h2>
+<div class="live_area flex_row justify_center padding_2x">
+	<h2 class="big_light text_center ver_margin_2x">"현명한 여행객들의 커뮤니티 정글리안"</h2>
 	<div class="flex_col col3 align_center">
-		<img src="img/usp1_svg.svg" id="usp">
-		<h2 class="body_bold text_center ">Booking.com가격에 7% 캐시백</h2>
-		<p class="body_size text_center hor_margin_2x">최저가를 보장하는 부킹닷컴의 숙소에<br>캐시백 혜택을 누리세요.</p>
+		<img src="img/usp1_svg2.svg" id="usp">
+		<h2 class="body_bold text_center ">Booking.com최저가에 7%캐시백</h2>
+		<p class="body_size text_center hor_margin_2x">부킹닷컴 X 정글리안 선 결제 없이 무료취소 7% 현금 캐시백까지 모든 혜택을 누리세요</p>
 	</div>
 	<div class="flex_col col3 align_center">
 		<img src="img/usp2_svg.svg" id="usp">
 		<h2 class="body_bold text_center">가장 빠르고 확실한 캐시백</h2>
-		<p class="body_size text_center hor_margin_2x">누구보다 빠릅니다!<br>체크인 당일 캐시백을 받아가세요.</p>
+		<p class="body_size text_center hor_margin_2x">업계 최초! 누구보다 빠릅니다. 체크인 당일 캐시백을 받아가세요.</p>
 	</div>
 	<div class="flex_col col3 align_center">
 		<img src="img/usp3_svg.svg" id="usp">
-		<h2 class="body_bold text_center">커뮤니티와 함께하는 여행계획</h2>
-		<p class="body_size text_center hor_margin_2x">혼자하는 여행계획 No!<br> 커뮤니티와 알찬 여행 계획을 세우세요.</p>
+		<h2 class="body_bold text_center">때로는 혼자, 때로는 함꼐하는 여행</h2>
+		<p class="body_size text_center hor_margin_2x">정글리안 커뮤니티로 알찬 여행계획도 세우고 여행메이트를 찾아보세요.</p>
 	</div>
 </div>
 <!-- USP끝-->
@@ -239,7 +245,7 @@
 	<div class="col1 bg_filter" id="bg_filter">
 		<div class="live_area flex_row justify_center section_ver_padding">
 			<h2 class="big_size text_center">정글리안 리워드 프로그램</h2>
-			<h2 class="middle_thin text_center">"1년동안 얼마를 지원받을 수 있을까요?"</h2>
+			<h2 class="middle_thin text_center">"여행 일정과 친구초대 횟수로 적립 가능 금액을 확인해보세요."</h2>
 			<!--계산기-->
 			<div class="flex_row col1 white_bg ver_margin_4x" id="calculator">
 				<div class="flex_col col2 align_center ver_margin_4x">
@@ -289,6 +295,7 @@
 					<div class="button white_bg btt_shadow">가입하고 혜택받기</div>
 				</div>
 			</div>
+			<p class="caption col2 text_center">※세금 및 봉사료 호텔 예약 시 별도로 발생되는 비용과 부가세, 환율변동, 환전 수수료 등과 같은 원인으로 금액이 차이 날 수 있습니다.</p>
 			<!--종료-->
 		</div>
 	</div>
@@ -309,8 +316,7 @@
 			<a class="footer_item body_medium middle_emphasis" href="">이용약관</a>
 		</p>
 		<p class="flex_col col4" id="info">
-			<a class="footer_item body_medium middle_emphasis" href="">FAQ</a>
-			<a class="footer_item body_medium middle_emphasis" href="">공지사항</a>
+			<a class="footer_item body_medium middle_emphasis" href="faq.html">FAQ</a>
 			<a class="footer_item body_medium middle_emphasis" href="">이벤트</a>
 		</p>
 		<p class="flex_col col4" id="info">
@@ -342,6 +348,10 @@
 </body>
 <script src="js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript">
+	$("#my_menu").on("click",function(){
+		$(".dropdown-content").toggleClass("drop_down");
+	});
+
 	$(".event_tab").on("click",function(){
 		$(this).addClass("selected_evt_tab");
 		$(".event_tab").not($(this)).removeClass("selected_evt_tab");

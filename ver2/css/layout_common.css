@@ -56,6 +56,9 @@ hr{
 .space_between{
 	justify-content: space-between;
 }
+.space_around{
+	justify-content: space-around;
+}
 .align_center{
 	align-items: center;
 }
@@ -76,7 +79,11 @@ hr{
 	width: 1080px;
 	padding-left: calc(50% - 540px) !important;
 	padding-right: calc(50% - 540px) !important;
-
+}
+.live_area_margin{
+	width: 1080px;
+	margin-left: calc(50% - 540px) !important;
+	margin-right: calc(50% - 540px) !important;
 }
 .live_area_narrow{
 	width: 880px;
@@ -137,6 +144,9 @@ hr{
 .ver_top_1x{
 	margin-top: 8px;
 }
+.ver_top_2x{
+	margin-top: 16px;
+}
 .ver_bottom_1x{
 	margin-bottom: 8px;
 }
@@ -163,6 +173,12 @@ hr{
 }
 .padding_2x{
 	padding:32px;
+}
+.padding_3x{
+	padding:48px;
+}
+.padding_4x{
+	padding:64px;
 }
 .padding_tinny{
 	padding:8px;

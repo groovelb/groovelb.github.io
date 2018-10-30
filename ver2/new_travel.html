@@ -27,7 +27,7 @@
 		</div>
 	</div>
 	<div class="flex_row col2 align_center justify_end" id="right">
-		<a class="text_menu flex_row align_center body_size hor_margin_2x">FAQ</a>
+		<a class="text_menu flex_row align_center body_size hor_margin_2x href="faq.html"">FAQ</a>
 		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="reward.html">캐시백 신청</a>
 		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="message_main.html">메세지</a>
 		<a class="flex_row align_center hor_margin_2x" id="user_info" style="margin-right: 0" href="my_page.html">
@@ -82,7 +82,7 @@
 						</p>
 						<div class="s_button black_border caption_bold" style="margin-left:8px;">수정하기</div>
 					</div>
-					<div class="square_button flex_centered">
+					<div class="square_button flex_centered" id="remove">
 					<img src="img/ic_delete.svg" style="width: 24px; height: 24px;">
 					</div>
 				</div>
@@ -184,4 +184,29 @@
 	</div>
 </div>
 </body>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+		/*여행 삭제 이벤트 핸들러*/
+		$("#remove").on("click",function(){
+			$("body").append("<div class='dialog_bg'></div>");
+			$(".dialog_bg").append($("#remove_dialog"));
+		});
+		$("#dg_xbox1").on("click",function(){
+			console.log("click");
+			$("body").append($("#remove_dialog"));
+			$(".dialog_bg").remove();
+		});
+	});
+</script>
+<!--여행 삭제2-->
+<div class="flex_col align_center m_dialog dialog padding_2x white_bg" id="remove_dialog">
+	<img class="xbox" src="img/ic_close.svg" id="dg_xbox1">
+	<h2 class="middle_size ver_bottom_4x ver_bottom_2x text_center">여행 삭제</h2>
+	<p class="body_size text_center ver_margin_1x" style="width:100%;">호텔 예약내역이 남아있는 여행은 삭제할 수 없습니다. 여행계획만 삭제하시겠습니까?</p>
+	<div class="flex_row col1 space_around">
+		<div class="button primary_border ver_margin_2x">여행계획 삭제</div>
+		<div class="button primary_bg primary_border ver_margin_2x">취소</div>
+	</div>
+</div>
 </html>

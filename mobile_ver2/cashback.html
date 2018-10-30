@@ -7,7 +7,8 @@
 	<link rel="stylesheet" type="text/css" href="css_ver3/layout_main.css">
 	<link rel="stylesheet" type="text/css" href="css_ver3/layout_common.css">
 	<link rel="stylesheet" type="text/css" href="css/layout_common.css">
-	<link rel="stylesheet" type="text/css" href="css_ver3/layout_community.css">
+	
+	<link rel="stylesheet" type="text/css" href="css/layout_community.css">
 	<link rel="stylesheet" type="text/css" href="css/components.css">
 	<link rel="stylesheet" type="text/css" href="css/img.css">
 	<link rel="stylesheet" type="text/css" href="css_ver3/form.css">
@@ -18,7 +19,7 @@
 </head>
 <body>
 <!-- 헤더 -->
-<div class="header white_bg_header">
+<div class="header">
 	<div class="menu_dark" id="menu">
 	  <span></span>
 	  <span></span>
@@ -27,42 +28,50 @@
 	</div>
 	<img id="logo" src="img/logo_ver3.svg">
 	<div class="my_menu">
-		<div class=menu_item>
-			<img src="img/ic_message_black.svg">
-		</div>
-		<a href="my_page.html" class="profile_pic" id="pf2" style="width:24px; height:324x;">
+		<a href="message_main.html" class="menu_item">
+			<img src="img/ic_comments.svg">
+		</a>
+		<a href="my_page.html" class="profile_pic_s" id="pf2" style="width:24px; height:24px;">
 		</a>
 	</div>
 </div>
 <!--슬라이드 메뉴-->
 <div class="main_menu">
 	<a href="my_page.html" class="menu_list">
+		<div class="profile_pic_s menu_icon" id="pf2" style="width:24px; height:24px;">
+		</div>
 		마이페이지
 	</a>
-	<a href="profile.html" class="menu_list">
+	<a href="profile.html" class="menu_list menu_list_indent">
+		<img class="menu_icon" src="img/ic_my_profile.svg">
 		내 프로필
 	</a>
-	<a href="my_travel.html" class="menu_list">
+	<a href="my_travel.html" class="menu_list menu_list_indent">
+		<img class="menu_icon" src="img/ic_my_travel.svg">
 		내 여행
 	</a>
-	<a href="chashback.html" class="menu_list">
+	<a href="chashback.html" class="menu_list menu_list_indent">
+		<img class="menu_icon" src="img/ic_reward.svg">
 		리워드
 	</a>
 	<a href="community.html" class="menu_list">
+		<img class="menu_icon" src="img/ic_community_black.svg">
 		커뮤니티
 	</a>
 	<a href="cashback.html" class="menu_list">
+		<img class="menu_icon" src="img/ic_cashback.svg">
 		캐시백 신청
 	</a>
 	<a class="menu_list">
+		<img class="menu_icon" src="img/ic_faq.svg">
 		FAQ
 	</a>
-	<hr style="width: calc(100% - 64px);">
+	<hr>
 	<a class="menu_list center">
-		<div class="button border_btt" style="width: calc(100% - 16px); margin:0;">로그아웃</div>
+		<div class="button primary_border" style="width: calc(100% - 16px); margin:0;">로그아웃</div>
 	</a>
 </div>
-<!--내 프로필-->
+<!--적립금-->
 <div class="content_col">
 	<h2 class="middle_size ver_bottom_1x ver_top_4x">적립금</h2>
 	<div class="yellow_bg flex_col col1 flex_center ver_bottom_4x" style="padding:16px 0; border-radius:4px">

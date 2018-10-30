@@ -27,7 +27,7 @@
 		</div>
 	</div>
 	<div class="flex_row col2 align_center justify_end" id="right">
-		<a class="text_menu flex_row align_center body_size hor_margin_2x">FAQ</a>
+		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="faq.html">FAQ</a>
 		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="reward.html">캐시백 신청</a>
 		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="message_main.html">메세지</a>
 		<a class="flex_row align_center hor_margin_2x" id="user_info" style="margin-right: 0" href="my_page.html">
@@ -74,22 +74,22 @@
 			<!--여행 정보, 수정 가능-->
 			<div class="flex_col col1 ver_bottom_4x">
 				<h2 class="big_size">싱가폴 여행</h2>
-				<div class="flex_row col1 space_between">
+				<div class="flex_row col1">
 					<div class="flex_row align_center">
 						<img src="img/ic_calendar_p.svg" style="margin-right:4px;">
 						<p class="caption low_emphasis">
 						OCT 30 ~ NOV 12, 2018
 						</p>
-						<div class="s_button black_border caption_bold" style="margin-left:8px;">수정하기</div>
+						<div class="s_button black_border caption_bold" id="btt_edit" style="margin-left:8px;">수정하기</div>
 					</div>
-					<div class="square_button flex_centered">
-					<img src="img/ic_delete.svg" style="width: 24px; height: 24px;">
+					<div class="square_button hor_margin_2x flex_centered" id="remove">
+						<img src="img/ic_delete.svg" style="width: 24px; height: 24px;">
 					</div>
 				</div>
 			</div>
 			<!--여행 정보 끝-->
 			<!--숙소 예약정보-->
-			<h2 class="middle_size">숙소 예약</h2>
+			<h2 class="middle_size ver_bottom_1x">숙소 예약</h2>
 			<table class="table caption ver_bottom_8x">
 				<tr>
 					<th>예약번호</th>
@@ -112,7 +112,7 @@
 			</table>
 			<!--숙소 예약정보 끝-->
 			<!--커뮤니티 & 여헹 계획-->
-			<style>.card{margin-left:0} .card>h2{width:auto;} #user_list_thum>.profile_pic_s{margin-left: -18px;}</style>
+			<style>.card{margin-left:0} .card>h2{width:auto;}</style>
 			<div class="flex_row col1 ver_bottom_8x">
 				<!--커뮤니티-->
 				<div class="flex_col col2">
@@ -124,11 +124,11 @@
 							<div class="profile_pic_s" id="pf1"></div>
 							<div class="profile_pic_s" id="pf2"></div>
 							<div class="profile_pic_s" id="pf3"></div>
-							<div class="profile_pic_s" id="pf4"></div>
-							<div class="profile_pic_s" id="pf1"></div>
-							<div class="profile_pic_s" id="pf2"></div>
 						</div>
-						<p class="caption">총 <span>12,323</span> 회원</p>
+						<p class="caption"><span>12,323</span> 회원</p>
+						<p class="caption ver_bottom_2x"><span>323</span>개 장소</p>
+						<p class="caption">24명의 누적 적립금</p>
+						<p class="caption"><span class="yellow">630,000,000₩</span></p>
 					</a>
 				</div>
 				<!--여행계획-->
@@ -181,4 +181,62 @@
 	</div>
 </div>
 </body>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+		/*여행 삭제 이벤트 핸들러*/
+		$("#remove").on("click",function(){
+			$("body").append("<div class='dialog_bg'></div>");
+			$(".dialog_bg").append($("#remove_dialog"));
+		});
+		$("#dg_xbox1").on("click",function(){
+			console.log("click");
+			$("body").append($("#remove_dialog"));
+			$(".dialog_bg").remove();
+		});
+		/*여행 수정 이벤트 핸들러*/
+		$("#btt_edit").on("click",function(){
+			$("body").append("<div class='dialog_bg'></div>");
+			$(".dialog_bg").append($("#edit_travel_dialog"));
+		});
+		$("#dg_xbox2").on("click",function(){
+			console.log("click");
+			$("body").append($("#edit_travel_dialog"));
+			$(".dialog_bg").remove();
+		});
+	});
+</script>
+<!--여행 삭제-->
+<div class="flex_col align_center m_dialog dialog padding_2x white_bg" id="remove_dialog">
+	<img class="xbox" src="img/ic_close.svg" id="dg_xbox1">
+	<h2 class="middle_size ver_bottom_4x ver_bottom_2x text_center">여행 삭제</h2>
+	<p class="body_size text_center ver_margin_1x" style="width:100%;">'싱가폴 여행'을 삭제하시겠습니까? 삭제시 모든 여행계획은 복구가 불가능합니다.</p>
+	<div class="button primary_bg ver_margin_2x" style="width:164px;">여행 삭제</div>
+</div>
+<!--기존 여행 수정-->
+<div class="flex_col align_center dialog padding_2x white_bg" id="edit_travel_dialog">
+	<img class="xbox" src="img/ic_close.svg" id="dg_xbox2">
+	<h2 class="middle_size ver_bottom_4x text_center">여행정보 수정</h2>
+	<div class="flex_row col1 padding_1x ver_bottom_2x">
+		<!--구글 플레이스 연동부분-->
+		<div class="flex_row col1 padding_tinny ver_bottom_2x full_radious white_middle_bg">
+			<div class="flex_col col2 border_right" style="width:calc(50% - 17px); margin-right:16px">
+				<p class="caption_bold ver_bottom_1x middle_emphasis">목적지</p>
+				<p class="flex_row align_center caption_bold medium_empasize" id="location"><img src="img/ic_location.svg" class="icon_s">싱가폴</p>	
+			</div>
+			<div class="flex_row col2">
+				<div class="flex_col col2 justify_center">
+					<p class="caption_bold ver_bottom_1x middle_emphasis">체크인</p>
+					<p class="flex_row align_center caption_bold medium_empasize" id="date"><img src="img/ic_calendar_p.svg" class="icon_s">2018.10.12</p>
+				</div>
+				<div class="flex_col col2 justify_center">
+					<p class="caption_bold ver_bottom_1x middle_emphasis">체크아웃</p>
+					<p class="flex_row align_center caption_bold medium_empasize" id="date"><img src="img/ic_calendar_p.svg" class="icon_s">2018.10.12</p>
+				</div>
+			</div>
+		</div>
+		<input class="calculator_value number col1 ver_margin_2x" type="text" id="days" value="싱가폴 여행" style="margin-left:0; text-align: left;">
+	</div>
+	<a class="button primary_bg" href="new_travel.html" style="align-self: center; width:164px;">새여행 만들기</a>
+</div>
 </html>

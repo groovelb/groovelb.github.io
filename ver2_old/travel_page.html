@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/layout_common.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_main.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_community.css">
+	<link rel="stylesheet" type="text/css" href="css/type.css">
+	<link rel="stylesheet" type="text/css" href="css/color.css">
+	<link rel="stylesheet" type="text/css" href="css/components.css">
+	<link rel="stylesheet" type="text/css" href="css/img.css">
+	<style>
+		.card_img{border-radius: 4px;}
+	</style>
+</head>
+<body class="black_highlight">
+<!-- 헤더 -->
+<div class="header flex_row live_area black_highlight box_shadow" id="header">
+	<div class="flex_row col2  align_center justify_start" id="left">
+		<img id="header_logo" src="img/logo_ver3.svg">
+		<div class="text_menu flex_row align_center hor_margin_2x body_size" id="selected">
+			<a href="index_loggedin.html">호텔</a>
+		</div>
+		<div class="text_menu flex_row align_center body_size hor_margin_2x">
+			<a href="community_main.html">커뮤니티</a>
+		</div>
+	</div>
+	<div class="flex_row col2 align_center justify_end" id="right">
+		<a class="text_menu flex_row align_center body_size hor_margin_2x">FAQ</a>
+		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="reward.html">캐시백 신청</a>
+		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="message_main.html">메세지</a>
+		<a class="flex_row align_center hor_margin_2x" id="user_info" style="margin-right: 0" href="my_page.html">
+			<div class="profile_pic_s" id="pf1"></div>
+			<div class="flex_col">
+				<p class="body_bold hor_margin_tiny">username</p>
+				<p class="caption hor_margin_tiny">23,112₩</p>
+			</div>
+		</a>
+	</div>
+</div>
+<!--컨텐츠 영역-->
+<div class="live_area" style="padding-top: 128px;">
+	<div class="flex_row col1">
+		<div class="slide_menu">
+			<a href="my_page.html" class="slide_item">
+				<img src="img/ic_my_profile.svg">
+				내 프로필
+			</a>
+			<a href="my_travel.html" class="slide_item" id="selected_slide_item">
+				<img src="img/ic_my_travel_white.svg">
+				내 여행
+			</a>
+			<div class="slide_menu extend_item">
+				<a href="my_travel.html">
+					<div class="slide_item" id="selected_extend_item">
+						<img src="img/ic_calendar_p.svg">
+						내 여행계획
+					</div>
+				</a>
+				<a href="my_community.html">
+					<div class="slide_item">
+						<img src="img/ic_community_black.svg">
+						커뮤니티
+					</div>
+				</a>
+			</div>
+			<a  href="reward.html" class="slide_item">
+				<img src="img/ic_reward.svg">
+				리워드
+			</a>
+		</div>
+		<div class="content_col" style="align-items: center;">
+			<!--여행 정보, 수정 가능-->
+			<div class="flex_col col1 ver_bottom_4x">
+				<h2 class="big_size">싱가폴 여행</h2>
+				<div class="flex_row col1 space_between">
+					<div class="flex_row align_center">
+						<img src="img/ic_calendar_p.svg" style="margin-right:4px;">
+						<p class="caption low_emphasis">
+						OCT 30 ~ NOV 12, 2018
+						</p>
+						<div class="s_button black_border caption_bold" style="margin-left:8px;">수정하기</div>
+					</div>
+					<div class="square_button flex_centered">
+					<img src="img/ic_delete.svg" style="width: 24px; height: 24px;">
+					</div>
+				</div>
+			</div>
+			<!--여행 정보 끝-->
+			<!--숙소 예약정보-->
+			<h2 class="middle_size">숙소 예약</h2>
+			<table class="table caption ver_bottom_8x">
+				<tr>
+					<th>예약번호</th>
+					<th>호텔명</th>
+					<th>예약 기간</th>
+					<th>예약 확인서</th>
+				</tr>
+				<tr>
+					<td>1543447550</td>
+					<td>Holiday Inn Macao Cotail Central</td>
+					<td>2018.09.20 ~ 2018.09.21</td>
+					<td><a class="s_button primary2_bg letter_link" href="">보기</a></td>
+				</tr>
+				<tr>
+					<td>1543447550</td>
+					<td>Holiday Inn Macao Cotail Central</td>
+					<td>2018.09.20 ~ 2018.09.21</td>
+					<td><a class="s_button primary2_bg letter_link" href="">보기</a></td>
+				</tr>
+			</table>
+			<!--숙소 예약정보 끝-->
+			<!--커뮤니티 & 여헹 계획-->
+			<style>.card{margin-left:0} .card>h2{width:auto;} #user_list_thum>.profile_pic_s{margin-left: -18px;}</style>
+			<div class="flex_row col1 ver_bottom_8x">
+				<!--커뮤니티-->
+				<div class="flex_col col2">
+					<h2 class="middle_size">싱가폴 커뮤니티</h2>
+					<p class="body_size ver_bottom_2x">여행계획을 공유하고 동행을 찾으세요!</p>
+					<a class="card card_full b_card white_highlight flex_center" id="sg" href="community_page.html">
+						<h2 class="middle_size ver_bottom_1x">Singapore</h2>
+						<div class="flex_row align_center ver_bottom_1x" id=user_list_thum>
+							<div class="profile_pic_s" id="pf1"></div>
+							<div class="profile_pic_s" id="pf2"></div>
+							<div class="profile_pic_s" id="pf3"></div>
+							<div class="profile_pic_s" id="pf4"></div>
+							<div class="profile_pic_s" id="pf1"></div>
+							<div class="profile_pic_s" id="pf2"></div>
+						</div>
+						<p class="caption">총 <span>12,323</span> 회원</p>
+					</a>
+				</div>
+				<!--여행계획-->
+				<style>
+					#plan{border-radius: 16px;}
+					#plan>div>img{margin:12px;}
+
+				</style>
+				<div class="flex_col col2">
+					<h2 class="middle_size">여행 계획</h2>
+					<p class="body_size ver_bottom_2x">언제 어디갈지 정글리안과 함께 기록하세요.</p>
+					<a class="card card_full flex_center" id="map_img" href="plan.html">
+						<div class="flex_col padding_1x primary2_bg box_shadow" id="plan">
+							<div class="flex_row justify_center">
+								<img src="img/ic_add_location.svg">
+								<img src="img/ic_calendar_w.svg">
+								<img src="img/ic_map_w.svg">
+							</div>
+							<p class="body_size">12일간의 일정을 함께 계획하세요!</p>
+						</div>
+					</a>
+				</div>
+				<!--여행계획 끝-->
+			</div>
+			<div class="flex_row col1">
+				<style>.profile_pic_middle{margin-right:16px; margin-bottom: 16px}</style>
+				<div class="flex_col col2">
+					<h2 class="body_bold">같은 기간의 싱가폴 여행자</h2>
+					<p class="body_size ver_bottom_1x">여행계획을 공유하고 동행을 찾으세요</p>
+					<div class="flex_row col1 align_center">
+						<div class="profile_pic_middle" id="pf1"></div>
+						<div class="profile_pic_middle" id="pf2"></div>
+						<div class="profile_pic_middle" id="pf3"></div>
+					</div>
+				</div>
+				<div class="flex_col col2">
+					<h2 class="body_bold">이미 다녀간 추천 정글리안</h2>
+					<p class="body_size ver_bottom_1x">정글리안이 추천한 여행선배에게 질문하세요</p>
+					<div class="flex_row col1 align_center">
+						<div class="profile_pic_middle" id="pf5"></div>
+						<div class="profile_pic_middle" id="pf6"></div>
+						<div class="profile_pic_middle" id="pf7"></div>
+						<div class="profile_pic_middle" id="pf2"></div>
+						<div class="profile_pic_middle" id="pf9"></div>
+						<div class="profile_pic_middle" id="pf4"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/layout_common.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_main.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_community.css">
+	<link rel="stylesheet" type="text/css" href="css/type.css">
+	<link rel="stylesheet" type="text/css" href="css/color.css">
+	<link rel="stylesheet" type="text/css" href="css/components.css">
+	<link rel="stylesheet" type="text/css" href="css/img.css">
+	<style>
+		.card_img{border-radius: 4px;}
+		.card{margin-left:0;margin-right:16px;}
+	</style>
+</head>
+<body class="black_highlight">
+<!-- 헤더 -->
+<div class="header flex_row live_area black_highlight box_shadow" id="header">
+	<div class="flex_row col2  align_center justify_start" id="left">
+		<img id="header_logo" src="img/logo_ver3.svg">
+		<div class="text_menu flex_row align_center hor_margin_2x body_size" id="selected">
+			<a href="index_loggedin.html">호텔</a>
+		</div>
+		<div class="text_menu flex_row align_center body_size hor_margin_2x">
+			<a href="community_main.html">커뮤니티</a>
+		</div>
+	</div>
+	<div class="flex_row col2 align_center justify_end" id="right">
+		<a class="text_menu flex_row align_center body_size hor_margin_2x">FAQ</a>
+		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="reward.html">캐시백 신청</a>
+		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="message_main.html">메세지</a>
+		<a class="flex_row align_center hor_margin_2x" id="user_info" style="margin-right: 0" href="my_page.html">
+			<div class="profile_pic_s" id="pf1"></div>
+			<div class="flex_col">
+				<p class="body_bold hor_margin_tiny">username</p>
+				<p class="caption hor_margin_tiny">23,112₩</p>
+			</div>
+		</a>
+	</div>
+</div>
+<!--컨텐츠 영역-->
+<div class="live_area" style="padding-top: 128px;">
+	<div class="flex_row col1">
+		<div class="slide_menu">
+			<a href="my_page.html" class="slide_item">
+				<img src="img/ic_my_profile.svg">
+				내 프로필
+			</a>
+			<a href="my_travel.html" class="slide_item" id="selected_slide_item">
+				<img src="img/ic_my_travel_white.svg">
+				내 여행
+			</a>
+			<div class="slide_menu extend_item">
+				<a href="my_travel.html">
+					<div class="slide_item">
+						<img src="img/ic_calendar_black.svg">
+						내 여행계획
+					</div>
+				</a>
+				<a href="my_community.html" id="selected_extend_item">
+					<div class="slide_item">
+						<img src="img/ic_community_p.svg">
+						커뮤니티
+					</div>
+				</a>
+			</div>
+			<a  href="reward.html" class="slide_item">
+				<img src="img/ic_reward.svg">
+				리워드
+			</a>
+		</div>
+		<div class="content_col">
+			<div class="card_full full_border padding_1x live_width_narrow grd1_bg ver_bottom_4x" style="margin-left: 0; margin-left: 0; width:calc(100% - 32px)" id="banner">
+				<h2 class="big_size">5만명의 정글리안이 다녀온 도시별 커뮤니티</h2>
+				<p class="body ver_bottom_2x">유익한 여행지정보를 찾고 동행할 친구를 만나보세요.</p>
+			</div>
+			<!--여행 예정지 커뮤니티-->
+			<h2 class="middle_size">여행 예정지 커뮤니티</h2>
+			<div class="flex_row col1 ver_bottom_4x">
+				<!--커뮤니티-->
+				<a class="card card_full b_card white_highlight flex_center" id="sg" href="community_page.html">
+					<h2 class="middle_size ver_bottom_1x">Singapore</h2>
+					<div class="flex_row align_center ver_bottom_1x" id="user_list_thum">
+						<div class="profile_pic_s" id="pf1"></div>
+						<div class="profile_pic_s" id="pf2"></div>
+						<div class="profile_pic_s" id="pf3"></div>
+					</div>
+					<p class="caption">총 12,323 회원</p>
+				</a>
+				<!--커뮤니티-->
+				<a class="card card_full b_card white_highlight flex_center" id="kul" href="community_page.html">
+					<h2 class="middle_size ver_bottom_1x">Kualalumpur</h2>
+					<div class="flex_row align_center ver_bottom_1x" id="user_list_thum">
+						<div class="profile_pic_s" id="pf1"></div>
+						<div class="profile_pic_s" id="pf2"></div>
+						<div class="profile_pic_s" id="pf3"></div>
+					</div>
+					<p class="caption">총 12,323 회원</p>
+				</a>
+			</div>
+			<h2 class="middle_size">추천 커뮤니티</h2>
+			<!--커뮤니티-->
+			<div class="flex_col">
+				<a class="card card_full b_card white_highlight flex_center" id="bkk" href="community_page.html">
+					<h2 class="middle_size ver_bottom_1x">Bangkok</h2>
+					<div class="flex_row align_center ver_bottom_1x" id="user_list_thum">
+						<div class="profile_pic_s" id="pf1"></div>
+						<div class="profile_pic_s" id="pf2"></div>
+						<div class="profile_pic_s" id="pf3"></div>
+					</div>
+					<p class="caption">총 12,323 회원</p>
+				</a>
+				<p class="caption_bold primary2" style="align-self: flex-end; margin-right: 16px">싱가폴 여행자들이 많이 다녀감</p>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

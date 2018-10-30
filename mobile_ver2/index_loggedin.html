@@ -64,6 +64,7 @@
 		<img class="menu_icon" src="img/ic_faq.svg">
 		FAQ
 	</a>
+	<hr>
 	<a class="menu_list center">
 		<div class="button primary_border" style="width: calc(100% - 16px); margin:0;">로그아웃</div>
 	</a>
@@ -115,15 +116,22 @@
 
 <div class="live_area">
 	<!--리워드 프로그램-->
-	<div class="flex_col col1 align_center full_radious" style="margin-top: -128px;">
+	<div class="flex_col col1 align_center full_radious" style="margin-top: -144px;">
 		<h2 class="middle_regular flex_row flex_center text_center ver_top_2x white_highlight" style="margin-bottom: calc(16px * 7.5);"><img class="menu_icon" src="img/ic_reward_white.svg">정글리안 리워드 프로그램</h2>
 		<div class="flex_row col1 justify_center grd1_bg box_shadow" id="event_slide_containner" style="position:absolute; overflow: hidden; width:calc(100% - 32px) !important; margin-top: 48px; margin-left:32; height: calc(16px * 7)!important; left: 16px">
+			<!--리워드 이벤트 네비-->
+			<div class="FAB_circle event_left" id="slide_arrow_left">
+				<img id="arrow" src="img/arrow_prev_white.svg">
+			</div>
+			<div class="FAB_circle event_right" id="slide_arrow_right">
+				<img id="arrow" src="img/arrow_next_white.svg">
+			</div>
 			<div class="flex_row" style="width:calc(200%); position: absolute; left: 0;" id="event_slide">
 				<div class="flex_col card_full event">
 					<div class="flex_row col1 flex_center ver_padding_1x white_highlight">
 						<img src="img/usp2_svg.svg" style="width: 80px; height: 80px; margin-left: -8px;">
 						<div class="flex_col align_start">
-							<p class="middle_thin ver_bottom_1x">체크인 당일 7%캐시백</p>
+							<p class="middle_thin">체크인 당일 7%캐시백</p>
 							<div class="s_button primary2_bg caption">자세히 보기</div>
 						</div>
 					</div>
@@ -132,18 +140,22 @@
 					<div class="flex_row col1 flex_center ver_padding_1x white_highlight">
 						<img src="img/usp4_svg.svg" style="width: 80px; height: 80px; margin-left: -8px;">
 						<div class="flex_col align_start">
-							<p class="middle_thin ver_bottom_1x">친구초대 커미션 20,000₩</p>
+							<p class="middle_thin">친구초대 커미션 20,000₩</p>
 							<div class="s_button primary2_bg caption">자세히 보기</div>
 						</div>
 					</div>
 				</div>
 			</div>
+			<div class="flex_row col1 flex_center" id="progress_dots" style="position:absolute; bottom:8px;">
+				<div class="dot current_dot" id="dot1"></div>
+				<div class="dot" id="dot2"></div>
+			</div>
 		</div>
-		<div class="button body_medium white_bg primary_dark_border ver_bottom_2x box_shadow">가입하고 혜택받기 <img src="img/arrow_next_p_dark.svg" style="width:16px;height:16px;margin: 2px 0 0 4px"></div>
+		<div class="button body_medium white_bg primary_dark_border box_shadow">가입하고 혜택받기 <img src="img/arrow_next_p_dark.svg" style="width:16px;height:16px;margin: 2px 0 0 4px"></div>
 	</div>
 	<!--리워드 종료-->
 	<!--커뮤니티-->
-	<div class="flex_col col1 ver_top_2x" style="margin: 16px 0 32px 0; height: 212px">
+	<div class="flex_col col1 ver_top_2x" style="height: 264px" id="main_community">
 		<h2 class="middle_size">커뮤니티</h2>
 		<p class="body_size">여행계획을 공유하고 여행친구를 찾으세요!</p>
 		<div class="FAB_circle" id="slide_arrow_left">
@@ -155,7 +167,7 @@
 		<div class="containner" style="position:absolute; width:calc(100% - 16px); height:176px; margin: 48px 0 0 0; overflow: hidden;">
 			<style>
 				.content_slide{width: auto !important;}
-				.content_slide>.col2{width: 148px;}
+				.content_slide>.col2{width: 158px;}
 			</style>
 			<div class="content_slide">
 				<a class="margin_r_driection col2" href="my_travel.html">
@@ -254,19 +266,19 @@
 <!-- Footer -->
 <footer>
 	<p class="sitemap_col" id="introduction">
-		<a class="footer_item caption" href="">Junglian 소개</a>
-		<a class="footer_item caption" href="">고객 센터</a>
-		<a class="footer_item caption" href="">개인정보처리 방침</a>
-		<a class="footer_item caption" href="">이용약관</a>
+		<a class="footer_item caption_bold" href="">Junglian 소개</a>
+		<a class="footer_item caption_bold" href="">고객 센터</a>
+		<a class="footer_item caption_bold" href="">개인정보처리 방침</a>
+		<a class="footer_item caption_bold" href="">이용약관</a>
 	</p>
 	<p class="sitemap_col" id="info">
-		<a class="footer_item caption" href="">FAQ</a>
-		<a class="footer_item caption" href="">공지사항</a>
-		<a class="footer_item caption" href="">이벤트</a>
+		<a class="footer_item caption_bold" href="">FAQ</a>
+		<a class="footer_item caption_bold" href="">공지사항</a>
+		<a class="footer_item caption_bold" href="">이벤트</a>
 	</p>
 	<p class="sitemap_col" id="info">
-		<a class="footer_item caption" href="">커뮤니티 가이드라인</a>
-		<a class="footer_item caption" href="">리워드 프로그램</a>
+		<a class="footer_item caption_bold" href="">커뮤니티 가이드라인</a>
+		<a class="footer_item caption_bold" href="">리워드 프로그램</a>
 	</p>
 	<div class="link">
 		<p class="caption ver_bottom_1x" style="width:100%; font-weight: 500;">Follow us</p>
@@ -309,6 +321,15 @@
 			});
 			$("#xbox").on("click",function(){
 				$(".main_menu").toggleClass("main_menu_on");
+			});
+
+			/*이벤트 슬라이드*/
+			$("#event_slide").delay(500).animate({left:"-100%"},{duration:100});
+			$(".event_left").on("click",function(){
+				$("#event_slide").animate({left: "+=100%"},{duration:100});
+			});
+			$(".event_right").on("click",function(){
+				$("#event_slide").animate({left: "+=-100%"},{duration:100});
 			});
 		});
 </script>

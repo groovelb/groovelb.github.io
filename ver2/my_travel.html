@@ -27,7 +27,7 @@
 		</div>
 	</div>
 	<div class="flex_row col2 align_center justify_end" id="right">
-		<a class="text_menu flex_row align_center body_size hor_margin_2x">FAQ</a>
+		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="faq.html">FAQ</a>
 		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="reward.html">캐시백 신청</a>
 		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="message_main.html">메세지</a>
 		<a class="flex_row align_center hor_margin_2x" id="user_info" style="margin-right: 0" href="my_page.html">
@@ -235,15 +235,18 @@
 		});
 	});
 </script>
-<div class="flex_col align_center s_dialog dialog padding_1x white_bg" id="setting_dialog">
+<!--공개 설정-->
+<div class="flex_col align_center m_dialog dialog padding_2x white_bg" id="setting_dialog">
 	<img class="xbox" src="img/ic_close.svg" id="dg_xbox1">
-	<h2 class="body_bold ver_bottom_2x text_center">공개 설정</h2>
-	<p class="caption text_center ver_margin_1x" style="width:100%;">여행계획을 공개하시면 여행 계획 공유 및 동행을 찾을 수 있습니다.</p>
-	<label class="checkbox_container body_size">여행계획 공개
-	  <input type="checkbox" checked="checked">
-	  <span class="checkmark"></span>
-	</label>
-	<div class="button primary_bg ver_margin_2x">확인</div>
+	<h2 class="middle_size ver_bottom_4x ver_bottom_2x text_center">공개 설정</h2>
+	<p class="body_size text_center ver_margin_1x" style="width:100%;">여행계획을 공개하시면 여행 계획 공유 및 동행을 찾을 수 있습니다.</p>
+	<div class="list under_border col1">
+		<label class="checkbox_container body_medium ver_padding_1x">여행계획 공개
+		  <input type="checkbox" checked="checked">
+		  <span class="checkmark"></span>
+		</label>
+	</div>
+	<div class="button primary_bg ver_margin_2x" style="width:164px;">확인</div>
 </div>
 <div class="flex_col align_center dialog padding_2x white_bg" id="add_travel_dialog">
 	<img class="xbox" src="img/ic_close.svg" id="dg_xbox2">

@@ -27,7 +27,7 @@
 		</div>
 	</div>
 	<div class="flex_row col2 align_center justify_end" id="right">
-		<a class="text_menu flex_row align_center body_size hor_margin_2x">FAQ</a>
+		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="faq.html">FAQ</a>
 		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="reward.html">캐시백 신청</a>
 		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="message_main.html">메세지</a>
 		<a class="flex_row align_center hor_margin_2x" id="user_info" style="margin-right: 0" href="my_page.html">
@@ -275,7 +275,7 @@
 	<!--쓰기 다이알로그-->
 	<div class="dialog padding_2x card write_dialog white_bg" id="wrt_dialog">
 		<img class="xbox" src="img/ic_close.svg" id="dg_xbox1">
-		<div class="tab3 flex_row body_size" style="justify-content: space-between; width: 100%;">
+		<div class="tab3 flex_row body_size tab_containner" style="justify-content: space-between; width: 100%;">
 			<div class="tab_item flex_center col3 tab_selected" id="tab_trv">트래블 로그</div>
 			<div class="tab_item flex_center col3" id="tab_qna">Q&A</div>
 			<div class="tab_item flex_center col3" id="tab_mating">동행찾기</div>
@@ -294,8 +294,7 @@
 			<div class="button primary_bg" style="margin-left: calc(100% - 96px);">올리기</div>
 		</div>
 	</div>
-
-	<!-- 쓰기 다일알로그 탭 -->
+	<!-- 질문 다일알로그 탭 -->
 	<div class="flex_row tabbed_content" id="wrt_qna">
 		<style>.square_button{margin-right: 16px;} textarea{width: 100%;}</style>
 		<div class="text_area col1 padding_1x full_border bottom_radious ver_bottom_2x">
@@ -304,6 +303,7 @@
 			<textarea class="col1 body_bold q_textarea" placeholder="질문을 적어주세요." class="body_size" style="border-width: 0; height: 104px;"></textarea>
 		</div>
 	</div>
+	<!-- 동행 다일알로그 탭 -->
 	<div class="flex_row tabbed_content" id="wrt_mating">
 		<style>.square_button{margin-right: 16px;}</style>
 		<div class="text_area flex_row col1 padding_1x full_border bottom_radious ver_bottom_2x">

@@ -28,17 +28,19 @@
 	background-color: #ffffff;
 }
 .primary{
-	color: #7c4dff !important;
+	color: #8480f7 !important;
+	/*color: #7c4dff !important;*/
 }
 .primary_dark{
 	color: #311B92 !important;
 }
 .primary_dark_border{
 	color: #311B92;
-	border: solid 1px #311B92 !important;
+	border: solid 2px #311B92 !important;
 }
 .primary_bg{
-	background-color: #7c4dff;
+	background-color: #8480f7 !important;
+	/*background-color: #7c4dff;*/
 	color: #ffffff;
 }
 .primary2{

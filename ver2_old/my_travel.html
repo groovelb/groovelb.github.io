@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/layout_common.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_main.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_community.css">
+	<link rel="stylesheet" type="text/css" href="css/type.css">
+	<link rel="stylesheet" type="text/css" href="css/color.css">
+	<link rel="stylesheet" type="text/css" href="css/components.css">
+	<link rel="stylesheet" type="text/css" href="css/img.css">
+	<style>
+		.card_img{border-radius: 4px;}
+	</style>
+</head>
+<body class="black_highlight">
+<!-- 헤더 -->
+<div class="header flex_row live_area black_highlight box_shadow" id="header">
+	<div class="flex_row col2  align_center justify_start" id="left">
+		<img id="header_logo" src="img/logo_ver3.svg">
+		<div class="text_menu flex_row align_center hor_margin_2x body_size" id="selected">
+			<a href="index_loggedin.html">호텔</a>
+		</div>
+		<div class="text_menu flex_row align_center body_size hor_margin_2x">
+			<a href="community_main.html">커뮤니티</a>
+		</div>
+	</div>
+	<div class="flex_row col2 align_center justify_end" id="right">
+		<a class="text_menu flex_row align_center body_size hor_margin_2x">FAQ</a>
+		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="reward.html">캐시백 신청</a>
+		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="message_main.html">메세지</a>
+		<a class="flex_row align_center hor_margin_2x" id="user_info" style="margin-right: 0" href="my_page.html">
+			<div class="profile_pic_s" id="pf1"></div>
+			<div class="flex_col">
+				<p class="body_bold hor_margin_tiny">username</p>
+				<p class="caption hor_margin_tiny">23,112₩</p>
+			</div>
+		</a>
+	</div>
+</div>
+<!--컨텐츠 영역-->
+<div class="live_area white_bg" style="padding-top: 128px;">
+	<div class="flex_row col1">
+		<div class="slide_menu">
+			<a href="my_page.html" class="slide_item">
+				<img src="img/ic_my_profile.svg">
+				내 프로필
+			</a>
+			<a href="my_travel.html" class="slide_item" id="selected_slide_item">
+				<img src="img/ic_my_travel_white.svg">
+				내 여행
+			</a>
+			<div class="slide_menu extend_item">
+				<a href="my_travel.html">
+					<div class="slide_item" id="selected_extend_item">
+						<img src="img/ic_calendar_p.svg">
+						내 여행계획
+					</div>
+				</a>
+				<a href="my_community.html">
+					<div class="slide_item">
+						<img src="img/ic_community_black.svg">
+						커뮤니티
+					</div>
+				</a>
+			</div>
+			<a  href="reward.html" class="slide_item">
+				<img src="img/ic_reward.svg">
+				리워드
+			</a>
+
+		</div>
+		<div class="content_col" style="align-items: center;">
+			<!--소개-->
+			<div class="flex_col col1 ver_bottom_4x align_center" style="width:60%; margin-left:20%; margin-right: 20%;">
+				<div class="profile_pic_big" id="pf1"></div>
+				<h2 class="middle_size ver_bottom_1x" style="width: auto">Username</h2>
+				<p class="body_size middle_emphasis text_center col2">
+					휴양지 전문 여행가입니다. 남미, 남유럽, 미주 12개 도시 휴향지 탐방기 구경하세요! 11/01 ~ 11/23 아르헨티나 여행 예정!
+				</p>
+				<div class="flex_row col1 justify_center" id="user_meta">
+					<p class="flex_row caption_bold middle_emphasis align_center margin_tinny" id="cities"><img src="img/ic_city.svg">12개 도시 방문</p>
+				<p class="flex_row caption_bold middle_emphasis align_center margin_tinny" id="locations"><img src="img/ic_location.svg">25개 장소 등록</p>
+				</div>
+				<div class="flex_row col1 justify_center">
+					<div class='chip chip_selected margin_tinny'>맛집탐방</div>
+					<div class='chip chip_selected margin_tinny'>와인여행</div>
+				</div>
+			</div>
+			
+			<!--내 여행 섹션 -->
+			<div class="flex_row white_bg col1 space_between ver_bottom_8x">
+				<div class="flex_row col1 space_between align_center ver_bottom_1x">
+					<div class="flex_row align_end">
+						<h2 class="middle_size" style="width:auto">내 여행 계획</h2>
+						<p class="caption_bold primary2" style="margin:0 0 4px 4px;">(공개)</p>
+					</div>
+					<div class="flex_row">
+					  <div class="button black_border" id="public_setting"><img src="img/ic_setting.svg">공개설정</div>
+					</div>
+				</div>
+				<p class="body_size ver_bottom_2x">여행계획을 공유하고 여행친구도 찾으세요.</p>
+				<div class="flex_row col1 space_between">
+					<a class="card card_3" href="travel_page.html">
+						<div class="card_img" id="sg">
+						</div>
+						<div class="travel_info margin_1x">
+							<h2 class="body_bold">싱가폴 여행</h2>
+							<p class="caption_bold primary2">Holiday Central외 3개 장소</p>
+							<p class="caption middle_emphasis">OCT 30 ~ NOV 12, 2018</p>
+						</div>
+					</a>
+					<div class="card card_3">
+						<div class="card_img" id="kul">
+						</div>
+						<div class="travel_info margin_1x">
+							<h2 class="body_bold">쿠알라룸프르 여행</h2>
+							<p class="caption_bold primary2">Holiday Central 예약됨</p>
+							<p class="caption middle_emphasis">OCT 30 ~ NOV 12, 2018</p>
+						</div>
+					</div>
+					<div class="card card_3" style="margin-right: 0">
+						<div class="add_travel">
+							<img src="img/ic_add_2ndp.svg" style="width:96px; height:96px; padding:calc(37.5% - 48px - 17px)  calc(50% - 48px)">
+						</div>
+						<div class="travel_info margin_1x">
+							<h2 class="body_size text_center low_emphasis">새로운 계획을 추가하세요!</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--내 여행 섹션 종료-->
+			<!--내 트래블 로그 섹션 -->
+			<div class="flex_row col1">
+				<div class="flex_row col1 space_between align_center ver_bottom_2x">
+					<h2 class="middle_size" style="width:auto">내 트래블 로그</h2>
+					<div class="flex_row">
+					  <div class="button black_border"><img src="img/ic_write.svg">트래블로그 쓰기</div>
+					</div>
+				</div>
+				<div class="flex_row col1">
+					<div class="flex_col col3">
+						<!--포스트-->
+						<style>#location>img{width: 16px; height:16px ; margin-left:-4px;}</style>
+						<div class="card card_full">
+							<div class="card_img short" id="trv1">
+							</div>
+							<div class="post_info margin_1x">
+								<h2 class="body_size">포스트 첫문장 한줄로 텍스트 워핑</h2>
+								<p class="flex_row align_center caption middle_emphasis" id="location"><img src="img/ic_location.svg">Location, City</p>
+							</div>
+						</div>
+						<!--포스트-->
+						<div class="card card_full">
+							<div class="card_img long" id="trv2">
+							</div>
+							<div class="post_info margin_1x">
+								<h2 class="body_size">포스트 첫문장 한줄로 텍스트 워핑</h2>
+
+								<p class="flex_row align_center caption middle_emphasis ver_margin_tiny" id="location"><img src="img/ic_location.svg">Location, City</p>
+							</div>
+						</div>
+					</div>
+					<div class="flex_col col3">
+						<!--포스트-->
+						<div class="card card_full">
+							<div class="card_img middle" id="trv3">
+							</div>
+							<div class="post_info margin_1x">
+								<h2 class="body_size">포스트 첫문장 한줄로 텍스트 워핑</h2>
+								<p class="flex_row align_center caption middle_emphasis ver_margin_tiny" id="location"><img src="img/ic_location.svg">Location, City</p>
+							</div>
+						</div>
+						<!--포스트-->
+						<div class="card card_full">
+							<div class="card_img long" id="trv4">
+							</div>
+							<div class="post_info margin_1x">
+								<h2 class="body_size">포스트 첫문장 한줄로 텍스트 워핑</h2>
+								<p class="flex_row align_center caption middle_emphasis ver_margin_tiny" id="location"><img src="img/ic_location.svg">Location, City</p>
+							</div>
+						</div>
+					</div>
+					<div class="flex_col col3">
+						<!--포스트-->
+						<div class="card card_full">
+							<div class="card_img short" id="trv5">
+							</div>
+							<div class="post_info margin_1x">
+								<h2 class="body_size">포스트 첫문장 한줄로 텍스트 워핑</h2>
+								<p class="flex_row align_center caption middle_emphasis ver_margin_tiny" id="location"><img src="img/ic_location.svg">Location, City</p>
+							</div>
+						</div>
+						<!--포스트-->
+						<div class="card card_full">
+							<div class="card_img short" id="trv6">
+							</div>
+							<div class="post_info margin_1x">
+								<h2 class="body_size">포스트 첫문장 한줄로 텍스트 워핑</h2>
+								<p class="flex_row align_center caption middle_emphasis ver_margin_tiny" id="location"><img src="img/ic_location.svg">Location, City</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--트래블로그 섹션끝-->
+		</div>
+	</div>
+</div>
+</body>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+		/*공개설정 이벤트 핸들러*/
+		$("#public_setting").on("click",function(){
+			$("body").append("<div class='dialog_bg'></div>");
+			$(".dialog_bg").append($("#setting_dialog"));
+		});
+		$("#dg_xbox1").on("click",function(){
+			console.log("click");
+			$("body").append($("#setting_dialog"));
+			$(".dialog_bg").remove();
+		});
+
+		/*여행 추가하기 이벤트 핸들러*/
+		$(".add_travel").on("click",function(){
+			$("body").append("<div class='dialog_bg'></div>");
+			$(".dialog_bg").append($("#add_travel_dialog"));
+		});
+		$("#dg_xbox2").on("click",function(){
+			console.log("click");
+			$("body").append($("#add_travel_dialog"));
+			$(".dialog_bg").remove();
+		});
+	});
+</script>
+<div class="flex_col align_center s_dialog dialog padding_1x white_bg" id="setting_dialog">
+	<img class="xbox" src="img/ic_close.svg" id="dg_xbox1">
+	<h2 class="body_bold ver_bottom_2x text_center">공개 설정</h2>
+	<p class="caption text_center ver_margin_1x" style="width:100%;">여행계획을 공개하시면 여행 계획 공유 및 동행을 찾을 수 있습니다.</p>
+	<label class="checkbox_container body_size">여행계획 공개
+	  <input type="checkbox" checked="checked">
+	  <span class="checkmark"></span>
+	</label>
+	<div class="button primary_bg ver_margin_2x">확인</div>
+</div>
+<div class="flex_col align_center dialog padding_2x white_bg" id="add_travel_dialog">
+	<img class="xbox" src="img/ic_close.svg" id="dg_xbox2">
+	<h2 class="body_bold ver_bottom_2x text_center">새 여행 추가</h2>
+	<div class="flex_row col1 padding_1x ver_bottom_2x">
+		<!--구글 플레이스 연동부분-->
+		<div class="flex_row col1 padding_tinny ver_margin_2x full_radious white_middle_bg">
+			<p class="flex_row col2 align_center caption_bold medium_empasize" id="location"><img src="img/ic_location.svg" class="icon_s">도시 설정</p>
+			<div class="flex_row col2">
+				<p class="flex_row col2 align_center caption_bold medium_empasize" id="date"><img src="img/ic_calendar_p.svg" class="icon_s">도착 날짜</p>
+				<p class="flex_row col2 align_center caption_bold medium_empasize" id="date"><img src="img/ic_calendar_p.svg" class="icon_s">떠나는 날짜</p>
+			</div>
+		</div>
+		<input class="calculator_value number col1 ver_margin_2x" type="text" id="days" placeholder="여행제목" style="margin-left:0; text-align: left;">
+	</div>
+	<a class="button primary_bg" href="new_travel.html" style="align-self: center;">새여행 만들기</a>
+</div>
+</html>

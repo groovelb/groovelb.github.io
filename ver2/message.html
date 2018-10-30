@@ -24,7 +24,7 @@
 		</div>
 	</div>
 	<div class="flex_row col2 align_center justify_end" id="right">
-		<a class="text_menu flex_row align_center body_size hor_margin_2x">FAQ</a>
+		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="faq.html">FAQ</a>
 		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="reward.html">캐시백 신청</a>
 		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="message_main.html">메세지</a>
 		<a class="flex_row align_center hor_margin_2x" id="user_info" style="margin-right: 0" href="my_page.html">
@@ -185,10 +185,33 @@ $(document).ready(function(){
 });
 
 </script>
-<div class="flex_col align_center s_dialog dialog padding_1x white_bg" id="mating_dialog">
+<div class="flex_col align_center dialog padding_2x white_bg" id="mating_dialog">
 	<img class="xbox" src="img/ic_close.svg" id="dg_xbox1">
-	<h2 class="body_bold ver_bottom_2x text_center">동행신청</h2>
-	<p class="body_size text_center ver_margin_1x" style="width:100%;">동행신청후 동행이 성사되면 20,000₩이 적립됩니다. 기타 안내 메세지...</p>
-	<div class="button primary_bg ver_margin_2x" id="confirm_mating">확인</div>
+	<h2 class="middle_size ver_bottom_4x text_center">동행신청</h2>
+	<div class="flex_row col1 flex_center align_center ver_bottom_1x">
+		<div class="profile_pic_big box_shadow" id="pf2">
+		</div>
+		<!--화살표-->
+		<img src="img/ic_arrow_long_right_2ndp.svg" style="width:96px; height: 96px;" style="z-index: 999;">
+		<!--동행아이템-->
+		<div class="card s_card box_shadow flex_col align_center space_between ver_margin_1x" id="trv13" style="margin-left: -8px; z-index: -1">
+			<div class="card align_center padding_tinny white_bg" id="date">
+				<p class="body_bold primary">31</p>
+				<p class="caption">OCT</p>
+			</div>
+			<div class="col1 white_bg bottom_radious ver_padding_tinny">
+				<!--참여자 프로필-->
+				<div class="flex_row col1 flex_center" id="user_list_thum">
+					<div class="profile_pic_s" id="pf1"></div>
+					<div class="profile_pic_s" id="pf2"></div>
+					<div class="profile_pic_s" id="pf3"></div>
+				</div>
+				<p class="flex_row flex_center caption_bold middle_emphasis" id="location"><img src="img/ic_location.svg">Zouk, Singapore</p>
+			</div>
+		</div>
+	</div>
+	<p class="caption text_center ver_bottom_1x"><span>username</span>외 3명 참여중</p>
+	<p class="body_size text_center ver_bottom_8x" style="width:100%;">동행신청을 하시겠습니까?<br>동행신청 결과는 메세지에서 확인할 수 있습니다.</p>
+	<div class="button primary_bg ver_margin_2x box_shadow" id="confirm_mating" style="width:164px;">동행신청</div>
 </div>
 </html>

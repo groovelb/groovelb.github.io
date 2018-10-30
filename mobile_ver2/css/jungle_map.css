@@ -6,7 +6,7 @@ html, body{
 	width: auto;
 }
 #map{background-color: #383838;
-
+	position: fixed !important;
 	width: 100%;
 	height: 100%;
 }
@@ -23,9 +23,9 @@ html, body{
 }
 .plan_slider{
 	position:absolute;
-	top:0;
+	top:50%;
 	left:0;
-	width: 384px;
+	width: 100%;
 	height: 100%;
 	color: #383838;
 	background-color: #ffffff;
@@ -33,7 +33,6 @@ html, body{
 	box-shadow: 0px 0px 12px 0px rgba(64,64,64,0.2);
 	transition: left 0.2s;
 	transition-timing-function: ease-out;
-	overflow-x: visible;
 }
 .slide{
 	position: absolute;
@@ -81,7 +80,7 @@ html, body{
 	position: fixed;
 	z-index: 999;
 	top:24px;
-	left: calc(50% - 72px);
+	left: calc(50% - 132px);
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -111,15 +110,12 @@ html, body{
 	background-color: #ffffff;
 }
 .slide_toggle{
-	position: absolute;
-	top:16px;
-	left:384px;
 	display: flex;
-	width:32px;
-	height:48px;
+	margin-top: -24px;
+	width:48px;
+	height:24px;
 	background-color: #fafafa;
-	border: solid 0.5px #eeeeee;
-	border-radius: 0 4px 4px 0;
+	border-radius: 4px 4px 0 0;
 }
 .arrow{
 	transform: rotate(180deg);
@@ -206,7 +202,8 @@ html, body{
 #plan_save{
 	width:calc(100% - 64px);
 	position: absolute;
-	bottom:32px;
+	padding:16px 0;
+	bottom:0;
 	left:0;
 	display: flex;
 }

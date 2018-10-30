@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css_ver3/layout_main.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/layout_common.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_common.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/layout_community.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_community.css">
+	<link rel="stylesheet" type="text/css" href="css/components.css">
+	<link rel="stylesheet" type="text/css" href="css/img.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/form.css">
+	<link rel="stylesheet" type="text/css" href="css/type.css">
+	<link rel="stylesheet" type="text/css" href="css/color.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/align.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/menu_transition.css">
+</head>
+<body>
+<!-- 헤더 -->
+<div class="header">
+	<div class="menu_dark" id="menu">
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	</div>
+	<img id="logo" src="img/logo_ver3.svg">
+	<div class="my_menu">
+		<a href="message_main.html" class="menu_item">
+			<img src="img/ic_comments.svg">
+		</a>
+		<a href="my_page.html" class="profile_pic_s" id="pf2" style="width:24px; height:24px;">
+		</a>
+	</div>
+</div>
+<!--FAB-->
+<style>
+	.fab_up{
+		bottom: 16px !important;
+		transition: bottom 0.5s;
+		transition-timing-function: ease-in;
+	}
+</style>
+<div class="FAB_circle white_bg box_shadow" id="btt_write" style="position: fixed; bottom:-48px; right: 16px; width:48px; height: 48px; transition: bottom 0.5s;">
+	<img src="img/ic_write_p_dark.svg">
+</div>
+<!--슬라이드 메뉴-->
+<div class="main_menu">
+	<a href="my_page.html" class="menu_list">
+		<div class="profile_pic_s menu_icon" id="pf2" style="width:24px; height:24px;">
+		</div>
+		마이페이지
+	</a>
+	<a href="profile.html" class="menu_list menu_list_indent">
+		<img class="menu_icon" src="img/ic_my_profile.svg">
+		내 프로필
+	</a>
+	<a href="my_travel.html" class="menu_list menu_list_indent">
+		<img class="menu_icon" src="img/ic_my_travel.svg">
+		내 여행
+	</a>
+	<a href="chashback.html" class="menu_list menu_list_indent">
+		<img class="menu_icon" src="img/ic_reward.svg">
+		리워드
+	</a>
+	<a href="community.html" class="menu_list">
+		<img class="menu_icon" src="img/ic_community_black.svg">
+		커뮤니티
+	</a>
+	<a href="cashback.html" class="menu_list">
+		<img class="menu_icon" src="img/ic_cashback.svg">
+		캐시백 신청
+	</a>
+	<a class="menu_list">
+		FAQ
+	</a>
+	<hr style="width: calc(100% - 64px);">
+	<a class="menu_list center">
+		<div class="button primary_border" style="width: calc(100% - 16px); margin:0;">로그아웃</div>
+	</a>
+</div>
+<!--컨텐츠-->
+<style>.section_top>.button{margin-right: 0}</style>
+<div class="content_col">
+		<!--커뮤니티 타이틀 && 필터 && 쓰기 -->
+	<div class="col1" style="margin:16px auto; width: 796px;">
+		<h2 class="big_size ver_top_2x ver_bottom_1x" style="text-align: left; width:100%; font-weight: 700; margin-top: 0">싱가폴 커뮤니티</h2>
+		<div class="flex_row col1 space_between ver_margin_1x">
+			<div class="flex_row flex_item_center align_center ver_bottom_1x" id="filter">
+				<label class="checkbox_container caption">트래블 로그
+				  <input type="checkbox" checked="checked">
+				  <span class="checkmark"></span>
+				</label>
+				<label class="checkbox_container caption">질문
+				  <input type="checkbox">
+				  <span class="checkmark"></span>
+				</label>
+				<label class="checkbox_container caption">동행 찾기
+				  <input type="checkbox">
+				  <span class="checkmark"></span>
+				</label>
+				<label class="checkbox_container caption">모두보기
+				  <input type="checkbox">
+				  <span class="checkmark"></span>
+				</label>
+			</div>
+			<!--<div class="button black_border" id="write"><img src="img/ic_write.svg">포스트 쓰기</div>-->
+		</div>
+	</div>
+	<!--내 트래블 로그 섹션 -->
+	<div class="flex_row col1">
+		<style>
+			#location>img{width: 16px; height:16px;margin-left:-4px;}
+			#left>.card_full{width:calc(100% - 4px); margin-left: 0; margin-right: 4px;}
+			#right>.card_full{width:calc(100% - 4px); margin-right: 0; margin-left: 4px;}
+		</style>
+		<div class="flex_col col2" id="left">
+			<!--포스트-->
+			<div class="post card card_full">
+				<div class="card_img short" id="trv1">
+				</div>
+				<div class="post_info margin_1x">
+					<h2 class="body_bold">포스트글 두줄까지는 텍스트 워핑으로 보여준다...</h2>
+					<p class="flex_row align_center caption_bold middle_emphasis" id="location"><img src="img/ic_location.svg">Location, City</p>
+				</div>
+			</div>
+			<!--질문-->
+			<div class="question card card_full">
+				<div class="flex_col padding_tinny primary2_bg card align_center">
+					<div class="q_mark">Q</div>
+					<div class="profile_pic_middle 
+					margin_1x" id="pf6">
+					</div>
+					<h2 class="body_medium text_center ver_bottom_1x">"리틀인디아에서 로컬 향신료가게 추천부탁드립니다."</h2>
+				</div>
+				<div class="post_info margin_1x">
+					<p class="flex_row align_center caption_bold middle_emphasis ver_margin_tiny" id="location"><img src="img/ic_location.svg">Location, City</p>
+				</div>
+			</div>
+			<!--포스트-->
+			<div class="post card card_full">
+				<div class="card_img short" id="trv5">
+				</div>
+				<div class="post_info margin_1x">
+					<h2 class="body_bold">포스트글 두줄까지는 텍스트 워핑으로 보여준다...</h2>
+					<p class="flex_row align_center caption_bold middle_emphasis ver_margin_tiny" id="location"><img src="img/ic_location.svg">Location, City</p>
+				</div>
+			</div>
+			<!--포스트-->
+			<div class="post card card_full">
+				<div class="card_img long" id="trv2">
+				</div>
+				<div class="post_info margin_1x">
+					<h2 class="body_bold">포스트글 두줄까지는 텍스트 워핑으로 보여준다...</h2>
+
+					<p class="flex_row align_center caption_bold middle_emphasis ver_margin_tiny" id="location"><img src="img/ic_location.svg">Location, City</p>
+				</div>
+			</div>
+		</div>
+		<div class="flex_col col2" id="right">
+			<!--포스트-->
+			<div class="post card card_full">
+				<div class="card_img middle" id="trv3">
+				</div>
+				<div class="post_info margin_1x">
+					<h2 class="body_bold">포스트글 두줄까지는 텍스트 워핑으로 보여준다...</h2>
+					<p class="flex_row align_center caption_bold middle_emphasis ver_margin_tiny" id="location"><img src="img/ic_location.svg">Location, City</p>
+				</div>
+			</div>
+			<!--동행-->
+			<div class="mating card card_full" id="mating">
+				<div class="card_img ver_padding_2x align_center padding_tinny" id="trv13">
+					<div class="card align_center padding_tinny white_bg" id="date">
+						<p class="body_bold primary">31</p>
+						<p class="caption">OCT</p>
+					</div>
+				</div>
+				<div class="flex_col padding_1x grd1_bg card align_center hor_margin_1x text_center" id="mating_info">
+					<div class="profile_pic_middle ver_bottom_1x" id="pf7" style="margin-top:-46px">
+					</div>
+					<h2 class="body_size ">"같이 클럽 zouk가실분 찾아요"</h2>
+				</div>
+				<div class="post_info margin_1x">
+					<p class="flex_row align_center caption_bold middle_emphasis ver_margin_tiny" id="location"><img src="img/ic_location.svg">Location, City</p>
+				</div>
+			</div>
+			<!--포스트-->
+			<div class="post card card_full">
+				<div class="card_img short" id="trv7">
+				</div>
+				<div class="post_info margin_1x">
+					<h2 class="body_bold">포스트글 두줄까지는 텍스트 워핑으로 보여준다...</h2>
+					<p class="flex_row align_center caption_bold middle_emphasis ver_margin_tiny" id="location"><img src="img/ic_location.svg">Location, City</p>
+				</div>
+			</div>
+			<!--포스트-->
+			<div class="post card card_full">
+				<div class="card_img short" id="trv6">
+				</div>
+				<div class="post_info margin_1x">
+					<h2 class="body_bold">포스트글 두줄까지는 텍스트 워핑으로 보여준다...</h2>
+					<p class="flex_row align_center caption_bold middle_emphasis ver_margin_tiny" id="location"><img src="img/ic_location.svg">Location, City</p>
+				</div>
+			</div>
+			<!--질문-->
+			<div class="question card card_full">
+				<div class="flex_col padding_tinny primary2_bg card align_center">
+					<div class="q_mark">Q</div>
+					<div class="profile_pic_middle margin_1x" id="pf8">
+					</div>
+					<h2 class="big_size alphabet"></h2>
+					<h2 class="body_medium text_center ver_bottom_1x">"오차로드 주변에 치킨라이스 맛있게하는데 있나요? 전통스타일로.."</h2>
+				</div>
+				<div class="post_info margin_1x">
+					<p class="flex_row align_center caption_bold middle_emphasis ver_margin_tiny" id="location"><img src="img/ic_location.svg">Location, City</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--트래블로그 섹션끝-->
+</div>
+</body>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+		$(document).ready(function(){
+			var menu_on = false;
+			$("#menu").on("click",function(){
+				menu_on = (!menu_on);
+				$(".main_menu").toggleClass("main_menu_on");
+				$(this).toggleClass('open');
+				$(".header").toggleClass("no_box_shadow");
+				if(menu_on){
+					$(".my_menu").hide();
+				}
+				else{
+					$(".my_menu").show();
+				}
+				
+			});
+			$("#xbox").on("click",function(){
+				$(".main_menu").toggleClass("main_menu_on");
+			});
+		});
+		$(window).bind('mousewheel', function(event) {
+		    if (event.originalEvent.wheelDelta >= 0) {
+		        console.log('Scroll up');
+		        $("#btt_write").addClass("fab_up");
+		    }
+		    else {
+		        console.log('Scroll down');
+		        $("#btt_write").removeClass("fab_up");
+		    }
+		});
+</script>
+</html>

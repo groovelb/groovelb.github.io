@@ -21,7 +21,7 @@
 	background-color: rgba(36,20,42.5,0.4);
 }
 #top_content_area{
-	padding-top: 64px !important;
+	padding-top: 56px !important;
 	padding-bottom: 128px;
 }
 #top_left{
@@ -29,6 +29,10 @@
 }
 #top_right{
 	width:calc(50% - 16px);
+}
+/*메인 커뮤니티 썸네일*/
+#main_community>.FAB_circle{
+	margin-top: 96px;
 }
 /*이벤트 탭 큰트롤*/
 .tab_content{
@@ -81,6 +85,18 @@
 	border-radius: 8px;
 	/*border: solid 6px #ffffff;*/
 }
+#event_slide_containner>#slide_arrow_left{
+	box-shadow: none !important;
+	background-color: #00000000;
+	margin-top: 48px;
+	left:0;
+}
+#event_slide_containner>#slide_arrow_right{
+	box-shadow: none !important;
+	background-color: #00000000;
+	margin-top: 48px;
+	right:0;
+}
 
 
 /**섹션2**/
@@ -88,42 +104,7 @@ img#usp{
 	width: 144px;
 	height: 144px;
 }
-/*슬라이더*/
-.slider{
-	width: calc(1080px);
-	margin:0 calc(50% - 540px - 16px);
-	padding:16px;
-	border-radius: 8px;
-	background-color: #ffffff;
-}
-#slide_arrow_left{
-	position: absolute;
-	margin-top: 96px;
-	left:0;
-}
-#slide_arrow_right{
-	position: absolute;
-	margin-top: 96px;
-	right:0;
-}
-#event_slide{
-	animation: rolling 3s ease-in-out;
-}
-@keyframes rolling{
-	0%{
-		left:0%;
-	}
-	97%{
-		left:0%;
-	}	
-	100%{
-		left: -100%;
-	}
-}
-#event_slide>.event{
-	width: calc(50% - 32px) !important;
-	margin:0 16px !important;
-}
+
 /**섹션3**/
 #calculator_bg{
 	z-index: -1;
