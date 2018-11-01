@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.css" />
+	<link rel="stylesheet" href="css/remove_bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="css/layout_common.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_main.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_community.css">
+	<link rel="stylesheet" type="text/css" href="css/type.css">
+	<link rel="stylesheet" type="text/css" href="css/color.css">
+	<link rel="stylesheet" type="text/css" href="css/components.css">
+	<link rel="stylesheet" type="text/css" href="css/img.css">
+</head>
+<body class="black_highlight">
+<!-- 헤더 -->
+<div class="header flex_row live_area black_highlight box_shadow" id="header">
+	<div class="flex_row col2  align_center justify_start" id="left">
+		<img id="header_logo" src="img/logo_ver3.svg">
+		<div class="text_menu flex_row align_center hor_margin_2x body_size" id="selected">
+			<a href="index_loggedin.html">호텔</a>
+		</div>
+		<div class="text_menu flex_row align_center body_size hor_margin_2x">
+			<a href="community_main.html">커뮤니티</a>
+		</div>
+	</div>
+	<div class="flex_row col2 align_center justify_end" id="right">
+		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="faq.html">FAQ</a>
+		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="reward.html">캐시백 신청</a>
+		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="message_main.html">메세지</a>
+		<a class="flex_row align_center hor_margin_2x" id="user_info" style="margin-right: 0" href="my_page.html">
+			<div class="profile_pic_s" id="pf1"></div>
+			<div class="flex_col">
+				<p class="body_bold hor_margin_tiny">username</p>
+				<p class="caption hor_margin_tiny">23,112₩</p>
+			</div>
+		</a>
+	</div>
+</div>
+<!--컨텐츠 영역-->
+<div class="live_area white_bg" style="padding-top: 128px;">
+	<div class="flex_row col1">
+		<div class="slide_menu" style="border-width: 0">
+			<a href="junglian.html" class="slide_item" id="slide_item">
+				<img src="img/ic_monkey.svg">
+				정글리안?
+			</a>
+			<a href="faq.html" class="slide_item" id="slide_item">
+				<img src="img/ic_faq.svg">
+				FAQ
+			</a>
+			<a href="cs.html" class="slide_item" id="selected_slide_item">
+				<img src="img/ic_customer_white.svg">
+				고객센터
+			</a>
+			<a  href="reward_program.html" class="slide_item">
+				<img src="img/ic_reward.svg">
+				리워드 프로그램
+			</a>
+			<a  href="terms_of_service.html" class="slide_item">
+				<img src="img/ic_terms_black.svg">
+				이용약관
+			</a>
+			<a  href="personal_data_policy.html" class="slide_item">
+				<img src="img/ic_personal_policy_black.svg">
+				개인정보 활용 방침
+			</a>
+		</div>
+		<div class="content_col_narrow align_center flex_col" id="content_containner">
+			<style>
+				#cs>p{
+					line-height: 32px;
+				}
+			</style>
+			<img src="img/logo_junglian_booking2.svg" class="ver_bottom_8x" style="width:512px; height: auto; margin-top:-24px;">
+			<div class="flex_row col1 ver_bottom_4x" id="cs">
+				<h2 class="big_thin ver_bottom_2x text_center">"적립금 및 커뮤니티 문의해주세요"</h2>
+				<h2 class="middle_size primary">정글리안 CS센터</h2>
+				<p class="body_size">
+					<span>진행 업무</span> : 정글리안 홈페이지 운영 전반, 서비스이용 전반<br>
+					<span>운영시간</span> : 10AM~18PM(점심시간 : PM12:30~13:30)<br>
+					<span>이메일문의</span> : cs@junglian.com<br>
+					<span>전화문의</span> : 1544-6352<br>
+					<span>카카오톡문의</span> : @junglian
+				</p>
+			</div>
+			<hr class="ver_bottom_4x">
+			<div class="flex_row col1" id="cs">
+				<h2 class="big_thin ver_bottom_2x text_center">"예약 변경 문의해주세요."</h2>
+				<h2 class="middle_size" style="color:#00327b">부킹닷컴 CS센터</h2>
+				<p class="body_size">
+				<span>진행 업무</span> : 정글리안은 부킹닷컴 제휴 협력사로 호텔예약 및 변경은 부킹닷컴에서 문의가 가능하십니다.<br> 
+				<span>운영시간</span> : 국내 평일 9AM-10PM, 주말 9AM-7PM / 국외 24H<br>
+				<span>전화문의</span> : 국내 02-3483-3225 / 국외 +44 20-3684-7925<br>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+		/**/
+		$(".question").on("click",function(){
+			$(this).toggleClass("selected");
+			$(this).siblings(".answer").toggleClass("show");
+		});
+
+		/**/
+		/*쓰기 다이얼로그 탭 이동*/
+		$(".tab_item").on("click",function(){
+			console.log("tab click!");
+			$(".tab_item").removeClass("tab_selected");
+			$(this).addClass("tab_selected");
+			var id = $(this).attr("id");
+			console.log(id);
+			if(id=="reservation_tab"){
+				$("#reservation_qna").removeClass("hide");
+				$("#cashback_qna").addClass("hide");
+				$('#reserve_faq_banner').removeClass("hide");
+				$("#cashback_faq_banner").addClass("hide");
+			}
+			else if(id=="cashback_tab"){
+				$("#reservation_qna").addClass("hide");
+				$("#cashback_qna").removeClass("hide");	
+				$('#reserve_faq_banner').addClass("hide");
+				$("#cashback_faq_banner").removeClass("hide");
+			}
+		});
+	});
+</script>
+</html>

@@ -72,6 +72,9 @@ body{
     color: #ffffff;
     background-color: #FFC400;
 }
+.yellow{
+	color: #FFCC00;
+}
 .unread{
 	background-color: #FAF6FF;
 }

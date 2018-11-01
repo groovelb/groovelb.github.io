@@ -1,0 +1,13 @@
+*{
+	box-sizing: content-box !important;
+}
+*, ::after, ::before{
+	box-sizing: content-box !important;
+}
+.card{
+	border:0;
+}
+a:hover{
+	color: none !important;
+	text-decoration: none !important;
+}
