@@ -55,7 +55,8 @@ function initMap() {
     // for display.
     map = new google.maps.Map(document.getElementById('map'), {
       center: myLatLng,
-      zoom: 12
+      zoom: 12,
+      disableDefaultUI: true
     });
 
     // Create a marker and set its position.
@@ -68,7 +69,7 @@ function initMap() {
 
 	    marker.addListener('click', function(){
 	    	console.log("marker" + i + " click!");
-            document.getElementById("place_info").classList.add("slide_on");
+            document.getElementById("place_slider").classList.add("short_slider_on");
 	    });
 
         markers.push(marker);
@@ -85,10 +86,18 @@ function initMap() {
 
         marker.addListener('click', function(){
             console.log("marker" + i + " click!");
-            document.getElementById("place_info").classList.add("slide_on");
+            document.getElementById("saved_place_slider").classList.add("short_slider_on");
+            $("#plan_slider").removeClass("long_slider_on");
         });
     });
+
+
+      map.addListener('drag', function(){
+            document.getElementById("place_slider").classList.remove("short_slider_on");
+            document.getElementById("saved_place_slider").classList.remove("short_slider_on");
+      });
   }
+
 
   function hide_markers(){
     markers.forEach(function(marker){

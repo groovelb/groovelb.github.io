@@ -62,14 +62,12 @@ h2{
 	font-family: notosans_cjk_medium;
 	font-weight: 500;
 	line-height: 24px;
-	letter-spacing: 0.28px;
 }
 .middle_regular{
 	font-size: 18px;
 	font-family: notosans_cjk_regular;
 	font-weight: 500;
 	line-height: 32px;
-	letter-spacing: 0.28px;
 }
 .white_bg>.middle_size{
 	font-weight: 700;
@@ -124,12 +122,12 @@ h2{
 	font-weight: 100;
 }
 .caption{
-	font-size: 10px;
+	font-size: 12px;
 	line-height: 14px;
 	font-family: notosans_cjk_light;
 }
 .caption_bold{
-	font-size: 10px;
+	font-size: 12px;
 	line-height: 14px;
 	font-family: notosans_cjk_medium;
 }
@@ -147,7 +145,4 @@ h2{
 
 .card>h2{
 	text-align: center;
-}
-p>span{
-	color:#EA80FC;
 }

@@ -9,6 +9,9 @@
 .box_shadow{
 	box-shadow: 0 4px 16px 0 rgba(0,0,0,.12), 0 0 8px 0 rgba(0,0,0,.12);
 }
+.box_shadow_strong{
+	box-shadow: 0 4px 16px 1px rgba(0,0,0,.22), 0 0 8px 1px rgba(0,0,0,.22) !important;
+}
 
 #header_logo{
 	height: 36px;
@@ -105,6 +108,12 @@
 	width: 24px;
 	height: 24px;
 	margin-right: 8px;
+}
+.message_area{
+	overflow: scroll;
+	overflow-x: none;
+	display: flex;
+	flex-direction: column;
 }
 .search_box>.textfield{
 	border-width: 0
@@ -338,7 +347,7 @@ select.styled-select{
 	background-color: #00E676;
 }
 .FAB_circle{
-	z-index: 999;
+	z-index: 9;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -502,6 +511,19 @@ select.styled-select{
 }
 /*card size*/
 /*small*/
+.ss_card{
+	width: 144px;
+	height: 144px;
+}
+.ss_card:before{
+	content: "";
+    display: block;
+    background: rgba(0,0,0,0.32);
+    width: inherit;
+    height: inherit;
+    border-radius: 4px;
+    position: absolute;
+}
 .s_card{
 	width: 203px;
 	height: 203px;
@@ -647,7 +669,6 @@ select.styled-select{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 1080px;
     width: 100%;
     height: 100%;
     background-color: rgba(32,32,32,0.65);
@@ -657,14 +678,31 @@ select.styled-select{
 	/*padding-top: 36px;*/
 	position:fixed;
 	top: 20%;
-	width:calc(1080px * 0.6);
 	z-index: -999;
 	display: none;
+	overflow: scroll;
+}
+.full_dialog{
+	/*padding-top: 36px;*/
+	top:0;
+	left:0;
+	position:fixed;
+	padding:8px;
+	padding-top: 32px;
+	width: calc(100% - 16px);
+	height: auto;
+	min-height: calc(100% - 40px);
+	z-index: -999;
+	display: none;
+	overflow: scroll;
 }
 .dialog_bg>.dialog{
 	display: flex !important;
 }
-.dialog>.xbox {
+.dialog_bg>.full_dialog{
+	display: flex !important;
+}
+.dialog, .full_dialog>.xbox {
     position: absolute;
     top: 8px;
     right: 8px;

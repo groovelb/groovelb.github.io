@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css_ver3/layout_main.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/layout_common.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_common.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_community.css">
+	<link rel="stylesheet" type="text/css" href="css/components.css">
+	<link rel="stylesheet" type="text/css" href="css/img.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/form.css">
+	<link rel="stylesheet" type="text/css" href="css/type.css">
+	<link rel="stylesheet" type="text/css" href="css/color.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/align.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/menu_transition.css">
+</head>
+<body>
+<!-- 헤더 -->
+<div class="header">
+	<div class="menu_dark" id="menu">
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	</div>
+	<img id="logo" src="img/logo_ver3.svg">
+	<div class="my_menu">
+		<a href="message_main.html" class="menu_item">
+			<img src="img/ic_comments.svg">
+		</a>
+		<a href="my_page.html" class="profile_pic_s" id="pf2" style="width:24px; height:24px;">
+		</a>
+	</div>
+</div>
+<!--슬라이드 메뉴-->
+<div class="main_menu">
+	<a href="my_page.html" class="menu_list">
+		<div class="profile_pic_s menu_icon" id="pf2" style="width:24px; height:24px;">
+		</div>
+		마이페이지
+	</a>
+	<a href="profile.html" class="menu_list menu_list_indent">
+		<img class="menu_icon" src="img/ic_my_profile.svg">
+		내 프로필
+	</a>
+	<a href="my_travel.html" class="menu_list menu_list_indent">
+		<img class="menu_icon" src="img/ic_my_travel.svg">
+		내 여행
+	</a>
+	<a href="chashback.html" class="menu_list menu_list_indent">
+		<img class="menu_icon" src="img/ic_reward.svg">
+		리워드
+	</a>
+	<a href="community.html" class="menu_list">
+		<img class="menu_icon" src="img/ic_community_black.svg">
+		커뮤니티
+	</a>
+	<a href="cashback.html" class="menu_list">
+		<img class="menu_icon" src="img/ic_cashback.svg">
+		캐시백 신청
+	</a>
+	<a class="menu_list">
+		<img class="menu_icon" src="img/ic_faq.svg">
+		FAQ
+	</a>
+	<hr>
+	<a class="menu_list center">
+		<div class="button primary_border" style="width: calc(100% - 16px); margin:0;">로그아웃</div>
+	</a>
+</div>
+
+<div class="content_col">
+	<style>
+		#banner_containner{margin-bottom: 114px !important;}
+		#banner{position: absolute;}
+		#close{position: absolute; right:16px; top:16px;}
+	</style>
+	<div class="flex_row col1 ver_bottom_2x" id="banner_containner">
+		<div class="card_full full_border live_width_narrow grd1_bg" style="width:calc(100% - 32px);margin:0" id="banner">
+			<div class="padding_1x" style="width:calc(100% - 32px);">
+				<img src="img/ic_close_white.svg" id="close">
+				<h2 class="big_size ver_top_2x">여행친구 찾고 리워드 받자!</h2>
+				<p class="body_size">동행이 성사되면 여행중 즐길 수 있는 여가비 20,000₩를 적립해드립니다.</p>
+			</div>
+		</div>
+	</div>
+	<style>
+		#message{flex-grow: 1;} #trv_status{text-align: right}
+		#user_info>div, #trv_Status{justify-content: center;}
+	</style>
+	<div class="flex_row ver_bottom_4x" id="line_break"></div>
+	<h2 class="body_bold ver_bottom_2x">메세지</h2>
+	<div class="flex_row ver_padding_tinny full_border align_center col1 space_between">
+		<div class="flex_row margin_1x"  id="user_info">
+			<div class="profile_pic_s" id="pf1"></div>
+		</div>
+		<div class="flex_row body_size black_highlight margin_1x col2" id="message">
+			<div class="flex_row col1 space_between">
+				<p class="body_bold">username</p>
+				<p class="caption low_emphasis">싱가폴 여행중</p>
+			</div>
+			
+			정글리안에 오신걸 환영합니다! 캐시백, 커뮤니티등 안내 메세지...
+		</div>
+	</div>
+	<!--트-->
+	<a class="flex_row ver_padding_tinny full_border align_center col1 space_between unread" href="message.html">
+		<div class="flex_row margin_1x"  id="user_info">
+			<div class="profile_pic_s" id="pf2"></div>
+		</div>
+		<div class="flex_row body_size black_highlight margin_1x col2" id="message">
+			<div class="flex_row col1 space_between align_center">
+				<p class="body_bold">username</p>
+				<p class="caption low_emphasis">싱가폴 여행중</p>
+			</div>
+			
+			오차로드에서 모하실건가요? 저희는 지금 남자 2이서 여행중이에요ㅎ
+		</div>
+	</a>
+	<!--트-->
+	<a class="flex_row ver_padding_tinny full_border align_center col1 space_between">
+		<div class="flex_row margin_1x"  id="user_info">
+			<div class="profile_pic_s" id="pf3"></div>
+		</div>
+		<div class="flex_row body_size black_highlight margin_1x col2" id="message">
+			<div class="flex_row col1 space_between align_center">
+				<p class="body_bold">username</p>
+				<p class="caption low_emphasis">싱가폴 여행중</p>
+			</div>
+			
+			부킷빙땅에서 가셨던 케밥 레스토랑 어땠나요? 양 많아요?
+		</div>	
+	</a>
+	<!--트-->
+	<a class="flex_row ver_padding_tinny full_border align_center col1 space_between ver_bottom_4x">
+		<div class="flex_row margin_1x"  id="user_info">
+			<div class="profile_pic_s" id="pf2"></div>
+		</div>
+		<div class="flex_row body_size black_highlight margin_1x col2" id="message">
+			<div class="flex_row col1 space_between align_center">
+				<p class="body_bold">username</p>
+				<p class="caption low_emphasis">싱가폴 여행중</p>
+			</div>
+			
+			오차로드 동행 구하셨나요? 처음가보는데 해매기 싫어서 ㅎ
+		</div>
+	</a>
+	<h2 class="body_bold ver_bottom_2x">알람</h2>
+	<!--알람 리스트-->
+	<a class="flex_row ver_padding_tinny full_border align_center col1 space_between ver_bottom_4x">
+		<div class="flex_row margin_1x"  id="user_info">
+			<div class="profile_pic_s" id="pf6"></div>
+		</div>
+		<div class="flex_row body_size black_highlight margin_1x col2" id="message">
+			<div class="flex_row col1 space_between align_center">
+				<p class="body_bold">username</p>
+				<p class="caption low_emphasis">싱가폴 여행중</p>
+			</div>
+			Username님이 포스트에 댓글을 달았습니다. “전 혼자 여행중인데 따라가도 될까요?....”
+		</div>
+	</a>
+</div>
+</body>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+		$(document).ready(function(){
+			var menu_on = false;
+			$("#menu").on("click",function(){
+				menu_on = (!menu_on);
+				$(".main_menu").toggleClass("main_menu_on");
+				$(this).toggleClass('open');
+				$(".header").toggleClass("no_box_shadow");
+				if(menu_on){
+					$(".my_menu").hide();
+				}
+				else{
+					$(".my_menu").show();
+				}
+				
+			});
+			$("#xbox").on("click",function(){
+				$(".main_menu").toggleClass("main_menu_on");
+			});
+		});
+</script>
+</html>

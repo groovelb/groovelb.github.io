@@ -43,7 +43,7 @@
 		transition-timing-function: ease-in;
 	}
 </style>
-<div class="FAB_circle white_bg box_shadow" id="btt_write" style="position: fixed; bottom:-48px; right: 16px; width:48px; height: 48px; transition: bottom 0.5s;">
+<div class="FAB_circle white_bg box_shadow_strong" id="btt_write" style="position: fixed; bottom:-48px; right: 16px; width:48px; height: 48px; transition: bottom 0.5s;">
 	<img src="img/ic_write_p_dark.svg">
 </div>
 <!--슬라이드 메뉴-->
@@ -61,7 +61,7 @@
 		<img class="menu_icon" src="img/ic_my_travel.svg">
 		내 여행
 	</a>
-	<a href="chashback.html" class="menu_list menu_list_indent">
+	<a href="cashback.html" class="menu_list menu_list_indent">
 		<img class="menu_icon" src="img/ic_reward.svg">
 		리워드
 	</a>
@@ -243,7 +243,83 @@
 			$("#xbox").on("click",function(){
 				$(".main_menu").toggleClass("main_menu_on");
 			});
+
+
+				/*모달 컨트롤*/
+			/*쓰기 버튼 이벤트 핸들러*/
+			$("#btt_write").on("click",function(){
+				console.log("click button");
+				$("body").append("<div class='dialog_bg'></div>");
+				$(".dialog_bg").append($("#wrt_dialog"));
+
+				//Bad code. 배경클릭시 다이얼로그 제거하려는데 안의 div까지 모두 이벤트 발생해버림.
+				/*$(".dialog_bg").on("click",function(){
+					console.log("click");
+					$("body").append($("#wrt_dialog"));
+					$(".dialog_bg").remove();
+				});*/
+
+				$("#dg_xbox1").on("click",function(){
+					console.log("click");
+					$("body").append($("#wrt_dialog"));
+					$(".dialog_bg").remove();
+				});
+
+				/*쓰기 다이얼로그 탭 이동*/
+				$(".tab_item").on("click",function(){
+					console.log("tab click!");
+					$(".tab_item").removeClass("tab_selected");
+					$(this).addClass("tab_selected");
+
+					var id = $(this).attr("id");
+					var current_cont = $("#wrt_dialog").find(".tabbed_content");
+
+					$("#out_of_screen").append(current_cont);
+					if(id=="tab_trv"){
+						$("#wrt_dialog").append($("#wrt_travel_log"));
+					}
+					else if(id=="tab_qna"){
+						$("#wrt_dialog").append($("#wrt_qna"));
+					}
+					else if(id=="tab_mating"){
+						$("#wrt_dialog").append($("#wrt_mating"));
+					}
+				});
+			});
+
+			/*포스트 자세히 보기*/
+			$(".post").on("click",function(){
+				$("body").append("<div class='dialog_bg'></div>");
+				$(".dialog_bg").append($("#post_detail"));
+			});
+			$("#dg_xbox2").on("click", function(){
+				console.log("click");
+				$("#out_of_screen").append($("#post_detail"));
+				$(".dialog_bg").remove();
+			})
+
+			/*질문 자세히 보기*/
+			$(".question").on("click",function(){
+				$("body").append("<div class='dialog_bg'></div>");
+				$(".dialog_bg").append($("#question_detail"));
+			});
+			$("#dg_xbox3").on("click", function(){
+				$("body").append($("#question_detail"));
+				$(".dialog_bg").remove();
+			});
+
+			/*동행 자세히 보기*/
+			$(".mating").on("click",function(){
+				$("body").append("<div class='dialog_bg'></div>");
+				$(".dialog_bg").append($("#mating_detail"));
+			});
+			$("#dg_xbox4").on("click", function(){
+				$("body").append($("#mating_detail"));
+				$(".dialog_bg").remove();
+			});	
 		});
+
+		/*플로팅 버튼*/
 		$(window).bind('mousewheel', function(event) {
 		    if (event.originalEvent.wheelDelta >= 0) {
 		        console.log('Scroll up');
@@ -255,4 +331,256 @@
 		    }
 		});
 </script>
+<!--다이얼로그 섹션-->
+<!--Read Me 원래는 동적으로 생성하는게 맞지만 시간이없어서 화면밖에 위치한 Div를 불러오는 식으로 작업해놓음-->
+
+
+<!--쓰기 다이얼로그 탭-->
+<!-- 팝업에 쓰일 다이얼로그, 컴퍼넌트들, 평소에는 보이지 않음 -->
+<div id="out_of_screen" style="position: fixed; top:-100%; left:-100%">	
+	<!--쓰기 다이알로그-->
+	<div class="full_dialog flex_col write_dialog white_bg" id="wrt_dialog">
+		<img class="xbox" src="img/ic_close.svg" id="dg_xbox1">
+		<div class="tab3 flex_row body_size tab_containner" style="justify-content: space-between; width: 100%;">
+			<div class="tab_item flex_center col3 tab_selected" id="tab_trv">트래블 로그</div>
+			<div class="tab_item flex_center col3" id="tab_qna">Q&A</div>
+			<div class="tab_item flex_center col3" id="tab_mating">동행찾기</div>
+		</div>
+		<div class="flex_row tabbed_content" id="wrt_travel_log">
+			<div class="text_area col1 padding_1x full_border bottom를_radious ver_bottom_2x">
+				<p class="flex_row align_center caption medium_empasize ver_bottom_1x" id="location"><img src="img/ic_location.svg">싱가폴</p>
+				<textarea class="col1 body_size" placeholder="여행기를 적어주세요." class="body_size" style="border-width: 0; height: 104px;"></textarea>
+			</div>
+			<div class="square_button b_square_button" id="trv1">
+			</div>
+			<div class="square_button b_square_button">
+				<img src="img/ic_add.svg" style="width:48px; height:48px">
+			</div>
+			<div class="button primary_bg" style="margin-left: calc(100% - 96px);">올리기</div>
+		</div>
+	</div>
+	<!-- 질문 다일알로그 탭 -->
+	<div class="flex_row tabbed_content" id="wrt_qna">
+		<style>textarea{width: 100%;}</style>
+		<div class="text_area col1 padding_1x full_border bottom_radious ver_bottom_2x">
+			<!--구글 플레이스 연동부분-->
+			<p class="flex_row align_center caption medium_empasize ver_bottom_1x" id="location"><img src="img/ic_location.svg">싱가폴</p>
+			<textarea class="col1 body_size" placeholder="질문을 적어주세요." class="body_size" style="border-width: 0; height: 104px;"></textarea>
+		</div>
+	</div>
+	<!-- 동행 다일알로그 탭 -->
+	<div class="flex_row tabbed_content" id="wrt_mating">
+		<div class="text_area flex_row col1 padding_1x full_border bottom_radious ver_bottom_2x">
+			<!--구글 플레이스 연동부분-->
+			<p class="flex_row col2 align_center caption medium_empasize ver_bottom_1x" id="location"><img src="img/ic_location.svg">장소 찾기</p>
+			<p class="flex_row col2 align_center caption medium_empasize ver_bottom_1x" id="location"><img src="img/ic_calendar_p.svg">날짜 지정</p>
+			<textarea placeholder="동행 일정을 적어주세요." class="body_size" style="border-width: 0; height: 104px;"></textarea>
+		</div>
+		<div class="button primary_bg" style="margin-left: calc(100% - 96px);">올리기</div>
+	</div>
+
+	<!-- 일반 포스트 자세히 보기 -->
+	<div class="full_dialog flex_col align_center white_bg padding_2x" id="post_detail">
+		<img class="xbox" src="img/ic_close.svg" id="dg_xbox2">
+		<div class="flex_col white_bg">
+			<p class="caption_bold ver_bottom_1x">트레블 로그</p>
+			<div class="flex_row col1 align_center ver_padding_tinny space_between border_bottom ver_bottom_2x">
+				<!--사용자 인포-->
+				<div class="flex_row align_center" id="poster_info">
+					<div class="profile_pic_middle" id="pf5">
+					</div>
+					<div class="hor_margin_tiny">
+						<p class="body_bold">username</p>
+						<p class="caption middle_emphasis">2018 09/20</p>
+					</div>
+				</div>
+				<img src="img/ic_more.svg">
+			</div>
+			<!--포스트 컨텐츠-->
+			<div class="flex_col1 col1 border_bottom">
+				<div class="col1" style="width:65%">
+					<div class="pic_4_3 ver_bottom_1x" id="trv1">
+					</div>
+					<div class="flex_row col1 space_between">
+						<div class="square_button selected_pic" id="trv5"></div>
+						<div class="square_button" id="trv6"></div>
+						<div class="square_button" id="trv7"></div>
+						<div class="square_button" id="trv8"></div>
+						<div class="square_button" id="trv9"></div>
+						<div class="square_button" id="map_thumb"></div>
+					</div>
+					<p class="flex_row col1 align_center body_bold primary2 ver_margin_1x ver_bottom_2x" id="location"><img class="icon_s" src="img/ic_location_2ndp.svg">Place Title, Short Address</p>
+				</div>
+				<div class="flex_col col1" style="width:35%">
+					<div class="body_size ver_bottom_2x">
+						싱가폴 갈때마다 방문하는 OOO 이번에 새롭게 바뀌었는데 추가된 메뉴가 좋았다. 가격은 00~00SG로 저렴한 편이고 사람도 많이 붐비지 않아서 좋아.
+					</div>
+				</div>
+			</div>
+			<!--커멘트-->
+			<div class="flex_row justify_start align_center ver_margin_1x">
+				<img class="icon_s" src="img/ic_comments.svg">
+				<p class="caption_bold">커멘트</p>
+			</div>
+			<div class="flex_row margin_1x justify_end" id="opp_cmt" style="align-self: flex-end;">
+				<!--사용자 인포-->
+				<div class="flex_row col1 body_size padding_tinny white_middle_bg full_radious" style="max-width:calc(100% - 96px)">
+					<div class="flex_row space_between col1">
+						<p class="caption_bold">long username</p>
+						<p class="caption_bold low_emphasis">10/31</p>
+					</div>
+					<p class="body_size">아니요 걸어갔어요~</p>
+				</div>
+				<div class="profile_pic_middle hor_margin_tiny" id="pf5">
+				</div>
+			</div>
+			<!--커멘트-->
+			<div class="flex_row margin_1x" id="opp_cmt" style="align-self: flex-start;">
+				<!--사용자 인포-->
+				<div class="profile_pic_middle" id="pf2">
+				</div>
+				<div class="flex_row col1 body_size padding_tinny white_middle_bg full_radious hor_margin_tiny" style="max-width:calc(100% - 96px)">
+					<div class="flex_row space_between col1">
+						<p class="caption_bold">long username</p>
+						<p class="caption_bold low_emphasis">10/31</p>
+					</div>
+					<p class="body_size">오 저도 가보고 싶네요. 전철타고 가셨나요?</p>
+				</div>
+			</div>
+			<!--커멘트 달기-->
+			<div class="flex_row col1 ver_top_1x space_between align_center">
+				<textarea class="body_size full_border full_radious" placeholder="커멘트를 남기세요" style="width: calc(100% - 80px) !important;"></textarea>
+				<div class="profile_pic_middle hor_margin_tiny" id="pf5">
+				</div>
+				<div class="button primary_bg ver_margin_1x" style="align-self: flex-end;">커멘트 달기</div>
+			</div>
+		</div>
+	</div>
+	<!-- 질문 자세히 보기 -->
+	<div class="full_dialog flex_col align_center white_bg padding_2x" id="question_detail">
+		<img class="xbox" src="img/ic_close.svg" id="dg_xbox3">
+		<div class="flex_col white_bg">
+			<p class="caption_bold ver_bottom_1x">질문하기</p>
+			<div class="flex_row col1 ver_padding_tinny space_between border_bottom ver_bottom_1x">
+				<!--사용자 인포-->
+				<div class="flex_row align_center" id="poster_info">
+					<div class="profile_pic_middle" id="pf6">
+					</div>
+					<div class="hor_margin_tiny">
+						<p class="body_bold">username</p>
+						<p class="caption middle_emphasis">2018 09/20</p>
+					</div>
+				</div>
+				<img src="img/ic_more.svg">
+			</div>
+			<!--질문-->
+			<div class="flex_col col1 border_bottom ver_padding_1x ver_margin_2x primary2_bg full_radious align_center">
+				<p class="big_alphabet hor_margin_2x" style="align-self: flex-start;">Q</p>
+				<div class="body_size">
+					<p class="body_bold">"리틀인디아에서 로컬 향신료가게 추천부탁드립니다."</p>
+				</div>
+			</div>
+			<!--답변-->
+			<p class="big_alphabet primary border_top hor_padding_1x ver_bottom_1x">A</p>
+			<div class="flex_row margin_1x justify_end" id="opp_cmt" style="align-self: flex-end;">
+				<!--사용자 인포-->
+				<div class="flex_row col1 body_size padding_tinny white_middle_bg full_radious" style="max-width:calc(100% - 96px)">
+					<div class="flex_row space_between col1">
+						<p class="caption_bold">long username</p>
+						<p class="caption_bold low_emphasis">10/31</p>
+					</div>
+					<p class="body_size">OOO 좋더라고요</p>
+				</div>
+				<div class="profile_pic_middle hor_margin_tiny" id="pf5">
+				</div>
+			</div>
+			<!--커멘트-->
+			<div class="flex_row margin_1x" id="opp_cmt" style="align-self: flex-start;">
+				<!--사용자 인포-->
+				<div class="profile_pic_middle" id="pf2">
+				</div>
+				<div class="flex_row col1 body_size padding_tinny white_middle_bg full_radious hor_margin_tiny" style="max-width:calc(100% - 96px)">
+					<div class="flex_row space_between col1">
+						<p class="caption_bold">long username</p>
+						<p class="caption_bold low_emphasis">10/31</p>
+					</div>
+					<p class="body_size">12st 두번째 코너에 중국어로 빨간판써있는 곳 가보셔요</p>
+				</div>
+			</div>
+			<!--커멘트 달기-->
+			<div class="flex_row col1 ver_top_1x space_between align_center">
+				<textarea class="body_size full_border full_radious" placeholder="답변을 남기세요" style="width: calc(100% - 80px) !important;"></textarea>
+				<div class="profile_pic_middle hor_margin_tiny" id="pf5">
+				</div>
+				<div class="button primary_bg ver_margin_1x" style="align-self: flex-end;">답변 달기</div>
+			</div>
+		</div>
+	</div>
+	<!-- 동행 자세히 보기 -->
+	<div class="full_dialog flex_col align_center white_bg padding_2x" id="mating_detail">
+		<img class="xbox" src="img/ic_close.svg" id="dg_xbox4">
+		<div class="flex_col white_bg">
+			<p class="caption_bold ver_bottom_1x">동행 찾기</p>
+			<div class="flex_row col1 align_center ver_padding_tinny space_between border_bottom ver_bottom_2x">
+				<!--사용자 인포-->
+				<div class="flex_row align_center" id="poster_info">
+					<div class="profile_pic_middle" id="pf5">
+					</div>
+					<div class="hor_margin_tiny">
+						<p class="body_bold">username</p>
+						<p class="caption middle_emphasis">2018 09/20</p>
+					</div>
+				</div>
+				<img src="img/ic_more.svg">
+			</div>
+			<!--포스트 컨텐츠-->
+			<div class="flex_row col1 border_bottom">
+				<div class="flex_row col1 space_between ver_bottom_2x">
+					<p class="flex_row align_center big_size primary text_center" id="location"><img src="img/ic_location.svg" style="width:48px; height: 48px">Zouk, Singapore</p>
+					<div class="card align_center padding_tinny primary_bg" id="date" style="width:48px;">
+						<p class="body_bold white">31</p>
+						<p class="caption">OCT</p>
+					</div>
+				</div>
+				<div class="col2">
+					<div class="card card_img short" id="place_img" style="border-radius: 4px 0 0 0">
+					</div>
+				</div>
+				<div class="col2">
+					<div class="card card_img short" id="mating_location" style="border-radius: 0 4px 0 0">
+					</div>
+				</div>
+				<div class="middle_size padding_1x grd1_bg bottom_radious ver_bottom_2x">"31일날 zouk 같이가실뿐 구해요. 같이 여행온 친구가 클럽 안좋아해서 혼자가기 뻘쭘하네요"</div>
+				<div class="flex_row col1 justify_center ver_bottom_2x">
+					<div class="button primary_bg" style="border:solid 1px">동행 신청하기</div>
+					<div class="button black_border hor_margin_tiny">메세지 보내기</div>
+				</div>
+			</div>
+			<!--커멘트-->
+			<div class="flex_row justify_start align_center ver_margin_1x">
+				<img class="icon_s" src="img/ic_comments.svg">
+				<p class="caption_bold">커멘트</p>
+			</div>
+			<div class="flex_row margin_1x" id="opp_cmt" style="align-self: flex-start;">
+				<!--사용자 인포-->
+				<div class="profile_pic_middle" id="pf2">
+				</div>
+				<div class="flex_row col1 body_size padding_tinny white_middle_bg full_radious hor_margin_tiny" style="max-width:calc(100% - 96px)">
+					<div class="flex_row space_between col1">
+						<p class="caption_bold">long username</p>
+						<p class="caption_bold low_emphasis">10/31</p>
+					</div>
+					<p class="body_size">오 저도 가보고 싶어요. 몇시까지 노실건가요?</p>
+				</div>
+			</div>
+			<!--커멘트 달기-->
+			<div class="flex_row col1 ver_top_1x space_between align_center">
+				<textarea class="body_size full_border full_radious" placeholder="커멘트를 남기세요" style="width: calc(100% - 80px) !important;"></textarea>
+				<div class="profile_pic_middle hor_margin_tiny" id="pf5">
+				</div>
+				<div class="button primary_bg ver_margin_1x" style="align-self: flex-end;">커멘트 달기</div>
+			</div>
+		</div>
+	</div>
+</div>
 </html>
