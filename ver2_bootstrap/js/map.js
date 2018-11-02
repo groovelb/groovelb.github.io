@@ -55,7 +55,8 @@ function initMap() {
     // for display.
     map = new google.maps.Map(document.getElementById('map'), {
       center: myLatLng,
-      zoom: 12
+      zoom: 12,
+    disableDefaultUI: true
     });
 
     // Create a marker and set its position.
