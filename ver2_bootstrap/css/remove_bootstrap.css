@@ -1,13 +1,31 @@
+/*Box resizing*/
 *{
 	box-sizing: content-box !important;
 }
 *, ::after, ::before{
 	box-sizing: content-box !important;
 }
+
+/*Card*/
 .card{
 	border:0;
 }
+
+/*Link Color*/
 a:hover{
-	color: none !important;
+	color: inherit !important;
 	text-decoration: none !important;
 }
+a.white_highlight:hover>h2{
+	color: #ffffff !important;
+}
+a.white_highlight:hover>p{
+	color: #ffffff !important;
+}
+
+/*Table*/
+.table td, .table th{
+	padding:0 !important;
+	vertical-align: middle !important;
+	border:0 !important;
+} 
