@@ -1,0 +1,153 @@
+/*Noto Sans*/
+@font-face{
+	font-family: notosans_cjk_regular;
+	src: url(font/NotoSansKR-Regular.otf);
+}
+@font-face{
+	font-family: notosans_cjk_light;
+	src: url(font/NotoSansKR-Light.otf);
+}
+@font-face{
+	font-family: notosans_cjk_medium;
+	src: url(font/NotoSansKR-Medium.otf);
+}
+@font-face{
+	font-family: notosans_cjk_bold;
+	src: url(font/NotoSansKR-Bold.otf);
+}
+@font-face{
+	font-family: notosans_cjk_thin;
+	src: url(font/NotoSansKR-Thin.otf);
+}
+body{
+	font-family: notosans_cjk_light;
+}
+h2{
+	display: inline-block;
+	margin:0;
+}
+span {
+    font-family: notosans_cjk_bold;
+}
+
+
+
+/*Roboto*/
+@font-face{
+	font-family: roboto_bold;
+	src: url(font/Roboto-Bold.ttf);
+}
+@font-face{
+	font-family: roboto_medium;
+	src: url(font/Roboto-Medium.ttf);
+}
+@font-face{
+	font-family: roboto_regular;
+	src: url(font/Roboto-Regular.ttf);
+}
+.text_center{
+	text-align: center;
+}
+
+/*Size*/
+.body_size{
+	font-size: 14px;
+	line-height: 18px;
+	font-weight: 300;
+	font-family: notosans_cjk_light !important;
+}
+.body_medium{
+	font-size: 14px;
+	line-height: 18px;
+	font-family: notosans_cjk_medium;
+	font-weight: 300;
+}
+.middle_size{
+	font-size: 18px;
+	font-family: notosans_cjk_medium;
+	font-weight: 500;
+	line-height: 24px;
+}
+.middle_regular{
+	font-size: 18px;
+	font-family: notosans_cjk_regular;
+	font-weight: 500;
+	line-height: 32px;
+}
+.white_bg>.middle_size{
+	font-weight: 700;
+}
+.body_bold{
+	font-size: 14px;
+	line-height: 18px;
+	font-family: notosans_cjk_bold;
+	font-weight: 300;
+}
+.body_medium{
+	font-size: 14px;
+	line-height: 18px;
+	font-family: notosans_cjk_regular;
+	font-weight: 300;
+}
+.middle_thin{
+	font-size: 18px;
+	font-family: notosans_cjk_thin;
+	font-weight: 100;
+	line-height: 28px;
+}
+.big_size{
+	font-size: 24px;
+	font-family: notosans_cjk_medium;
+	line-height: 32px;
+	font-weight: 500;
+}
+.big_bold{
+	font-size: 36px;
+	font-family: notosans_cjk_bold;
+	line-height: 48px;
+	font-weight: 500;
+}
+.q_mark{
+	align-self: flex-start;
+	position: absolute;
+	font-size: 36px;
+	font-family: roboto_medium !important;
+	line-height: 36px;
+}
+.big_light{
+	font-size: 24px;
+	font-family: notosans_cjk_light;
+	line-height: 32px;
+	font-weight: 100;
+}
+.big_thin{
+	font-size: 24px;
+	font-family: notosans_cjk_thin;
+	line-height: 32px;
+	font-weight: 100;
+}
+.caption{
+	font-size: 12px;
+	line-height: 14px;
+	font-family: notosans_cjk_light;
+}
+.caption_bold{
+	font-size: 12px;
+	line-height: 14px;
+	font-family: notosans_cjk_medium;
+}
+
+.number{
+	font-family: roboto_medium !important;
+}
+.alphabet{
+	font-family: roboto_regular !important;
+}
+.big_alphabet{
+	font-size: 48px;
+	font-family: roboto_bold !important;
+}
+
+.card>h2{
+	text-align: center;
+}

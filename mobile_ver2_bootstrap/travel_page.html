@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.css" />
+	<link rel="stylesheet" href="css/remove_bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="css_ver3/layout_main.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/layout_common.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_common.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/layout_community.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_community.css">
+	<link rel="stylesheet" type="text/css" href="css/components.css">
+	<link rel="stylesheet" type="text/css" href="css/img.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/form.css">
+	<link rel="stylesheet" type="text/css" href="css/type.css">
+	<link rel="stylesheet" type="text/css" href="css/color.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/align.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/menu_transition.css">
+</head>
+<body>
+<!-- 헤더 -->
+<div class="header">
+	<div class="menu_dark" id="menu">
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	</div>
+	<img id="logo" src="img/logo_ver3.svg">
+	<div class="my_menu">
+		<a href="message_main.html" class="menu_item">
+			<img src="img/ic_comments.svg">
+		</a>
+		<a href="my_page.html" class="profile_pic_s" id="pf2" style="width:24px; height:24px;">
+		</a>
+	</div>
+</div>
+<!--슬라이드 메뉴-->
+<style>
+	.main_menu>div>hr{
+		margin:0px 32px;
+	}
+</style>
+<div class="main_menu">
+	<div class="flex_col align_center">
+		<a href="my_page.html" class="menu_list">
+			<div class="profile_pic_s menu_icon" id="pf2" style="width:24px; height:24px;">
+			</div>
+			마이페이지
+		</a>
+		<a href="profile.html" class="menu_list menu_list_indent">
+			<img class="menu_icon" src="img/ic_my_profile.svg">
+			내 프로필
+		</a>
+		<a href="my_travel.html" class="menu_list menu_list_indent">
+			<img class="menu_icon" src="img/ic_my_travel.svg">
+			내 여행
+		</a>
+		<a href="cashback.html" class="menu_list menu_list_indent">
+			<img class="menu_icon" src="img/ic_reward.svg">
+			리워드
+		</a>
+		<a href="community.html" class="menu_list">
+			<img class="menu_icon" src="img/ic_community_black.svg">
+			커뮤니티
+		</a>
+		<a href="cashback.html" class="menu_list ver_bottom_4x">
+			<img class="menu_icon" src="img/ic_cashback.svg">
+			캐시백 신청
+		</a>
+		<hr style="width: calc(100% - 64px)">
+		<p class="padding_tinny caption_bold white_bg" style="margin-top: -16px">유용한 링크</p>
+		<a class="menu_list" href="junglian.html">
+			<img class="menu_icon" src="img/ic_monkey.svg">
+			정글리안
+		</a>
+		<a class="menu_list" href="faq.html">
+			<img class="menu_icon" src="img/ic_faq.svg">
+			FAQ
+		</a>
+		<a class="menu_list" href="cs.html">
+			<img class="menu_icon" src="img/ic_reward.svg">
+			고객센터
+		</a>
+		<a class="menu_list" href="terms.html">
+			<img class="menu_icon" src="img/ic_terms_black.svg">
+			이용약관
+		</a>
+		<a class="menu_list ver_bottom_2x" href="personal_data_policy.html">
+			<img class="menu_icon" src="img/ic_personal_policy_black.svg">
+			개인정보 활용방침
+		</a>
+		<hr class="ver_bottom_2x" style="width: calc(100% - 64px)">
+		<a class="menu_list center ver_bottom_4x">
+			<div class="button primary_border" style="width: calc(100% - 16px); margin:0;">로그아웃</div>
+		</a>
+	</div>
+</div>
+<!--컨텐츠-->
+<style>.section_top>.button{margin-right: 0}</style>
+<div class="content_col">
+	<!--여행 정보, 수정 가능-->
+	<div class="flex_col col1 ver_bottom_4x ver_top_4x">
+		<h2 class="big_size">싱가폴 여행</h2>
+		<div class="flex_row col1 align_center space_between">
+			<div class="flex_row align_center">
+				<img src="img/ic_calendar_p.svg" style="margin-right:4px;">
+				<p class="caption low_emphasis">
+				OCT 30 ~ NOV 12, 2018
+				</p>
+				<div class="s_button black_border caption_bold" style="margin-left:8px;">수정하기</div>
+			</div>
+			<div class="square_button flex_centered">
+			<img src="img/ic_delete.svg" style="width: 24px; height: 24px;">
+			</div>
+		</div>
+	</div>
+	<!--여행 정보 끝-->
+	<!--숙소 예약정보-->
+	<h2 class="middle_size ver_bottom_1x">숙소 예약</h2>
+	<table class="table caption ver_bottom_4x">
+		<tr>
+			<th>예약번호</th>
+			<th>호텔명</th>
+			<th>예약 기간</th>
+			<th>예약 확인서</th>
+		</tr>
+		<tr>
+			<td>1543447550</td>
+			<td>Holiday Inn Macao Cotail Central</td>
+			<td>2018.09.20 ~ 2018.09.21</td>
+			<td><a class="s_button primary2 letter_link" href="">보기</a></td>
+		</tr>
+		<tr>
+			<td>1543447550</td>
+			<td>Holiday Inn Macao Cotail Central</td>
+			<td>2018.09.20 ~ 2018.09.21</td>
+			<td><a class="s_button primary2 letter_link" href="">보기</a></td>
+		</tr>
+	</table>
+	<!--숙소 예약정보 끝-->
+	<!--커뮤니티 & 여헹 계획-->
+	<style>.card{margin-left:0} .card>h2{width:auto;} #user_list_thum>.profile_pic_s{margin-left: -12px;}</style>
+	<div class="flex_row col1 ver_bottom_8x">
+		<!--커뮤니티-->
+		<div class="flex_col col1 ver_bottom_4x">
+			<h2 class="middle_size">싱가폴 커뮤니티</h2>
+			<p class="body_size">여행계획을 공유하고 동행을 찾으세요!</p>
+			<a class="card card_full b_card white_highlight flex_center" id="sg" href="community_page.html">
+				<h2 class="middle_size ver_bottom_1x">Singapore</h2>
+				<div class="flex_row align_center ver_bottom_1x" id=user_list_thum>
+					<div class="profile_pic_s" id="pf1"></div>
+					<div class="profile_pic_s" id="pf2"></div>
+					<div class="profile_pic_s" id="pf1"></div>
+					<div class="profile_pic_s" id="pf2"></div>
+				</div>
+				<p class="caption">총 <span>12,323</span> 회원</p>
+			</a>
+		</div>
+		<!--여행계획-->
+		<style>
+			#plan{border-radius: 16px;}
+			#plan>div>img{margin:12px;}
+
+		</style>
+		<div class="flex_col col1">
+			<h2 class="middle_size">여행 계획</h2>
+			<p class="body_size">언제 어디갈지 정글리안과 함께 기록하세요.</p>
+			<a class="card card_full flex_center" id="map_img" href="plan.html">
+				<div class="flex_col padding_1x primary2_bg box_shadow" id="plan">
+					<div class="flex_row justify_center">
+						<img src="img/ic_add_location.svg">
+						<img src="img/ic_calendar_w.svg">
+						<img src="img/ic_map_w.svg">
+					</div>
+					<p class="body_size">12일간의 일정을 함께 계획하세요!</p>
+				</div>
+			</a>
+		</div>
+		<!--여행계획 끝-->
+	</div>
+	<div class="flex_row col1 ver_bottom_4x align_center text_center">
+		<style>.profile_pic_middle{margin-right:16px; margin-bottom: 16px}</style>
+		<div class="flex_col col1 ver_bottom_4x">
+			<h2 class="body_bold">같은 기간의 싱가폴 여행자</h2>
+			<p class="body_size ver_bottom_1x">여행계획을 공유하고 동행을 찾으세요</p>
+			<div class="flex_row col1 align_center justify_center">
+				<div class="profile_pic_middle" id="pf1"></div>
+				<div class="profile_pic_middle" id="pf2"></div>
+				<div class="profile_pic_middle" id="pf3"></div>
+			</div>
+		</div>
+		<div class="flex_col col1 ver_bottom_4x">
+			<h2 class="body_bold">이미 다녀간 추천 정글리안</h2>
+			<p class="body_size ver_bottom_1x">정글리안이 추천한 여행선배에게 질문하세요</p>
+			<div class="flex_row col1 align_center justify_center">
+				<div class="profile_pic_middle" id="pf5"></div>
+				<div class="profile_pic_middle" id="pf6"></div>
+				<div class="profile_pic_middle" id="pf7"></div>
+				<div class="profile_pic_middle" id="pf2"></div>
+				<div class="profile_pic_middle" id="pf9"></div>
+				<div class="profile_pic_middle" id="pf4"></div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+		$(document).ready(function(){
+			var menu_on = false;
+			$("#menu").on("click",function(){
+				menu_on = (!menu_on);
+				$(".main_menu").toggleClass("main_menu_on");
+				$(this).toggleClass('open');
+				$(".header").toggleClass("no_box_shadow");
+				if(menu_on){
+					$(".my_menu").hide();
+				}
+				else{
+					$(".my_menu").show();
+				}
+				
+			});
+			$("#xbox").on("click",function(){
+				$(".main_menu").toggleClass("main_menu_on");
+			});
+		});
+</script>
+</html>

@@ -1,0 +1,86 @@
+.white_highlight{
+	color: #ffffff !important;
+}
+.white_middle{
+	color: #f0f0f0;
+}
+.white_middle_bg{
+	background-color: #f0f0f0;
+}
+.yellow{
+	color:#FFCC00;
+}
+.search_bg{
+	background-color: #00E676;
+}
+.black_highlight{
+	color: #383838;
+}
+.middle_emphasis{
+	color: #686868;
+}
+.low_emphasis{
+	color: #A0A0A0;
+}
+.low_emphasis_bg{
+	background-color: #c0c0c0;
+}
+.white_bg{
+	color: #383838;
+	background-color: #ffffff;
+}
+.primary{
+	color: #8480f7 !important;
+	/*color: #7c4dff !important;*/
+}
+.primary_dark{
+	color: #311B92 !important;
+}
+.primary_dark_border{
+	color: #311B92;
+	border: solid 2px #311B92 !important;
+}
+.primary_bg{
+	background-color: #8480f7 !important;
+	/*background-color: #7c4dff;*/
+	color: #ffffff;
+}
+.primary2{
+	color: #4da3fa !important;
+}
+.primary2_bg{
+	background-color: #4da3fa;
+	color: #ffffff;
+}
+.grd1_bg{
+	color: #ffffff;
+	background: -moz-linear-gradient(-45deg, #7c4dff 0%, #4da3fa 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg, #7c4dff 0%,#4da3fa 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg, #7c4dff 0%,#4da3fa 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7c4dff', endColorstr='#4da3fa',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.grd2_bg{
+	color: #ffffff;
+	background: -moz-linear-gradient(-45deg, #00E676 0%, #1DE9B6 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg, #00E676 0%,#1DE9B6 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg, #00E676 0%,#1DE9B6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00E676', endColorstr='#1DE9B6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.yellow_bg {
+    color: #ffffff;
+    background-color: #FFC400;
+}
+.unread{
+	background-color: #FAF6FF;
+}
+
+#primary_filter{
+	background-color: rgba(64,38,128,0.45);
+}
+#primary2_filter{
+	background-color: rgba(38,82,125,0.45);
+}
+
+
+
+

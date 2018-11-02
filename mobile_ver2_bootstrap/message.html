@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.css" />
+	<link rel="stylesheet" href="css/remove_bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="css_ver3/layout_main.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/layout_common.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_common.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_community.css">
+	<link rel="stylesheet" type="text/css" href="css/components.css">
+	<link rel="stylesheet" type="text/css" href="css/img.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/form.css">
+	<link rel="stylesheet" type="text/css" href="css/type.css">
+	<link rel="stylesheet" type="text/css" href="css/color.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/align.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/menu_transition.css">
+</head>
+<body>
+<!-- 헤더 -->
+<style>
+	body, html{
+		width: 100%;
+		height: 100%;
+	}
+	#msg_top{
+		transition: height 0.2s ease;
+	}
+	.header_fold{
+		height: 64px !important;
+		transition: height 0.2s ease;
+	}
+	.hide{
+		display: none;
+	}
+	#arrow{
+ 		transform: rotate(180deg);
+ 		transition: transform 0.2s ease;
+	}
+	.arrow_up{
+		transform: rotate(0deg) !important;
+ 		transition: transform 0.2s ease;
+	}
+</style>
+<div class="flex_col align_center col1 space_between box_shadow" id="msg_top" style="padding-top: 8px; position:absolute;height: 228px; overflow: hidden;">
+	<!--대화상대 정보-->
+	<div class="flex_row col1 align_center" id="user_info">
+		<a class="square_button white_bg" href="message_main.html">
+			<img src="img/ic_arrow_back.svg" style="width:24px;height:24px;">
+		</a>
+		<div class="profile_pic_s" id="pf4"></div>
+		<div class="hor_margin_tiny">
+			<p class="middle_size">username</p>
+			<p class="caption middle_emphasis">싱가폴 여행중 10/29 ~ 11/12</p>
+		</div>
+	</div>
+	<div class="padding_tinny" id="slide_btt" style="margin-bottom: -12px; position:absolute; bottom:0">
+		<img src="img/ic_arrow_down.svg" class="icon_s" id="arrow" style="margin:0">
+	</div>
+	<!--동행 슬라이더-->
+	<div class="flex_row col1" style="position:absolute; width:calc(100% - 8px) !important; top:64px; left:8px; height:156px; overflow: hidden;" id="mating_slider">
+		<!--
+		<div class="FAB_circle" id="slide_arrow_right" style="top:48px;">
+			<img id="arrow" src="img/arrow_next.svg">
+		</div>
+		-->
+		<div class="flex_row" style="position:absolute; width:720px;">
+			<!--동행아이템-->
+			<div class="card ss_card box_shadow flex_col align_center space_between margin_r_driection mating_card" id="trv6">
+				<div class="card align_center padding_tinny white_bg" id="date">
+					<p class="body_bold primary">2</p>
+					<p class="caption">NOV</p>
+				</div>
+				<div class="col1 white_bg bottom_radious">
+					<p class="body_bold padding_tinny text_center">"레이플스원에서 맥주한잔 하실분"</p>
+				</div>
+			</div>
+			<!--동행아이템-->
+			<div class="card ss_card box_shadow flex_col align_center space_between margin_r_driection" id="trv13">
+				<div class="card align_center padding_tinny white_bg" id="date">
+					<p class="body_bold primary">31</p>
+					<p class="caption">OCT</p>
+				</div>
+				<div class="col1 white_bg bottom_radious">
+					<p class="body_bold padding_tinny text_center">"같이 클럽 zouk가실분 찾아요...."</p>
+				</div>
+			</div>
+			<!--동행아이템-->
+			<div class="card ss_card box_shadow flex_col align_center space_between margin_r_driection" id="trv11">
+				<div class="card align_center padding_tinny white_bg" id="date">
+					<p class="body_bold primary">29</p>
+					<p class="caption">OCT</p>
+				</div>
+				<div class="col1 white_bg bottom_radious">
+					<p class="body_bold padding_tinny text_center">"같이 클럽 zouk가실분 찾아요...."</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--동행 슬라이더 끝-->
+</div>
+<!--메세지 영역-->
+<style>
+	.msg_area_long{
+		padding-top: calc(72px + 16px) !important;
+		height: calc(100% - 58px - 72px - 16px - 16px) !important;
+		transition: padding-top 0.2s ease, height 0.2s ease !important;
+	}
+	.msg_area_short{
+		padding-top: calc(236px + 16px);
+		height: calc(100% - 58px - 236px - 16px - 16px);
+		transition: padding-top 0.2s ease, height 0.2s ease;
+	}
+	.textfield{width: calc(100% - 16px - 64px); height: auto;}
+	textarea{height: 32px !important;}
+	.msg{width: 100%; justify-content: space-between; margin-bottom: 8px;}
+	#time{width: 100%;}
+	#my_msg>.textfield{background-color: #f0f0f0}
+	#msg_btt{margin-right: calc(68px + 8px)}
+	#msg_input_containner{width:calc(100% - 16px); margin:0 8px 8px 8px;}
+</style>
+<div class="message_area msg_area_short padding_1x">
+	<!--메세지-->
+	<div class="flex_row msg" id="my_msg">
+		<div class="textfield body_size padding_tinny">
+			꼭 가보고싶은 파인 다이닝 레스토랑 있는데 혼자라서 고민중이었어요. 싱가폴은 처음이신가요?
+			<p class="caption" id="time"> pm 09:00</p>
+		</div>
+		<div class="profile_pic_middle" id="pf1"></div>
+	</div>
+	<div class="flex_row msg" id="opp_msg">
+		<div class="profile_pic_middle" id="pf3">
+		</div>
+		<div class="textfield body_size padding_tinny">
+			오차로드에서 모하실건가요? 저희는 지금 남자 2이서 여행중이에요
+			<p class="caption" id="time"> pm 09:00</p>
+		</div>
+	</div>
+</div>
+<!--메시지 인풋-->
+<div class="flex_row msg align_center" id="msg_input_containner">
+		<textarea  type="textarea" class="textfield body_size padding_tinny" id="msg_input" style="margin-bottom: 0px;"></textarea>
+		<div class="square_button primary2_bg" style="z-index: 999;">
+			<img class="icon_s" src="img/ic_send_invite_white.svg">
+		</div>
+	</div>
+</body>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+		$(document).ready(function(){
+			var menu_on = false;
+			$("#menu").on("click",function(){
+				menu_on = (!menu_on);
+				$(".main_menu").toggleClass("main_menu_on");
+				$(this).toggleClass('open');
+				$(".header").toggleClass("no_box_shadow");
+				if(menu_on){
+					$(".my_menu").hide();
+				}
+				else{
+					$(".my_menu").show();
+				}
+			});
+			$("#xbox").on("click",function(){
+				$(".main_menu").toggleClass("main_menu_on");
+			});
+
+			/*동행슬라이더 확대 축소*/
+			$("#slide_btt").on("click",function(){
+				console.log("click")
+				$("#msg_top").toggleClass("header_fold");
+				$("#mating_slider").toggleClass("hide");
+				$("#arrow").toggleClass("arrow_up")
+				$(".message_area").toggleClass("msg_area_long");
+			});
+
+			/*동행 신청 이벤트 핸들러*/
+			$(".mating_card").on("click",function(){
+					$("body").append("<div class='dialog_bg'></div>");
+					$(".dialog_bg").append($("#mating_dialog"));
+				
+				$("#confirm_mating").on("click",function(){
+					$("body").append($("#mating_dialog"));
+					$(".dialog_bg").remove();
+
+					$("#btt_mating").text("동행신청 보냄");
+					$("#btt_mating").removeClass("primary_bg");
+					$("#btt_mating").addClass("primary_dark_border primary_dark");
+					$("#msg_mating1").delay(300).css("display","flex");
+					$("#msg_mating2").delay(1200).css("display","flex");	
+				});
+			});
+
+			/*동행 신청창 닫기*/
+			$("#dg_xbox1").on("click",function(){
+					console.log("click");
+					$("body").append($("#mating_dialog"));
+					$(".dialog_bg").remove();
+			});
+		});
+</script>
+<div class="flex_col align_center full_dialog padding_2x white_bg" id="mating_dialog">
+	<img class="xbox" src="img/ic_close.svg" id="dg_xbox1">
+	<h2 class="middle_size ver_bottom_4x text_center">동행신청</h2>
+	<div class="flex_col col1 flex_center align_center ver_bottom_1x">
+		<div class="profile_pic_big box_shadow" id="pf2">
+		</div>
+		<!--화살표-->
+		<img src="img/ic_arrow_down_2ndp.svg" style="width:96px; height: 96px; z-index: 999;margin-top: -24px;margin-bottom: -48px;">
+		<!--동행아이템-->
+		<div class="card s_card box_shadow flex_col align_center space_between ver_margin_1x" id="trv13" style="margin-left: -8px; z-index: 1">
+			<div class="card align_center padding_tinny white_bg" id="date">
+				<p class="body_bold primary">31</p>
+				<p class="caption">OCT</p>
+			</div>
+			<div class="col1 white_bg bottom_radious ver_padding_tinny">
+				<!--참여자 프로필-->
+				<div class="flex_row col1 flex_center" id="user_list_thum">
+					<div class="profile_pic_s" id="pf1"></div>
+					<div class="profile_pic_s" id="pf2"></div>
+					<div class="profile_pic_s" id="pf3"></div>
+				</div>
+				<p class="flex_row flex_center caption_bold middle_emphasis" id="location"><img src="img/ic_location.svg">Zouk, Singapore</p>
+			</div>
+		</div>
+	</div>
+	<p class="caption text_center ver_bottom_1x"><span>username</span>외 3명 참여중</p>
+	<p class="body_size text_center ver_bottom_4x" style="width:100%;">동행신청을 하시겠습니까?<br>동행신청 결과는 메세지에서 확인할 수 있습니다.</p>
+	<div class="button primary_bg ver_margin_2x box_shadow" id="confirm_mating" style="width:164px;">동행신청</div>
+</div>
+</html>

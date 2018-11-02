@@ -60,7 +60,7 @@ hr{
 	justify-content: space-around;
 }
 .align_center{
-	align-items: center;
+	align-items: center !important;
 }
 .flex_center{
 	align-items: center;

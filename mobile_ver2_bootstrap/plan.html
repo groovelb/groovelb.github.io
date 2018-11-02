@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.css" />
+	<link rel="stylesheet" href="css/remove_bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="css_ver3/layout_main.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/layout_common.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_common.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/layout_community.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_community.css">
+	<link rel="stylesheet" type="text/css" href="css/components.css">
+	<link rel="stylesheet" type="text/css" href="css/img.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/form.css">
+	<link rel="stylesheet" type="text/css" href="css/type.css">
+	<link rel="stylesheet" type="text/css" href="css/color.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/align.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/menu_transition.css">
+	<link rel="stylesheet" type="text/css" href="css/jungle_map.css">
+</head>
+<body>
+<!--컨텐츠-->
+<!--맵 토글-->
+<div class="map_toggle body_size primary_bg box_shadow">
+	<div class="map_toggle_item flex_row flex_center toggle_selected cap caption_bold" id=map_toggle_left>정글리안 추천장소</div>
+	<div class="map_toggle_item flex_row flex_center caption_bold" id=map_toggle_right>내 일정 보기</div>
+</div>
+<div class="textfield align_center space_between white_bg box_shadow_strong" id="search_bar" style="width:calc(100% - 32px);height:42px;">
+	<input class="body_size input_no_style" type="text" id="user_id" name="user_id" placeholder="장소를 검색해보세요" onchange="search_research_move()">
+	<img src="img/ic_search.svg" id="search_btt">
+	<img src="img/ic_close.svg" id="close_btt" style="display: none;">
+</div>
+<!--플랜 슬라이더-->
+<div class="long_slider" id="plan_slider">
+	<div id="date_list" style="width: 100%; height: calc(100% - 74px - 36px); overflow-y: scroll;">
+		<!--템-->
+		<div class="list day_list padding_1x day border_bottom" id="day1">
+			<div class="flex_row align_end" id="date">
+				<h2 class="middle_size" style="margin:0">Day1</h2><p class="caption_bold low_emphasis">SAT 10/9</p>
+			</div>
+			<p class="flex_row align_center caption" id="location" style="width:calc(100% - 24px)"><img src="img/ic_location.svg">"리틀 인디아"를 포함한 3개의 장소</p><img class="btt_show_list" src="img/ic_down.svg">
+			<!--날짜별 장소리스트-->
+			<div class="col1 place_list_day">
+				<!--장소 리스트-->
+				<div class="list padding_tinny place_list align_cen place1 id="place1">
+					<div class="place_thumb" id="plc_img3"></div>
+					<div class="place_meta">
+						<h2 class="body_bold">Little India</h2>
+						<p class="caption">Category</p>
+						<div class="flex_row col1 ver_top_1x">
+							<img src="img/ic_star.svg" class="s_icon star">
+							<img src="img/ic_star.svg" class="s_icon star">
+							<img src="img/ic_star.svg" class="s_icon star">
+							<img src="img/ic_star.svg" class="s_icon star">
+						</div>
+					</div>
+				</div>
+				<!--장소 리스트-->
+				<div class="list padding_tinny place_list align_cen place1 id="place1">
+					<div class="place_thumb" id="trv3"></div>
+					<div class="place_meta">
+						<h2 class="body_bold">Place1</h2>
+						<p class="caption">Category</p>
+						<div class="flex_row col1 ver_top_1x">
+							<img src="img/ic_star.svg" class="s_icon star">
+							<img src="img/ic_star.svg" class="s_icon star">
+							<img src="img/ic_star.svg" class="s_icon star">
+							<img src="img/ic_star.svg" class="s_icon star">
+						</div>
+					</div>
+				</div>
+				<!--장소 리스트-->
+				<div class="list padding_tinny place_list align_cen place1 id="place1">
+					<div class="place_thumb" id="trv5"></div>
+					<div class="place_meta">
+						<h2 class="body_bold">Place2</h2>
+						<p class="caption">Category</p>
+						<div class="flex_row col1 ver_top_1x">
+							<img src="img/ic_star.svg" class="s_icon star">
+							<img src="img/ic_star.svg" class="s_icon star">
+							<img src="img/ic_star.svg" class="s_icon star">
+							<img src="img/ic_star.svg" class="s_icon star">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--템-->
+		<div class="list day_list padding_1x day border_bottom">
+			<div class="flex_row align_end" id="date">
+				<h2 class="middle_size" style="margin:0">Day2</h2><p class="caption_bold low_emphasis">SAT 10/10</p>
+			</div>
+			<p class="flex_row align_center caption" id="location" style="width:calc(100% - 24px)"><img src="img/ic_location.svg">"0개의 장소</p><img class="btt_show_list" src="img/ic_down.svg">
+		</div>
+		<!--템-->
+		<div class="list day_list padding_1x day border_bottom">
+			<div class="flex_row align_end" id="date">
+				<h2 class="middle_size" style="margin:0">Day3</h2><p class="caption_bold low_emphasis">SAT 10/11</p>
+			</div>
+			<p class="flex_row align_center caption" id="location" style="width:calc(100% - 24px)"><img src="img/ic_location.svg">0개의 장소</p><img class="btt_show_list" src="img/ic_down.svg">
+		</div>
+		<!--템-->
+		<div class="list day_list padding_1x day border_bottom">
+			<div class="flex_row align_end" id="date">
+				<h2 class="middle_size" style="margin:0">Day4</h2><p class="caption_bold low_emphasis">SAT 10/9</p>
+			</div>
+			<p class="flex_row align_center caption" id="location" style="width:calc(100% - 24px)"><img src="img/ic_location.svg">0개의 장소</p><img class="btt_show_list" src="img/ic_down.svg">
+		</div>
+		<!--템-->
+		<div class="list day_list padding_1x day border_bottom">
+			<div class="flex_row align_end" id="date">
+				<h2 class="middle_size" style="margin:0">Day5</h2><p class="caption_bold low_emphasis">SAT 10/9</p>
+			</div>
+			<p class="flex_row align_center caption" id="location" style="width:calc(100% - 24px)"><img src="img/ic_location.svg">0개의 장소</p><img class="btt_show_list" src="img/ic_down.svg">
+		</div>
+		<!--템-->
+		<div class="list day_list padding_1x day border_bottom">
+			<div class="flex_row align_end" id="date">
+				<h2 class="middle_size" style="margin:0">Day6</h2><p class="caption_bold low_emphasis">SAT 10/9</p>
+			</div>
+			<p class="flex_row align_center caption" id="location" style="width:calc(100% - 24px)"><img src="img/ic_location.svg">0개의 장소</p><img class="btt_show_list" src="img/ic_down.svg">
+		</div>
+		<!--템-->
+		<div class="list day_list padding_1x day border_bottom ver_bottom_2x">
+			<div class="flex_row align_end" id="date">
+				<h2 class="middle_size" style="margin:0">Day7</h2><p class="caption_bold low_emphasis">SAT 10/9</p>
+			</div>
+			<p class="flex_row align_center caption" id="location" style="width:calc(100% - 24px)"><img src="img/ic_location.svg">0개의 장소</p><img class="btt_show_list" src="img/ic_down.svg">
+		</div>
+		<!--지정안된 장소들-->
+		<h2 class="body_bold middle_emphasis margin_2x" style="margin-top: 8px; margin-bottom: 8px">지정안된 장소들</h2>
+		<!--장소 리스트-->
+		<div class="list padding_1x place_list align_center place1" id="place1">
+			<div class="place_thumb" id="plc_img1"></div>
+			<div class="place_meta">
+				<h2 class="body_bold">Place title</h2>
+				<p class="caption">Category</p>
+				<div class="flex_row col1 ver_top_1x">
+					<img src="img/ic_star.svg" class="s_icon star">
+					<img src="img/ic_star.svg" class="s_icon star">
+					<img src="img/ic_star.svg" class="s_icon star">
+					<img src="img/ic_star.svg" class="s_icon star">
+				</div>
+			</div>
+		</div>
+		<!--장소 리스트-->
+		<div class="list padding_1x place_list align_center place1" id="place1">
+			<div class="place_thumb" id="plc_img2"></div>
+			<div class="place_meta">
+				<h2 class="body_bold">Place title</h2>
+				<p class="caption">Category</p>
+				<div class="flex_row col1 ver_top_1x">
+					<img src="img/ic_star.svg" class="s_icon star">
+					<img src="img/ic_star.svg" class="s_icon star">
+					<img src="img/ic_star.svg" class="s_icon star">
+					<img src="img/ic_star.svg" class="s_icon star">
+				</div>
+			</div>
+		</div>
+		<!--장소 리스트-->
+		<div class="list padding_1x place_list align_center place1" id="place1">
+			<div class="place_thumb" id="plc_img3"></div>
+			<div class="place_meta">
+				<h2 class="body_bold">Place title</h2>
+				<p class="caption">Category</p>
+				<div class="flex_row col1 ver_top_1x">
+					<img src="img/ic_star.svg" class="s_icon star">
+					<img src="img/ic_star.svg" class="s_icon star">
+					<img src="img/ic_star.svg" class="s_icon star">
+					<img src="img/ic_star.svg" class="s_icon star">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="flex_col align_center col1 white_bg ver_padding_tinny" id="plan_save">
+		<p class="caption ver_bottom_1x" style="text-align: center;">groovelb님의 구글계정의 맵과 캘린더에 일정이 저장됩니다.</p>
+		<div class="button primary_bg center box_shadow" style="width: calc(100% - 68px)">구글로 내보내기</div>
+	</div>
+</div>
+<!--장소 정보-->
+<div class="short_slider" id="place_slider">
+	<div class="flex_row col1">
+		<div class="col2">
+			<div class="place_img">
+			</div>
+		</div>
+		<div class="col2">
+			<h2 class="body_bold" style="font-weight: 700; padding-left: 16px; padding-top: 8px">Place Title</h2>
+			<p class="caption_bold medium_empasize" style="padding-left: 16px;">Cafe</p>
+			<div class="place_info caption medium_empasize">
+				<img src="img/ic_location.svg">
+				<p>22 Martin Road, #01-00, Singapore 239058</p>
+			</div>
+			<div class="place_info caption medium_empasize">
+				<img src="img/ic_time.svg">
+				<p>10:00am ~ 09:00pm</p>
+			</div>
+			<div class="place_info caption medium_empasize">
+				<img src="img/ic_web.svg">
+				<p>www.places.com</p>
+			</div>
+			<div class="place_info caption medium_empasize">
+				<img src="img/ic_phone.svg">
+				<p>+65 6836 4695</p>
+			</div>	
+			<div class="flex_row col1 ver_top_1x caption_bold yellow align_center">
+				<p style="padding-left:16px">4.0</p>
+				<img src="img/ic_star.svg" class="s_icon star hor_margin_tiny">
+				<img src="img/ic_star.svg" class="s_icon star">
+				<img src="img/ic_star.svg" class="s_icon star">
+				<img src="img/ic_star.svg" class="s_icon star">
+			</div>
+		</div>
+	</div>
+	<div class="button primary_bg margin_1x" id="save_to_map">내맵에 저장하기</div>
+	<div class="col1 padding_1x" style="margin-top: 8px; margin-bottom: 8px">
+		<!--유저리스트-->
+		<div class="flex_col col1 ver_bottom_2x">
+			<h2 class="caption_bold ver_bottom_1x">Place title을 방문 예정 정글리안</h2>
+			<div class="flex_row col1 align_center">
+				<div class="profile_pic_s" id="pf3"></div>
+				<div class="profile_pic_s" id="pf4"></div>
+				<div class="profile_pic_s" id="pf5"></div>
+				<div class="profile_pic_s" id="pf8"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--장소 정보-->
+<div class="short_slider" id="saved_place_slider">
+	<div class="flex_row col1">
+		<div class="col2">
+			<div class="place_img">
+			</div>
+		</div>
+		<div class="col2">
+			<h2 class="body_bold" style="font-weight: 700; padding-left: 16px; padding-top: 8px">Place Title</h2>
+			<p class="caption_bold medium_empasize" style="padding-left: 16px;">Cafe</p>
+			<div class="place_info caption medium_empasize">
+				<img src="img/ic_location.svg">
+				<p>22 Martin Road, #01-00, Singapore 239058</p>
+			</div>
+			<div class="place_info caption medium_empasize">
+				<img src="img/ic_time.svg">
+				<p>10:00am ~ 09:00pm</p>
+			</div>
+			<div class="place_info caption medium_empasize">
+				<img src="img/ic_web.svg">
+				<p>www.places.com</p>
+			</div>
+			<div class="place_info caption medium_empasize">
+				<img src="img/ic_phone.svg">
+				<p>+65 6836 4695</p>
+			</div>
+			<div class="flex_row col1 ver_top_1x caption_bold yellow align_center">
+				<p style="padding-left:16px">4.0</p>
+				<img src="img/ic_star.svg" class="s_icon star hor_margin_tiny">
+				<img src="img/ic_star.svg" class="s_icon star">
+				<img src="img/ic_star.svg" class="s_icon star">
+				<img src="img/ic_star.svg" class="s_icon star">
+			</div>
+		</div>
+	</div>
+	<div class="button primary_border margin_1x" id="save_to_map">저장 취소</div>
+	<div class="col1 padding_1x" style="margin-top: 8px; margin-bottom: 8px">
+		<!--유저리스트-->
+		<div class="flex_col col1 ver_bottom_2x">
+			<h2 class="caption_bold ver_bottom_1x">Place title을 방문 예정 정글리안</h2>
+			<div class="flex_row col1 align_center">
+				<div class="profile_pic_s" id="pf3"></div>
+				<div class="profile_pic_s" id="pf4"></div>
+				<div class="profile_pic_s" id="pf5"></div>
+				<div class="profile_pic_s" id="pf8"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--검색 결과-->
+<div class="full_slider" id="search_result" style="padding-top:60px">
+	<div class="col1" id="search_result_list">
+		<!--장소 리스트-->
+		<div class="list padding_tinny place_list align_cen place1 id="place1">
+			<div class="place_thumb" id="plc_img3"></div>
+			<div class="place_meta">
+				<h2 class="body_bold">Little India</h2>
+				<p class="caption">Category</p>
+				<div class="flex_row col1 ver_top_1x caption_bold yellow align_center">
+					<p>4.0</p>
+					<img src="img/ic_star.svg" class="s_icon star hor_margin_tiny">
+					<img src="img/ic_star.svg" class="s_icon star">
+					<img src="img/ic_star.svg" class="s_icon star">
+					<img src="img/ic_star.svg" class="s_icon star">
+				</div>
+			</div>
+		</div>
+		<!--장소 리스트-->
+		<div class="list padding_tinny place_list align_cen place1 id="place1">
+			<div class="place_thumb" id="trv3"></div>
+			<div class="place_meta">
+				<h2 class="body_bold">Place1</h2>
+				<p class="caption">Category</p>
+				<div class="flex_row col1 ver_top_1x caption_bold yellow align_center">
+					<p>4.0</p>
+					<img src="img/ic_star.svg" class="s_icon star hor_margin_tiny">
+					<img src="img/ic_star.svg" class="s_icon star">
+					<img src="img/ic_star.svg" class="s_icon star">
+					<img src="img/ic_star.svg" class="s_icon star">
+				</div>
+			</div>
+		</div>
+		<!--장소 리스트-->
+		<div class="list padding_tinny place_list align_cen place1 id="place1">
+			<div class="place_thumb" id="trv5"></div>
+			<div class="place_meta">
+				<h2 class="body_bold">Place2</h2>
+				<p class="caption">Category</p>
+				<div class="flex_row col1 ver_top_1x caption_bold yellow align_center">
+					<p>4.0</p>
+					<img src="img/ic_star.svg" class="s_icon star hor_margin_tiny">
+					<img src="img/ic_star.svg" class="s_icon star">
+					<img src="img/ic_star.svg" class="s_icon star">
+					<img src="img/ic_star.svg" class="s_icon star">
+				</div>
+			</div>
+		</div>
+		<!--장소 리스트-->
+		<div class="list padding_tinny place_list align_cen place1 id="place1">
+			<div class="place_thumb" id="trv1"></div>
+			<div class="place_meta">
+				<h2 class="body_bold">Place3</h2>
+				<p class="caption">Category</p>
+				<div class="flex_row col1 ver_top_1x align_center caption_bold yellow">
+					<p>4.0</p>
+					<img src="img/ic_star.svg" class="s_icon star hor_margin_tiny">
+					<img src="img/ic_star.svg" class="s_icon star">
+					<img src="img/ic_star.svg" class="s_icon star">
+					<img src="img/ic_star.svg" class="s_icon star">
+				</div>
+			</div>
+		</div>
+		<!--장소 리스트-->
+		<div class="list padding_tinny place_list align_cen place1 id="place1">
+			<div class="place_thumb" id="trv7"></div>
+			<div class="place_meta">
+				<h2 class="body_bold">Place4</h2>
+				<p class="caption">Category</p>
+				<div class="flex_row col1 ver_top_1x caption_bold yellow align_center">
+					<p>4.0</p>
+					<img src="img/ic_star.svg" class="s_icon star hor_margin_tiny">
+					<img src="img/ic_star.svg" class="s_icon star">
+					<img src="img/ic_star.svg" class="s_icon star">
+					<img src="img/ic_star.svg" class="s_icon star">
+				</div>
+			</div>
+		</div>
+		<!--장소 리스트-->
+		<div class="list padding_tinny place_list align_cen place1 id="place1">
+			<div class="place_thumb" id="trv8"></div>
+			<div class="place_meta">
+				<h2 class="body_bold">Place5</h2>
+				<p class="caption">Category</p>
+				<div class="flex_row col1 ver_top_1x caption_bold yellow align_center">
+					<p>4.0</p>
+					<img src="img/ic_star.svg" class="s_icon star hor_margin_tiny">
+					<img src="img/ic_star.svg" class="s_icon star">
+					<img src="img/ic_star.svg" class="s_icon star">
+					<img src="img/ic_star.svg" class="s_icon star">
+				</div>
+			</div>
+		</div>
+		<!--장소 리스트-->
+		<div class="list padding_tinny place_list align_cen place1 id="place1">
+			<div class="place_thumb" id="trv9"></div>
+			<div class="place_meta">
+				<h2 class="body_bold">Place6</h2>
+				<p class="caption">Category</p>
+				<div class="flex_row col1 ver_top_1x caption_bold yellow align_center">
+					<p>4.0</p>
+					<img src="img/ic_star.svg" class="s_icon star hor_margin_tiny">
+					<img src="img/ic_star.svg" class="s_icon star">
+					<img src="img/ic_star.svg" class="s_icon star">
+					<img src="img/ic_star.svg" class="s_icon star">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="map">
+</div>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/map.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCj04BGKKuMBA-uNFbuLAvwCvkgA3cNpEE&callback=initMap" async defer></script>
+<script>
+/*맵 모두 변경 이벤트*/
+document.getElementById("map_toggle_left").addEventListener("click", function(){
+	$(this).addClass("toggle_selected");
+	$("#map_toggle_right").removeClass("toggle_selected");
+	show_markers();
+	$("#plan_slider").removeClass("long_slider_on");
+	$("#search_bar").animate({opacity:1});
+});
+document.getElementById("map_toggle_right").addEventListener("click", function(){
+	console.log("map_toggle!");
+	$(this).addClass("toggle_selected");
+	$("#map_toggle_left").removeClass("toggle_selected");
+	hide_markers();
+	$("#plan_slider").addClass("long_slider_on");
+	$("#search_bar").animate({opacity:0});
+});
+
+/*서치바 검색결과 이벤트*/
+function search_research_move(){
+	$("#search_result").addClass("full_slider_on");
+	$("#search_btt").css("display","none");
+	$("#close_btt").css("display","block");
+	$("#place_slider").removeClass("short_slider_on");
+	$("#close_btt").on("click",function(){
+		$("#search_result").removeClass("full_slider_on");
+		$("#search_btt").css("display","block");
+		$("#close_btt").css("display","none");
+	});
+}
+</script>
+</html>

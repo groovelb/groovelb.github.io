@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.css" />
+	<link rel="stylesheet" href="css/remove_bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="css_ver3/layout_main.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/layout_common.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_common.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_community.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/layout_community.css">
+	<link rel="stylesheet" type="text/css" href="css/components.css">
+	<link rel="stylesheet" type="text/css" href="css/img.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/form.css">
+	<link rel="stylesheet" type="text/css" href="css/type.css">
+	<link rel="stylesheet" type="text/css" href="css/color.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/align.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/menu_transition.css">
+</head>
+<body class="body_size">
+<!-- 헤더 -->
+<div class="header">
+	<div class="menu_dark" id="menu">
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	</div>
+	<img id="logo" src="img/logo_ver3.svg">
+	<div class="my_menu">
+		<a href="message_main.html" class="menu_item" id="message">
+			<img src="img/ic_comments.svg">
+		</a>
+		<a href="my_page.html" class="profile_pic_s" id="pf2" style="width:24px; height:24px;">
+		</a>
+	</div>
+</div>
+<!--슬라이드 메뉴-->
+<style>
+	.main_menu>div>hr{
+		margin:0px 32px;
+	}
+</style>
+<div class="main_menu">
+	<div class="flex_col align_center">
+		<a href="my_page.html" class="menu_list">
+			<div class="profile_pic_s menu_icon" id="pf2" style="width:24px; height:24px;">
+			</div>
+			마이페이지
+		</a>
+		<a href="profile.html" class="menu_list menu_list_indent">
+			<img class="menu_icon" src="img/ic_my_profile.svg">
+			내 프로필
+		</a>
+		<a href="my_travel.html" class="menu_list menu_list_indent">
+			<img class="menu_icon" src="img/ic_my_travel.svg">
+			내 여행
+		</a>
+		<a href="cashback.html" class="menu_list menu_list_indent">
+			<img class="menu_icon" src="img/ic_reward.svg">
+			리워드
+		</a>
+		<a href="community.html" class="menu_list">
+			<img class="menu_icon" src="img/ic_community_black.svg">
+			커뮤니티
+		</a>
+		<a href="cashback.html" class="menu_list ver_bottom_4x">
+			<img class="menu_icon" src="img/ic_cashback.svg">
+			캐시백 신청
+		</a>
+		<hr style="width: calc(100% - 64px)">
+		<p class="padding_tinny caption_bold white_bg" style="margin-top: -16px">유용한 링크</p>
+		<a class="menu_list" href="junglian.html">
+			<img class="menu_icon" src="img/ic_monkey.svg">
+			정글리안
+		</a>
+		<a class="menu_list" href="faq.html">
+			<img class="menu_icon" src="img/ic_faq.svg">
+			FAQ
+		</a>
+		<a class="menu_list" href="cs.html">
+			<img class="menu_icon" src="img/ic_reward.svg">
+			고객센터
+		</a>
+		<a class="menu_list" href="terms.html">
+			<img class="menu_icon" src="img/ic_terms_black.svg">
+			이용약관
+		</a>
+		<a class="menu_list ver_bottom_2x" href="personal_data_policy.html">
+			<img class="menu_icon" src="img/ic_personal_policy_black.svg">
+			개인정보 활용방침
+		</a>
+		<hr class="ver_bottom_2x" style="width: calc(100% - 64px)">
+		<a class="menu_list center ver_bottom_4x">
+			<div class="button primary_border" style="width: calc(100% - 16px); margin:0;">로그아웃</div>
+		</a>
+	</div>
+</div>
+<!--탑 배너-->
+<div class="flex_col ver_padding_1x align_center col1 grd1_bg" style="width:calc(100%) !important; height:auto; margin-top:64px;" id="reserve_faq_banner">
+	<img class="ver_bottom_1x" src="img/ic_hotel_faq.svg" style="width:80px; height:80px;">
+	<p class="middle_thin ver_bottom_4x">"좋은 호텔을 찾도록 도와드립니다."</p>
+</div>
+<div class="flex_col ver_padding_1x align_center col1 grd1_bg full_radious hide" style="width:calc(100%)!important; height:auto; margin-top:64px;" id="cashback_faq_banner">
+	<img class="ver_bottom_1x" src="img/usp2_svg.svg" style="width:80px; height:80px;">
+	<p class="middle_thin ver_bottom_4x">"캐시백 꼭 받을 수 있도록 도와드립니다."</p>
+</div>
+<div class="content_col">
+	<div class="flex_col col1" id="content_containner" style="width:calc(100%)">
+		<div class="white_bg full_radious" style="align-items: center; width:calc(100% - 32px); padding:16px; margin-top: -80px;">
+			<div class="flex_row col1 tab_containner">
+				<div class="tab_item tab_selected flex_center col2" id="reservation_tab">
+					예약관련
+				</div>
+				<div class="tab_item flex_center col2" id="cashback_tab">
+					적립금 관련
+				</div>
+			</div>
+			<style>
+				.question{padding: 16px 16px 16px 16px; margin: 8px 0px; cursor: pointer; border-radius: 4px;box-shadow: 0px 0px 4px #888888;}
+				.question:hover{
+					background-color: #fafafa;
+				}
+				.answer{width:calc(100% - 32px)!important; padding:0 16px;height: 0; overflow:hidden; transition: height 1s ease-in; cursor: pointer;}
+				.show{height:auto !important; transition: height 1s ease-in; margin-bottom:16px; padding-bottom: 16px; border-bottom: solid 1px #eeeeee;}
+				.hide{display: none !important}
+				.selected{color: #7c4dff; font-family: notosans_cjk_medium;}
+			</style>
+			<div class="col1" id="reservation_qna">
+				<!--Q1-->
+				<div class="flex_row col1 list">
+					<div class="question col1 body_thin" id="">
+						1. 정글리안 이용이 처음인데, 예약은 어떻게 해야 하나요?
+					</div>
+					<div class="answer flex_row col1 body_size" id="">
+						<p>홈페이지 상단 우측 회원가입을 클릭 후 상세 정보 입력하시면 회원가입이 완료됩니다. 
+						정글리안 회원가입 후 호텔 예약을 이용해 주셔야 “정글리안 리워드프로그램” 이용이 
+						가능하오니 꼭 회원가입 후 이용 부탁드립니다.</p>
+					</div>
+				</div>
+				<!--Q2-->
+				<div class="flex_row col1 list">
+					<div class="question col1 body_thin" id="">
+						2. 예약정보가 보이지 않는 경우 어떻게 해야 하나요?
+					</div>
+					<div class="answer flex_row col1 body_size" id="">
+						<p>정글리안에서 예약정보 혹은 적립금 내역이 보이지 않으신 경우는<p>
+						
+						<p class="text_indent">1. 예약정보가 시스템에 반영되기까지 다소 시간이 걸리는 경우</p>
+						<p class="text_indent">2. 고객님께서 비회원(비로그인)으로 예약을 하신 경우</p>
+						<p class="text_indent">3. 고객님의 PC 환경 및 웹브라우져 환경으로 인해 보이지 않는 경우</p>
+						<p class="text_indent ver_bottom_2x">4. 고객님께서 정글리안을 통하지 않고 부킹닷컴만을 통해 예약하셨을 경우가 있습니다.
+						 
+
+						<p class="ver_bottom_2x">1 의 경우, 예약정보가 정글리안 시스템에 반영되기까지 다소 시간이 소요될 수 있으니 통상적으로 예약 후 30분 뒤에 확인하시면 정상적으로 예약내역을 확인하실 수 있습니다.</p>
+						 
+						<p class="ver_bottom_2x">2 의 경우, 정글리안 사이트 및 어플(또는 모바일 웹페이지)에서 ‘적립금 찾기’를 통해 예약정보와 적립내역을 고객님 계정으로 이동할 수 있습니다.</p>
+
+						<p class="ver_bottom_2x">(정글리안 계정 간의 예약정보 및 적립 내역 이동은 불가합니다.)
+						PC에서 ‘적립금 찾기’를 하시는 경우, 정글리안 회원가입 후 메인 페이지 우측 상단에 있는</p>
+
+						<p class="ver_bottom_2x">‘내 프로필’ -> 리워드에 있는 ‘적립금 찾기’를 이용하시면 고객님의 적립금을 찾으실 수 있습니다.</p>
+						 
+						<p class="ver_bottom_2x">3 의 경우, 다른 PC나 앱(또는 모바일 웹페이지)을 통해 확인해 보실 수 있습니다. (windows XP, IE9 이하 구동 불가합니다)</p>
+						 
+						<p class="ver_bottom_2x">4 의 경우, 정글리안에 고객님의 예약건이 등록되지 않기 때문에 정글포인트 적립은 불가능함을 양해 부탁드립니다.</p>
+					</div>
+				</div>
+				<!--Q3-->
+				<div class="flex_row col1 list">
+					<div class="question col1 body_thin" id="">
+						3. 정글리안을 통해서 예약은 했는데, 로그인(=회원가입)을 하지 않았어요. 적립금은 어떻게 신청해야 하나요?
+					</div>
+					<div class="answer flex_row col1 body_size" id="">
+						<p class="ver_bottom_2x">
+						비회원으로 예약을 진행하셨어도 적립 가능합니다.
+						</p>
+
+						<p class="ver_bottom_2x">1) PC의 경우 로그인 및 회원가입 후 메인 페이지 우측 상단에 있는 ‘내 프로필’ -> ‘리워드’에 있는 ‘적립금 찾기’를 이용하시면 고객님의 적립금을 찾으실 수 있습니다.</p>
+						 
+						<p class="ver_bottom_2x">2) 앱(또는 모바일 웹페이지)의 경우 로그인 및 회원가입 후 메인 페이지 우측 상단에 있는 메뉴(≡)에서 ‘적립금 찾기’를 이용하시면 적립금 고객님 계정으로 찾으실 수 있습니다.</p>
+						 
+						<p class="ver_bottom_2x">‘적립금 찾기’를 이용한 경우, 수정된 정보가 고객님 계정에 반영되는데 30분 정도의 시간이 소요될 수 있습니다. 적립금 및 적립 내역은 고객님 계정 내 ‘내 적립금 확인’에서 확인 가능합니다.</p>
+					</div>
+				</div>
+				<!--Q4-->
+				<div class="flex_row col1 list">
+					<div class="question col1 body_thin" id="">
+						4. 예약을 변경 또는 취소하고 싶습니다.
+					</div>
+					<div class="answer flex_row col1 body_size" id="">
+						<p class="ver_bottom_2x">정글리안은 부킹닷컴의 제휴 협력사이며, 호텔 예약의 변경 및 취소, 호텔 관련 문의 등 예약, 결제 및 호텔 이용 문의는 예약업무 주관사인 부킹닷컴 고객센터를 통해 빠르고 정확하게 안내 받으실 수 있습니다. 예약의 변경 및 취소는 예약확인서 상에서 가능하며, 정글리안 사이트 내에서도 예약의 변경 및 취소가 가능합니다. 부킹닷컴 고객센터는 customer.service@booking.com 및 국내 02-3483-3225(평일 9AM-10PM / 주말 9AM-7PM) / 국외 +44 20 3684 7925(24H)입니다.</p>
+
+					</div>
+				</div>
+				<!--Q5-->
+				<div class="flex_row col1 list">
+					<div class="question col1 body_thin" id="">
+						5. 정글리안에서 호텔 검색을 했더니 부킹닷컴 예약페이지로 넘어가는데, 왜 그런건가요?
+					</div>
+					<div class="answer flex_row col1 body_size" id="">
+						<p class="ver_bottom_2x">정글리안은 부킹닷컴에서 제공하는 호텔 예약 서비스와 동일한 조건으로 제휴되어 있습니다.  
+						홈페이지에서 호텔 검색 시 부킹닷컴 페이지로 넘어가는 현상은 정상적인 부분이니 안심하고 이용하셔도 좋습니다.</p>
+
+						<p class="ver_bottom_2x">부킹닷컴 예약페이지로 이동 후 상단에 “제휴사 junglian”로고를 확인 하실 수 있습니다. 
+						정글리안을 통해 예약 완료 후 고객님께서 가입하신 메일로 보내드린 예약확인서 상단에도 역시 “junglian”로고를 확인 하실 수 있습니다.</p>
+					</div>
+				</div>
+				<!--Q6-->
+				<div class="flex_row col1 list">
+					<div class="question col1 body_thin" id="">
+						6. 현지결제로 예약했는데 카드결제가 되었습니다. 혹시, 문제가 있는걸까요?
+					</div>
+					<div class="answer flex_row col1 body_size" id="">
+						<p class="ver_bottom_2x">현지결제로 예약하셔도 호텔 정책상 (환불불가상품 등) 예약을 보증하기 위해 호텔 측에서 숙박비용 전액, 혹은 일부금액을 가결제 해놓는 경우가 있을 수 있습니다. 이는 정상적인 경우이며 현지에서 결제를 하실 경우 가결제는 취소되기 때문에 안심하셔도 됩니다. 가결제 취소의 경우 호텔 및 카드사 마다 상이한 점 안내드립니다. 이와 관련한 자세한 안내는 부킹닷컴 고객센터 , 혹은 해당 호텔 측에 문의하시면 안내 받으실 수 있습니다. 부킹닷컴 고객센터는 customer.service@booking.com 및 국내 02-3483-3225(평일 9AM-10PM / 주말 9AM-7PM) / 국외 +44 20 3684 7925(24H)입니다.</p>
+					</div>
+				</div>
+				<!--Q7-->
+				<div class="flex_row col1 list">
+					<div class="question col1 body_thin" id="">
+						7. 메일로 예약확인서가 오지 않았어요. 예약확인서 재발송은 어디서 확인 가능한가요?
+					</div>
+					<div class="answer flex_row col1 body_size" id="">
+						<p class="ver_bottom_2x">예약확인서를 받지 못하신 경우, 예약 및 결제 업무를 주관하고 있는 부킹닷컴 고객센터로 연락하시면 관련 내용 상담 받으실 수 있습니다. 부킹닷컴 고객센터는 customer.service@booking.com 및 국내 02-3483-3225(평일 9AM-10PM / 주말 9AM-7PM) / 국외 +44 20 3684 7925(24H)입니다.</p>
+					</div>
+				</div>
+				<!--Q8-->
+				<div class="flex_row col1 list">
+					<div class="question col1 body_thin" id="">
+						8. 로그인이 되지 않아요.
+					</div>
+					<div class="answer flex_row col1 body_size" id="">
+						<p class="ver_bottom_2x">정글리안 로그인시 비밀번호 또는 아이디가 틀리더라도 ‘일치하는 사용자가 없습니다’라는 안내 메시지가 나오니 참고 부탁드립니다. 
+						PC 및 앱(또는 모바일 웹페이지)을 통해 아이디 또는 비밀번호 찾기를 이용하실 수 있습니다.</p>
+					</div>
+				</div>
+				<!--Q9-->
+				<div class="flex_row col1 list">
+					<div class="question col1 body_thin" id="">
+						9. 커뮤니티는 어떤 서비스인가요?
+					</div>
+					<div class="answer flex_row col1 body_size" id="">
+						<p class="ver_bottom_2x">정글리안 커뮤니티는 정글리안을 통해 여행하는 사람들의 정보공유를 하는 공간입니다. 
+						같은 기간에 여행하는 사람들이 어떤 계획을 가지고 여행을 하는지
+						여행하고자 하는 지역의 인기 호텔, 관광지, 맛집에 대한 정보를 서로 공유하고
+						필요에 따라 동행을 찾을 수 있는 역할을 하기도 합니다.</p>
+
+						<p class="ver_bottom_2x">예를들어, 현지 유명 맛집이 4명이상 예약이 가능한데 혼자 여행중이거나 2명이 여행중이라면 정글리안 커뮤니티를 통해  맛집만 함께 갈 동행자를 구할 수 있습니다.</p>
+
+						<p class="ver_bottom_2x">또한, ‘내 여행 -> 내 여행 계획’ 카테고리를 통해 손 쉽게 여행 계획을 세울 수 있으며
+						숙박 예정인 호텔을 이용한 사람과 호텔 정보, 인근 관광 정보를 간편한 메신저 형태로 채팅이 가능하여 복잡한 여행 정보를 경험자를 통해 정확하게 알 수 있습니다.</p>
+
+						<p class="ver_bottom_2x">정글리안 커뮤니티 사용가이드는 아래 페이지에서 상세하게 확인이 가능합니다. 
+						URL : 커뮤니티 사용가이드 랜딩 페이지로 연결</p>
+					</div>
+				</div>
+				<!--Q10-->
+				<div class="flex_row col1 list">
+					<div class="question col1 body_thin" id="">
+						10. 지니어스 회원이란 무엇인가요?
+					</div>
+					<div class="answer flex_row col1 body_size" id="">
+						<p class="ver_bottom_2x">지니어스 회원은 정글리안, 부킹닷컴에서 통용되는 VIP 회원 등급입니다. 지니어스 회원은 추가할인, 얼리 체크인, 레이트 체크아웃, 웰컴 드링크 등 다양한 혜택을 받아보실 수 있습니다.
+						호텔 정책상 적용 가능한 혜택이 상이할 수 있습니다. 지니어스 회원등급은 5회 이상 예약시 자동으로 적용됩니다.</p>
+						<p class="ver_bottom_2x">정글리안에서 로그인 후 호텔검색을 통해 이동한 부킹닷컴 예약페이지 상단의 ‘로그인’버튼을 통해 회원 로그인(부킹닷컴 계정, 없을 시 부킹닷컴 계정 별도 가입 필요)을 해주신 뒤 
+						예약을 해주셔야 지니어스 회원 등급 실적을 쌓으실 수 있습니다.</p>
+					</div>
+				</div>
+				<!--Q11-->
+				<div class="flex_row col1 list">
+					<div class="question col1 body_thin" id="">
+						11. 정글리안 회원이면서 부킹닷컴 지니어스 회원인데, 지니어스 회원 혜택은 어떻게 받나요?
+					</div>
+					<div class="answer flex_row col1 body_size" id="">
+						<p class="ver_bottom_2x">정글리안과 지니어스 회원 혜택을 함께 받기 위해서는 먼저 정글리안 사이트 접속 후 정글리안 계정으로 로그인을 하셔야 합니다. 
+						이 후, 호텔 검색을 통해 이동한 부킹닷컴 예약 페이지 상단의 ‘로그인’ 버튼을 통해 지니어스 회원 로그인을 해주시면 됩니다.</p>
+						<p class="ver_bottom_2x">정글리안 혜택을 받기 위해서는 예약페이지 상단의 ‘제휴사 Junglian’ 로고를 꼭 확인해 주시길 바랍니다. 정글리안을 통해 예약완료 후 고객님께서 예약시 기입하신 메일로 보내드린 
+						예약확인서 상단에서 ‘정글리안’로고를 확인하실 수 있습니다.</p>
+
+						<p class="ver_bottom_2x">앱(또는 모바일 웹페이지)의 경우, 우측 상단의 메뉴(≡)버튼을 통해 로그인 후, 호텔 검색을 통해 부킹닷컴 예약페이지로 이동 후 좌측 상단의 메뉴(≡)버튼을 통해 지니어스 회원 신청하신 계정으로 
+						다시 한번 로그인을 해주시면 됩니다. 정글리안 혜택을 받기 위해서는 예약페이지 상단의 ‘Junglian’ 로고를 꼭 확인해 주시길 바랍니다.</p>
+						<p class="ver_bottom_2x">정글리안을 통해 예약완료 후 고객님께서 예약시 기입하신 메일로 보내드린 예약확인서 상단에서 ‘정글리안’로고를 확인하실 수 있습니다.</p>
+					</div>
+				</div>
+				<!--Q12-->
+				<div class="flex_row col1 list">
+					<div class="question col1 body_thin" id="">
+						12. 호텔 예약을 했는데 최저가가 아닐 경우 최저가 맞춤 제도 신청은 어떻게 하나요?
+					</div>
+					<div class="answer flex_row col1 body_size" id="">
+						<p class="ver_bottom_2x">정글리안의 파트너사인 부킹닷컴에서는 상품에 대한 최저가 맞춤제를 실시하고 있습니다. 정글리안을 통해 예약하신 상품이 최저가가 아닐 경우, 
+						투숙으로 인한 경제적 손실을 보상해 드리고 있습니다.
+						최저가와 관련한 보상절차는 부킹닷컴 고객센터로 문의하시면 자세하게 안내 받으실 수 있습니다.</p>
+						<p class="ver_bottom_2x">부킹닷컴 고객센터 customer.service@booking.com 및 국내 02-3483-3225(9AM-5PM) / 국외 +44 20 3684 7925(24H)입니다.</p>
+					</div>
+				</div>
+			</div>
+			<!--적립금 관련 캐시백-->
+			<div class="col1 hide" id="cashback_qna">
+				<!--Q13-->
+				<div class="flex_row col1 list">
+					<div class="question col1 body_thin" id="">
+						1.정글리안 리워드 프로그램이란 무엇인가요?
+					</div>
+					<div class="answer flex_row col1 body_size" id="">
+						<p class="ver_bottom_2x">정글리안은 여행을 즐기는 모든 사람들이 보다 합리적으로, 함께 하는 가치를 높이고자 “정글리안 리워드 프로그램” 을 통해 회원 누구나 예약 금액의 7% 현금 캐시백, 
+						친구 초대 시 초대받은 친구가 정글리안을 통해 여행 시 1건 당 2만원을 지급해 드리는 커미션 제도로 그 누구보다 여러분의 여행을 가장 빠르게 지원하는 프로그램입니다.</p>
+
+						<p class="caption_bold">체크인 당일 7%캐시백</p>
+						<p class="ver_bottom_2x">
+						: 세금 및 봉사료와 같은 호텔 예약 시 별도로 발생하는 비용을 제외한 예약 총 구매금액이 10만원 이상인   
+						예약에 한해 캐시백 제도가 적용됩니다. 
+						호텔 체크인 당일 등록하신 계좌 본인 확인 후 바로 지급됩니다. 
+						(호텔 예약 시스템, 은행 업무 지연으로 인해 지급일정은 1~2일 조금 더 소요 될 수 있습니다.)
+						</p>
+						<p class="caption_bold">친구추천 커미션</p>
+						<p class="ver_bottom_2x">: 정글리안 회원가입 후 ‘내 프로필’-> ‘리워드’에 있는 ‘초대하기’ 카테고리에서 친구초대시 필요한 
+						개별 추천링크 발급이 가능합니다. 
+						친구에게 추천링크가 포함된 초대장 보내기를 이용하시면 간편하게 초대가 완료됩니다.</p> 
+						<p class="ver_bottom_2x">커미션의 경우 추천링크를 받은 친구가 정글리안을 통해 호텔예약 후 체크인까지 확인 되면 자동으로 
+						각 2만원씩 적립됩니다.</p>
+						<p class="ver_bottom_2x">누적적립금은 ‘내 프로필’-> ‘리워드’에 있는 ‘초대하기’ 카테고리에서 확인이 가능합니다.</p> 
+					</div>
+				</div>
+				<!--Q14-->
+				<div class="flex_row col1 list">
+					<div class="question col1 body_thin" id="">
+						  2. 캐시백 신청은 어떻게 하나요?
+					</div>
+					<div class="answer flex_row col1 body_size" id="">
+						<p class="caption_bold">‘내 프로필’</p> -> <p class="caption_bold">‘캐시백신청’</p> 
+						  <p class="ver_bottom_2x">카테고리에서 누적된 총 적립금과 내역 확인과
+						   이름, 계좌번호, 이메일, 전화번호 기입 후 신청이 가능합니다. 
+						  캐시백은 지급 조건 및 일정은 아래와 같습니다.</p>  
+						  <p class="ver_bottom_2x">1. 캐시백은 총 누적 적립금액 10만원 이상일 때 신청 가능 (무통장계좌이체)</p>
+						  <p class="ver_bottom_2x">2. 캐시백은 숙소 체크인 후 캐시백 금액이 확정되며 신청일 기준으로 2일이내 신청인 개인계좌로 이체</p>
+						  <p class="ver_bottom_2x">3. 적립 금액은 예약 30분 이내 확인 가능. 단, 새벽 예약의 경우 익일 환율 고시후 예정금액 조회 가능</p>
+						  <p class="ver_bottom_2x">4. 정글리안 아이디의 명의와 은행 계좌번호 명의가 일치해야 캐시백 가능</p>
+					</div>
+				</div>
+				<!--Q15-->
+				<div class="flex_row col1 list">
+					<div class="question col1 body_thin" id="">
+						 3. 친구추천 커미션 금액은 어떻게 확인 하나요?
+					</div>
+					<div class="answer flex_row col1 body_size" id="">
+						<p class="ver_bottom_2x"><p class="caption_bold">‘내 프로필’</p> -> <p class="caption_bold">‘리워드’</p> 카테고리에서 초대하기 영역에서 총 초대수, 총 예약수, 누적 적립금까지 확인 가능합니다. 
+						누적된 적립금 캐시백 신청은 ‘내 프로필’-> ‘캐시백신청’ 카테고리에서 진행이 가능합니다.</p>
+					</div>
+				</div>
+				<!--Q16-->
+				<div class="flex_row col1 list">
+					<div class="question col1 body_thin" id="">
+						4. 내 적립금 금액 확인은 어디서 할 수 있나요?
+					</div>
+					<div class="answer flex_row col1 body_size" id="">
+						<p class="ver_bottom_2x">‘내 프로필’ -> ‘캐시백신청’ 카테고리 영역에서 포인트 적립 내역이 확인 가능하며, 최종 누적 적립금까지 확인이 가능합니다.</p>
+					</div>
+				</div>
+				<!--Q17-->
+				<div class="flex_row col1 list">
+					<div class="question col1 body_thin" id="">
+						5. 친구추천 커미션 서비스는 어떻게 이용하면 되나요?
+					</div>
+					<div class="answer flex_row col1 body_size" id="">
+						<p class="ver_bottom_2x">정글리안 회원가입후 ‘내 프로필’-> ‘리워드’의 초대하기 카테고리에서 개별로 추천링크가 생성됩니다. 추천링크를 같이 여행 할 친구, 여행 계획이 있는 친구 등 자유롭게 전달해주세요.</p>
+
+						<p class="ver_bottom_2x">추천링크를 통해 정글리안 회원 가입-> 호텔 예약-> 호텔 체크인까지 확인 되면 초대한 고객님의 계정에 자동으로 적립금이 쌓이게 됩니다.</p>
+
+						<p class="ver_bottom_2x">추천링크를 통하지 않아도 추천인ID(=정글리안 로그인 아이디)를 호텔 예약 시 적어주시면 초대한 고객님의 계정에 자동으로 적립금이 쌓게 됩니다.</p> 
+
+						<p class="ver_bottom_2x">친구추천 커미션 서비스 이용시 캐시백 지급 조건은 아래와 같습니다.</p>
+
+						  <p class="ver_bottom_2x">1. 캐시백은 총 누적 적립금액 10만원 이상일 때 신청 가능 (무통장계좌이체)
+						     L정글리안 회원이면 누구나 7% 캐시백 적립금액 포함 10만원 이상일 때 캐시백 신청이 가능합니다.</p>
+						  <p class="ver_bottom_2x">2. 정글리안 아이디의 명의와 은행 계좌번호 명의가 일치해야 캐시백 가능</p> 
+						  <p class="ver_bottom_2x">3. 커미션의 경우 초대 받은 친구가 호텔 예약 후 체크인 완료가 확인되면 각 2만원씩 적립됩니다.</p>
+					</div>
+				</div>
+				<!--Q18-->
+				<div class="flex_row col1 list">
+					<div class="question col1 body_thin" id="">
+						6. 예상했던 캐시백 금액과 실제 지급된 캐시백 금액이 다른것 같아요. 어떻게 해야 하나요?
+					</div>
+					<div class="answer flex_row col1 body_size" id="">
+						<p class="ver_bottom_2x">캐시백 적립 과정에서 부가세, 환율변동, 환전 수수료 등과 같은 원인으로 고객님께서 생각하시는 금액과 다소 차이가 날 수 있습니다. 
+						다만 차이가 클 경우, cs@junglian.com 으로 해당 예약건의 예약번호와 Pin번호를 포함하여 문의주시면 자세히 안내해 드리겠습니다.</p>
+					</div>
+				</div>
+				<!--Q19-->
+				<div class="flex_row col1 list">
+					<div class="question col1 body_thin" id="">
+						7. 정글리안을 통하지 않고 부킹닷컴에서 직접 예약했어요. 
+							이럴 경우 적립이 불가능한가요?
+					</div>
+					<div class="answer flex_row col1 body_size" id="">
+						<p class="ver_bottom_2x">정글리안을 통하지 않고 부킹닷컴으로 직접 예약을 하신 경우 정글리안에서 해당 예약에 대한 적립을 도와드릴 수 없습니다. 다만, 예약의 무료취소가 가능한 경우 예약을 취소하신 뒤에 정글리안을 통해 예약하시면 정상적으로 적립을 받으실 수 있습니다.</p>
+					</div>
+				</div>
+				<!--Q20-->
+				<div class="flex_row col1 list">
+					<div class="question col1 body_thin" id="">
+						8. 잃어버린 적립금 찾기를 했는데 계속 오류가 나요. 어떻게 해야 하나요?
+					</div>
+					<div class="answer flex_row col1 body_size" id="">
+						<p class="ver_bottom_2x">정글리안에서 잃어버린 적립금 찾기 이용 시 계속 오류가 발생하는 경우는</p>
+						<p class="ver_bottom_2x">1. 비회원이 아닌 로그인 후 예약을 진행해 주신 경우</p>
+						<p class="ver_bottom_2x">2. 고객님의 PC 환경 및 웹브라우져 환경으로 인해 보이지 않는 경우</p>
+						<p class="ver_bottom_2x">3. 고객님께서 정글리안을 통하지 않고 부킹닷컴만을 통해 예약하셨을 경우가 있습니다.</p>
+						 
+						<p class="ver_bottom_2x">1 의 경우, 고객님 계정 내 ‘리워드’-> ‘적립금찾기’ ’에서 확인하실 수 있습니다.</p>
+						 
+						<p class="ver_bottom_2x">2 의 경우, 다른 PC나 앱(또는 모바일 웹페이지)을 통해 확인해 보실 수 있습니다. (windows XP, IE9 이하 구동 불가)</p>
+						 
+						<p class="ver_bottom_2x">3 의 경우, 정글리안에 고객님의 예약건이 등록되지 않기 때문에 정글포인트 적립은 불가능함을 양해 부탁드립니다.</p>
+						<p class="ver_bottom_2x">정글리안을 통해 예약완료 된 예약건은 고객님께서 예약시 기입하신 메일로 보내드린 예약확인서 상단에서 ‘정글리안’로고를 확인하실 수 있습니다.</p>
+					</div>
+				</div>
+				<!--Q21-->
+				<div class="flex_row col1 list">
+					<div class="question col1 body_thin" id="">
+						9. 적립금액 확정은 언제인가요?
+					</div>
+					<div class="answer flex_row col1 body_size" id="">
+						<p class="ver_bottom_2x">적립금 확정은 고객님께서 투숙을 완료하신 후 투숙일(체크인)을 기준으로 바로 확인이  이루어집니다.
+						간혹 일부 호텔에 한하여 성수기, 연말 등의 특수한 상황으로 투숙정보가 늦게 전송되는 경우가 있습니다.
+						정상적으로 투숙을 완료하셨다면 캐시백 포인트 적립에 대해서는 크게 걱정하지 않으셔도 됩니다.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="js/menu_slide2.js"></script>
+<script>
+
+		/*질문 펼치기*/
+		$(".question").on("click",function(){
+			$(this).toggleClass("selected");
+			$(this).siblings(".answer").toggleClass("show");
+		});
+
+		/*쓰기 다이얼로그 탭 이동*/
+		$(".tab_item").on("click",function(){
+			console.log("tab click!");
+			$(".tab_item").removeClass("tab_selected");
+			$(this).addClass("tab_selected");
+			var id = $(this).attr("id");
+			console.log(id);
+			if(id=="reservation_tab"){
+				$("#reservation_qna").removeClass("hide");
+				$("#cashback_qna").addClass("hide");
+				$('#reserve_faq_banner').removeClass("hide");
+				$("#cashback_faq_banner").addClass("hide");
+			}
+			else if(id=="cashback_tab"){
+				$("#reservation_qna").addClass("hide");
+				$("#cashback_qna").removeClass("hide");	
+				$('#reserve_faq_banner').addClass("hide");
+				$("#cashback_faq_banner").removeClass("hide");
+			}
+		});
+</script>
+</html>

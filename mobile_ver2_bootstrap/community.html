@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.css" />
+	<link rel="stylesheet" href="css/remove_bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="css_ver3/layout_main.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/layout_common.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_common.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_community.css">
+	<link rel="stylesheet" type="text/css" href="css/components.css">
+	<link rel="stylesheet" type="text/css" href="css/img.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/form.css">
+	<link rel="stylesheet" type="text/css" href="css/type.css">
+	<link rel="stylesheet" type="text/css" href="css/color.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/align.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/menu_transition.css">
+</head>
+<body>
+<!-- 헤더 -->
+<div class="header">
+	<div class="menu_dark" id="menu">
+	<span></span>
+	<span></span>
+	<span></span>
+	<span></span>
+	</div>
+	<img id="logo" src="img/logo_ver3.svg">
+	<div class="my_menu">
+		<a href="message_main.html" class="menu_item">
+			<img src="img/ic_comments.svg">
+		</a>
+		<a href="my_page.html" class="profile_pic_s" id="pf2" style="width:24px; height:24px;">
+		</a>
+	</div>
+</div>
+<!--슬라이드 메뉴-->
+<style>
+	.main_menu>div>hr{
+		margin:0px 32px;
+	}
+</style>
+<div class="main_menu">
+	<div class="flex_col align_center">
+		<a href="my_page.html" class="menu_list">
+			<div class="profile_pic_s menu_icon" id="pf2" style="width:24px; height:24px;">
+			</div>
+			마이페이지
+		</a>
+		<a href="profile.html" class="menu_list menu_list_indent">
+			<img class="menu_icon" src="img/ic_my_profile.svg">
+			내 프로필
+		</a>
+		<a href="my_travel.html" class="menu_list menu_list_indent">
+			<img class="menu_icon" src="img/ic_my_travel.svg">
+			내 여행
+		</a>
+		<a href="cashback.html" class="menu_list menu_list_indent">
+			<img class="menu_icon" src="img/ic_reward.svg">
+			리워드
+		</a>
+		<a href="community.html" class="menu_list">
+			<img class="menu_icon" src="img/ic_community_black.svg">
+			커뮤니티
+		</a>
+		<a href="cashback.html" class="menu_list ver_bottom_4x">
+			<img class="menu_icon" src="img/ic_cashback.svg">
+			캐시백 신청
+		</a>
+		<hr style="width: calc(100% - 64px)">
+		<p class="padding_tinny caption_bold white_bg" style="margin-top: -16px">유용한 링크</p>
+		<a class="menu_list" href="junglian.html">
+			<img class="menu_icon" src="img/ic_monkey.svg">
+			정글리안
+		</a>
+		<a class="menu_list" href="faq.html">
+			<img class="menu_icon" src="img/ic_faq.svg">
+			FAQ
+		</a>
+		<a class="menu_list" href="cs.html">
+			<img class="menu_icon" src="img/ic_reward.svg">
+			고객센터
+		</a>
+		<a class="menu_list" href="terms.html">
+			<img class="menu_icon" src="img/ic_terms_black.svg">
+			이용약관
+		</a>
+		<a class="menu_list ver_bottom_2x" href="personal_data_policy.html">
+			<img class="menu_icon" src="img/ic_personal_policy_black.svg">
+			개인정보 활용방침
+		</a>
+		<hr class="ver_bottom_2x" style="width: calc(100% - 64px)">
+		<a class="menu_list center ver_bottom_4x">
+			<div class="button primary_border" style="width: calc(100% - 16px); margin:0;">로그아웃</div>
+		</a>
+	</div>
+</div>
+<!--컨텐츠-->
+<div class="flex_row col1 flex_center" style="position: absolute; overflow: hidden; height: 240px; left: 0">
+	<style>
+		#community_top{
+			background-image: radial-gradient(#ffffffff 20%, #ffffff80 36%, #ffffff10 100%);
+		}
+		#community_top2{
+			background-image: linear-gradient(#ffffff00 0%, #ffffffff 60%);
+		}
+		#community_bg>div>.profile_pic_middle{
+			margin: 16px calc((100%/16) - 34px) 24px calc((100%/16) - 34px);
+		}
+		#community_bg{
+			animation-name: slide_right;
+    		animation-duration: 18s;
+		}
+		@keyframes slide_right{
+			0%   {left: -10%;}
+			50%   {left: 0%;}
+			100% {left: -10%;}
+		}
+	</style>
+	<div class="flex_col flex_center" style="position: absolute; top:64px; z-index: -1; width:200%; left: -20%" id="community_bg">
+		<div class="flex_row col1" style="margin-right: 48px">
+			<div class="profile_pic_middle" id="pf1"></div>
+			<div class="profile_pic_middle" id="pf2"></div>
+			<div class="profile_pic_middle" id="pf3"></div>
+			<div class="profile_pic_middle" id="pf4"></div>
+			<div class="profile_pic_middle" id="pf5"></div>
+			<div class="profile_pic_middle" id="pf6"></div>
+			<div class="profile_pic_middle" id="pf7"></div>
+			<div class="profile_pic_middle" id="pf8"></div>
+			<div class="profile_pic_middle" id="pf7"></div>
+			<div class="profile_pic_middle" id="pf6"></div>
+			<div class="profile_pic_middle" id="pf5"></div>
+			<div class="profile_pic_middle" id="pf4"></div>
+			<div class="profile_pic_middle" id="pf7"></div>
+			<div class="profile_pic_middle" id="pf6"></div>
+			<div class="profile_pic_middle" id="pf5"></div>
+			<div class="profile_pic_middle" id="pf4"></div>
+		</div>
+		<div class="flex_row col1">
+			<div class="profile_pic_middle" id="pf6"></div>
+			<div class="profile_pic_middle" id="pf7"></div>
+			<div class="profile_pic_middle" id="pf8"></div>
+			<div class="profile_pic_middle" id="pf7"></div>
+			<div class="profile_pic_middle" id="pf6"></div>
+			<div class="profile_pic_middle" id="pf7"></div>
+			<div class="profile_pic_middle" id="pf6"></div>
+			<div class="profile_pic_middle" id="pf5"></div>
+			<div class="profile_pic_middle" id="pf4"></div>
+			<div class="profile_pic_middle" id="pf7"></div>
+			<div class="profile_pic_middle" id="pf6"></div>
+			<div class="profile_pic_middle" id="pf5"></div>
+			<div class="profile_pic_middle" id="pf4"></div>
+			<div class="profile_pic_middle" id="pf7"></div>
+			<div class="profile_pic_middle" id="pf6"></div>
+			<div class="profile_pic_middle" id="pf5"></div>
+		</div>
+	</div>
+</div>
+<div class="flex_col col1 align_center" style=" padding-top: 80px;" id="community_top">
+	<div class="flex_col col1 align_center ver_padding_4x" id="community_top2">
+		<h2 class="big_bold ver_bottom_1x text_center">정글리안 커뮤니티</h2>
+		<p class="body_medium ver_bottom_4x text_center">혼자하는 여행계획 NO! 커뮤니티와 함께하세요</p>
+		<div style="width:calc(100% - 32px)">
+			<div class="textfield body_size tf_full box_shadow white_bg">
+				<img class="icon" src="img/ic_search.svg">
+				싱가폴
+			</div>
+		</div>
+	</div>
+</div>
+<div class="live_area">
+	<style>
+		.card_full{margin:8px 0;}
+	</style>
+	<div class="flex_row col1">
+		<!--커뮤니티-->
+		<a class="card card_full b_card white_highlight flex_center" id="sg" href="community_page.html">
+			<h2 class="big_size ver_bottom_1x">싱가폴</h2>
+			<p class="caption">총 12,323 회원</p>
+			<p class="caption ver_bottom_2x">총 23개 장소</p>
+			<p class="caption">24명의 누적 적립금</p>
+			<p class="caption_bold"><span class="yellow">630,000,000₩</span></p>
+		</a>
+		<!--커뮤니티-->
+		<a class="card card_full b_card white_highlight flex_center" id="bkk" href="community_page.html">
+			<h2 class="big_size ver_bottom_1x">방콕</h2>
+			<p class="caption">총 12,323 회원</p>
+			<p class="caption ver_bottom_2x">총 23개 장소</p>
+			<p class="caption">24명의 누적 적립금</p>
+			<p class="caption_bold"><span class="yellow">630,000,000₩</span></p>
+		</a>
+		<!--커뮤니티-->
+		<a class="card card_full b_card white_highlight flex_center" id="ld" href="community_page.html">
+			<h2 class="big_size ver_bottom_1x">런던</h2>
+			<p class="caption">총 12,323 회원</p>
+			<p class="caption ver_bottom_2x">총 23개 장소</p>
+			<p class="caption">24명의 누적 적립금</p>
+			<p class="caption_bold"><span class="yellow">630,000,000₩</span></p>
+		</a>
+		<!--커뮤니티-->
+		<a class="card card_full b_card white_highlight flex_center" id="danang" href="community_page.html">
+			<h2 class="big_size ver_bottom_1x">다낭</h2>
+			<p class="caption">총 12,323 회원</p>
+			<p class="caption ver_bottom_2x">총 23개 장소</p>
+			<p class="caption">24명의 누적 적립금</p>
+			<p class="caption_bold"><span class="yellow">630,000,000₩</span></p>
+		</a>
+		<!--커뮤니티-->
+		<a class="card card_full b_card white_highlight flex_center" id="kul" href="community_page.html">
+			<h2 class="big_size ver_bottom_1x">쿠알라룸프르</h2>
+			<p class="caption">총 12,323 회원</p>
+			<p class="caption ver_bottom_2x">총 23개 장소</p>
+			<p class="caption">24명의 누적 적립금</p>
+			<p class="caption_bold"><span class="yellow">630,000,000₩</span></p>
+		</a>
+		<!--커뮤니티-->
+		<a class="card card_full b_card white_highlight flex_center" id="hw" href="community_page.html">
+			<h2 class="big_size ver_bottom_1x">하와이</h2>
+			<p class="caption">총 12,323 회원</p>
+			<p class="caption ver_bottom_2x">총 23개 장소</p>
+			<p class="caption">24명의 누적 적립금</p>
+			<p class="caption_bold"><span class="yellow">630,000,000₩</span></p>
+		</a>
+		<!--커뮤니티-->
+		<a class="card card_full b_card white_highlight flex_center" id="sf" href="community_page.html">
+			<h2 class="big_size ver_bottom_1x">샌프란시스코</h2>
+			<p class="caption">총 12,323 회원</p>
+			<p class="caption ver_bottom_2x">총 23개 장소</p>
+			<p class="caption">24명의 누적 적립금</p>
+			<p class="caption_bold"><span class="yellow">630,000,000₩</span></p>
+		</a>
+		<!--커뮤니티-->
+		<a class="card card_full b_card white_highlight flex_center" id="la" href="community_page.html">
+			<h2 class="big_size ver_bottom_1x">로스엔젤레스</h2>
+			<p class="caption">총 12,323 회원</p>
+			<p class="caption ver_bottom_2x">총 23개 장소</p>
+			<p class="caption">24명의 누적 적립금</p>
+			<p class="caption_bold"><span class="yellow">630,000,000₩</span></p>
+		</a>
+		<!--커뮤니티-->
+		<a class="card card_full b_card white_highlight flex_center" id="fkk" href="community_page.html">
+			<h2 class="big_size ver_bottom_1x">후쿠오카</h2>
+			<p class="caption">총 12,323 회원</p>
+			<p class="caption ver_bottom_2x">총 23개 장소</p>
+			<p class="caption">24명의 누적 적립금</p>
+			<p class="caption_bold"><span class="yellow">630,000,000₩</span></p>
+		</a>
+	</div>
+</div>
+</body>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+		$(document).ready(function(){
+			var menu_on = false;
+			$("#menu").on("click",function(){
+				menu_on = (!menu_on);
+				$(".main_menu").toggleClass("main_menu_on");
+				$(this).toggleClass('open');
+				$(".header").toggleClass("no_box_shadow");
+				if(menu_on){
+					$(".my_menu").hide();
+				}
+				else{
+					$(".my_menu").show();
+				}
+				
+			});
+			$("#xbox").on("click",function(){
+				$(".main_menu").toggleClass("main_menu_on");
+			});
+		});
+</script>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.css" />
+	<link rel="stylesheet" href="css/remove_bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="css_ver3/layout_main.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/layout_common.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_common.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/layout_community.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_community.css">
+	<link rel="stylesheet" type="text/css" href="css/components.css">
+	<link rel="stylesheet" type="text/css" href="css/img.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/form.css">
+	<link rel="stylesheet" type="text/css" href="css/type.css">
+	<link rel="stylesheet" type="text/css" href="css/color.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/align.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/menu_transition.css">
+	<link rel="stylesheet" type="text/css" href="css/jungle_map.css">
+</head>
+<body>
+<!--컨텐츠-->
+<!--맵 토글-->
+<div class="map_toggle body_size primary_bg">
+	<div class="map_toggle_item flex_row flex_center primary_bg toggle_selected cap body_size" id=map_toggle_left>정글리안 추천장소</div>
+	<div class="map_toggle_item flex_row flex_center body_size" id=map_toggle_right>내 일정 보기</div>
+</div>
+<!--슬라이더-->
+<div class="plan_slider flex_col align_center" id="slider">
+	<!--일정 컨테이터-->
+	<div class="slide" id="plan" style="left:0">
+		<div class="white_middle_bg flex_col align_center">
+			<img src="img/ic_toggle_arrow.svg" class="arrow" id="arrow" style="transform: rotate(-90deg);">
+			<div class="textfield align_center space_between white_bg ver_bottom_2x" style="width:calc(100% - 64px)">
+				<input class="body_size input_no_style" type="text" id="user_id" name="user_id" placeholder="장소를 검색해보세요" onchange="search_research_move()">
+				<img src="img/ic_search.svg">
+			</div>
+		</div>
+		<div id="date_list" style="width: 100%; height: calc(100% - 32px - 98px - 118px); overflow-y: scroll;">
+			<!--템-->
+			<div class="list day_list padding_1x day border_bottom" id="day1">
+				<div class="flex_row align_end" id="date">
+					<h2 class="middle_size" style="margin:0">Day1</h2><p class="caption_bold low_emphasis">SAT 10/9</p>
+				</div>
+				<p class="flex_row align_center caption" id="location" style="width:calc(100% - 24px)"><img src="img/ic_location.svg">"리틀 인디아"를 포함한 3개의 장소</p><img class="btt_show_list" src="img/ic_down.svg">
+				<!--날짜별 장소리스트-->
+				<div class="col1 place_list_day">
+					<!--장소 리스트-->
+					<div class="list padding_tinny place_list align_cen place1 id="place1">
+						<div class="place_thumb" id="plc_img3"></div>
+						<div class="place_meta">
+							<h2 class="body_bold">Little India</h2>
+							<p class="caption">Category</p>
+						</div>
+					</div>
+					<!--장소 리스트-->
+					<div class="list padding_tinny place_list align_cen place1 id="place1">
+						<div class="place_thumb" id="trv3"></div>
+						<div class="place_meta">
+							<h2 class="body_bold">Place1</h2>
+							<p class="caption">Category</p>
+						</div>
+					</div>
+					<!--장소 리스트-->
+					<div class="list padding_tinny place_list align_cen place1 id="place1">
+						<div class="place_thumb" id="trv5"></div>
+						<div class="place_meta">
+							<h2 class="body_bold">Place2</h2>
+							<p class="caption">Category</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--템-->
+			<div class="list day_list padding_1x day border_bottom">
+				<div class="flex_row align_end" id="date">
+					<h2 class="middle_size" style="margin:0">Day2</h2><p class="caption_bold low_emphasis">SAT 10/10</p>
+				</div>
+				<p class="flex_row align_center caption" id="location" style="width:calc(100% - 24px)"><img src="img/ic_location.svg">"0개의 장소</p><img class="btt_show_list" src="img/ic_down.svg">
+			</div>
+			<!--템-->
+			<div class="list day_list padding_1x day border_bottom">
+				<div class="flex_row align_end" id="date">
+					<h2 class="middle_size" style="margin:0">Day3</h2><p class="caption_bold low_emphasis">SAT 10/11</p>
+				</div>
+				<p class="flex_row align_center caption" id="location" style="width:calc(100% - 24px)"><img src="img/ic_location.svg">0개의 장소</p><img class="btt_show_list" src="img/ic_down.svg">
+			</div>
+			<!--템-->
+			<div class="list day_list padding_1x day border_bottom">
+				<div class="flex_row align_end" id="date">
+					<h2 class="middle_size" style="margin:0">Day4</h2><p class="caption_bold low_emphasis">SAT 10/9</p>
+				</div>
+				<p class="flex_row align_center caption" id="location" style="width:calc(100% - 24px)"><img src="img/ic_location.svg">0개의 장소</p><img class="btt_show_list" src="img/ic_down.svg">
+			</div>
+			<!--템-->
+			<div class="list day_list padding_1x day border_bottom">
+				<div class="flex_row align_end" id="date">
+					<h2 class="middle_size" style="margin:0">Day5</h2><p class="caption_bold low_emphasis">SAT 10/9</p>
+				</div>
+				<p class="flex_row align_center caption" id="location" style="width:calc(100% - 24px)"><img src="img/ic_location.svg">0개의 장소</p><img class="btt_show_list" src="img/ic_down.svg">
+			</div>
+			<!--템-->
+			<div class="list day_list padding_1x day border_bottom">
+				<div class="flex_row align_end" id="date">
+					<h2 class="middle_size" style="margin:0">Day6</h2><p class="caption_bold low_emphasis">SAT 10/9</p>
+				</div>
+				<p class="flex_row align_center caption" id="location" style="width:calc(100% - 24px)"><img src="img/ic_location.svg">0개의 장소</p><img class="btt_show_list" src="img/ic_down.svg">
+			</div>
+			<!--템-->
+			<div class="list day_list padding_1x day border_bottom ver_bottom_2x">
+				<div class="flex_row align_end" id="date">
+					<h2 class="middle_size" style="margin:0">Day7</h2><p class="caption_bold low_emphasis">SAT 10/9</p>
+				</div>
+				<p class="flex_row align_center caption" id="location" style="width:calc(100% - 24px)"><img src="img/ic_location.svg">0개의 장소</p><img class="btt_show_list" src="img/ic_down.svg">
+			</div>
+			<!--지정안된 장소들-->
+			<h2 class="body_bold middle_emphasis margin_2x">지정안된 장소들</h2>
+			<!--장소 리스트-->
+			<div class="list padding_1x place_list align_center place1" id="place1">
+				<div class="place_thumb" id="plc_img1"></div>
+				<div class="place_meta">
+					<h2 class="body_bold">Place title</h2>
+					<p class="caption">Category</p>
+				</div>
+			</div>
+			<!--장소 리스트-->
+			<div class="list padding_1x place_list align_center place1" id="place1">
+				<div class="place_thumb" id="plc_img2"></div>
+				<div class="place_meta">
+					<h2 class="body_bold">Place title</h2>
+					<p class="caption">Category</p>
+				</div>
+			</div>
+			<!--장소 리스트-->
+			<div class="list padding_1x place_list align_center place1" id="place1">
+				<div class="place_thumb" id="plc_img3"></div>
+				<div class="place_meta">
+					<h2 class="body_bold">Place title</h2>
+					<p class="caption">Category</p>
+				</div>
+			</div>
+		</div>
+		<div class="flex_col align_center padding_1x" id="plan_save">
+			<p class="caption ver_bottom_1x" style="text-align: center;">groovelb님의 구글계정의 맵과 캘린더에 일정이 저장됩니다.</p>
+			<div class="button primary_bg center box_shadow" style="width: calc(100% - 68px)">구글로 내보내기</div>
+		</div>
+	</div>
+	<!--일정컨테이너 종료-->
+</div>
+<div id="map">
+</div>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/map.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCj04BGKKuMBA-uNFbuLAvwCvkgA3cNpEE&callback=initMap" async defer></script>
+<script>
+	/*맵 모두 변경 이벤트*/
+	document.getElementById("map_toggle_left").addEventListener("click", function(){
+		if(!this.classList.contains("toggle_selected")){
+			console.log("map_toggle!");
+			map_mode_switch();
+			show_markers();
+		}
+	});
+	document.getElementById("map_toggle_right").addEventListener("click", function(){
+		if(!this.classList.contains("toggle_selected")){
+				console.log("map_toggle!");
+				map_mode_switch();
+				hide_markers();
+			}
+	});
+	/*맵모두 변경함수*/
+	function map_mode_switch(){
+		document.getElementById("map_toggle_left").classList.toggle("toggle_selected");
+		document.getElementById("map_toggle_right").classList.toggle("toggle_selected");
+	}
+</script>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.css" />
+	<link rel="stylesheet" href="css/remove_bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="css_ver3/layout_main.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/layout_common.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_common.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_community.css">
+	<link rel="stylesheet" type="text/css" href="css/components.css">
+	<link rel="stylesheet" type="text/css" href="css/img.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/form.css">
+	<link rel="stylesheet" type="text/css" href="css/type.css">
+	<link rel="stylesheet" type="text/css" href="css/color.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/align.css">
+	<link rel="stylesheet" type="text/css" href="css_ver3/menu_transition.css">
+</head>
+<body>
+<!-- 헤더 -->
+<div class="header">
+	<div class="menu_dark" id="menu">
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	</div>
+	<img id="logo" src="img/logo_ver3.svg">
+	<div class="my_menu">
+		<a href="message_main.html" class="menu_item">
+			<img src="img/ic_comments.svg">
+		</a>
+		<a href="my_page.html" class="profile_pic_s" id="pf2" style="width:24px; height:24px;">
+		</a>
+	</div>
+</div>
+<!--슬라이드 메뉴-->
+<style>
+	.main_menu>div>hr{
+		margin:0px 32px;
+	}
+</style>
+<div class="main_menu">
+	<div class="flex_col align_center">
+		<a href="my_page.html" class="menu_list">
+			<div class="profile_pic_s menu_icon" id="pf2" style="width:24px; height:24px;">
+			</div>
+			마이페이지
+		</a>
+		<a href="profile.html" class="menu_list menu_list_indent">
+			<img class="menu_icon" src="img/ic_my_profile.svg">
+			내 프로필
+		</a>
+		<a href="my_travel.html" class="menu_list menu_list_indent">
+			<img class="menu_icon" src="img/ic_my_travel.svg">
+			내 여행
+		</a>
+		<a href="cashback.html" class="menu_list menu_list_indent">
+			<img class="menu_icon" src="img/ic_reward.svg">
+			리워드
+		</a>
+		<a href="community.html" class="menu_list">
+			<img class="menu_icon" src="img/ic_community_black.svg">
+			커뮤니티
+		</a>
+		<a href="cashback.html" class="menu_list ver_bottom_4x">
+			<img class="menu_icon" src="img/ic_cashback.svg">
+			캐시백 신청
+		</a>
+		<hr style="width: calc(100% - 64px)">
+		<p class="padding_tinny caption_bold white_bg" style="margin-top: -16px">유용한 링크</p>
+		<a class="menu_list" href="junglian.html">
+			<img class="menu_icon" src="img/ic_monkey.svg">
+			정글리안
+		</a>
+		<a class="menu_list" href="faq.html">
+			<img class="menu_icon" src="img/ic_faq.svg">
+			FAQ
+		</a>
+		<a class="menu_list" href="cs.html">
+			<img class="menu_icon" src="img/ic_reward.svg">
+			고객센터
+		</a>
+		<a class="menu_list" href="terms.html">
+			<img class="menu_icon" src="img/ic_terms_black.svg">
+			이용약관
+		</a>
+		<a class="menu_list ver_bottom_2x" href="personal_data_policy.html">
+			<img class="menu_icon" src="img/ic_personal_policy_black.svg">
+			개인정보 활용방침
+		</a>
+		<hr class="ver_bottom_2x" style="width: calc(100% - 64px)">
+		<a class="menu_list center ver_bottom_4x">
+			<div class="button primary_border" style="width: calc(100% - 16px); margin:0;">로그아웃</div>
+		</a>
+	</div>
+</div>
+<!--적립금-->
+<div class="content_col">
+	<div class="content_col align_end">
+		<h2 class="middle_size ver_bottom_2x">잃어버린 적립금 찾기</h2>
+		<p class="caption ver_bottom_1x col1">
+			가입전 정글리안을 경유한 예약건에 대한 포인트를 찾을 수있습니다.<br>
+			예약확인서(부킹닷컴)는 가입한 메일함에서 찾을 수 있습니다.
+		</p>
+		<style>input.col2 {width: calc(50% - 16px - 2px - 8px);}</style>
+		<form class="flex_row col1 space_between">
+			<input class="textfield body_size col1" type="text" id="email" name="email" placeholder="이메일">
+			<input class="textfield body_size col1" type="text" id="phone_num" name="phone_num" placeholder="전화번호">
+			<input class="textfield body_size col1" type="text" id="book_num" name="book_num" placeholder="예약번호">
+			<input class="textfield body_size col1" type="text" id="pin" name="pin" placeholder="핀번호">	
+		</form>
+		<div class="button primary_bg body_medium white_highlight box_shadow"><img class="icon_s" src="img/ic_find_point_white.svg">포인츠 찾기 신청</div>
+	</div>
+</div>
+</body>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+		$(document).ready(function(){
+			var menu_on = false;
+			$("#menu").on("click",function(){
+				menu_on = (!menu_on);
+				$(".main_menu").toggleClass("main_menu_on");
+				$(this).toggleClass('open');
+				$(".header").toggleClass("no_box_shadow");
+				if(menu_on){
+					$(".my_menu").hide();
+				}
+				else{
+					$(".my_menu").show();
+				}
+				
+			});
+			$("#xbox").on("click",function(){
+				$(".main_menu").toggleClass("main_menu_on");
+			});
+		});
+</script>
+</html>
