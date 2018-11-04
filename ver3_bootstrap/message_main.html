@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.css" />
+	<link rel="stylesheet" href="css/remove_bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="css/layout_common.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_main.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_community.css">
+	<link rel="stylesheet" type="text/css" href="css/type.css">
+	<link rel="stylesheet" type="text/css" href="css/color.css">
+	<link rel="stylesheet" type="text/css" href="css/components.css">
+	<link rel="stylesheet" type="text/css" href="css/img.css">
+</head>
+<body class="black_highlight">
+<!-- 헤더 -->
+<div class="header flex_row live_area black_highlight box_shadow" id="header">
+	<div class="flex_row col2  align_center justify_start" id="left">
+		<img id="header_logo" src="img/logo_ver3.svg">
+		<div class="text_menu flex_row align_center hor_margin_2x body_size" id="selected">
+			<a href="index_loggedin.html">호텔</a>
+		</div>
+		<div class="text_menu flex_row align_center body_size hor_margin_2x">
+			<a href="community_main.html">커뮤니티</a>
+		</div>
+	</div>
+	<div class="flex_row col2 align_center justify_end" id="right">
+		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="faq.html">FAQ</a>
+		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="reward.html">캐시백 신청</a>
+		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="message_main.html">메세지</a>
+		<a class="flex_row align_center hor_margin_2x" id="user_info" style="margin-right: 0" href="my_page.html">
+			<div class="profile_pic_s" id="pf1"></div>
+			<div class="flex_col">
+				<p class="body_bold hor_margin_tiny">username</p>
+				<p class="caption hor_margin_tiny">23,112₩</p>
+			</div>
+		</a>
+	</div>
+</div>
+<!--컨텐츠 영역-->
+<style>
+	#banner_containner{margin-bottom: 169px !important;}
+	#banner{position: absolute;}
+	#close{position: absolute; right:16px; top:16px;}
+	#banner_containner>.live_width_narrow{width:calc(880px - 32px); padding: 16px;}
+</style>
+<div class="live_area_narrow" style="padding-top: 128px;">
+	<div class="flex_row col1 ver_bottom_4x" id="banner_containner">
+		<div class="card_full full_border live_width_narrow grd1_bg" style="margin-left: 0; margin-left: 0" id="banner">
+			<img src="img/ic_close_white.svg" id="close">
+			<h2 class="big_size">여행친구를 찾고 리워드를 받아가세요</h2>
+			<p class="body ver_bottom_4x">마음이 맞는 정글리안과 채팅도중 동행이 성사되면 여행중 즐길 수 있는 여가비 20,000₩를 적립해드립니다.</p>
+		</div>
+	</div>
+	<style>
+		#message{flex-grow: 4;} #trv_status{text-align: right}
+		#user_info>div, #trv_Status{justify-content: center;}
+	</style>
+	<div class="flex_row ver_bottom_4x" id="line_break"></div>
+	<h2 class="body_bold ver_bottom_2x">메세지</h2>
+	<div class="flex_row full_border align_center col1 space_between">
+		<div class="flex_row margin_2x"  id="user_info">
+			<div class="profile_pic_middle" id="pf1"></div>
+			<div class="flex_col hor_margin_tiny">
+				<p class="caption">username</p>
+				<p class="caption">09:00</p>
+			</div>
+		</div>
+		<div class="flex_row body_size black_highlight margin_2x" id="message">
+			정글리안에 오신걸 환영합니다! 캐시백, 커뮤니티등 안내 메세지...
+		</div>
+		<div class="margin_2x" id="trv_status">
+			<p class="caption">세계여행중</p>
+			<p class="caption">~2090</p>
+		</div>
+	</div>
+	<!--메세지 리스트-->
+	<a class="flex_row full_border align_center col1 space_between unread" href="message.html">
+		<div class="flex_row margin_2x"  id="user_info">
+			<div class="profile_pic_middle" id="pf2"></div>
+			<div class="flex_col hor_margin_tiny">
+				<p class="caption">username</p>
+				<p class="caption">09:00</p>
+			</div>
+		</div>
+		<div class="flex_row body_size black_highlight margin_2x" id="message">
+			오차로드에서 모하실건가요? 저희는 지금 남자 2이서 여행중이에요ㅎ
+		</div>
+		<div class="margin_2x" id="trv_status">
+			<p class="caption">싱가폴 여행중</p>
+			<p class="caption">02 Sep ~ 01 OCT</p>
+		</div>
+	</a>
+	<!--메세지 리스트-->
+	<a class="flex_row full_border align_center col1 space_between">
+		<div class="flex_row margin_2x"  id="user_info">
+			<div class="profile_pic_middle" id="pf3"></div>
+			<div class="flex_col hor_margin_tiny">
+				<p class="caption">username</p>
+				<p class="caption">09:00</p>
+			</div>
+		</div>
+		<div class="flex_row body_size black_highlight margin_2x" id="message">
+			부킷빙땅에서 가셨던 케밥 레스토랑 어땠나요? 양 많아요?
+		</div>
+		<div class="margin_2x" id="trv_status">
+			<p class="caption">쿠알라룸프르 여행예정</p>
+			<p class="caption">02 Nov ~ 01 Dec</p>
+		</div>
+	</a>
+	<!--메세지 리스트-->
+	<a class="flex_row full_border align_center col1 space_between ver_bottom_4x">
+		<div class="flex_row margin_2x"  id="user_info">
+			<div class="profile_pic_middle" id="pf2"></div>
+			<div class="flex_col hor_margin_tiny">
+				<p class="caption">username</p>
+				<p class="caption">09:00</p>
+			</div>
+		</div>
+		<div class="flex_row body_size black_highlight margin_2x" id="message">
+			오차로드 동행 구하셨나요? 처음가보는데 해매기 싫어서 ㅎ
+		</div>
+		<div class="margin_2x" id="trv_status">
+			<p class="caption">싱가폴 여행중</p>
+			<p class="caption">02 Sep ~ 01 OCT</p>
+		</div>
+	</a>
+	<h2 class="body_bold ver_bottom_2x">알람</h2>
+	<!--알람 리스트-->
+	<a class="flex_row full_border align_center col1 space_between ver_bottom_4x">
+		<div class="flex_row margin_2x"  id="user_info">
+			<div class="profile_pic_middle" id="pf4"></div>
+			<div class="flex_col hor_margin_tiny">
+				<p class="caption">username</p>
+				<p class="caption">09:00</p>
+			</div>
+		</div>
+		<div class="flex_row body_size black_highlight margin_2x" id="message">	
+		Username님이 포스트에 댓글을 달았습니다. “전 혼자 여행중인데 따라가도 될까요?....”
+		</div>
+		<div class="margin_2x" id="trv_status">
+			<p class="caption">세계여행중</p>
+			<p class="caption">~2090</p>
+		</div>
+	</a>
+</div>
+</body>
+</html>

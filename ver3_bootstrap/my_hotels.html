@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.css"/>
+	<link rel="stylesheet" href="css/remove_bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="css/layout_common.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_main.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_community.css">
+	<link rel="stylesheet" type="text/css" href="css/type.css">
+	<link rel="stylesheet" type="text/css" href="css/color.css">
+	<link rel="stylesheet" type="text/css" href="css/components.css">
+	<link rel="stylesheet" type="text/css" href="css/img.css">
+	<style>
+		.card_img{border-radius: 4px;}
+	</style>
+</head>
+<body class="black_highlight">
+<!-- 헤더 -->
+<div class="header flex_row live_area black_highlight box_shadow" id="header">
+	<div class="flex_row col2  align_center justify_start" id="left">
+		<img id="header_logo" src="img/logo_ver3.svg">
+		<div class="text_menu flex_row align_center hor_margin_2x body_size" id="selected">
+			<a href="index_loggedin.html">호텔</a>
+		</div>
+		<div class="text_menu flex_row align_center body_size hor_margin_2x">
+			<a href="community_main.html">커뮤니티</a>
+		</div>
+	</div>
+	<div class="flex_row col2 align_center justify_end" id="right">
+		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="faq.html">FAQ</a>
+		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="reward.html">캐시백 신청</a>
+		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="message_main.html">메세지</a>
+		<a class="flex_row align_center hor_margin_2x" id="user_info" style="margin-right: 0" href="my_page.html">
+			<div class="profile_pic_s" id="pf1"></div>
+			<div class="flex_col">
+				<p class="body_bold hor_margin_tiny">username</p>
+				<p class="caption hor_margin_tiny">23,112₩</p>
+			</div>
+		</a>
+	</div>
+</div>
+<!--컨텐츠 영역-->
+<div class="live_area white_bg" style="padding-top: 128px;">
+	<div class="flex_row col1">
+		<div class="slide_menu">
+			<a href="my_page.html" class="slide_item">
+				<img src="img/ic_my_profile.svg">
+				내 프로필
+			</a>
+			<a href="my_hotels.html" class="slide_item" id="selected_slide_item">
+				<img src="img/ic_hotel_white2.svg">
+				내 호텔예약 보기
+			</a>
+			<a href="my_travel.html" class="slide_item">
+				<img src="img/ic_my_travel.svg">
+				내 여행
+			</a>
+			<a  href="reward.html" class="slide_item">
+				<img src="img/ic_reward.svg">
+				리워드
+			</a>
+		</div>
+		<div class="content_col" style="align-items: center;">
+			<style>
+				#plan{border-radius: 16px;}
+				#plan>div>img{margin:12px;}
+			</style>
+			<!--내 여행 섹션 -->
+			<div class="flex_row white_bg col1 space_between ver_bottom_8x">
+				<div class="flex_row col1 space_between align_center ver_bottom_1x">
+					<div class="flex_row align_end">
+						<h2 class="middle_size" style="width:auto">내 호텔 내역</h2>
+						<p class="caption_bold primary2" style="margin:0 0 4px 4px;">(공개)</p>
+					</div>
+					<div class="flex_row">
+					  <div class="button black_border" id="public_setting"><img src="img/ic_setting.svg">공개설정</div>
+					</div>
+				</div>
+				<p class="body_size ver_bottom_2x">여행계획을 공유하고 여행친구도 찾으세요.</p>
+				<!--호텔 리스트-->
+				<div class="flex_row col1 ver_padding_2x border_bottom" id="sg_list">
+					<!--호텔 정보-->
+					<h2 class="body_bold">싱가폴, 마리나 베이 샌즈</h2>
+					<h2 class="caption_bold ver_bottom_2x primary2">OCT 30 ~ NOV 12, 2018</h2>
+					<div class="card card_full b_card white_highlight flex_center box_shadow" id="sg_hotel" style="margin-left:0">
+						<h2 class="middle_size ver_bottom_1x">마리나 베이 샌즈</h2>
+						<p class="caption ver_bottom_2x">OCT 30 ~ NOV 12, 2018</p>
+						<div class="s_button white_bg box_shadow caption_bold">예약 확인서 보기</div>
+					</div>
+					<!--호텔 위치 보기-->
+					<a class="card card_full flex_center box_shadow" id="map_img" href="plan_hotel.html">
+						<div class="flex_col padding_1x primary2_bg box_shadow" id="plan">
+							<div class="flex_row justify_center">
+								<img src="img/ic_add_location.svg">
+								<img src="img/ic_calendar_w.svg">
+								<img src="img/ic_map_w.svg">
+							</div>
+							<p class="body_size">호텔 위치 및 일정을 확인하세요!</p>
+						</div>
+					</a>
+				</div>
+				<!--호텔 리스트-->
+				<div class="flex_row col1 ver_padding_2x" id="kl_list">
+					<!--호텔 정보-->
+					<h2 class="body_bold">쿠알라룸푸르, Expressionz Suite KLCC by De Space</h2>
+					<h2 class="caption ver_bottom_2x primary2 caption_bold">NOV 13 ~ NOV 19, 2018</h2>
+					<div class="card card_full b_card white_highlight flex_center box_shadow" id="kl_hotel" style="margin-left:0">
+						<h2 class="middle_size ver_bottom_1x">Expressionz Suite KLCC by De Space</h2>
+						<p class="caption ver_bottom_2x">NOV 13 ~ NOV 19, 2018</p>
+						<div class="s_button white_bg box_shadow caption_bold">예약 확인서 보기</div>
+					</div>
+					<!--호텔 위치 보기-->
+					<a class="card card_full flex_center box_shadow" id="map_img" href="plan_hotel.html">
+						<div class="flex_col padding_1x primary2_bg box_shadow" id="plan">
+							<div class="flex_row justify_center">
+								<img src="img/ic_add_location.svg">
+								<img src="img/ic_calendar_w.svg">
+								<img src="img/ic_map_w.svg">
+							</div>
+							<p class="body_size">호텔 위치 및 일정을 확인하세요!</p>
+						</div>
+					</a>
+				</div>
+			</div>
+			<!--내 여행 섹션 종료-->
+		</div>
+	</div>
+</div>
+</body>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+		/*공개설정 이벤트 핸들러*/
+		$("#public_setting").on("click",function(){
+			$("body").append("<div class='dialog_bg'></div>");
+			$(".dialog_bg").append($("#setting_dialog"));
+		});
+		$("#dg_xbox1").on("click",function(){
+			console.log("click");
+			$("body").append($("#setting_dialog"));
+			$(".dialog_bg").remove();
+		});
+
+		/*여행 추가하기 이벤트 핸들러*/
+		$(".add_travel").on("click",function(){
+			$("body").append("<div class='dialog_bg'></div>");
+			$(".dialog_bg").append($("#add_travel_dialog"));
+		});
+		$("#dg_xbox2").on("click",function(){
+			console.log("click");
+			$("body").append($("#add_travel_dialog"));
+			$(".dialog_bg").remove();
+		});
+	});
+</script>
+<!--공개 설정-->
+<div class="flex_col align_center m_dialog dialog padding_2x white_bg" id="setting_dialog">
+	<img class="xbox" src="img/ic_close.svg" id="dg_xbox1">
+	<h2 class="middle_size ver_bottom_4x ver_bottom_2x text_center">공개 설정</h2>
+	<p class="body_size text_center ver_margin_1x" style="width:100%;">여행계획을 공개하시면 여행 계획 공유 및 동행을 찾을 수 있습니다.</p>
+	<div class="list under_border col1">
+		<label class="checkbox_container body_medium ver_padding_1x">여행계획 공개
+		  <input type="checkbox" checked="checked">
+		  <span class="checkmark"></span>
+		</label>
+	</div>
+	<div class="button primary_bg ver_margin_2x" style="width:164px;">확인</div>
+</div>
+</html>

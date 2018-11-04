@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.css" />
+	<link rel="stylesheet" href="css/remove_bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="css/layout_common.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_main.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_community.css">
+	<link rel="stylesheet" type="text/css" href="css/type.css">
+	<link rel="stylesheet" type="text/css" href="css/color.css">
+	<link rel="stylesheet" type="text/css" href="css/components.css">
+	<link rel="stylesheet" type="text/css" href="css/img.css">
+</head>
+<body class="black_highlight">
+<!-- 헤더 -->
+<div class="header flex_row live_area black_highlight box_shadow" id="header">
+	<div class="flex_row col2  align_center justify_start" id="left">
+		<img id="header_logo" src="img/logo_ver3.svg">
+		<div class="text_menu flex_row align_center hor_margin_2x body_size" id="selected">
+			<a href="index_loggedin.html">호텔</a>
+		</div>
+		<div class="text_menu flex_row align_center body_size hor_margin_2x">
+			<a href="community_main.html">커뮤니티</a>
+		</div>
+	</div>
+	<div class="flex_row col2 align_center justify_end" id="right">
+		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="faq.html">FAQ</a>
+		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="reward.html">캐시백 신청</a>
+		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="message_main.html">메세지</a>
+		<a class="flex_row align_center hor_margin_2x" id="user_info" style="margin-right: 0" href="my_page.html">
+			<div class="profile_pic_s" id="pf1"></div>
+			<div class="flex_col">
+				<p class="middle_size hor_margin_tiny">username</p>
+				<p class="caption hor_margin_tiny">23,112₩</p>
+			</div>
+		</a>
+	</div>
+</div>
+<!--컨텐츠 영역-->
+<div class="live_area white_bg" style="padding-top: 128px;">
+	<div class="flex_row col1">
+		<div class="slide_menu" style="border-width: 0">
+			<a href="junglian.html" class="slide_item" id="selected_slide_item">
+				<img src="img/ic_monkey_white.svg">
+				정글리안?
+			</a>
+			<a href="faq.html" class="slide_item" id="slide_item">
+				<img src="img/ic_faq.svg">
+				FAQ
+			</a>
+			<a href="cs.html" class="slide_item">
+				<img src="img/ic_customer_black.svg">
+				고객센터
+			</a>
+			<a  href="reward_program.html" class="slide_item">
+				<img src="img/ic_reward.svg">
+				리워드 프로그램
+			</a>
+			<a  href="terms_of_service.html" class="slide_item">
+				<img src="img/ic_terms_black.svg">
+				이용약관
+			</a>
+			<a  href="personal_data_policy.html" class="slide_item">
+				<img src="img/ic_personal_policy_black.svg">
+				개인정보 활용 방침
+			</a>
+		</div>
+		<style>
+			#junglian>div>div>img{
+				width:128px;
+				height: 128px;
+				margin:32px;
+			}
+		</style>
+		<div class="content_col" id="junglian">
+			<div class="flex_row col1 body_size">
+				<div class="flex_row align_center col1">
+					<img src="img/usp1_svg2.svg">
+					<div class="flex_col " style="width:calc(100% - 192px) !important;">
+						<p class="middle_size">정글리안은 전 세계 호텔예약사이트 NO.1 부킹닷컴의 제휴사!</p>
+						<p class="ver_bottom_2x">정글리안을 통한 모든 숙소 예약은 부킹닷컴의 결재시스템을 사용하여 선 결제 없이 무료취소 예약과 최저가보상정책 모두 동일하게 적용됩니다. 안심하고 결제하셔도 됩니다.</p>
+					</div>
+				</div>
+				<div class="flex_row align_center col1">
+					<img src="img/usp2_svg.svg">
+					<div class="flex_col " style="width:calc(100% - 192px) !important;">
+						<p class="middle_size">여러분의 여행을 누구보다 빠르게 지원하는 "리워드프로그램" 운영</p>
+						<p class="ver_bottom_2x">정글리안은 여행을 즐기는 모든 사람들이 보다 합리적으로, 함께 하는 가치를 높이고자 “정글리안 리워드 프로그램” 을 운영합니다.회원 누구나 7% 현금 캐시백, 커뮤니티 활동을 통한 커미션, 추천인 커미션 제도로 여러분의 여행을 가장 빠르게 지원합니다.</p>
+					</div>
+				</div>
+				<div class="flex_row align_center col1">
+					<img src="img/usp3_svg.svg">
+					<div class="flex_col " style="width:calc(100% - 192px) !important;">
+						<p class="middle_size">여행정보 공유, 여행 메이트를 찾을 수 있는 "커뮤니티" 운영</p>
+						<p class="ver_bottom_2x">2명이상 혹은 4명이상만  예약이 가능한 현지 맛집, 가고 싶은데 같이갈 사람이 없다면?지금 바로 정글리안 커뮤니티에서 함께 할 친구를 찾아보세요. 혼자가더라도 함께하는 여행을 즐길 수 있습니다. 지금, 정글리안을 통해 특별한 경험을 함께 해주세요.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+		/**/
+		$(".question").on("click",function(){
+			$(this).toggleClass("selected");
+			$(this).siblings(".answer").toggleClass("show");
+		});
+
+		/**/
+		/*쓰기 다이얼로그 탭 이동*/
+		$(".tab_item").on("click",function(){
+			console.log("tab click!");
+			$(".tab_item").removeClass("tab_selected");
+			$(this).addClass("tab_selected");
+			var id = $(this).attr("id");
+			console.log(id);
+			if(id=="reservation_tab"){
+				$("#reservation_qna").removeClass("hide");
+				$("#cashback_qna").addClass("hide");
+				$('#reserve_faq_banner').removeClass("hide");
+				$("#cashback_faq_banner").addClass("hide");
+			}
+			else if(id=="cashback_tab"){
+				$("#reservation_qna").addClass("hide");
+				$("#cashback_qna").removeClass("hide");	
+				$('#reserve_faq_banner').addClass("hide");
+				$("#cashback_faq_banner").removeClass("hide");
+			}
+		});
+	});
+</script>
+</html>

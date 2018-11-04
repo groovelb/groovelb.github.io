@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.css" />
+	<link rel="stylesheet" href="css/remove_bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="css/layout_common.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_main.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_community.css">
+	<link rel="stylesheet" type="text/css" href="css/type.css">
+	<link rel="stylesheet" type="text/css" href="css/color.css">
+	<link rel="stylesheet" type="text/css" href="css/components.css">
+	<link rel="stylesheet" type="text/css" href="css/img.css">
+</head>
+<body class="black_highlight">
+<!-- 헤더 -->
+<div class="header flex_row live_area black_highlight box_shadow" id="header">
+	<div class="flex_row col2  align_center justify_start" id="left">
+		<img id="header_logo" src="img/logo_ver3.svg">
+		<div class="text_menu flex_row align_center hor_margin_2x body_size" id="selected">
+			<a href="index_loggedin.html">호텔</a>
+		</div>
+		<div class="text_menu flex_row align_center body_size hor_margin_2x">
+			<a href="community_main.html">커뮤니티</a>
+		</div>
+	</div>
+	<div class="flex_row col2 align_center justify_end" id="right">
+		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="faq.html">FAQ</a>
+		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="reward.html">캐시백 신청</a>
+		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="message_main.html">메세지</a>
+		<a class="flex_row align_center hor_margin_2x" id="user_info" style="margin-right: 0" href="my_page.html">
+			<div class="profile_pic_s" id="pf1"></div>
+			<div class="flex_col">
+				<p class="body_bold hor_margin_tiny">username</p>
+				<p class="caption hor_margin_tiny">23,112₩</p>
+			</div>
+		</a>
+	</div>
+</div>
+<!--컨텐츠 영역-->
+<div class="live_area" style="padding-top: 128px;">
+	<div class="flex_row col1">
+		<div class="slide_menu">
+			<a href="my_page.html" class="slide_item">
+				<img src="img/ic_my_profile.svg">
+				내 프로필
+			</a>
+			<a href="my_hotels.html" class="slide_item">
+				<img src="img/ic_hotel_black.svg">
+				내 호텔예약 보기
+			</a>
+			<a href="my_travel.html" class="slide_item">
+				<img src="img/ic_my_travel.svg">
+				내 여행
+			</a>
+			<a  href="reward.html" class="slide_item" id="selected_slide_item">
+				<img src="img/ic_reward_white.svg">
+				리워드
+			</a>
+			<div class="slide_menu extend_item">
+			<a href="reward.html">
+				<div class="slide_item" id="selected_extend_item">
+					<img src="img/ic_cashback_selected.svg">
+					캐시백 신청
+				</div>
+			</a>
+			<a href="find_point.html">
+				<div class="slide_item">
+					<img src="img/ic_find_point.svg">
+					적립금 찾기
+				</div>
+			</a>
+			<a href="invitation.html">
+				<div class="slide_item">
+					<img src="img/ic_invite_earn.svg">
+					초대하기
+				</div>
+			</a>
+		</div>
+	</div>
+	<div class="content_col content_col_narrow" style="align-items: center;">
+		<h2 class="middle_size ver_bottom_2x">적립금</h2>
+		<div class="yellow_bg flex_col col1 flex_center ver_bottom_4x" style="padding:16px 0; border-radius:4px">
+			<p class="number big_size center" style="margin:0">20,000₩</p>
+		</div>
+		<h2 class="middle_size ver_bottom_2x">최근 포인트 적립 내역</h2>
+		<table class="table caption ver_bottom_4x">
+			<tr>
+				<th>지급일</th>
+				<th>호텔명</th>
+				<th>예약금액</th>
+				<th>적립금액</th>
+			</tr>
+			<tr>
+				<td>2018.06.20</td>
+				<td>Holiday Inn Macao Cotail Central</td>
+				<td>520,0000₩ (7%)</td>
+				<td>36,4000₩ (7%)</td>
+			</tr>
+		</table>
+
+		<h2 class="middle_size ver_bottom_2x">적립금 캐시백 신청</h2>
+		<form class="flex_row col1" style="justify-content: space-between;" action="">
+			<style>
+				input.col2{width: calc(50% - 16px - 2px - 8px);}
+				#account_field{width: calc(50% - 8px);}
+			</style>
+			<input class="textfield body_size col2" type="text" id="name" name="name" placeholder="이름">
+			<div class="flex_row col2 space_between" id="account_field">
+				<select class="styled-select body_size" name="bank">
+				    <option value="bankname">우리</option>
+				    <option value="bankname">국민</option>
+				    <option value="bankname">신한</option>
+				    <option value="bankname">농협</option>
+			  </select>
+				<input class="textfield body_size" type="text" id="name" name="name" placeholder="계좌번호을 입력해주세요" style="width:calc(100% - 64px - 8px - 16px);">
+			</div>
+			<input class="textfield body_size col2" type="text" id="email" name="email" placeholder="이메일">
+			<input class="textfield body_size col2" type="text" id="전화번호" name="전화번호" placeholder="전화번호">
+			<div class="button primary_bg ver_bottom_2x white_highlight box_shadow" style="width: 100%">캐시백 신청하기</div>
+			<p class="caption ver_bottom_4x">
+				1. 캐시백은 총 누적 적립금액 5만원 이상일 때 신청 가능 (무통장계좌이체)<br> 
+				2. 캐시백은 숙소 체크인 기준으로 2일이내 신청인 개인계좌로 이체<br>
+				3. 적립 금액은 예약 30분 이내 확인 가능. 단, 새벽 예약의 경우 익일 환율 고시후 예정금액 조회 가능<br>
+				4. 정글리안 아이디의 명의와 은행 계좌번호 명의가 일치해야 캐시백 가능
+			</p>
+		</form>
+		<h2 class="middle_size ver_bottom_2x">캐시백 내역</h2>
+		<table class="table caption ver_bottom_4x">
+			<tr>
+				<th>신청일</th>
+				<th>지급일</th>
+				<th>캐시백</th>
+				<th>상태</th>
+			</tr>
+			<tr>
+				<td>2018.06.20</td>
+				<td>2018.08.04</td>
+				<td>100,000₩</td>
+				<td>완료</td>
+			</tr>
+			<tr>
+				<td>2018.06.20</td>
+				<td>2018.08.04</td>
+				<td>100,000₩</td>
+				<td>완료</td>
+			</tr>
+			<tr>
+				<td>2018.06.20</td>
+				<td>2018.08.04</td>
+				<td>100,000₩</td>
+				<td>완료</td>
+			</tr>
+		</table>
+	</div>
+</div>
+</body>
+</html>

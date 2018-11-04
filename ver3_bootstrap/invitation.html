@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.css" />
+	<link rel="stylesheet" href="css/remove_bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="css/layout_common.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_main.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_community.css">
+	<link rel="stylesheet" type="text/css" href="css/type.css">
+	<link rel="stylesheet" type="text/css" href="css/color.css">
+	<link rel="stylesheet" type="text/css" href="css/components.css">
+	<link rel="stylesheet" type="text/css" href="css/img.css">
+</head>
+<body class="black_highlight">
+<!-- 헤더 -->
+<div class="header flex_row live_area black_highlight box_shadow" id="header">
+	<div class="flex_row col2  align_center justify_start" id="left">
+		<img id="header_logo" src="img/logo_ver3.svg">
+		<div class="text_menu flex_row align_center hor_margin_2x body_size" id="selected">
+			<a href="index_loggedin.html">호텔</a>
+		</div>
+		<div class="text_menu flex_row align_center body_size hor_margin_2x">
+			<a href="community_main.html">커뮤니티</a>
+		</div>
+	</div>
+	<div class="flex_row col2 align_center justify_end" id="right">
+		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="faq.html">FAQ</a>
+		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="reward.html">캐시백 신청</a>
+		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="message_main.html">메세지</a>
+		<a class="flex_row align_center hor_margin_2x" id="user_info" style="margin-right: 0" href="my_page.html">
+			<div class="profile_pic_s" id="pf1"></div>
+			<div class="flex_col">
+				<p class="body_bold hor_margin_tiny">username</p>
+				<p class="caption hor_margin_tiny">23,112₩</p>
+			</div>
+		</a>
+	</div>
+</div>
+<!--컨텐츠 영역-->
+<div class="live_area" style="padding-top: 128px;">
+	<div class="flex_row col1">
+		<div class="slide_menu">
+			<a href="my_page.html" class="slide_item">
+				<img src="img/ic_my_profile.svg">
+				내 프로필
+			</a>
+			<a href="my_travel.html" class="slide_item">
+				<img src="img/ic_my_travel.svg">
+				내 여행
+			</a>
+			<a  href="reward.html" class="slide_item" id="selected_slide_item">
+				<img src="img/ic_reward_white.svg">
+				리워드
+			</a>
+			<div class="slide_menu extend_item">
+			<a href="reward.html">
+				<div class="slide_item">
+					<img src="img/ic_cashback.svg">
+					캐시백 신청
+				</div>
+			</a>
+			<a href="find_point.html">
+				<div class="slide_item">
+					<img src="img/ic_find_point.svg">
+					적립금 찾기
+				</div>
+			</a>
+			<a href="invitation.html" id="selected_extend_item">
+				<div class="slide_item">
+					<img src="img/ic_invite_earn_selected.svg">
+					초대하기
+				</div>
+			</a>
+		</div>
+	</div>
+	<div class="content_col" style="align-items: center;">
+		<h2 class="big_size ver_bottom_4x">정글리안으로 친구들을 초대하세요</h2>
+		<h2 class="middle_size ver_bottom_2x">추천 형황</h2>
+		<div class="flex_row col1 space_between ver_bottom_4x">
+			<style>
+				.flex_col>h2{width: auto;}
+				.card{width:calc(33% - 8px); padding:32px 0;}
+			</style>
+			<div class="flex_col col3 card flex_center primary_bg">
+				<p class="caption">총 초대수</p>
+				<h2 class="number big_size">2</h2>
+			</div>
+			<div class="flex_col col3 card flex_center primary2_bg">
+				<p class="caption">총 예약수</p>
+				<h2 class="number big_size">4</h2>
+			</div>
+			<div class="flex_col col3 card flex_center yellow_bg">
+				<p class="caption">누적 적립금</p>
+				<h2 class="number big_size">40,000₩</h2>
+			</div>
+		</div>
+		<h2 class="middle_size">추천 링크</h2>
+		<style>.big_button{margin-left: 16px}</style>
+		<div class="flex_row col1">
+			<input class="textfield body_size col2" value="https://www.junglian.com/?referral_code=Gsd21Z">
+			<div class="big_button primary_bg box_shadow">고유링크 복사</div>
+		</div>
+		<h2 class="middle_size">초대장 보내기</h2>
+		<div class="flex_row col1">
+			<input class="textfield body_size col2" placeholder="이메일을 입력해주세요.">
+			<div class="big_button primary_bg box_shadow">초대장 보내기</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

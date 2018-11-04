@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 168 168" style="enable-background:new 0 0 168 168;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#7C4DFF;}
+	.st1{fill:#FFFFFF;}
+	.st2{fill:#FDD835;}
+</style>
+<title>Shape</title>
+<desc>Created with Sketch.</desc>
+<title>marker</title>
+<animateTransform  accumulate="none" additive="replace" attributeName="transform" attributeType="XML" calcMode="linear" dur="0.2s" fill="freeze" from="0 0" keyTimes="0; 0.4; 0.7; 0.8; 1" repeatCount="1" restart="always" to="0 60" type="translate" values="0 0; 0 15; 0 30; 0 45; 0 60" xlink:href="#marker">
+	</animateTransform>
+<animateTransform  accumulate="none" additive="replace" attributeName="transform" attributeType="XML" begin="0.5s" calcMode="linear" dur="0.2s" fill="freeze" from="0 60" keyTimes="0; 0.4; 0.7; 0.8; 1" repeatCount="1" restart="always" to="0 120" type="translate" values="0 60; 0 75; 0 90; 0 105; 0 120" xlink:href="#marker">
+	</animateTransform>
+<animate  accumulate="none" additive="replace" attributeName="opacity" attributeType="XML" calcMode="linear" dur="0.2s" fill="freeze" from="0" repeatCount="1" restart="always" to="1" xlink:href="#marker">
+	</animate>
+<animateTransform  accumulate="none" additive="replace" attributeName="transform" attributeType="XML" begin="0.65s" calcMode="linear" dur="0.2s" fill="freeze" from="8 120" repeatCount="1" restart="always" to="8 72" type="translate" xlink:href="#cash">
+	</animateTransform>
+<g>
+	<g id="hotel">
+		<g id="Message-Rolling1---marker-appear" transform="translate(-340.000000, -152.000000)">
+			<g id="Group-4" transform="translate(340.000000, 152.000000)">
+				<path id="Shape" class="st0" d="M112.9,21.8c-14.9,4.4-29.9,9-44.8,13.6c-1.1,0.3-1.9,1.5-1.9,2.6v22.5L24.9,80
+					c-0.9,0.4-1.6,1.4-1.6,2.4v60.6c0,1.4,1.3,2.7,2.7,2.7h115.4c1.4,0,2.7-1.3,2.7-2.7V39.4c0-1-0.6-1.9-1.4-2.4l-28.2-14.8
+					C114,21.9,113.5,21.8,112.9,21.8z M116,29l22.8,12v99.5H116C116,103.3,116,66.1,116,29z M120,50.1v10.8h5.4V50.1H120z
+					 M129.4,50.1v10.8h5.4V50.1H129.4z M83.7,60.2l26.8,5.6c0,24.9,0,49.8,0,74.7H83.7V60.2z M120,66.3v10.8h5.4V66.3H120z
+					 M129.4,66.3v10.8h5.4V66.3H129.4z M86.4,69v10.8h5.4V69H86.4z M94.5,69v10.8h5.4V69H94.5z M102.5,69v10.8h5.4V69H102.5z
+					 M86.4,82.5v10.8h5.4V82.5H86.4z M94.5,82.5v10.8h5.4V82.5H94.5z M102.5,82.5v10.8h5.4V82.5H102.5z M120,82.5v10.8h5.4V82.5H120
+					z M129.4,82.5v10.8h5.4V82.5H129.4z M86.4,98.7v10.8h5.4V98.7H86.4z M94.5,98.7v10.8h5.4V98.7H94.5z M102.5,98.7v10.8h5.4V98.7
+					H102.5z M120,98.7v10.8h5.4V98.7H120z M129.4,98.7v10.8h5.4V98.7H129.4z M86.4,114.8v10.8h5.4v-10.8H86.4z M94.5,114.8v10.8h5.4
+					v-10.8H94.5z M102.5,114.8v10.8h5.4v-10.8H102.5z M120,114.8v10.8h5.4v-10.8H120z M129.4,114.8v10.8h5.4v-10.8H129.4z"/>
+			</g>
+		</g>
+	</g>
+	<path id="marker" class="st1" d="M49.6,116.6c-3.1,0-5.7-2.6-5.7-5.7s2.6-5.7,5.7-5.7s5.7,2.6,5.7,5.7c0,0,0,0,0,0
+		C55.3,114,52.8,116.6,49.6,116.6z M49.6,94.9c-8.8,0-15.9,7.1-16,15.9c0,0,0,0,0,0c0,12,16,29.6,16,29.6s16-17.7,16-29.6
+		C65.6,102.1,58.5,94.9,49.6,94.9C49.7,94.9,49.7,94.9,49.6,94.9z"/>
+	<g>
+		<circle class="st1" cx="49.6" cy="55.8" r="22.2"/>
+		<path id="cash" class="st2" d="M54,55.8l0.5,1.8h1.2l0.5-1.8H54z M49,55.8l-0.5,1.8h2.2l-0.5-1.8H49z M43,55.8l0.5,1.8h1.1
+			l0.5-1.8H43z M38.4,45.7c0.8,0,1.7,0.5,2,1.3l1.5,5.2h4.4l1.5-5.2c0.2-0.7,1-1.3,1.7-1.3c0.7,0,1.5,0.5,1.7,1.3l1.5,5.2h4.4
+			l1.5-5.2c0.2-0.8,0.9-1.2,1.7-1.3c1.2-0.1,2.2,1.2,1.7,2.3l-1.2,4h0.4c1,0,1.8,0.8,1.8,1.8c0,1-0.8,1.8-1.8,1.8H60l-0.5,1.8h0.3
+			c1,0,1.8,0.8,1.8,1.8c0,1-0.8,2-1.8,2h-1.3l-1.5,5.2c-0.2,0.7-1,1.3-1.7,1.3c-0.8,0-1.5-0.6-1.7-1.3L52,61.4h-4.4L46,66.5
+			c-0.2,0.7-1,1.3-1.7,1.3c-0.8,0-1.5-0.6-1.7-1.3l-1.5-5.2h-1.5c-1,0-1.8-0.8-1.8-1.8c0-1,0.8-1.9,1.8-1.9h0.2l-0.5-1.8h-1.5
+			c-1,0-1.8-0.8-1.8-1.8s0.8-1.8,1.8-1.8h0.4l-1.2-4C36.5,47,37.3,45.8,38.4,45.7z M49.6,35.6c-11.1,0-20.2,9.1-20.2,20.2
+			S38.5,76,49.6,76s20.2-9.1,20.2-20.2S60.8,35.6,49.6,35.6z"/>
+	</g>
+</g>
+</svg>
