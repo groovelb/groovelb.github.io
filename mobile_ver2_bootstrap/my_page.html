@@ -44,56 +44,74 @@
 	}
 </style>
 <div class="main_menu">
-	<div class="flex_col align_center">
-		<a href="my_page.html" class="menu_list">
-			<div class="profile_pic_s menu_icon" id="pf2" style="width:24px; height:24px;">
-			</div>
-			마이페이지
-		</a>
-		<a href="profile.html" class="menu_list menu_list_indent">
-			<img class="menu_icon" src="img/ic_my_profile.svg">
-			내 프로필
-		</a>
-		<a href="my_travel.html" class="menu_list menu_list_indent">
-			<img class="menu_icon" src="img/ic_my_travel.svg">
-			내 여행
-		</a>
-		<a href="cashback.html" class="menu_list menu_list_indent">
-			<img class="menu_icon" src="img/ic_reward.svg">
-			리워드
-		</a>
-		<a href="community.html" class="menu_list">
-			<img class="menu_icon" src="img/ic_community_black.svg">
-			커뮤니티
-		</a>
-		<a href="cashback.html" class="menu_list ver_bottom_4x">
-			<img class="menu_icon" src="img/ic_cashback.svg">
-			캐시백 신청
-		</a>
-		<hr style="width: calc(100% - 64px)">
-		<p class="padding_tinny caption_bold white_bg" style="margin-top: -16px">유용한 링크</p>
-		<a class="menu_list" href="junglian.html">
-			<img class="menu_icon" src="img/ic_monkey.svg">
-			정글리안
-		</a>
-		<a class="menu_list" href="faq.html">
-			<img class="menu_icon" src="img/ic_faq.svg">
-			FAQ
-		</a>
-		<a class="menu_list" href="cs.html">
-			<img class="menu_icon" src="img/ic_reward.svg">
-			고객센터
-		</a>
-		<a class="menu_list" href="terms.html">
-			<img class="menu_icon" src="img/ic_terms_black.svg">
-			이용약관
-		</a>
-		<a class="menu_list ver_bottom_2x" href="personal_data_policy.html">
-			<img class="menu_icon" src="img/ic_personal_policy_black.svg">
-			개인정보 활용방침
-		</a>
-		<hr class="ver_bottom_2x" style="width: calc(100% - 64px)">
-		<a class="menu_list center ver_bottom_4x">
+	<div class="flex_col white_middle_bg">
+		<p class="body_bold margin_2x ver_top_4x middle_emphasis">여행</p>
+		<div class="flex_col full_radious box_shadow" style="width:calc(100% - 32px); margin-left:16px; overflow: hidden;">
+			<a href="my_page.html" class="menu_list">
+				<div class="profile_pic_s menu_icon" id="pf2" style="width:24px; height:24px;">
+				</div>
+				마이 페이지
+			</a>
+			<a href="my_travel.html" class="menu_list menu_list_indent">
+				<img class="menu_icon" src="img/ic_my_travel.svg">
+				내 여행 일정
+			</a>
+			<a href="community.html" class="menu_list menu_list_indent">
+				<img class="menu_icon" src="img/ic_community_black.svg">
+				내 여행지 핫스팟 & 동행
+			</a>
+			<a href="plan_hotel.html"class="menu_list">
+				<img class="menu_icon" src="img/ic_hotel_black.svg">
+				내 예약 상세 보기
+			</a>
+			<a href="community.html" class="menu_list">
+				<img class="menu_icon" src="img/ic_community_black.svg">
+				핫스팟 & 동행
+			</a>
+		</div>
+		<p class="body_bold margin_2x ver_top_4x middle_emphasis">리워드 프로그램</p>
+		<div class="flex_col full_radious box_shadow" style="width:calc(100% - 32px); margin-left:16px; overflow: hidden;">
+			<a href="cashback.html" class="menu_list">
+				<img class="menu_icon" src="img/ic_cashback.svg">
+				캐시백 신청
+			</a>
+			<a href="cashback.html" class="menu_list">
+				<img class="menu_icon" src="img/ic_find_point.svg">
+				적립금 찾기
+			</a>
+			<a href="cashback.html" class="menu_list">
+				<img class="menu_icon" src="img/ic_invite_earn.svg">
+				초대하기
+			</a>
+		</div>
+		<p class="body_bold margin_2x ver_top_4x middle_emphasis">유용한 링크</p>
+		<div class="flex_col full_radious box_shadow ver_bottom_4x" style="width:calc(100% - 32px); margin-left:16px; overflow: hidden;">
+			<a class="menu_list" href="junglian.html">
+				<img class="menu_icon" src="img/ic_monkey.svg">
+				정글리안
+			</a>
+			<a class="menu_list" href="faq.html">
+				<img class="menu_icon" src="img/ic_faq.svg">
+				FAQ
+			</a>
+			<a class="menu_list" href="event.html">
+				<img class="menu_icon" src="img/ic_faq.svg">
+				이벤트
+			</a>
+			<a class="menu_list" href="cs.html">
+				<img class="menu_icon" src="img/ic_reward.svg">
+				고객센터
+			</a>
+			<a class="menu_list" href="terms.html">
+				<img class="menu_icon" src="img/ic_terms_black.svg">
+				이용약관
+			</a>
+			<a class="menu_list" href="personal_data_policy.html">
+				<img class="menu_icon" src="img/ic_personal_policy_black.svg">
+				개인정보 활용방침
+			</a>
+		</div>
+		<a class="menu_list center white_middle_bg">
 			<div class="button primary_border" style="width: calc(100% - 16px); margin:0;">로그아웃</div>
 		</a>
 	</div>
@@ -114,7 +132,7 @@
 			<p class="flex_row caption_bold middle_emphasis align_center" id="cities"><img class="icon_s" src="img/ic_city.svg">12개 도시 방문</p>
 			<p class="flex_row caption_bold middle_emphasis align_center hor_margin_tiny" id="locations"><img class="icon_s" src="img/ic_location.svg">25개 장소 등록</p>
 		</div>
-		<div class="flex_row col1 justify_center ver_bottom_1x" id="user_meta">
+		<div class="flex_row col1 justify_center ver_bottom_4x" id="user_meta">
 			<style> #user_meta>.chip{margin-right: 4px;} </style>
 			<div class="chip">맛집 탐방</div>
 			<div class="chip">와인 여행</div>
@@ -123,12 +141,14 @@
 		</div>
 	</div>
 	<!--내 여행-->
-	<div class="flex_row col1 align_center ver_bottom_1x ver_top_2x">
-		<img class="menu_icon" src="img/ic_my_travel.svg">
-		<p class="middle_size">내 여행</p>
+	<div class="flex_row space_between col1 ver_bottom_1x align_center">
+		<p class="body_bold">내 여행 계획</p>
+		<div class="flex_row">
+			<div class="button body_size black_border" style="align-self: center"><img src="img/ic_setting.svg">공개설정</div>
+		</div>
 	</div>
 	<!--내 여행 섹션 -->
-	<div class="flex_col col1" style="height: 176px">
+	<div class="flex_col col1 ver_bottom_2x" style="height: 176px">
 		<div class="containner" id="my_travel" style="position:absolute; width:calc(100% - 16px); height:176px; margin: 0px 0 0 0; overflow: hidden;">
 			<div class="FAB_circle" id="slide_arrow_left" style="left: -8px;">
 				<img id="arrow" src="img/arrow_prev.svg">
@@ -171,29 +191,110 @@
 			</div>
 		</div>
 	</div>
-	<a href="my_travel.html" class="s_button primary2 ver_bottom_4x" style="padding-left:0 !important"><p class="body_bold">모두보기(16)</p><img src="img/arrow_next_2ndp.svg" style="width:16px;height:16px;margin: 2px 0 0 2px"></a>
-	<!--리워드-->
-	<div class="flex_row col1 align_center ver_bottom_1x ver_top_1x">
-		<img class="menu_icon" src="img/ic_reward.svg">
-		<p class="middle_size">리워드</p>
+	<div class="button body_size primary_bg box_shadow ver_bottom_4x" style="align-self: center"><img src="img/ic_add.svg">여행 추가</div>
+	<!--트레블 로그-->
+	<div class="flex_row space_between col1 ver_bottom_1x align_center">
+		<p class="body_bold">포스트</p>
 	</div>
-	<a href="cashback.html" class="flex_col yellow_bg full_radious padding_1x align_center ver_bottom_2x" style="width:calc(100% - 32px)">
-		<h2 class="highlight body_size ver_bottom_1x" style="text-align: center;">적립금</h2>
-		<p class="number big_size ver_bottom_1x">123,123₩</p>
-		<div class="button primary_bg" style="width:calc(100% - 16px)">캐시백 신청</div>
-	</a>
-	<div class="flex_row col1 space_between ver_bottom_4x">
-		<style>#invitation, #find_point{ width:calc(50% - 8px); }</style>
-		<a href="invite.html" class="flex_col col2 ver_padding_1x flex_center primary_dark_border full_radious" id="invitation">
-			<p class="highlight body_bold">초대하기</p>
-			<img src="img/usp4_svg.svg" style="width:48px; height: 48px;">
-			<p class="number middle_size center" style="margin:0">20,000₩ 적립</p>
-		</a>
-		<a href="find_point.html" class="flex_col col2 ver_padding_1x flex_center primary2_bg full_radious" id="find_point">
-			<p class="highlight body_size white">포인트 찾기</p>
-			<img src="img/ic_find_point_white.svg" style="width:48px; height: 48px;">
-			<p class="number middle_size center" style="margin:0">가입전 예약</p>
-		</a>
+	<div class="flex_row col1">
+		<div class="flex_col col2" id="left">
+			<!--포스트-->
+			<style>
+				#location>img{width: 16px; height:16px;margin-left:-4px;}
+				#left>.card_full{width:calc(100% - 4px); margin-left: 0; margin-right: 4px;}
+				#right>.card_full{width:calc(100% - 4px); margin-right: 0; margin-left: 4px;}
+			</style>
+			<div class="post card card_full">
+				<div class="card_img short" id="trv1">
+				</div>
+				<div class="post_info margin_1x">
+					<h2 class="body_bold">포스트글 두줄까지는 텍스트 워핑으로 보여준다...</h2>
+					<p class="flex_row align_center caption_bold middle_emphasis" id="location"><img src="img/ic_location.svg">Location, City</p>
+				</div>
+			</div>
+			<!--질문-->
+			<div class="question card card_full">
+				<div class="flex_col padding_tinny primary2_bg card align_center">
+					<div class="q_mark">Q</div>
+					<div class="profile_pic_middle 
+					margin_1x" id="pf6">
+					</div>
+					<h2 class="body_medium text_center ver_bottom_1x">"리틀인디아에서 로컬 향신료가게 추천부탁드립니다."</h2>
+				</div>
+				<div class="post_info margin_1x">
+					<p class="flex_row align_center caption_bold middle_emphasis ver_margin_tiny" id="location"><img src="img/ic_location.svg">Location, City</p>
+				</div>
+			</div>
+			<!--포스트-->
+			<div class="post card card_full">
+				<div class="card_img long" id="trv2">
+				</div>
+				<div class="post_info margin_1x">
+					<h2 class="body_bold">포스트글 두줄까지는 텍스트 워핑으로 보여준다...</h2>
+
+					<p class="flex_row align_center caption_bold middle_emphasis ver_margin_tiny" id="location"><img src="img/ic_location.svg">Location, City</p>
+				</div>
+			</div>
+			<!--질문-->
+			<div class="question card card_full">
+				<div class="flex_col padding_tinny primary2_bg card align_center">
+					<div class="q_mark">Q</div>
+					<div class="profile_pic_middle margin_1x" id="pf8">
+					</div>
+					<h2 class="big_size alphabet"></h2>
+					<h2 class="body_medium text_center ver_bottom_1x">"오차로드 주변에 치킨라이스 맛있게하는데 있나요? 전통스타일로.."</h2>
+				</div>
+				<div class="post_info margin_1x">
+					<p class="flex_row align_center caption_bold middle_emphasis ver_margin_tiny" id="location"><img src="img/ic_location.svg">Location, City</p>
+				</div>
+			</div>
+		</div>
+		<div class="flex_col col2" id="right">
+			<!--포스트-->
+			<div class="post card card_full">
+				<div class="card_img middle" id="trv3">
+				</div>
+				<div class="post_info margin_1x">
+					<h2 class="body_bold">포스트글 두줄까지는 텍스트 워핑으로 보여준다...</h2>
+					<p class="flex_row align_center caption_bold middle_emphasis ver_margin_tiny" id="location"><img src="img/ic_location.svg">Location, City</p>
+				</div>
+			</div>
+			<!--동행-->
+			<div class="mating card card_full" id="mating">
+				<div class="card_img ver_padding_2x align_center padding_tinny" id="trv13">
+					<div class="card align_center padding_tinny white_bg" id="date">
+						<p class="body_bold primary">31</p>
+						<p class="caption">OCT</p>
+					</div>
+				</div>
+				<div class="flex_col padding_1x grd1_bg card align_center hor_margin_1x text_center" id="mating_info">
+					<div class="profile_pic_middle ver_bottom_1x" id="pf7" style="margin-top:-46px">
+					</div>
+					<h2 class="body_size ">"같이 클럽 zouk가실분 찾아요"</h2>
+				</div>
+				<div class="post_info margin_1x">
+					<p class="flex_row align_center caption_bold middle_emphasis ver_margin_tiny" id="location"><img src="img/ic_location.svg">Location, City</p>
+				</div>
+			</div>
+			<!--포스트-->
+			<div class="post card card_full">
+				<div class="card_img short" id="trv7">
+				</div>
+				<div class="post_info margin_1x">
+					<h2 class="body_bold">포스트글 두줄까지는 텍스트 워핑으로 보여준다...</h2>
+					<p class="flex_row align_center caption_bold middle_emphasis ver_margin_tiny" id="location"><img src="img/ic_location.svg">Location, City</p>
+				</div>
+			</div>
+			<!--포스트-->
+			<div class="post card card_full">
+				<div class="card_img short" id="trv5">
+				</div>
+				<div class="post_info margin_1x">
+					<h2 class="body_bold">포스트글 두줄까지는 텍스트 워핑으로 보여준다...</h2>
+					<p class="flex_row align_center caption_bold middle_emphasis ver_margin_tiny" id="location"><img src="img/ic_location.svg">Location, City</p>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 </body>

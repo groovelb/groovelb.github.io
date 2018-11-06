@@ -280,7 +280,7 @@ select.styled-select{
 	align-items: center;
 	justify-content: center;
 	min-width: 64px;
-	height: 36px;
+	height: 32px;
 	border-radius: 6px;
 	cursor: pointer;
 	font-family: notosans_cjk_regular;
@@ -306,7 +306,7 @@ select.styled-select{
 	height: 24px;
 	border-radius: 4px;
 	cursor: pointer;
-	border-width: 1.5px !important;
+	border-width: 1px !important;
 }
 .chip{
 	display: flex;

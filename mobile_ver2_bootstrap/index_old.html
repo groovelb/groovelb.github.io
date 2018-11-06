@@ -28,52 +28,53 @@
 	  <span></span>
 	</div>
 	<img id="logo" src="img/logo_ver3_white.svg">
-	<style>
-		.menu_item{
-			width: auto;
-			padding:12px 8px;
-		}
-	</style>
-	<div class="my_menu">
-		<a class="menu_item s_button white_border caption_bold white_highlight">
-			로그인
+</div>
+<!--슬라이드 메뉴-->
+<style>
+	.main_menu>div>hr{
+		margin:0px 32px;
+	}
+</style>
+<div class="main_menu">
+	<div class="flex_col align_center">
+		<a href="cashback.html" class="menu_list">
+			<img class="menu_icon" src="img/ic_reward.svg">
+			리워드
+		</a>
+		<a href="community.html" class="menu_list">
+			<img class="menu_icon" src="img/ic_community_black.svg">
+			핫스팟 & 동행
+		</a>
+		<hr style="width: calc(100% - 64px)">
+		<p class="padding_tinny caption_bold white_bg" style="margin-top: -16px">유용한 링크</p>
+		<a class="menu_list" href="junglian.html">
+			<img class="menu_icon" src="img/ic_monkey.svg">
+			정글리안
+		</a>
+		<a class="menu_list" href="faq.html">
+			<img class="menu_icon" src="img/ic_faq.svg">
+			FAQ
+		</a>
+		<a class="menu_list" href="cs.html">
+			<img class="menu_icon" src="img/ic_reward.svg">
+			고객센터
+		</a>
+		<a class="menu_list" href="terms.html">
+			<img class="menu_icon" src="img/ic_terms_black.svg">
+			이용약관
+		</a>
+		<a class="menu_list ver_bottom_2x" href="personal_data_policy.html">
+			<img class="menu_icon" src="img/ic_personal_policy_black.svg">
+			개인정보 활용방침
+		</a>
+		<hr class="ver_bottom_2x" style="width: calc(100% - 64px)">
+		<a class="menu_list center ver_bottom_4x">
+			<div class="button primary_border" style="width: calc(100% - 16px); margin:0;">로그아웃</div>
 		</a>
 	</div>
 </div>
-<!--슬라이드 메뉴-->
-<div class="main_menu flex_col align_center">
-	<a href="cashback.html" class="menu_list">
-		<img class="menu_icon" src="img/ic_reward.svg">
-		리워드
-	</a>
-	<a href="community.html" class="menu_list">
-		<img class="menu_icon" src="img/ic_community_black.svg">
-		커뮤니티
-	</a>
-	<a href="cashback.html" class="menu_list">
-		<img class="menu_icon" src="img/ic_cashback.svg">
-		캐시백 신청
-	</a>
-	<hr style="width: calc(100% - 64px)">
-	<p class="padding_tinny caption_bold white_bg" style="margin-top: -32px">유용한 링크</p>
-	<a class="menu_list" href="junglian.html">
-		<img class="menu_icon" src="img/ic_monkey.svg">
-		정글리안
-	</a>
-	<a class="menu_list" href="faq.html">
-		<img class="menu_icon" src="img/ic_faq.svg">
-		FAQ
-	</a>
-	<hr style="width: calc(100% - 64px)">
-	<a class="menu_list center">
-		<div class="button primary_bg" style="width: calc(100% - 16px); margin:0;">가입</div>
-	</a>
-	<a class="menu_list center">
-		<div class="button primary_border" style="width: calc(100% - 16px); margin:0;">로그인</div>
-	</a>
-</div>
 <!-- 탑 배경 -->
-	<!-- 서치박스 -->
+<!-- 서치박스 -->
 <div class="white primary_bg flex_col col1 align_center ver_bottom_2x" id="top_bg">
 	<div class="live_area bg_filter" id="top_content_area">
 		<style>#destination{height:26px;}</style>
@@ -258,7 +259,7 @@
 				</div>
 				<div class="flex_col col1 align_center grd1_bg ver_padding_1x ver_top_1x" id="calcuator_result">
 					<h2 class="number big_size white_highlight text_center ver_bottom_1x">105,200₩</h2>
-					<div class="button body_medium white_bg primary_dark_border box_shadow">가입하고 혜택받기 <img src="img/arrow_next_p_dark.svg" style="width:16px;height:16px;margin: 2px 0 0 4px"></div>
+					<div class="button white_bg btt_shadow">가입하고 혜택받기</div>
 				</div>
 			</div>
 			<!--종료-->
@@ -307,33 +308,5 @@
 </body>
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script>
-		$(document).ready(function(){
-			var menu_on = false;
-			$("#menu").on("click",function(){
-				menu_on = (!menu_on);
-				$(".main_menu").toggleClass("main_menu_on");
-				$(this).toggleClass('open');
-				if(menu_on){
-					$("#logo").attr("src","img/logo_ver3.svg");
-				}
-				else{
-					$("#logo").attr("src","img/logo_ver3_white.svg");
-				}
-				
-			});
-			$("#xbox").on("click",function(){
-				$(".main_menu").toggleClass("main_menu_on");
-			});
-
-			/*이벤트 슬라이드*/
-			$("#event_slide").delay(500).animate({left:"-100%"},{duration:100});
-			$(".event_left").on("click",function(){
-				$("#event_slide").animate({left: "+=100%"},{duration:100});
-			});
-			$(".event_right").on("click",function(){
-				$("#event_slide").animate({left: "+=-100%"},{duration:100});
-			});
-		});
-</script>
+<script src="js/menu_slide.js"></script>
 </html>

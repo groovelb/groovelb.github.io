@@ -45,56 +45,78 @@
 	}
 </style>
 <div class="main_menu">
-	<div class="flex_col align_center">
-		<a href="my_page.html" class="menu_list">
-			<div class="profile_pic_s menu_icon" id="pf2" style="width:24px; height:24px;">
-			</div>
-			마이페이지
-		</a>
-		<a href="profile.html" class="menu_list menu_list_indent">
-			<img class="menu_icon" src="img/ic_my_profile.svg">
-			내 프로필
-		</a>
-		<a href="my_travel.html" class="menu_list menu_list_indent">
-			<img class="menu_icon" src="img/ic_my_travel.svg">
-			내 여행
-		</a>
-		<a href="cashback.html" class="menu_list menu_list_indent">
-			<img class="menu_icon" src="img/ic_reward.svg">
-			리워드
-		</a>
-		<a href="community.html" class="menu_list">
-			<img class="menu_icon" src="img/ic_community_black.svg">
-			커뮤니티
-		</a>
-		<a href="cashback.html" class="menu_list ver_bottom_4x">
-			<img class="menu_icon" src="img/ic_cashback.svg">
-			캐시백 신청
-		</a>
-		<hr style="width: calc(100% - 64px)">
-		<p class="padding_tinny caption_bold white_bg" style="margin-top: -16px">유용한 링크</p>
-		<a class="menu_list" href="junglian.html">
-			<img class="menu_icon" src="img/ic_monkey.svg">
-			정글리안
-		</a>
-		<a class="menu_list" href="faq.html">
-			<img class="menu_icon" src="img/ic_faq.svg">
-			FAQ
-		</a>
-		<a class="menu_list" href="cs.html">
-			<img class="menu_icon" src="img/ic_reward.svg">
-			고객센터
-		</a>
-		<a class="menu_list" href="terms.html">
-			<img class="menu_icon" src="img/ic_terms_black.svg">
-			이용약관
-		</a>
-		<a class="menu_list ver_bottom_2x" href="personal_data_policy.html">
-			<img class="menu_icon" src="img/ic_personal_policy_black.svg">
-			개인정보 활용방침
-		</a>
-		<hr class="ver_bottom_2x" style="width: calc(100% - 64px)">
-		<a class="menu_list center ver_bottom_4x">
+	<div class="flex_col white_middle_bg">
+		<p class="body_bold margin_2x ver_top_4x middle_emphasis">여행</p>
+		<div class="flex_col full_radious box_shadow" style="width:calc(100% - 32px); margin-left:16px; overflow: hidden;">
+			<a href="my_page.html" class="menu_list">
+				<div class="profile_pic_s menu_icon" id="pf2" style="width:24px; height:24px;">
+				</div>
+				마이 페이지
+			</a>
+			<a href="my_travel.html" class="menu_list menu_list_indent">
+				<img class="menu_icon" src="img/ic_my_travel.svg">
+				내 여행 일정
+			</a>
+			<a href="community.html" class="menu_list menu_list_indent">
+				<img class="menu_icon" src="img/ic_community_black.svg">
+				내 여행지 핫스팟 & 동행
+			</a>
+			<a href="plan_hotel.html"class="menu_list">
+				<img class="menu_icon" src="img/ic_hotel_black.svg">
+				내 예약 상세 보기
+			</a>
+			<a href="community.html" class="menu_list">
+				<img class="menu_icon" src="img/ic_community_black.svg">
+				핫스팟 & 동행
+			</a>
+		</div>
+		<p class="body_bold margin_2x ver_top_4x middle_emphasis">리워드 프로그램</p>
+		<div class="flex_col full_radious box_shadow" style="width:calc(100% - 32px); margin-left:16px; overflow: hidden;">
+			<a href="community.html" class="menu_list">
+				<img class="menu_icon" src="img/ic_reward.svg">
+				리워드
+			</a>
+			<a href="cashback.html" class="menu_list menu_list_indent">
+				<img class="menu_icon" src="img/ic_cashback.svg">
+				캐시백 신청
+			</a>
+			<a href="cashback.html" class="menu_list menu_list_indent">
+				<img class="menu_icon" src="img/ic_find_point.svg">
+				적립금 찾기
+			</a>
+			<a href="cashback.html" class="menu_list menu_list_indent">
+				<img class="menu_icon" src="img/ic_invite_earn.svg">
+				초대하기
+			</a>
+		</div>
+		<p class="body_bold margin_2x ver_top_4x middle_emphasis">유용한 링크</p>
+		<div class="flex_col full_radious box_shadow ver_bottom_4x" style="width:calc(100% - 32px); margin-left:16px; overflow: hidden;">
+			<a class="menu_list" href="junglian.html">
+				<img class="menu_icon" src="img/ic_monkey.svg">
+				정글리안
+			</a>
+			<a class="menu_list" href="faq.html">
+				<img class="menu_icon" src="img/ic_faq.svg">
+				FAQ
+			</a>
+			<a class="menu_list" href="event.html">
+				<img class="menu_icon" src="img/ic_faq.svg">
+				이벤트
+			</a>
+			<a class="menu_list" href="cs.html">
+				<img class="menu_icon" src="img/ic_reward.svg">
+				고객센터
+			</a>
+			<a class="menu_list" href="terms.html">
+				<img class="menu_icon" src="img/ic_terms_black.svg">
+				이용약관
+			</a>
+			<a class="menu_list" href="personal_data_policy.html">
+				<img class="menu_icon" src="img/ic_personal_policy_black.svg">
+				개인정보 활용방침
+			</a>
+		</div>
+		<a class="menu_list center white_middle_bg">
 			<div class="button primary_border" style="width: calc(100% - 16px); margin:0;">로그아웃</div>
 		</a>
 	</div>
@@ -126,7 +148,7 @@
 		<input class="textfield body_size" type="text" id="name" name="name" placeholder="이름">
 		<input class="textfield body_size" type="text" id="name" name="name" placeholder="전화번호">
 	</form>
-	<div class="button primary_bg ver_bottom_4x" style="width: 144px; align-self: flex-end; margin-right:0">저장하기</div>
+	<a href="my_page.html" class="button primary_bg ver_bottom_4x" style="width: 144px; align-self: flex-end; margin-right:0">저장하기</a>
 </div>
 </body>
 <script src="js/jquery-3.2.1.min.js"></script>

@@ -125,13 +125,15 @@ display: none;
 	justify-content: flex-start;
 	flex-wrap: wrap;
 	align-items: center;
-	width: calc(100% - 64px);
-	height: 32px;
-	padding:8px 32px;
+	width: calc(100% - 32px);
+	height: 36px;
+	padding:8px 16px;
 	font-weight: 500;
 	font-family: notosans_cjk_medium;
 	font-size: 14px;
 	color: #383838;
+	background-color: #ffffff;
+	border-bottom: solid 1px #eeeeee;
 }
 .menu_list>hr{
 	width: calc(100%);
@@ -140,7 +142,7 @@ display: none;
 }
 .menu_list_indent{
 	width: calc(100% - 96px);
-	padding:8px 32px 8px 64px;
+	padding:8px 32px 8px 32px;
 }
 .main_menu_on{
 	top:0;
