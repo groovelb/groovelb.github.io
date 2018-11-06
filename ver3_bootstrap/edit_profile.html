@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.css" />
+	<link rel="stylesheet" href="css/remove_bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="css/layout_common.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_main.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_community.css">
+	<link rel="stylesheet" type="text/css" href="css/type.css">
+	<link rel="stylesheet" type="text/css" href="css/color.css">
+	<link rel="stylesheet" type="text/css" href="css/components.css">
+	<link rel="stylesheet" type="text/css" href="css/img.css">
+</head>
+<body class="black_highlight white_middle_bg">
+<!-- 헤더 -->
+<div class="header flex_row live_area black_highlight box_shadow" id="header">
+	<div class="flex_row col2  align_center justify_start" id="left">
+		<img id="header_logo" src="img/logo_ver3.svg">
+		<div class="text_menu flex_row align_center hor_margin_2x body_size" id="selected">
+			<a href="index_loggedin.html">호텔</a>
+		</div>
+		<div class="text_menu flex_row align_center body_size hor_margin_2x">
+			<a href="community_main.html">커뮤니티</a>
+		</div>
+	</div>
+	<div class="flex_row col2 align_center justify_end" id="right">
+		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="faq.html">FAQ</a>
+		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="reward.html">캐시백 신청</a>
+		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="message_main.html">메세지</a>
+		<a class="flex_row align_center hor_margin_2x" id="user_info" style="margin-right: 0" href="my_page.html">
+			<div class="profile_pic_s" id="pf1"></div>
+			<div class="flex_col">
+				<p class="body_bold hor_margin_tiny">username</p>
+				<p class="caption hor_margin_tiny">23,112₩</p>
+			</div>
+		</a>
+	</div>
+</div>
+<!--컨텐츠 영역-->
+<div class="live_area" style="padding-top: 128px;">
+	<div class="flex_row col1">
+		<div class="content_col white_bg content_col_narrow border ver_bottom_8x" style="align-items: center; padding:32px !important;">
+			<div class="profile_pic_big" id="pf1"></div>
+			<p class="caption_bold center ver_bottom_4x priamry2">사진바꾸기</p>
+			<h2 class="body_bold">기본정보</h2>
+			<style> input.col2{width: calc(50% - 24px);}</style>
+			<form class="flex_row col1 space_between">
+				<label class="label body_size ver_margin_1x col2">아이디</label>
+				<label class="label body_size ver_margin_1x col2">닉네임</label>
+				<input class="textfield body_size col2" type="text" id="user_id" name="user_id" value="groovelb@gmail.com">
+				<input class="textfield body_size col2" type="text" id="user_id" name="user_id" placeholder="닉네임을 입력해주세요">
+			</form>
+			<form class="flex_col col1 ver_bottom_4x" action="">
+				<label class="label body_size ver_margin_1x">소개</label>
+				<style>textarea {padding-top:8px; height: 96px !important;}</style>
+				<textarea class="textfield body_size" type="text" id="name" name="name" placeholder="어떤 여행을 좋아하는지 소개해주세요"></textarea>
+				<p class="caption_bold low_emphasis" style="align-self: flex-end;">0/400</p>
+				<label class="label body_size ver_margin_1x">여행 성향</label>
+				<p class="caption low_emphasis ver_margin_1x" style="width:100%;">username니의 여행성향을 추가하면 다른 여행자들과 연결될 확율이 높습니다</p>
+				<div class="flex_row col1">
+					<div class='chip chip_selected margin_1x'>맛집여행</div>
+					<div class='chip chip_selected margin_1x'>와인여행</div>
+					<div class="square_button flex_centered" id="preference_add">
+						<img src="img/ic_add.svg" style="width: 24px; height: 24px;">
+					</div>
+				</div>
+			</form>
+			<h2 class="body_bold">개인정보</h2>
+			<p class="caption low_emphasis ver_margin_1x" style="width:100%;">아래의 개인정보는 다른 정글리안들에게 공개되지 않습니다.</p>
+			<form class="flex_col col1 ver_bottom_4x" action="">
+				<label class="label body_size ver_margin_1x">이름</label>
+				<input class="textfield body_size" type="text" id="name" name="name" placeholder="이름을 입력해주세요">
+				<label class="label body_size ver_margin_1x">전화번호</label>
+				<input class="textfield body_size" type="text" id="name" name="name" placeholder="전화번호를 입력해주세요">
+			</form>
+			<a href="my_travel.html" class="button primary_bg white_highlight" style="width: 144px; align-self: flex-end; margin-right:0">저장하기</a>
+		</div>
+	</div>
+</div>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/preference.js"></script>
+<script>
+	var selectd = [];
+	$(document).ready(function(){
+		console.log("load");
+
+		/*성향 팝업 이벤트*/
+		$("#preference_add").on("click",function(){
+			console.log("click");
+			
+			$("body").append("<div class='dialog_bg'></div>");
+			$(".dialog_bg").append($("#prf_dialog"));
+			preference.forEach(function(item){
+
+				/*선택여부에 따라 성향 색표시*/
+				if(item.check==0){
+					$("#preference").append("<div class='chip margin_1x'>" + item.keyword + "</div>");
+				}
+				else{
+					$("#preference").append("<div class='chip chip_selected margin_1x'>" + item.keyword + "</div>")
+				}		
+			});
+			$(".chip").on("click",function(){
+				$(this).toggleClass("chip_selected");
+				if($(this).hasClass("chip_selected")){
+					console.log(this);
+				}
+			});	
+		});
+
+		/*팝업 닫기 이벤트*/
+		$("#dg_xbox1").on("click", function(){
+			$("body").append($("#prf_dialog"));
+			$(".dialog_bg").remove();
+		});
+		$("#add_btt").on("click", function(){
+			$("body").append($("#prf_dialog"));
+			$(".dialog_bg").remove();
+		});
+
+	});
+</script>
+</body>
+<!--여행 성향 선택-->
+<div class="flex_col align_center dialog padding_2x white_bg" id="prf_dialog">
+	<img class="xbox" src="img/ic_close.svg" id="dg_xbox1">
+	<h2 class="middle_size ver_bottom_4x text_center">여행 성향</h2>
+	<div class="profile_pic_middle" id="pf1"></div>
+	<p class="body_size text_center ver_margin_1x" style="width:100%;"><span>username</span>님의 여행 성향을 나타내는 키워드를 선택해주세요!(최대5개)</p>
+	<div class="flex_row col1 ver_bottom_4x" id="preference"></div>
+	<div class="button primary_bg box_shadow" id="add_btt" style="width:164px;">성향 추가하기</div>
+</div>
+</html>

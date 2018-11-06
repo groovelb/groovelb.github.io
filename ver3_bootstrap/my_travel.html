@@ -46,23 +46,15 @@
 <div class="live_area white_bg" style="padding-top: 128px;">
 	<div class="flex_row col1">
 		<div class="slide_menu">
-			<a href="my_page.html" class="slide_item">
-				<img src="img/ic_my_profile.svg">
-				내 프로필
-			</a>
-			<a href="my_hotels.html" class="slide_item">
-				<img src="img/ic_hotel_black.svg">
-				내 호텔예약 보기
-			</a>
 			<a href="my_travel.html" class="slide_item" id="selected_slide_item">
 				<img src="img/ic_my_travel_white.svg">
-				내 여행
+				마이 페이지
 			</a>
 			<div class="slide_menu extend_item">
 				<a href="my_travel.html">
 					<div class="slide_item" id="selected_extend_item">
 						<img src="img/ic_calendar_p.svg">
-						내 여행계획
+						내 여행일정
 					</div>
 				</a>
 				<a href="my_community.html">
@@ -72,18 +64,27 @@
 					</div>
 				</a>
 			</div>
+			<a href="plan_hotel.html" target="_blank" class="slide_item">
+				<img src="img/ic_hotel_black.svg">
+				예약 상세 보기
+			</a>
 			<a  href="reward.html" class="slide_item">
 				<img src="img/ic_reward.svg">
 				리워드
 			</a>
-
 		</div>
 		<div class="content_col" style="align-items: center;">
 			<!--소개-->
-			<div class="flex_col col1 ver_bottom_4x align_center" style="width:60%; margin-left:20%; margin-right: 20%;">
-				<div class="profile_pic_big" id="pf1"></div>
+			<div class="flex_col col1 ver_bottom_8x align_center">
+				
+				<div class="flex_col col1">
+					<a href="my_page.html" class="button black_border ver_margin_tiny" id="edit_profile" style="align-self: flex-end;">
+						<img src="img/ic_profile.svg">프로필 수정
+					</a>
+					<div class="profile_pic_big" id="pf1" style="align-self: center; margin-top: -38px;"></div>
+				</div>
 				<h2 class="middle_size ver_bottom_1x" style="width: auto">Username</h2>
-				<p class="body_size middle_emphasis text_center col2">
+				<p class="body_size middle_emphasis text_center col2 ver_bottom_1x">
 					휴양지 전문 여행가입니다. 남미, 남유럽, 미주 12개 도시 휴향지 탐방기 구경하세요! 11/01 ~ 11/23 아르헨티나 여행 예정!
 				</p>
 				<div class="flex_row col1 justify_center" id="user_meta">
@@ -141,10 +142,10 @@
 			<!--내 트래블 로그 섹션 -->
 			<div class="flex_row col1">
 				<div class="flex_row col1 space_between align_center ver_bottom_2x">
-					<h2 class="middle_size" style="width:auto">내 트래블 로그</h2>
-					<div class="flex_row">
+					<h2 class="middle_size" style="width:auto">내 포스트</h2>
+					<!--<div class="flex_row">
 					  <div class="button black_border"><img src="img/ic_write.svg">트래블로그 쓰기</div>
-					</div>
+					</div>-->
 				</div>
 				<div class="flex_row col1">
 					<div class="flex_col col3">
