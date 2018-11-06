@@ -54,7 +54,7 @@
 			<!--호텔검색-->
 			<div class="flex_col col2" id="top_left">
 				<p class="middle_regular ver_bottom_2x">호텔 검색</p>
-				<p class="body_size ver_bottom_1x">전 세계 70개국 29,043,810개의 숙소를 실시간으로 찾으세요.</p>
+				<p class="body_size ver_bottom_1x">모든 호텔 예약은 부킹닷컴으로 최종 결제!</p>
 				<!--서치박스-->
 				<div class="search_box flex_row middle_emphasis space_between box_shadow">
 					<div class="textfield white_bg body_size tf_full">
@@ -98,7 +98,7 @@
 			<!--리워드 프로그램-->
 			<div class="flex_col col2" id="top_right">
 				<!--이벤트 && 내여행 탭-->
-				<div class="flex_row col1 ver_bottom_2x">
+				<div class="flex_row col1 ver_bottom_2x"  style="margin-bottom: 12px !important;">
 					<div class="event_tab selected_evt_tab margin_r_driection flex_row align_center" id="reward_tab">
 						<img  class="icon_s" src="img/ic_reward_white.svg">
 						<p class="middle_regular">리워드 프로그램</p>
@@ -112,8 +112,8 @@
 				<div class="tab_content_containner" style="margin-top: -4px;">
 					<!--리워드 프로그램-->
 					<div class="flex_col tab_content tab_show col1" id="reward_content">
-						<p class="body_size ver_bottom_1x">정글리안은 여러분의 여행을 가장 빠르게 지원합니다.</p>
-						<div class="flex_row col1 card_full flex_center primary2_bg" style="width: calc(100%); margin:0 0">
+						<p class="body_size ver_bottom_1x">부킹닷컴에도 없는 놀라운 혜택.</p>
+						<div class="flex_row col1 card_full flex_center primary2_bg ver_bottom_2x" style="width: calc(100%); margin:0 0">
 							<div class="flex_col col2">
 								<div class="flex_col card_full flex_center" id="checkin">
 									<div class="content padding_ver_32 flex_center flex_col" id="primary_filter">
@@ -133,41 +133,47 @@
 								</div>
 							</div>
 							<!--가입버튼-->
-							<div class="button body_medium white_bg primary_dark ver_margin_2x">가입하고 혜택받기 <img src="img/arrow_next_p_dark.svg" style="width:16px;height:16px;margin: 2px 0 0 4px"></div>
+							<div class="button body_medium white_bg primary_dark ver_margin_1x">가입하고 혜택받기<img src="img/arrow_next_p_dark.svg" style="width:16px;height:16px;margin: 2px 0 0 4px"></div>
 						</div>
 					</div>
 					<!--리워드 프로그램 종료-->
 					<!--내 여행-->
-					<div class="flex_col col tab_content" id="my_travel_content">
+					<div class="flex_col col1 tab_content" id="my_travel_content">
 						<p class="body_size ver_bottom_1x">여행 계획을 세우고 동행을 찾으세요!</p>
-						<div class=" flex_row col1 card_full flex_center white_bg" style="width: calc(100%); margin:0 0">
+						<div class=" flex_row col1 card_full flex_center white_bg ver_bottom_2x" style="width: calc(100%); margin:0 0; border-width: 0;">
 							<div class="flex_col col2">
-								<a class="card card_full" href="travel_page.html" style="margin-right: 4px;">
-									<div class="card_img" id="sg">
-									</div>
-									<div class="travel_info margin_1x">
-										<h2 class="body_bold">싱가폴 여행</h2>
-										<p class="caption_bold primary2">Holiday Central외 3개 장소</p>
-										<p class="caption middle_emphasis">OCT 30 ~ NOV 12, 2018</p>
+								<!--섬네일-->
+								<a href="travel_page.html" class="card s_card box_shadow flex_col margin_r_driection justify_end" id="sg" style="width:250px; height: 160px; margin: 8px 4px 0px 8px;">
+									<div class="margin_1x white_highlight">
+										<p class="body_medium">싱가폴 여행</p>
+										<p class="caption_bold">Holiday Central외 3개 장소</p>
+										<p class="caption">OCT 30 ~ NOV 12, 2018</p>
 									</div>
 								</a>
 							</div>
 							<div class="flex_col col2">
-								<a class="card card_full" href="travel_page.html" style="margin-left: 4px;">
-									<div class="card_img" id="kul">
-									</div>
-									<div class="travel_info margin_1x">
-										<h2 class="body_bold">싱가폴 여행</h2>
-										<p class="caption_bold primary2">Holiday Central외 3개 장소</p>
-										<p class="caption middle_emphasis">OCT 30 ~ NOV 12, 2018</p>
+								<style>
+									.card_img{
+										padding:50px 0 !important;
+									}
+								</style>
+								<!--섬네일-->
+								<a href="travel_page.html" class="card s_card box_shadow flex_col margin_r_driection justify_end" id="sg" style="width:250px; height: 160px; margin: 8px 8px 0px 4px;">
+									<div class="margin_1x white_highlight">
+										<p class="body_medium">싱가폴 여행</p>
+										<p class="caption_bold">Holiday Central외 3개 장소</p>
+										<p class="caption">OCT 30 ~ NOV 12, 2018</p>
 									</div>
 								</a>
 							</div>
 							<!--가입버튼-->
-							<a href="travel_page.html" class="button body_medium ver_margin_2x primary_dark_border">내 여행 모두보기 <img src="img/arrow_next_p_dark.svg" style="width:16px;height:16px;margin: 2px 0 0 4px"></a>
+							<a href="travel_page.html" class="button body_medium ver_margin_1x primary_dark_border">내 여행 모두보기 <img src="img/arrow_next_p_dark.svg" style="width:16px;height:16px;margin: 2px 0 0 4px"></a>
 						</div>
 					</div>
 					<!--내 여행 종료-->
+					<div class="col1 flex_row box_shadow white_bg full_radious" style="height: 151px; overflow: hidden;">
+						<img src="img/img_event2.jpg" style="width:524px; height: 151px;">
+					</div>
 				</div>
 				<!--탭 컨텐츠 종료-->
 			</div>
@@ -178,8 +184,8 @@
 <!-- 탑 영역 종료 -->
 <!-- 인기 커뮤니티-->
 <div class="live_area white_highlight" style="margin-top: -144px">
-	<h2 class="middle_size">핫스팟 & 동행</h2>
-	<p class="body_size요 ver_bottom_2x">각 도시별 핫스팟 & 동행에서 내 여행계획을 공유하고 함께 할 동행도 찾고, 2만원의 적립금 혜택도 받아보세요.</p>
+	<h2 class="middle_size white_highlight">핫스팟 & 동행</h2>
+	<p class="body_size요 ver_bottom_2x">정글리안 전문 여행 에디터가 선별한 도시별 2인 이상 가기 좋은 핫스팟 정보와 동행을 찾아보세요.</p>
 </div>
 <div class="slider flex_row" id="section1">
 	<style>#community_list>.s_card>h2{text-align: center;}</style>
@@ -191,37 +197,37 @@
 			<img id="arrow" src="img/arrow_next.svg">
 		</div>
 		<!--섬네일-->
-		<div class="card s_card box_shadow flex_col flex_center margin_r_driection" id="sg">
-			<h2 class="middle_size">싱가폴</h2>
+		<div class="card s_card flex_col flex_center margin_r_driection" id="sg">
+			<h2 class="middle_size white_highlight">싱가폴</h2>
 			<p class="caption white_middle">2122명 방문</p>
 			<p class="caption white_middle">212장소 등록</p>
 		</div>
 		<!--섬네일-->
-		<div class="card s_card box_shadow flex_col flex_center margin_r_driection" id="bkk">
-			<h2 class="middle_size">싱가폴</h2>
+		<div class="card s_card flex_col flex_center margin_r_driection" id="bkk">
+			<h2 class="middle_size white_highlight">싱가폴</h2>
 			<p class="caption white_middle">2122명 방문</p>
 			<p class="caption white_middle">212장소 등록</p>
 		</div>
 		<!--섬네일-->
-		<div class="card s_card box_shadow flex_col flex_center margin_r_driection" id="bali">
-			<h2 class="middle_size">싱가폴</h2>
+		<div class="card s_card flex_col flex_center margin_r_driection" id="bali">
+			<h2 class="middle_size white_highlight">싱가폴</h2>
 			<p class="caption white_middle">2122명 방문</p>
 			<p class="caption white_middle">212장소 등록</p>
 		</div>
 		<!--섬네일-->
-		<div class="card s_card box_shadow flex_col flex_center margin_r_driection" id="ny">
-			<h2 class="middle_size">싱가폴</h2>
+		<div class="card s_card flex_col flex_center margin_r_driection" id="ny">
+			<h2 class="middle_size white_highlight">싱가폴</h2>
 			<p class="caption white_middle">2122명 방문</p>
 			<p class="caption white_middle">212장소 등록</p>
 		</div>
 		<!--섬네일-->
-		<div class="card s_card box_shadow flex_col flex_center margin_r_driection" style="margin-right: 0" id="kul">
-			<h2 class="middle_size">싱가폴</h2>
+		<div class="card s_card flex_col flex_center margin_r_driection" style="margin-right: 0" id="kul">
+			<h2 class="middle_size white_highlight">싱가폴</h2>
 			<p class="caption white_middle">2122명 방문</p>
 			<p class="caption white_middle">212장소 등록</p>
 		</div>
-		<div class="button primary2 ver_margin_2x" style="padding-left:0"><p class="body_size">모두보기(16)</p><img src="img/arrow_next_2ndp.svg" style="width:16px;height:16px;margin: 2px 0 0 2px"></div>
 	</div>
+	<div class="button priamry2">모두보기(16)></div>
 </div>
 <!-- USP요약-->
 <div class="live_area flex_row justify_center ver_margin_2x section_ver_padding">
@@ -251,47 +257,47 @@
 	<div class="col1 bg_filter" id="bg_filter">
 		<div class="live_area flex_row justify_center section_ver_padding">
 			<h2 class="big_size text_center">정글리안 리워드 프로그램</h2>
-			<h2 class="middle_thin text_center">"여행 일정과 친구초대 횟수로 적립 가능 금액을 확인해보세요."</h2>
+			<h2 class="middle_thin white_highlight text_center">"호텔예약과 동행 프로그램 참여로 연간 적립 가능한 금액을 확인해보세요"</h2>
 			<!--계산기-->
 			<div class="flex_row col1 white_bg ver_margin_4x" id="calculator">
 				<div class="flex_col col2 align_center ver_margin_4x">
-					<h2 class="middle_size ver_margin_1x primary2 text_center">숙박료 7%캐시백</h2>
-					<img src="img/ic_hotel_2ndp.svg" style="width:64px; height:56px;">
+					<h2 class="middle_size white_highlight ver_margin_1x primary text_center">숙박료 7%캐시백</h2>
+					<img src="img/ic_hotel.svg" style="width:64px; height:56px;">
 					<!--계산식-->
-					<div class="flex_row col1 align_center justify_center">
+					<div class="flex_row col1 justify_center">
 						<div class="calculate_item">
 							<form action="">
 								<input class="calculator_value" type="text" id="days" value="6">
 							</form>
-							<p class="caption medium_empasize">연간 예상 숙박일</p>
+							<p class="caption medium_empasize">숙박일</p>
 						</div>
 						<img src="img/ic_times.svg" style="width:32px; height:32px;">
 						<div class="calculate_item">
 							<form action="">
 								<input class="calculator_value number" type="text" id="days" value="60,000₩">
 							</form>
-							<p class="caption medium_empasize">일박 평균 예약금</p>
+							<p class="caption medium_empasize">숙박일</p>
 						</div>
 					</div>
 					<!--계산식 종료-->
 				</div>
 				<div class="flex_col col2 align_center ver_margin_4x">
-					<h2 class="middle_size ver_margin_1x primary2 text_center">친구초대 리워드</h2>
-					<img src="img/ic_invite_2ndp.svg" style="width:64px; height:56px;">
+					<h2 class="middle_size white_highlight ver_margin_1x primary text_center">동행 지원 리워드</h2>
+					<img src="img/ic_invite.svg" style="width:64px; height:56px;">
 					<!--계산식-->
-					<div class="flex_row col1 align_center justify_center">
+					<div class="flex_row col1 justify_center">
 						<div class="calculate_item">
 							<form action="">
 								<input class="calculator_value" type="text" id="days" value="6">
 							</form>
-							<p class="caption medium_empasize">초대 친구수</p>
+							<p class="caption medium_empasize">연간 동행 횟수</p>
 						</div>
 						<img src="img/ic_times.svg" style="width:32px; height:32px;">
 						<div class="calculate_item">
 							<form action="">
 								<input class="calculator_value number" type="text" id="days" value="60,000₩">
 							</form>
-							<p class="caption medium_empasize">추천 커미션</p>
+							<p class="caption medium_empasize">동행 지원 적립금</p>
 						</div>
 					</div>
 					<!--계산식 종료-->
@@ -301,7 +307,6 @@
 					<div class="button white_bg btt_shadow">가입하고 혜택받기</div>
 				</div>
 			</div>
-			<p class="caption col2 text_center">※세금 및 봉사료 호텔 예약 시 별도로 발생되는 비용과 부가세, 환율변동, 환전 수수료 등과 같은 원인으로 금액이 차이 날 수 있습니다.</p>
 			<!--종료-->
 		</div>
 	</div>
@@ -316,7 +321,7 @@
 	</style>
 	<div class="live_area flex_row">
 		<p class="flex_col col4" id="introduction">
-			<a class="footer_item body_medium middle_emphasis" href="">정글리</a>
+			<a class="footer_item body_medium middle_emphasis" href="">정글리안</a>
 			<a class="footer_item body_medium middle_emphasis" href="">고객 센터</a>
 			<a class="footer_item body_medium middle_emphasis" href="">개인정보처리 방침</a>
 			<a class="footer_item body_medium middle_emphasis" href="">이용약관</a>

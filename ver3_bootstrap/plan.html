@@ -113,8 +113,8 @@
 			<img src="img/ic_phone.svg">
 			<p>+65 6836 4695</p>
 		</div>
-		<div class="button primary_border margin_2x" id="save_to_map">내맵에 저장됨</div>
-		<div class="button primary_bg margin_2x" id="save_to_map">예약확인서 보기</div>
+		<div class="button primary_border margin_2x save_to_map">내맵에 저장됨</div>
+		<div class="button primary_bg margin_2x" id="check_reservation">예약확인서 보기</div>
 		<div class="col1 padding_1x">
 			<!--유저리스트-->
 			<div class="flex_col col1 ver_bottom_2x">
@@ -167,7 +167,7 @@
 			<img src="img/ic_phone.svg">
 			<p>+65 6836 4695</p>
 		</div>
-		<div class="button primary_bg margin_2x" id="save_to_map">내맵에 저장하기</div>
+		<div class="button primary_bg margin_2x save_to_map">내맵에 저장하기</div>
 		<div class="col1 padding_1x">
 			<!--유저리스트-->
 			<div class="flex_col col1 ver_bottom_2x">
@@ -497,7 +497,7 @@
 		});
 
 		/*내 맵에 저장하기*/
-		$("#save_to_map").on("click",function(){
+		$(".save_to_map").on("click",function(){
 			$("body").append("<div class='dialog_bg'></div>");
 			$(".dialog_bg").append($("#date_dialog"));
 		});
