@@ -28,23 +28,24 @@
 	<div class="map_toggle_item flex_row flex_center caption_bold" id=map_toggle_right>내 일정 펼쳐 보기</div>
 </div>
 <div class="textfield align_center space_between white_bg box_shadow_strong" id="search_bar" style="width:calc(100% - 32px);height:42px;">
-	<input class="body_size input_no_style" type="text" id="user_id" name="user_id" placeholder="장소를 검색해보세요" onchange="search_research_move()">
 	<img src="img/ic_search.svg" id="search_btt">
 	<img src="img/ic_close.svg" id="close_btt" style="display: none;">
+	<img src="img/ic_close.svg" id="close_btt" style="display: none;">
+	<input class="body_size input_no_style" type="text" id="user_id" name="user_id" placeholder="장소를 검색해보세요" onchange="search_research_move()">
 </div>
 <!--플랜 슬라이더-->
 <div class="long_slider" id="plan_slider">
 	<div id="date_list" style="width: 100%; height: calc(100% - 74px - 36px); overflow-y: scroll;">
 		<!--템-->
 		<div class="list day_list padding_1x day border_bottom" id="day1">
-			<div class="flex_row align_end" id="date">
+			<div class="flex_row" id="date">
 				<h2 class="middle_size" style="margin:0">Day1</h2><p class="caption_bold low_emphasis">SAT 10/9</p>
 			</div>
 			<p class="flex_row align_center caption" id="location" style="width:calc(100% - 24px)"><img src="img/ic_location.svg">"리틀 인디아"를 포함한 3개의 장소</p><img class="btt_show_list" src="img/ic_down.svg">
 			<!--날짜별 장소리스트-->
 			<div class="col1 place_list_day">
 				<!--장소 리스트-->
-				<div class="list padding_tinny place_list align_cen place1 id="place1">
+				<div class="list padding_tinny place_list align_cen place1">
 					<div class="place_thumb" id="plc_img3"></div>
 					<div class="place_meta">
 						<h2 class="body_bold">Little India</h2>
@@ -58,7 +59,7 @@
 					</div>
 				</div>
 				<!--장소 리스트-->
-				<div class="list padding_tinny place_list align_cen place1 id="place1">
+				<div class="list padding_tinny place_list align_cen place1">
 					<div class="place_thumb" id="trv3"></div>
 					<div class="place_meta">
 						<h2 class="body_bold">Place1</h2>
@@ -72,7 +73,7 @@
 					</div>
 				</div>
 				<!--장소 리스트-->
-				<div class="list padding_tinny place_list align_cen place1 id="place1">
+				<div class="list padding_tinny place_list align_cen place1">
 					<div class="place_thumb" id="trv5"></div>
 					<div class="place_meta">
 						<h2 class="body_bold">Place2</h2>
@@ -132,7 +133,7 @@
 		<!--지정안된 장소들-->
 		<h2 class="body_bold middle_emphasis margin_2x" style="margin-top: 8px; margin-bottom: 8px">지정안된 장소들</h2>
 		<!--장소 리스트-->
-		<div class="list padding_1x place_list align_center place1" id="place1">
+		<div class="list padding_1x place_list align_center place1"">
 			<div class="place_thumb" id="plc_img1"></div>
 			<div class="place_meta">
 				<h2 class="body_bold">Place title</h2>
@@ -146,7 +147,7 @@
 			</div>
 		</div>
 		<!--장소 리스트-->
-		<div class="list padding_1x place_list align_center place1" id="place1">
+		<div class="list padding_1x place_list align_center place1"">
 			<div class="place_thumb" id="plc_img2"></div>
 			<div class="place_meta">
 				<h2 class="body_bold">Place title</h2>
@@ -160,7 +161,7 @@
 			</div>
 		</div>
 		<!--장소 리스트-->
-		<div class="list padding_1x place_list align_center place1" id="place1">
+		<div class="list padding_1x place_list align_center place1"">
 			<div class="place_thumb" id="plc_img3"></div>
 			<div class="place_meta">
 				<h2 class="body_bold">Place title</h2>
@@ -229,7 +230,7 @@
 	</div>
 </div>
 <!--장소 정보-->
-<div class="short_slider" id="saved_place_slider">
+<div class="short_slider" id="place_slider">
 	<div class="flex_row col1">
 		<div class="col2">
 			<div class="place_img">
@@ -281,7 +282,7 @@
 <div class="full_slider" id="search_result" style="padding-top:60px">
 	<div class="col1" id="search_result_list">
 		<!--장소 리스트-->
-		<div class="list padding_tinny place_list align_cen place1 id="place1">
+		<div class="list padding_tinny place_list align_cen place1">
 			<div class="place_thumb" id="plc_img3"></div>
 			<div class="place_meta">
 				<h2 class="body_bold">Little India</h2>
@@ -296,7 +297,7 @@
 			</div>
 		</div>
 		<!--장소 리스트-->
-		<div class="list padding_tinny place_list align_cen place1 id="place1">
+		<div class="list padding_tinny place_list align_cen place1">
 			<div class="place_thumb" id="trv3"></div>
 			<div class="place_meta">
 				<h2 class="body_bold">Place1</h2>
@@ -311,7 +312,7 @@
 			</div>
 		</div>
 		<!--장소 리스트-->
-		<div class="list padding_tinny place_list align_cen place1 id="place1">
+		<div class="list padding_tinny place_list align_cen place1">
 			<div class="place_thumb" id="trv5"></div>
 			<div class="place_meta">
 				<h2 class="body_bold">Place2</h2>
@@ -326,7 +327,7 @@
 			</div>
 		</div>
 		<!--장소 리스트-->
-		<div class="list padding_tinny place_list align_cen place1 id="place1">
+		<div class="list padding_tinny place_list align_cen place1">
 			<div class="place_thumb" id="trv1"></div>
 			<div class="place_meta">
 				<h2 class="body_bold">Place3</h2>
@@ -341,7 +342,7 @@
 			</div>
 		</div>
 		<!--장소 리스트-->
-		<div class="list padding_tinny place_list align_cen place1 id="place1">
+		<div class="list padding_tinny place_list align_cen place1">
 			<div class="place_thumb" id="trv7"></div>
 			<div class="place_meta">
 				<h2 class="body_bold">Place4</h2>
@@ -356,7 +357,7 @@
 			</div>
 		</div>
 		<!--장소 리스트-->
-		<div class="list padding_tinny place_list align_cen place1 id="place1">
+		<div class="list padding_tinny place_list align_cen place1">
 			<div class="place_thumb" id="trv8"></div>
 			<div class="place_meta">
 				<h2 class="body_bold">Place5</h2>
@@ -371,7 +372,7 @@
 			</div>
 		</div>
 		<!--장소 리스트-->
-		<div class="list padding_tinny place_list align_cen place1 id="place1">
+		<div class="list padding_tinny place_list align_cen place1">
 			<div class="place_thumb" id="trv9"></div>
 			<div class="place_meta">
 				<h2 class="body_bold">Place6</h2>
@@ -510,18 +511,24 @@ $(document).ready(function(){
 		$("#mating_list_containner").animate({left: "+=-152px"},{duration:100});
 	});
 
-	/*서치바 검색결과 이벤트*/
-	function search_research_move(){
-		$("#search_result").addClass("full_slider_on");
-		$("#search_btt").css("display","none");
-		$("#close_btt").css("display","block");
-		$("#place_slider").removeClass("short_slider_on");
-		$("#close_btt").on("click",function(){
-			$("#search_result").removeClass("full_slider_on");
-			$("#search_btt").css("display","block");
-			$("#close_btt").css("display","none");
-		});
-	}
+	/*장소 리스트 클릭*/
+	$(".place_list").on("click",function(){
+        $("#search_result").removeClass("full_slider_on");
+        $("#place_slider").addClass("short_slider_on");
+
+	});
 });
+/*서치바 검색결과 이벤트*/
+function search_research_move(){
+	$("#search_result").addClass("full_slider_on");
+	$("#search_btt").css("display","none");
+	$("#close_btt").css("display","block");
+	$("#place_slider").removeClass("short_slider_on");
+	$("#close_btt").on("click",function(){
+		$("#search_result").removeClass("full_slider_on");
+		$("#search_btt").css("display","block");
+		$("#close_btt").css("display","none");
+	});
+}
 </script>
 </html>

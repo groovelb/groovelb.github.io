@@ -94,7 +94,7 @@ function initMap() {
 
         marker.addListener('click', function(){
             console.log("marker" + i + " click!");
-            document.getElementById("saved_place_slider").classList.add("short_slider_on");
+            document.getElementById("place_slider").classList.add("short_slider_on");
             $("#plan_slider").removeClass("long_slider_on");
         });
     });
@@ -102,7 +102,7 @@ function initMap() {
 
       map.addListener('drag', function(){
             document.getElementById("place_slider").classList.remove("short_slider_on");
-            document.getElementById("saved_place_slider").classList.remove("short_slider_on");
+            document.getElementById("place_slider").classList.remove("short_slider_on");
       });
   }
 
