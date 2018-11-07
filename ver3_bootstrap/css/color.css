@@ -14,10 +14,10 @@ body{
 	background-color: #00E676;
 }
 .black_highlight{
-	color: #383838;
+	color: #383838 !important;
 }
 .middle_emphasis{
-	color: #686868;
+	color: #686868 !important;
 }
 .low_emphasis{
 	color: #A0A0A0;
@@ -73,7 +73,7 @@ body{
     background-color: #FFC400;
 }
 .yellow{
-	color: #FFCC00;
+	color: #FEBA02;
 }
 .unread{
 	background-color: #FAF6FF;
@@ -85,6 +85,21 @@ body{
 	background-color: rgba(38,82,125,0.45);
 }
 
+
+/*Booking.com*/
+.booking_blue{
+	color: #003580;
+}
+.booking_blue_bg{
+	background-color: #003580;
+}
+.booking_grd_bg{
+	color: #ffffff;
+	background: -moz-linear-gradient(45deg, #009FE3 0%, #003580 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(45deg, #009FE3 0%, #003580 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(-135deg, #009FE3 0%, #003580 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009FE3', endColorstr='#003580',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
 
 
 

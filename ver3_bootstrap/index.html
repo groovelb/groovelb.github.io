@@ -62,7 +62,7 @@
 							2018.11.01
 						</div>
 					</div>
-					<div class="textfield white_bg body_size tf_half" style="width:calc(50% - 24px - 36px)">
+					<div class="textfield white_bg body_size tf_half" style="width:calc(50% - 24px - 36px); margin-bottom: 0;">
 						<img class="icon" src="img/ic_guest.svg">
 						성인 2명
 					</div>
@@ -89,76 +89,49 @@
 			<!--리워드 프로그램-->
 			<div class="flex_col col2" id="top_right">
 				<!--이벤트 && 내여행 탭-->
-				<div class="flex_row col1 ver_bottom_2x">
-					<div class="event_tab selected_evt_tab margin_r_driection flex_row align_center" id="reward_tab">
+				<div class="flex_row col1 ver_bottom_2x"  style="margin-bottom: 12px !important;">
+					<div class="event_tab selected_evt_tab margin_r_driection flex_row align_center" id="reward_tab" style="border-color:#ffffff00">
 						<img  class="icon_s" src="img/ic_reward_white.svg">
 						<p class="middle_regular">리워드 프로그램</p>
-					</div>
-					<div class="event_tab margin_r_driection flex_row align_center" id="travel_tab">
-						<img class="icon_s"src="img/ic_my_travel_white.svg">
-						<p class="middle_regular">내 여행</p>
 					</div>
 				</div>
 				<!--탭 컨텐츠-->
 				<div class="tab_content_containner" style="margin-top: -4px;">
 					<!--리워드 프로그램-->
 					<div class="flex_col tab_content tab_show col1" id="reward_content">
-						<p class="body_size ver_bottom_1x">부킹닷컴에도 없는 놀라운 혜택.</p>
-						<div class="flex_row col1 card_full flex_center primary2_bg" style="width: calc(100%); margin:0 0">
+						<p class="body_size ver_bottom_1x">부킹닷컴에도 없는 놀라운 혜택</p>
+						<div class="flex_row col1 card_full box_shadow flex_center primary2_bg ver_bottom_2x" style="width: calc(100%); margin:0 0">
 							<div class="flex_col col2">
 								<div class="flex_col card_full flex_center" id="checkin">
 									<div class="content padding_ver_32 flex_center flex_col" id="primary_filter">
 										<p class="body_medium">체크인 당일 캐시백</p>
 										<p class=" number big_size center">7%</p>
-										<div class="s_button caption_bold white_middle">자세히 보기</div>
+										<div class="s_button white_border caption_bold white_middle" id="cashback_detail">자세히 보기</div>
 									</div>
 								</div>
 							</div>
 							<div class="flex_col col2">
 								<div class="flex_col card_full flex_center" id="invite">
 									<div class="content padding_ver_32 flex_center flex_col" id="primary2_filter">
-										<p class="body_medium">친구 초대 커미션</p>
+										<p class="body_medium">동행 지원 적립금</p>
 										<p class=" number big_size center">20,000₩</p>
-										<div class="s_button caption_bold white_middle">자세히 보기</div>
+										<div class="s_button white_border caption_bold white_middle" id="mating_detail">자세히 보기</div>
 									</div>
 								</div>
 							</div>
 							<!--가입버튼-->
-							<div class="button body_medium white_bg primary_dark ver_margin_2x" id="btt_signup">가입하고 혜택받기 <img src="img/arrow_next_p_dark.svg" style="width:16px;height:16px;margin: 2px 0 0 4px"></div>
+							<div target="_blank" class="button body_medium white_bg primary_dark ver_margin_1x" id="btt_signup1">가입하고 혜택받기<img src="img/arrow_next_p_dark.svg" style="width:16px;height:16px;margin: 2px 0 0 4px"></div>
 						</div>
 					</div>
 					<!--리워드 프로그램 종료-->
-					<!--내 여행-->
-					<div class="flex_col col tab_content" id="my_travel_content">
-						<p class="body_size ver_bottom_1x">여행 계획을 세우고 동행을 찾으세요!</p>
-						<div class=" flex_row col1 card_full flex_center white_bg" style="width: calc(100%); margin:0 0">
-							<div class="flex_col col2">
-								<a class="card card_full" href="travel_page.html" style="margin-right: 4px;">
-									<div class="card_img" id="sg">
-									</div>
-									<div class="travel_info margin_1x">
-										<h2 class="body_bold">싱가폴 여행</h2>
-										<p class="caption_bold primary2">Holiday Central외 3개 장소</p>
-										<p class="caption middle_emphasis">OCT 30 ~ NOV 12, 2018</p>
-									</div>
-								</a>
-							</div>
-							<div class="flex_col col2">
-								<a class="card card_full" href="travel_page.html" style="margin-left: 4px;">
-									<div class="card_img" id="kul">
-									</div>
-									<div class="travel_info margin_1x">
-										<h2 class="body_bold">싱가폴 여행</h2>
-										<p class="caption_bold primary2">Holiday Central외 3개 장소</p>
-										<p class="caption middle_emphasis">OCT 30 ~ NOV 12, 2018</p>
-									</div>
-								</a>
-							</div>
-							<!--가입버튼-->
-							<a href="travel_page.html" class="button body_medium ver_margin_2x primary_dark_border">내 여행 모두보기 <img src="img/arrow_next_p_dark.svg" style="width:16px;height:16px;margin: 2px 0 0 4px"></a>
-						</div>
+					<div class="col1 flex_row box_shadow white_highlight booking_grd_bg full_radious padding_1x" style="height: 80px; overflow: hidden; width:calc(100% - 32px) !important;">
+						<h2 class="middle_regular">
+							호텔예약, <span class="yellow">부킹닷컴</span>이 보장합니다!
+						</h2>
+						<p class="body_size">
+							부킹닷컴 제휴로 정글리안을 통한 모든 호텔예약은 부킹닷컴에서 최종 결제 됩니다. 
+						</p>
 					</div>
-					<!--내 여행 종료-->
 				</div>
 				<!--탭 컨텐츠 종료-->
 			</div>
@@ -289,7 +262,7 @@
 				</div>
 				<div class="flex_col col1 align_center grd1_bg ver_padding_2x" id="calcuator_result">
 					<h2 class="number big_size white_highlight text_center">105,200₩</h2>
-					<div class="button white_bg btt_shadow">가입하고 혜택받기</div>
+					<div class="button white_bg btt_shadow" id="btt_signup2">가입하고 혜택받기</div>
 				</div>
 			</div>
 			<!--종료-->
@@ -347,7 +320,11 @@
 <script type="text/javascript">
 $(document).ready(function(){
 	/*가입하기 팝업*/
-	$("#btt_signup").on("click",function(){
+	$("#btt_signup1").on("click",function(){
+			$("body").append("<div class='dialog_bg'></div>");
+			$(".dialog_bg").append($("#signup_dialog"));
+	});
+	$("#btt_signup2").on("click",function(){
 			$("body").append("<div class='dialog_bg'></div>");
 			$(".dialog_bg").append($("#signup_dialog"));
 	});
@@ -369,6 +346,30 @@ $(document).ready(function(){
 			$("body").append($("#signup_in_dialog"));
 			$(".dialog_bg").remove();
 	});
+
+	/*캐시백 팝업*/
+	$("#cashback_detail").on("click",function(){
+			$("body").append("<div class='dialog_bg'></div>");
+			$(".dialog_bg").append($("#cashback_popup"));
+	});
+
+	$("#dg_xbox3").on("click",function(){
+			console.log("click");
+			$("body").append($("#cashback_popup"));
+			$(".dialog_bg").remove();
+	});
+
+	/*동행 팝업*/
+	$("#mating_detail").on("click",function(){
+			$("body").append("<div class='dialog_bg'></div>");
+			$(".dialog_bg").append($("#mating_popup"));
+	});
+
+	$("#dg_xbox4").on("click",function(){
+			console.log("click");
+			$("body").append($("#mating_popup"));
+			$(".dialog_bg").remove();
+	});
 });
 </script>
 <!--가입-->
@@ -386,7 +387,7 @@ $(document).ready(function(){
 		</div>
 	</div>
 	<hr class="ver_margin_8x">
-	<h2 class="middle_size white_highlight ver_bottom_1x text_center" style="margin-top: -80px; background-color: #fafafafa; padding:0 8px; width: auto !important">회원가입</h2>
+	<h2 class="middle_size ver_bottom_1x text_center" style="margin-top: -80px; background-color: #fafafafa; padding:0 8px; width: auto !important">회원가입</h2>
 	<form class="flex_col col1 ver_bottom_2x ver_top_2x" action="" id="signup_form">
 		<input class="textfield body_bold" type="text" id="name" name="name" placeholder="이메일">
 		<input class="textfield body_bold" type="text" id="name" name="name" placeholder="비밀번호(6자리 이상)">
@@ -419,6 +420,16 @@ $(document).ready(function(){
 	<p class="caption_bold primary2 ver_bottom_2x">비밀번호 찾기</p>
 </div>
 </html>
+<!--캐시백 팝업-->
+<div class="flex_col align_center dialog full_dialog padding_2x white_middle_bg" id="cashback_popup">
+	<img class="xbox" src="img/ic_close.svg" id="dg_xbox3">
+	<img src="img/reward1_cashback.jpg">	
+</div>
+<!--동행 팝업-->
+<div class="flex_col align_center dialog full_dialog padding_2x white_middle_bg" id="mating_popup">
+	<img class="xbox" src="img/ic_close.svg" id="dg_xbox4">
+	<img src="img/reward1_cashback.jpg">	
+</div>
 
 
 

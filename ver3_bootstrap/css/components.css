@@ -635,6 +635,17 @@ select.styled-select{
 	display: none;
 	border-radius: 4px;
 }
+.full_dialog{
+	/*padding-top: 36px;*/
+	position:absolute;
+	top: 2%;
+	height: calc(96% - 64px);
+	overflow: scroll;
+	width:auto !important;
+	z-index: -999;
+	display: none;
+	border-radius: 4px;
+}
 .dialog_bg>.dialog{
 	display: flex !important;
 }
