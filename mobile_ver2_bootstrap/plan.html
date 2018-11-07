@@ -263,7 +263,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="button primary_border margin_1x" id="save_to_map">저장 취소</div>
+	<div class="button primary_bg margin_1x" id="save_to_map">내 일정에 저장</div>
 	<div class="col1 padding_1x" style="margin-top: 8px; margin-bottom: 8px">
 		<!--유저리스트-->
 		<div class="flex_col col1 ver_bottom_2x">
@@ -396,7 +396,7 @@
 		}
 	</style>
 	<!--동행 슬라이더-->
-	<div class="flex_col col1" style="height:184px; overflow: hidden;">
+	<div class="flex_col col1 align_start" style="height:184px; overflow: hidden;">
 		<div class="FAB_circle" id="slide_arrow_left" style="left:0; top:calc(50% + 24px);">
 			<img id="arrow" src="img/arrow_prev.svg">
 		</div>
@@ -484,34 +484,44 @@
 <script src="js/map2.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCj04BGKKuMBA-uNFbuLAvwCvkgA3cNpEE&callback=initMap" async defer></script>
 <script>
-/*맵 모두 변경 이벤트*/
-document.getElementById("map_toggle_left").addEventListener("click", function(){
-	$(this).addClass("toggle_selected");
-	$("#map_toggle_right").removeClass("toggle_selected");
-	show_markers();
-	$("#plan_slider").removeClass("long_slider_on");
-	$("#search_bar").animate({opacity:1});
-});
-document.getElementById("map_toggle_right").addEventListener("click", function(){
-	console.log("map_toggle!");
-	$(this).addClass("toggle_selected");
-	$("#map_toggle_left").removeClass("toggle_selected");
-	hide_markers();
-	$("#plan_slider").addClass("long_slider_on");
-	$("#search_bar").animate({opacity:0});
-});
-
-/*서치바 검색결과 이벤트*/
-function search_research_move(){
-	$("#search_result").addClass("full_slider_on");
-	$("#search_btt").css("display","none");
-	$("#close_btt").css("display","block");
-	$("#place_slider").removeClass("short_slider_on");
-	$("#close_btt").on("click",function(){
-		$("#search_result").removeClass("full_slider_on");
-		$("#search_btt").css("display","block");
-		$("#close_btt").css("display","none");
+$(document).ready(function(){
+	/*맵 모두 변경 이벤트*/
+	$("#map_toggle_left").on("click", function(){
+		$(this).addClass("toggle_selected");
+		$("#map_toggle_right").removeClass("toggle_selected");
+		show_markers();
+		$("#plan_slider").removeClass("long_slider_on");
+		$("#search_bar").animate({opacity:1});
 	});
-}
+	$("#map_toggle_right").on("click", function(){
+		console.log("map_toggle!");
+		$(this).addClass("toggle_selected");
+		$("#map_toggle_left").removeClass("toggle_selected");
+		hide_markers();
+		$("#plan_slider").addClass("long_slider_on");
+		$("#search_bar").animate({opacity:0});
+	});
+
+	/*동행 슬라이드*/
+	$("#slide_arrow_left").on("click",function(){
+		$("#mating_list_containner").animate({left: "+=152px"},{duration:100});
+	});
+	$("#slide_arrow_right").on("click",function(){
+		$("#mating_list_containner").animate({left: "+=-152px"},{duration:100});
+	});
+
+	/*서치바 검색결과 이벤트*/
+	function search_research_move(){
+		$("#search_result").addClass("full_slider_on");
+		$("#search_btt").css("display","none");
+		$("#close_btt").css("display","block");
+		$("#place_slider").removeClass("short_slider_on");
+		$("#close_btt").on("click",function(){
+			$("#search_result").removeClass("full_slider_on");
+			$("#search_btt").css("display","block");
+			$("#close_btt").css("display","none");
+		});
+	}
+});
 </script>
 </html>
