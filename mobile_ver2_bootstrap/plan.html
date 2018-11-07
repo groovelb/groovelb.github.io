@@ -28,9 +28,9 @@
 	<div class="map_toggle_item flex_row flex_center caption_bold" id=map_toggle_right>내 일정 펼쳐 보기</div>
 </div>
 <div class="textfield align_center space_between white_bg box_shadow_strong" id="search_bar" style="width:calc(100% - 32px);height:42px;">
-	<img src="img/ic_search.svg" id="search_btt">
-	<img src="img/ic_close.svg" id="close_btt" style="display: none;">
-	<img src="img/ic_close.svg" id="close_btt" style="display: none;">
+	<img src="img/ic_search.svg" class="search_bar_btt" id="search_btt">
+	<img src="img/ic_close.svg" class="search_bar_btt" id="close_btt" style="display: none;">
+	<img src="img/ic_back.svg" class="search_bar_btt" id="back_btt" style="display: none;">
 	<input class="body_size input_no_style" type="text" id="user_id" name="user_id" placeholder="장소를 검색해보세요" onchange="search_research_move()">
 </div>
 <!--플랜 슬라이더-->
@@ -515,20 +515,30 @@ $(document).ready(function(){
 	$(".place_list").on("click",function(){
         $("#search_result").removeClass("full_slider_on");
         $("#place_slider").addClass("short_slider_on");
+        search_bar_button_switch("back_btt");
+	});
 
+	/*검색결과 돌아가기 이벤트*/
+	$("#back_btt").on("click",function(){
+		$("#search_result").addClass("full_slider_on");
+		search_bar_button_switch("close_btt");
+		 $("#place_slider").removeClass("short_slider_on");
 	});
 });
 /*서치바 검색결과 이벤트*/
 function search_research_move(){
 	$("#search_result").addClass("full_slider_on");
-	$("#search_btt").css("display","none");
-	$("#close_btt").css("display","block");
+	search_bar_button_switch("close_btt");
 	$("#place_slider").removeClass("short_slider_on");
 	$("#close_btt").on("click",function(){
 		$("#search_result").removeClass("full_slider_on");
-		$("#search_btt").css("display","block");
-		$("#close_btt").css("display","none");
+		search_bar_button_switch("search_btt");
 	});
+}
+
+function search_bar_button_switch(str){
+	$("#" + str).css("display","block");
+	$(".search_bar_btt:not(#" + str +")").css("display","none");
 }
 </script>
 </html>

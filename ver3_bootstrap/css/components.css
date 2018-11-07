@@ -246,6 +246,9 @@ select.styled-select{
 .tf_half{
 	width: calc(50% - 24px);
 }
+.tf_third_one{
+	width: calc(33% - 4px - 16px);
+}
 .border_bottom{
 	border: solid 1px #e5e5e5;
 	border-width: 0 0 1px 0;
