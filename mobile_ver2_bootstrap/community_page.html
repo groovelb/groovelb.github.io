@@ -1,4 +1,4 @@
-<!기OCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<title></title>
@@ -158,10 +158,15 @@
 				<div class="card_img top_radious card_img_long ver_padding_2x padding_tinny justify_end" id="trv10">
 					<img src="img/hot_spot_circle.svg" id="hot_spot">
 				</div>
-				<div class="flex_col padding_1x grd1_bg card align_center hor_margin_1x text_center bottom_radious" id="mating_info">
+				<div class="flex_col padding_tinny grd1_bg card align_center hor_margin_1x text_center bottom_radious" id="mating_info">
 					<div class="profile_pic_middle ver_bottom_1x" id="pf7" style="margin-top:-46px">
 					</div>
-					<h2 class="body_size">싱가포르 최고의 데이트 장소</h2>
+					<h2 class="body_medium ver_bottom_1x">싱가포르 최고의 데이트 장소</h2>
+					<div class="flex_row col1 space_between">
+						 <p class="caption">좋아요7</p>
+						 <p class="caption">댓글3</p>
+						 <p class="caption">스크랩3</p>
+					</div>
 				</div>
 				<div class="post_info margin_1x">
 					<p class="flex_row align_center caption_bold ver_margin_tiny" id="location"><img src="img/ic_location.svg">Botanic Gardens</p>
@@ -361,7 +366,8 @@
 		</div>
 		<div class="flex_row tabbed_content" id="wrt_travel_log">
 			<div class="text_area col1 padding_1x full_border bottom를_radious ver_bottom_2x">
-				<p class="flex_row align_center caption medium_empasize ver_bottom_1x" id="location"><img src="img/ic_location.svg">싱가폴</p>
+				<input class="calculator_value number col1 ver_margin_2x" type="text" id="days" placeholder="여행제목" style="margin-left:0; text-align: left;">
+				<p class="flex_row align_center caption medium_empasize ver_bottom_1x" id="location"><img src="img/ic_location.svg">장소지정</p>
 				<textarea class="col1 body_size" placeholder="핫스팟을 올려주세요." class="body_size" style="border-width: 0; height: 104px;"></textarea>
 			</div>
 			<div class="square_button b_square_button" id="trv1">
@@ -451,9 +457,19 @@
 			</div>
 			<!--커멘트-->
 			<div class="padding_1x col1" style="width:calc(100% - 32px) !important;" id="comment_area">
-				<div class="flex_row justify_center align_center ver_bottom_2x">
-					<img class="icon_s" src="img/ic_comments.svg">
-					<p class="caption_bold">커멘트</p>
+				<div class="flex_row space_between align_center ver_bottom_4x">
+					<div class="flex_row align_center">
+						<img class="icon_s" src="img/ic_like.svg">
+						<p class="caption_bold">좋아요</p>
+					</div>
+					<div class="flex_row align_center">
+						<img class="icon_s" src="img/ic_comments.svg">
+						<p class="caption_bold">댓글 달기</p>
+					</div>
+					<div class="flex_row align_center">
+						<img class="icon_s" src="img/ic_scrap.svg">
+						<p class="caption_bold">스크랩</p>
+					</div>
 				</div>
 				<div class="flex_row ver_margin_1x justify_end" id="opp_cmt" style="align-self: flex-end;">
 					<!--사용자 인포-->
