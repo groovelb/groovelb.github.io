@@ -208,11 +208,8 @@
 				var current_cont = $("#wrt_dialog").find(".tabbed_content");
 
 				$("#out_of_screen").append(current_cont);
-				if(id=="tab_trv"){
-					$("#wrt_dialog").append($("#wrt_travel_log"));
-				}
-				else if(id=="tab_qna"){
-					$("#wrt_dialog").append($("#wrt_qna"));
+				if(id=="tab_hotspot"){
+					$("#wrt_dialog").append($("#wrt_hotspot"));
 				}
 				else if(id=="tab_mating"){
 					$("#wrt_dialog").append($("#wrt_mating"));
@@ -276,11 +273,11 @@
 	<div class="dialog padding_2x card write_dialog white_bg" id="wrt_dialog">
 		<img class="xbox" src="img/ic_close.svg" id="dg_xbox1">
 		<div class="tab3 flex_row body_size tab_containner" style="justify-content: space-between; width: 100%;">
-			<div class="tab_item flex_center col2 tab_selected" id="tab_mating">핫스팟</div>
-			<div class="tab_item flex_center col2" id="tab_qna">동행찾기</div>
+			<div class="tab_item flex_center col2 tab_selected" id="tab_hotspot">핫스팟</div>
+			<div class="tab_item flex_center col2" id="tab_mating">동행찾기</div>
 		</div>
 		<!-- 동행 다일알로그 탭 -->
-		<div class="flex_row tabbed_content" id="wrt_mating">
+		<div class="flex_row tabbed_content" id="wrt_hotspot">
 			<style>.square_button{margin-right: 16px;}</style>
 			<div class="text_area flex_row col1 padding_1x full_border bottom_radious ver_bottom_2x">
 				<!--구글 플레이스 연동부분-->
@@ -295,8 +292,8 @@
 			<div class="button primary_bg" style="margin-left: calc(100% - 96px);">올리기</div>
 		</div>
 	</div>
-	<!-- 질문 다일알로그 탭 -->
-	<div class="flex_row tabbed_content" id="wrt_qna">
+	<!-- 동행 다일알로그 탭 -->
+	<div class="flex_row tabbed_content" id="wrt_mating">
 		<style>.square_button{margin-right: 16px;} textarea{width: 100%;}</style>
 		<div class="text_area flex_row col1 padding_1x full_border bottom_radious ver_bottom_2x">
 			<!--구글 플레이스 연동부분-->
@@ -343,7 +340,7 @@
 				<div class="flex_col col1 padding_1x white_middle_bg hide" style="width:calc(100% - 32px) !important;" id="extend_popup">
 					<img class="xbox margin_1x" src="img/ic_close.svg" id="xbox_inside" style="align-self: flex-end;">
 					<!-- 동행 다일알로그 탭 -->
-					<div class="flex_row tabbed_content justify_center" id="wrt_mating">
+					<div class="flex_row tabbed_content justify_center">
 						<style>.square_button{margin-right: 16px;}</style>
 						<div class="text_area white_bg flex_row col1 padding_1x full_border bottom_radious ver_bottom_2x">
 							<!--구글 플레이스 연동부분-->
