@@ -46,17 +46,13 @@
 <div class="live_area white_bg" style="padding-top: 128px;">
 	<div class="flex_row col1">
 		<div class="slide_menu">
-			<a href="my_page.html" class="slide_item">
-				<img src="img/ic_my_profile.svg">
-				내 프로필
-			</a>
-			<a href="my_hotels.html" class="slide_item" id="selected_slide_item">
-				<img src="img/ic_hotel_white2.svg">
-				일정 바로보기
-			</a>
 			<a href="my_travel.html" class="slide_item">
 				<img src="img/ic_my_travel.svg">
-				내 여행
+				마이 페이지
+			</a>
+			<a href="my_hotels.html" target="_blank" class="slide_item" id="selected_slide_item">
+				<img src="img/ic_hotel_white.svg">
+				내 예약 상세 보기
 			</a>
 			<a  href="reward.html" class="slide_item">
 				<img src="img/ic_reward.svg">
@@ -72,7 +68,7 @@
 			<div class="flex_row white_bg col1 space_between ver_bottom_8x">
 				<div class="flex_row col1 space_between align_center ver_bottom_1x">
 					<div class="flex_row align_end">
-						<h2 class="middle_size" style="width:auto">내 호텔 내역</h2>
+						<h2 class="middle_size" style="width:auto">내 예약 내역</h2>
 						<p class="caption_bold primary2" style="margin:0 0 4px 4px;">(공개)</p>
 					</div>
 					<div class="flex_row">
@@ -133,16 +129,6 @@
 <script src="js/jquery-3.2.1.min.js"></script>
 <script>
 	$(document).ready(function(){
-		/*공개설정 이벤트 핸들러*/
-		$("#public_setting").on("click",function(){
-			$("body").append("<div class='dialog_bg'></div>");
-			$(".dialog_bg").append($("#setting_dialog"));
-		});
-		$("#dg_xbox1").on("click",function(){
-			console.log("click");
-			$("body").append($("#setting_dialog"));
-			$(".dialog_bg").remove();
-		});
 
 		/*여행 추가하기 이벤트 핸들러*/
 		$(".add_travel").on("click",function(){
