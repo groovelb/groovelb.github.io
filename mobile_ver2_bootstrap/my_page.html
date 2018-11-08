@@ -13,7 +13,6 @@
 	<link rel="stylesheet" type="text/css" href="css/layout_community.css">
 	<link rel="stylesheet" type="text/css" href="css/components.css">
 	<link rel="stylesheet" type="text/css" href="css/img.css">
-	<link rel="stylesheet" type="text/css" href="css_ver3/form.css">
 	<link rel="stylesheet" type="text/css" href="css/type.css">
 	<link rel="stylesheet" type="text/css" href="css/color.css">
 	<link rel="stylesheet" type="text/css" href="css_ver3/align.css">
@@ -144,7 +143,7 @@
 	<div class="flex_row space_between col1 ver_bottom_1x align_center">
 		<p class="body_bold">내 여행 일정</p>
 		<div class="flex_row">
-			<div class="button body_size black_border" style="align-self: center"><img src="img/ic_setting.svg">공개설정</div>
+			<div class="button body_size black_border" id="public_setting" style="align-self: center"><img src="img/ic_setting.svg">공개설정</div>
 		</div>
 	</div>
 	<!--내 여행 섹션 -->
@@ -191,10 +190,20 @@
 			</div>
 		</div>
 	</div>
-	<div class="button body_size primary_bg box_shadow ver_bottom_4x" style="align-self: center"><img src="img/ic_add.svg">여행 추가</div>
+	<div class="button body_size primary_bg box_shadow ver_bottom_4x add_travel" style="align-self: center"><img src="img/ic_add.svg">여행 추가</div>
 	<!--트레블 로그-->
 	<div class="flex_row space_between col1 ver_bottom_1x align_center">
-		<p class="body_bold">포스트</p>
+		<p class="body_bold">내 포스트</p>
+	</div>
+	<div class="flex_row flex_item_center align_center" id="filter">
+		<label class="checkbox_container caption">작성 포스트
+		  <input type="checkbox" checked="checked">
+		  <span class="checkmark"></span>
+		</label>
+		<label class="checkbox_container caption">스크랩 포스트
+		  <input type="checkbox" checked="checked">
+		  <span class="checkmark"></span>
+		</label>
 	</div>
 	<div class="flex_row col1">
 		<div class="flex_col col2" id="left">
@@ -319,6 +328,56 @@
 			$("#xbox").on("click",function(){
 				$(".main_menu").toggleClass("main_menu_on");
 			});
+
+			/*공개설정 이벤트 핸들러*/
+			$("#public_setting").on("click",function(){
+				$("body").append("<div class='dialog_bg'></div>");
+				$(".dialog_bg").append($("#setting_dialog"));
+			});
+			$("#dg_xbox1").on("click",function(){
+				console.log("click");
+				$("body").append($("#setting_dialog"));
+				$(".dialog_bg").remove();
+			});
+
+			/*여행 추가하기 이벤트 핸들러*/
+			$(".add_travel").on("click",function(){
+				$("body").append("<div class='dialog_bg'></div>");
+				$(".dialog_bg").append($("#add_travel_dialog"));
+			});
+			$("#dg_xbox2").on("click",function(){
+				console.log("click");
+				$("body").append($("#add_travel_dialog"));
+				$(".dialog_bg").remove();
+			});
 		});
 </script>
 </html>
+<!--공개 설정-->
+<div class="flex_col align_center s_dialog dialog padding_2x white_bg" id="setting_dialog">
+	<img class="xbox" src="img/ic_close.svg" id="dg_xbox1">
+	<h2 class="middle_size ver_bottom_4x ver_bottom_2x text_center">공개 설정</h2>
+	<p class="body_size text_center ver_margin_1x" style="width:100%;">여행계획을 공개하시면 여행 계획 공유 및 동행을 찾을 수 있습니다.</p>
+	<div class="list under_border col1">
+		<label class="checkbox_container body_medium ver_padding_1x">여행계획 공개
+		  <input type="checkbox" checked="checked">
+		  <span class="checkmark"></span>
+		</label>
+	</div>
+	<div class="button primary_bg ver_margin_2x" style="width:164px;">확인</div>
+</div>
+<!--여행 추가-->
+<div class="flex_col align_center s_dialog dialog padding_2x white_bg" id="add_travel_dialog">
+	<img class="xbox" src="img/ic_close.svg" id="dg_xbox2">
+	<h2 class="body_bold ver_bottom_2x text_center">새 여행 추가</h2>
+	<div class="flex_row col1 ver_bottom_2x">
+		<!--구글 플레이스 연동부분-->
+		<div class="flex_row col1 padding_tinny ver_margin_2x full_radious white_middle_bg">
+			<p class="flex_row col3 align_center caption_bold medium_empasize" id="location"><img src="img/ic_location.svg" class="icon_s">도시 설정</p>
+			<p class="flex_row col3 align_center caption_bold medium_empasize" id="date"><img src="img/ic_calendar_p.svg" class="icon_s">도착 날짜</p>
+			<p class="flex_row col3 align_center caption_bold medium_empasize" id="date"><img src="img/ic_calendar_p.svg" class="icon_s">떠나는 날짜</p>
+		</div>
+		<input class="calculator_value number col1 ver_margin_2x" type="text" id="days" placeholder="여행제목" style="margin-left:0; text-align: left;">
+	</div>
+	<a class="button primary_bg" href="new_travel.html" style="align-self: center;">새여행 만들기</a>
+</div>

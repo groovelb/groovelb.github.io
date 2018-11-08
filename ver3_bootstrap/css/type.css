@@ -56,6 +56,13 @@ h2{
 	letter-spacing: -0.01rem;
 	font-family: notosans_cjk_light !important;
 }
+.body_post{
+	font-size: 15px;
+	line-height: 24px;
+	font-weight: 300;
+	letter-spacing: -0.03rem;
+	font-family: notosans_cjk_light !important;
+}
 .body_medium{
 	font-size: 16px;
 	line-height: 24px;
@@ -137,7 +144,7 @@ span{
 .caption_bold{
 	font-size: 12px;
 	line-height: 18px;
-	font-family: notosans_cjk_medium;
+	font-family: notosans_cjk_bold;
 }
 
 .number{

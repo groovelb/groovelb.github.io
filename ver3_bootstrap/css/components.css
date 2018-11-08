@@ -1,3 +1,8 @@
+input:focus {
+	outline: none;
+    border-width:0;
+}
+
 /*header*/
 .header{
 	height: 64px;
@@ -37,6 +42,13 @@
 	height: 36px;
 	width: auto;
 	margin-right: 64px;
+}
+#post_text_area{
+	width: calc(100% - 64px) !important;
+	padding:32px;
+}
+#post_text_area>p{
+	margin:8px 0;
 }
 .text_menu{
 	height: 64px;
@@ -426,13 +438,15 @@ select.styled-select{
 	position: absolute;
 	align-self: flex-start;
 }
+.card_img>#hot_spot{
+	margin-left: 8px;
+}
 .card>#date{
 	width:42px;
 	margin-top: 8px;
 	margin-left: 8px;
 	align-self: flex-start;
 }
-
 .card_img_filter{
 	content: "";
     display: block;
@@ -447,13 +461,13 @@ select.styled-select{
 	border:solid 1px #ccc;
 }
 .top_radious{
-	border-radius: 4px 4px 0 0;
+	border-radius: 4px 4px 0 0 !important;
 }
 .full_radious{
 	border-radius: 4px !important;
 }
 .bottom_radious{
-	border-radius: 0 0 4px 4px;
+	border-radius: 0 0 4px 4px !important;
 }
 .card > *{
 	z-index: 1;
@@ -541,7 +555,6 @@ select.styled-select{
 .card_img_long{
 	padding: 8px 0 calc(95% - 8px - 34px) 0;
 }
-
 .card_img>#userprofile{
 	margin-left: 8px;
 	color: #ffffff;
@@ -556,7 +569,7 @@ select.styled-select{
 /*image sizes*/
 /*user info height: 34px*/
 .short{
-	padding: 25% 0;
+	padding: 8px 0 calc(50% - 8px) 0;
 }
 .long{
 	padding: 8px 0 calc(125% - 8px - 34px) 0;
@@ -659,6 +672,10 @@ select.styled-select{
     width: 24px;
     height: 24px;
 }
+.xbox {
+    width: 24px;
+    height: 24px;
+}
 .b_dialog{
 	width:calc(1080px * 0.4);
 }
@@ -689,11 +706,11 @@ select.styled-select{
 }
 .wide_dialog{
 	top: 2%;
-	max-width: calc(1080px * 0.6 - 64px);
-	width: calc(60% - 64px);
-	padding: 32px;
-	height: calc(96% - 64px);
+	/*max-width: calc(1080px * 0.6 - 64px);
 	min-width: calc(1080px * 0.6);
+	width: calc(60% - 64px);*/
+	width: 614px;
+	height: calc(96% - 64px);
 	overflow: scroll;
 }
 /*사진 사이즈*/
@@ -766,4 +783,9 @@ input:checked + .tg_slider:before {
 
 .tg_slider.round:before {
   border-radius: 50%;
+}
+
+/*보이기 숨기기*/
+.hide{
+	display: none;
 }

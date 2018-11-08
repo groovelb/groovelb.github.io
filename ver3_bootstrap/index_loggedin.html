@@ -128,7 +128,7 @@
 									<div class="content  flex_center flex_col" id="primary_filter">
 										<p class="body_medium">체크인 당일 캐시백</p>
 										<p class=" number big_size center">7%</p>
-										<div class="s_button white_border caption_bold white_middle">자세히 보기</div>
+										<div class="s_button white_border caption_bold white_middle" id="cashback_detail">자세히 보기</div>
 									</div>
 								</div>
 							</div>
@@ -137,7 +137,7 @@
 									<div class="content  flex_center flex_col" id="primary2_filter">
 										<p class="body_medium">동행 지원 적립금</p>
 										<p class=" number big_size center">20,000₩</p>
-										<div class="s_button white_border caption_bold white_middle">자세히 보기</div>
+										<div class="s_button white_border caption_bold white_middle" id="mating_detail">자세히 보기</div>
 									</div>
 								</div>
 							</div>
@@ -318,7 +318,8 @@
 				</div>
 				<div class="flex_col col1 align_center grd1_bg ver_padding_2x" id="calcuator_result">
 					<h2 class="number big_size white_highlight text_center">105,200₩</h2>
-					<div class="button white_bg btt_shadow">가입하고 혜택받기</div>
+					<!--가입버튼-->
+					<a href="reward_program.html" target="_blank" class="button body_medium white_bg primary_dark ver_margin_1x">리워드 프로그램 자세히 보기<img src="img/arrow_next_p_dark.svg" style="width:16px;height:16px;margin: 2px 0 0 4px"></a>
 				</div>
 			</div>
 			<!--종료-->
@@ -373,6 +374,7 @@
 </body>
 <script src="js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript">
+$(document).ready(function(){
 	$("#my_menu").on("click",function(){
 		$(".dropdown-content").toggleClass("drop_down");
 	});
@@ -393,8 +395,43 @@
 			$("#reward_content").removeClass("tab_show");
 		}
 	});
+
+	/*캐시백 팝업*/
+	$("#cashback_detail").on("click",function(){
+			$("body").append("<div class='dialog_bg'></div>");
+			$(".dialog_bg").append($("#cashback_popup"));
+	});
+
+	$("#dg_xbox3").on("click",function(){
+			console.log("click");
+			$("body").append($("#cashback_popup"));
+			$(".dialog_bg").remove();
+	});
+
+	/*동행 팝업*/
+	$("#mating_detail").on("click",function(){
+			$("body").append("<div class='dialog_bg'></div>");
+			$(".dialog_bg").append($("#mating_popup"));
+	});
+
+	$("#dg_xbox4").on("click",function(){
+			console.log("click");
+			$("body").append($("#mating_popup"));
+			$(".dialog_bg").remove();
+	});
+});
 </script>
 </html>
+<!--캐시백 팝업-->
+<div class="flex_col align_center dialog full_dialog padding_2x white_middle_bg" id="cashback_popup">
+	<img class="xbox" src="img/ic_close.svg" id="dg_xbox3">
+	<img src="img/reward1_cashback.jpg">	
+</div>
+<!--동행 팝업-->
+<div class="flex_col align_center dialog full_dialog padding_2x white_middle_bg" id="mating_popup">
+	<img class="xbox" src="img/ic_close.svg" id="dg_xbox4">
+	<img src="img/reward1_cashback.jpg">	
+</div>
 
 
 

@@ -141,7 +141,7 @@ display: none;
 	background: #e0e0e0;
 }
 .menu_list_indent{
-	width: calc(100% - 96px);
+	width: calc(100% - 64px);
 	padding:8px 32px 8px 32px;
 }
 .main_menu_on{

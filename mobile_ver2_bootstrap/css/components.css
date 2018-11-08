@@ -21,7 +21,7 @@
 	box-shadow: 0 4px 16px 0 rgba(0,0,0,.12), 0 0 8px 0 rgba(0,0,0,.12);
 }
 .box_shadow_strong{
-	box-shadow: 0 4px 16px 1px rgba(0,0,0,.22), 0 0 8px 1px rgba(0,0,0,.22) !important;
+	box-shadow: 0 4px 16px 1px rgba(0,0,0,.32), 0 0 8px 3px rgba(0,0,0,.32), 0 0 8px 3px rgba(0,0,0,.32) !important;
 }
 
 #header_logo{
@@ -129,12 +129,17 @@
 .search_box>.textfield{
 	border-width: 0
 }
+
+input:focus {
+	outline: none;
+    border-width:0;
+}
 /* The checkbox_container */
 .checkbox_container {
     display: flex;
     align-items: center;
     position: relative;
-    padding-left: 32px;
+    padding-left: 28px;
     height: 25px;
     margin-right: 32px;
     /*margin-bottom: 12px;*/
@@ -155,16 +160,18 @@
 /* Create a custom checkbox */
 .checkmark {
     position: absolute;
-    top: 0;
+    /*top: 0;*/
     left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
+    height: 18px;
+    width: 18px;
+    border-radius: 2px;
+    background-color: #fafafa;
+    border: solid #7c4dff 1px;
 }
 
 /* On mouse-over, add a grey background color */
 .checkbox_container:hover input ~ .checkmark {
-    background-color: #ccc;
+    background-color: #dddddd;
 }
 
 /* When the checkbox is checked, add a blue background */
@@ -186,12 +193,13 @@
 
 /* Style the checkmark/indicator */
 .checkbox_container .checkmark:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
+    left: 6px;
+    top: 2px;
+    width: 4px;
+    height: 8px;
     border: solid white;
-    border-width: 0 3px 3px 0;
+    border-width: 0 2px 2px 0;
+
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
@@ -535,6 +543,9 @@ select.styled-select{
     border-radius: 4px;
     position: absolute;
 }
+.ss_card>#date{
+	width: auto;
+}
 .s_card{
 	width: 203px;
 	height: 203px;
@@ -620,7 +631,7 @@ select.styled-select{
 /*image sizes*/
 /*user info height: 34px*/
 .short{
-	padding: 25% 0;
+	padding: 8px 0 calc(50% - 8px) 0;
 }
 .long{
 	padding: 8px 0 calc(125% - 8px - 34px) 0;
@@ -666,6 +677,13 @@ select.styled-select{
 	border: solid 2px #f0f0f0;
 }
 
+#post_text_area{
+	width: calc(100% - 64px) !important;
+	padding:32px;
+}
+#post_text_area>p{
+	margin:8px 0;
+}
 
 
 #user_list_thum>.profile_pic_s{margin-left: -18px;}
@@ -701,7 +719,8 @@ select.styled-select{
 	padding:8px;
 	padding-top: 32px;
 	width: calc(100% - 16px);
-	height: auto;
+	height: 100%;
+	overflow: scroll;
 	min-height: calc(100% - 40px);
 	z-index: -999;
 	display: none;
@@ -713,7 +732,7 @@ select.styled-select{
 .dialog_bg>.full_dialog{
 	display: flex !important;
 }
-.dialog, .full_dialog>.xbox {
+.dialog>.xbox, .full_dialog>.xbox {
     position: absolute;
     top: 8px;
     right: 8px;
@@ -722,8 +741,8 @@ select.styled-select{
 	width:calc(1080px * 0.3);
 }
 .s_dialog{
+	width:calc(100% - 64px - 16px) !important;
 	position: absolute !important;
-	width: auto !important;
 	top: auto !important;
 }
 
@@ -815,4 +834,8 @@ input:checked + .tg_slider:before {
 
 .tg_slider.round:before {
   border-radius: 50%;
+}
+/*보이기 숨기기*/
+.hide{
+	display: none;
 }

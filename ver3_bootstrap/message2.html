@@ -45,41 +45,10 @@
 		<!--메세지 상대 정보-->
 		<div class="flex_col" style="width:250px">
 			<div class="card_full flex_col border_full flex_center padding_1x card_border" style="position:absolute; width: 218px; overflow: hidden;">
-				<div class="profile_pic_big" id="pf3"></div>
+				<div class="profile_pic_big" id="pf1"></div>
 				<h2 class="body_bold" style="width:auto;">username</h2>
 				<p class="caption" id="trv_status">싱가폴 여행중</p>
 				<p class="caption ver_bottom_4x" id="trv_status">14 OCT ~ 12 NOV</p>
-				<h2 class="body_size ver_bottom_1x">진행중인 동행</h2>
-				<!--동행 슬라이더-->
-				<div class="flex_row col1" style="height:219px; overflow: hidden;">
-					<div class="flex_row" style="position:absolute; width:446px;">
-						<div class="FAB_circle" id="slide_arrow_left" style="left:calc(203px - 8px)">
-							<img id="arrow" src="img/arrow_next.svg">
-						</div>
-						<!--동행아이템-->
-						<div class="card s_card box_shadow flex_col align_center space_between margin_r_driection" id="trv13">
-							<div class="card align_center padding_tinny white_bg" id="date">
-								<p class="body_bold primary">31</p>
-								<p class="caption">OCT</p>
-							</div>
-							<div class="col1 white_bg bottom_radious">
-								<p class="body_bold padding_tinny text_center">"같이 클럽 zouk가실분 찾아요...."</p>
-							</div>
-						</div>
-						<!--동행아이템-->
-						<div class="card s_card box_shadow flex_col align_center space_between margin_r_driection" id="trv13">
-							<div class="card align_center padding_tinny white_bg" id="date">
-								<p class="body_bold primary">31</p>
-								<p class="caption">OCT</p>
-							</div>
-							<div class="col1 white_bg bottom_radious">
-								<p class="body_bold padding_tinny text_center">"같이 클럽 zouk가실분 찾아요...."</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!--동행 슬라이더 끝-->
-				<div class="button primary_bg box_shadow" id="btt_mating">동행 신청하기</div>
 			</div>
 		</div>
 	</div>
@@ -95,7 +64,7 @@
 		<!--메시지 인풋-->
 		<div class="flex_row msg">
 			<textarea  type="textarea" class="textfield body_size padding_tinny" id="msg_input"></textarea>
-			<div class="profile_pic_middle" id="pf1"></div>
+			<div class="profile_pic_middle" id="pf3"></div>
 		</div>
 		<div class="big_button primary2_bg" id="msg_btt" style="align-self: flex-end !important;">보내기</div>
 		<hr style="margin-top: 64px;">
@@ -106,11 +75,10 @@
 			1.동행신청 후 일방적으로 약속을 취소하면 불이익을 받을 수 있습니다.<br>2.동행중 부적절한 행동을할시 법적 책임을 물 수 있습니다.
 		</p>
 		<!--동행 수락-->
-		<div class="flex_row msg" id="msg_mating2" style="display: none;">
-			<div class="profile_pic_middle" id="pf3"></div>
-			<div class="textfield body_size padding_tinny ver_bottom_1x justify_start" style="border-width: 0;">
-				<p>username님이 동행 신청을 수락하였습니다.</p>
-				<p class="caption" id="time">pm 09:00</p>
+		<div class="flex_row msg hide" id="msg_mating1">
+			<div class="textfield body_size padding_tinny ver_bottom_1x justify_end" style="border-width: 0;">
+				<p>username님이 동행 신청을 수락하셨습니다.</p>
+				<p class="caption" id="time" style="text-align: right">pm 09:00</p>
 				<!--동행아이템-->
 				<div class="card s_card box_shadow flex_col align_center space_between ver_margin_1x" id="trv13">
 					<div class="card align_center padding_tinny white_bg" id="date">
@@ -123,34 +91,36 @@
 					</div>
 				</div>
 			</div>
+			<div class="profile_pic_middle" id="pf3"></div>
 		</div>
 		<!--동행 신청-->
-		<div class="flex_row msg" id="msg_mating1" style="display: none;">
-			<div class="textfield body_size padding_tinny ver_bottom_1x justify_end" style="border-width: 0;">
+		<div class="flex_row msg hide" id="msg_mating2">
+			<div class="profile_pic_middle" id="pf1"></div>
+			<div class="textfield body_size padding_tinny ver_bottom_1x justify_start" style="border-width: 0;">
 				<p>username님이 동행 신청을 하셨습니다.</p>
-				<p class="caption" id="time" style="text-align: right">pm 09:00</p>
+				<p class="caption" id="time">pm 09:00</p>
 				<!--동행아이템-->
 				<div class="card s_card box_shadow flex_col align_center space_between ver_margin_1x" id="trv13">
 					<div class="card align_center padding_tinny white_bg" id="date">
 						<p class="body_bold primary">31</p>
 						<p class="caption">OCT</p>
 					</div>
+					<div class="button primary2_bg box_shadow" id="accept_mating">동행 수락</div>
 					<div class="col1 white_bg bottom_radious">
 						<p class="body_bold padding_tinny text_center">"같이 클럽 zouk가실분 찾아요...."</p>
 					</div>
 				</div>
 			</div>
-			<div class="profile_pic_middle" id="pf1"></div>
 		</div>
 		<div class="flex_row msg" id="my_msg">
 			<div class="textfield body_size padding_tinny">
 				꼭 가보고싶은 파인 다이닝 레스토랑 있는데 혼자라서 고민중이었어요. 싱가폴은 처음이신가요?
 				<p class="caption" id="time"> pm 09:00</p>
 			</div>
-			<div class="profile_pic_middle" id="pf1"></div>
+			<div class="profile_pic_middle" id="pf3"></div>
 		</div>
 		<div class="flex_row msg" id="opp_msg">
-			<div class="profile_pic_middle" id="pf3">
+			<div class="profile_pic_middle" id="pf1">
 			</div>
 			<div class="textfield body_size padding_tinny">
 				오차로드에서 모하실건가요? 저희는 지금 남자 2이서 여행중이에요
@@ -176,8 +146,8 @@ $(document).ready(function(){
 			$("#btt_mating").text("동행신청 보냄");
 			$("#btt_mating").removeClass("primary_bg");
 			$("#btt_mating").addClass("primary_dark_border primary_dark");
-			$("#msg_mating1").css("display","flex");
-			mating.postMessage("apply mating");	
+	
+			//$("#msg_mating2").css("display","flex");	
 		});
 	});
 
@@ -185,6 +155,10 @@ $(document).ready(function(){
 			console.log("click");
 			$("body").append($("#mating_dialog"));
 			$(".dialog_bg").remove();
+	});
+	$("#accept_mating").on("click",function(){
+			$("#msg_mating1").removeClass("hide");
+			mating.postMessage("accept mating");
 	});
 
 	mating.onmessage = function (ev){

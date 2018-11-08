@@ -153,6 +153,7 @@
 </body>
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="js/preference.js"></script>
 <script>
 		$(document).ready(function(){
 			var menu_on = false;
@@ -172,6 +173,49 @@
 			$("#xbox").on("click",function(){
 				$(".main_menu").toggleClass("main_menu_on");
 			});
+
+			/*성향 팝업 이벤트*/
+			$("#preference_add").on("click",function(){
+				console.log("click");
+				
+				$("body").append("<div class='dialog_bg'></div>");
+				$(".dialog_bg").append($("#prf_dialog"));
+				preference.forEach(function(item){
+
+					/*선택여부에 따라 성향 색표시*/
+					if(item.check==0){
+						$("#preference").append("<div class='chip margin_1x'>" + item.keyword + "</div>");
+					}
+					else{
+						$("#preference").append("<div class='chip chip_selected margin_1x'>" + item.keyword + "</div>")
+					}		
+				});
+				$(".chip").on("click",function(){
+					$(this).toggleClass("chip_selected");
+					if($(this).hasClass("chip_selected")){
+						console.log(this);
+					}
+				});	
+			});
+
+			/*팝업 닫기 이벤트*/
+			$("#dg_xbox1").on("click", function(){
+				$("body").append($("#prf_dialog"));
+				$(".dialog_bg").remove();
+			});
+			$("#add_btt").on("click", function(){
+				$("body").append($("#prf_dialog"));
+				$(".dialog_bg").remove();
+			});
 		});
 </script>
 </html>
+<!--여행 성향 선택-->
+<div class="flex_col align_center full_dialog padding_2x white_bg" id="prf_dialog">
+	<img class="xbox" src="img/ic_close.svg" id="dg_xbox1">
+	<h2 class="middle_size ver_bottom_4x text_center">여행 성향</h2>
+	<div class="profile_pic_middle" id="pf1"></div>
+	<p class="body_size text_center ver_margin_1x" style="width:100%;"><span>username</span>님의 여행 성향을 나타내는 키워드를 선택해주세요!(최대5개)</p>
+	<div class="flex_row col1 ver_bottom_4x" id="preference"></div>
+	<div class="button primary_bg box_shadow" id="add_btt" style="width:164px;">성향 추가하기</div>
+</div>

@@ -45,7 +45,7 @@
  		transition: transform 0.2s ease;
 	}
 </style>
-<div class="flex_col align_center col1 space_between box_shadow" id="msg_top" style="padding-top: 8px; position:absolute;height: 228px; overflow: hidden;">
+<div class="flex_col align_center col1 space_between box_shadow white_bg" id="msg_top" style="padding-top: 8px; position:absolute;height: 228px; overflow: hidden; z-index: 9999;">
 	<!--대화상대 정보-->
 	<div class="flex_row col1 align_center" id="user_info">
 		<a class="square_button white_bg" href="message_main.html">
@@ -71,7 +71,7 @@
 			<!--동행아이템-->
 			<div class="card ss_card box_shadow flex_col align_center space_between margin_r_driection mating_card" id="trv6">
 				<div class="card align_center padding_tinny white_bg" id="date">
-					<p class="body_bold primary">2</p>
+					<p class="caption_bold primary">2</p>
 					<p class="caption">NOV</p>
 				</div>
 				<div class="col1 white_bg bottom_radious">
@@ -81,7 +81,7 @@
 			<!--동행아이템-->
 			<div class="card ss_card box_shadow flex_col align_center space_between margin_r_driection" id="trv13">
 				<div class="card align_center padding_tinny white_bg" id="date">
-					<p class="body_bold primary">31</p>
+					<p class="caption_bold primary">31</p>
 					<p class="caption">OCT</p>
 				</div>
 				<div class="col1 white_bg bottom_radious">
@@ -91,7 +91,7 @@
 			<!--동행아이템-->
 			<div class="card ss_card box_shadow flex_col align_center space_between margin_r_driection" id="trv11">
 				<div class="card align_center padding_tinny white_bg" id="date">
-					<p class="body_bold primary">29</p>
+					<p class="caption_bold primary">29</p>
 					<p class="caption">OCT</p>
 				</div>
 				<div class="col1 white_bg bottom_radious">
@@ -123,20 +123,59 @@
 	#msg_input_containner{width:calc(100% - 16px); margin:0 8px 8px 8px;}
 </style>
 <div class="message_area msg_area_short padding_1x">
-	<!--메세지-->
-	<div class="flex_row msg" id="my_msg">
-		<div class="textfield body_size padding_tinny">
-			꼭 가보고싶은 파인 다이닝 레스토랑 있는데 혼자라서 고민중이었어요. 싱가폴은 처음이신가요?
-			<p class="caption" id="time"> pm 09:00</p>
+	<div class="col1">
+		<!--메세지-->
+		<div class="flex_row msg" id="my_msg">
+			<div class="textfield body_size padding_tinny">
+				꼭 가보고싶은 파인 다이닝 레스토랑 있는데 혼자라서 고민중이었어요. 싱가폴은 처음이신가요?
+				<p class="caption" id="time"> pm 09:00</p>
+			</div>
+			<div class="profile_pic_middle" id="pf1"></div>
 		</div>
-		<div class="profile_pic_middle" id="pf1"></div>
-	</div>
-	<div class="flex_row msg" id="opp_msg">
-		<div class="profile_pic_middle" id="pf3">
+		<div class="flex_row msg" id="opp_msg">
+			<div class="profile_pic_middle" id="pf3">
+			</div>
+			<div class="textfield body_size padding_tinny">
+				오차로드에서 모하실건가요? 저희는 지금 남자 2이서 여행중이에요
+				<p class="caption" id="time"> pm 09:00</p>
+			</div>
 		</div>
-		<div class="textfield body_size padding_tinny">
-			오차로드에서 모하실건가요? 저희는 지금 남자 2이서 여행중이에요
-			<p class="caption" id="time"> pm 09:00</p>
+		<!--동행 신청-->
+		<div class="flex_row msg" id="msg_mating1">
+			<div class="textfield body_size padding_tinny ver_bottom_1x justify_end" style="border-width: 0;">
+				<p>username님이 동행 신청을 하셨습니다.</p>
+				<p class="caption" id="time" style="text-align: right">pm 09:00</p>
+				<!--동행아이템-->
+				<div class="card ss_card box_shadow flex_col align_center space_between ver_margin_1x" id="trv13">
+					<div class="card align_center padding_tinny white_bg" id="date">
+						<p class="caption_bold primary">31</p>
+						<p class="caption">OCT</p>
+					</div>
+					<div class="col1 white_bg bottom_radious">
+						<p class="body_bold padding_tinny text_center">"같이 클럽 zouk가실분 찾아요...."</p>
+					</div>
+				</div>
+			</div>
+			<div class="profile_pic_middle" id="pf1"></div>
+		</div>
+		<!--동행 수락-->
+		<div class="flex_row msg" id="msg_mating2">
+			<div class="profile_pic_middle" id="pf3"></div>
+			<div class="textfield body_size padding_tinny ver_bottom_1x justify_start" style="border-width: 0;">
+				<p>username님이 동행 신청을 수락하였습니다.</p>
+				<p class="caption" id="time">pm 09:00</p>
+				<!--동행아이템-->
+				<div class="card ss_card box_shadow flex_col align_center space_between ver_margin_1x" id="trv13">
+					<div class="card align_center padding_tinny white_bg" id="date">
+						<p class="caption_bold primary">31</p>
+						<p class="caption">OCT</p>
+					</div>
+					<div class="profile_pic_s" id="pf1"></div>
+					<div class="col1 white_bg bottom_radious">
+						<p class="body_bold padding_tinny text_center">"같이 클럽 zouk가실분 찾아요...."</p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
@@ -213,7 +252,7 @@
 		<!--동행아이템-->
 		<div class="card s_card box_shadow flex_col align_center space_between ver_margin_1x" id="trv13" style="margin-left: -8px; z-index: 1">
 			<div class="card align_center padding_tinny white_bg" id="date">
-				<p class="body_bold primary">31</p>
+				<p class="caption_bold primary">31</p>
 				<p class="caption">OCT</p>
 			</div>
 			<div class="col1 white_bg bottom_radious ver_padding_tinny">
