@@ -3,6 +3,7 @@
 <head>
 	<title></title>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.css" />
 	<link rel="stylesheet" href="css/remove_bootstrap.css" />
@@ -11,14 +12,47 @@
 	<link rel="stylesheet" type="text/css" href="css/type.css">
 	<link rel="stylesheet" type="text/css" href="css/color.css">
 	<link rel="stylesheet" type="text/css" href="css/components.css">
-	<link rel="stylesheet" type="text/css" href="css/img.css">
 	<style type="text/css">
 		html, body{
 			width: 100%;
 			height: 100%;
 		}
+		.usp_img{
+			width: 80;
+			height: 80px;
+			margin-bottom: -24px;
+		}
+		.message{
+			overflow: hidden;
+			margin-bottom: 16px;
+
+		}
 		h2{
+			width: auto !important;
 			margin: 16px 0;
+			font-family: notosans_cjk_bold !important;
+		}
+		@keyframes blink {
+		    0% {opacity: 1;}
+		    50% {opacity: 1;}
+		    75% {opacity: 0;}
+		    90% {opacity: 1;}
+		}
+		.hide_text{
+			opacity: 0;
+			height: 0;
+			transition: opacity 0.4s, height 0.4s;
+			transition-timing-function:cubic-bezier(1,.61,.56,1.93);
+		}
+		.show_text{
+			opacity: 1 !important;
+			height: auto !important;
+			transition: opacity 1s, height 1s;
+		}
+		.blink{
+			animation-name: blink;
+   			animation-duration: 1s;
+   			animation-iteration-count: infinite;
 		}
 		.j_logo{
 			height: 64px;
@@ -27,6 +61,7 @@
 		.b_logo{
 			height: 52px;
 			width: auto;
+			margin-left: -12px;
 		}
 		.arrow{
 			margin-left: -12px;
@@ -34,35 +69,56 @@
 			height: 48px;
 			opacity: 0;
 		}
+		#back_to_junglian{
+			width: 345px;
+			height: 64px;
+		}
 	</style>
 </head>
 <body class="flex_col col1 flex_center">
-	<h2 class="big_size text_center primary_dark">1.예약 후 30분내 적립금 자동 적립!</h2>
-	<h2 class="big_size text_center primary_dark">2.예약 후 반드시 7% 캐시백 신청하세요!</h2>
-	<h2 class="big_size text_center ver_bottom_8x primary_dark">3.정글리안에서 여행지에 맞는 핫스팟과 동행을 찾으세요!</h2>
-	<div class="flex_row space_between align_center ver_margin_2x ver_bottom_8x" style="width:860px">
-		<img class="j_logo" src="img/logo_ver3.svg">
-		<div class="flex_row" id="progress_bar">
-			<img class="arrow arrow1" src="img/ic_next_p1.svg">
-			<img class="arrow arrow2" src="img/ic_next_p2.svg">
-			<img class="arrow arrow3" src="img/ic_next_p3.svg">
-			<img class="arrow arrow4" src="img/ic_next_p4.svg">
+	<div class="message hide_text flex_col align_center">
+		<img class="usp_img" src="img/usp2_svg.svg">
+		<h2 class="big_size text_center primary_dark">체크인 당일 캐시백(7%) 반드시 신청하세요!</h2>
+	</div>
+	<div class="message hide_text flex_col align_center">
+		<img class="usp_img" src="img/usp3_svg2_2.svg">
+		<h2 class="big_size text_center primary_dark" style="color:#ffffff">여행지의 핫스팟과 동행을 찾으세요!</h2>
+	</div>
+	<div class="flex_col" style="width:768px">
+		<div class="flex_row space_between align_center ver_margin_2x">
+			<img class="j_logo" src="img/logo_ver3.svg">
+			<div class="flex_row" id="progress_bar">
+				<img class="arrow arrow1" src="img/ic_next_p1.svg">
+				<img class="arrow arrow2" src="img/ic_next_p2.svg">
+				<img class="arrow arrow3" src="img/ic_next_p3.svg">
+				<img class="arrow arrow4" src="img/ic_next_p4.svg">
+			</div>
+			<img class="b_logo" src="img/logo_booking.svg">
 		</div>
-		<img class="b_logo" src="img/logo_booking.svg">
+		<p class="body_size middle_emphasis text_center blink">검색중</p>
+		<img id="back_to_junglian" src="img/arrow_loading.svg" style="align-self: center; margin-top: -32px; opacity: 0;">
 	</div>
 </body>
 <script src="js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
 	progress_arrow();
+	setInterval(progress_arrow,1800);
 	function progress_arrow(){
+		console.log("load");
 		$(".arrow").each(function(i,d){
-			$(this).delay(i*50).animate({opacity:1}, 100*i, "linear", function(){
-				//$(".arrow").css({opacity:0});
-				progress_arrow();
-			});
+			$(this).delay(i*80).animate({opacity:0.85}, 60).delay(600).animate({opacity:0},50);
 		});
+		$("#back_to_junglian").delay(600).animate({opacity:0.85}, 300).delay(500).animate({opacity:0},60);
 	}
+	$(".message").each(function(i,d){
+		//$(this).delay(i*8000).addClass("show_text");
+
+		$(this).delay(i*1600).animate({
+								opacity:'1',
+								height:'164px',
+							}, 0);
+	});
 });
 </script>
 </html>
