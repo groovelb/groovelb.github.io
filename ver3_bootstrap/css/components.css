@@ -62,6 +62,17 @@ input:focus {
 	border-style: solid;
 	border-color: #ffffff;
 }
+.msg_on:before{
+	width: 8px;
+	height: 8px;
+	position: relative;
+	right:-48px;
+	top:-8px;
+	content: "";
+    display: block;
+    background: #ffcc00;
+    border-radius: 4px;
+}
 
 /*서치박스*/
 .search_box{
