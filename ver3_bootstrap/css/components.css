@@ -50,11 +50,6 @@ input:focus {
 #post_text_area>p{
 	margin:8px 0;
 }
-.text_menu{
-	height: 64px;
-	font-size: 14px;
-	font-family: notosans_cjk_medium !important;
-}
 .text_menu_selected{
 	padding-top: 4px;
 	font-weight: 500 !important;

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_reward</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M17,7 C17,3.135 13.865,0 10,0 C6.135,0 3,3.135 3,7 C3,10.865 6.135,14 10,14 C13.865,14 17,10.865 17,7 Z M10,11 C7.79,11 6,9.21 6,7 C6,4.79 7.79,3 10,3 C12.21,3 14,4.79 14,7 C14,9.21 12.21,11 10,11 Z M0,17 L4.345,12.655 C5.39,13.7 6.725,14.45 8.215,14.7925 L3.005,20 L2.995,17.01 L0,17 Z M15.655,12.655 L20,17 L17.005,17.01 L16.995,20 L11.785,14.7925 C13.275,14.4525 14.61,13.7 15.655,12.655 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Side-Menu_Extend" transform="translate(0.000000, -132.000000)">
+            <g id="Icon-/-Reward" transform="translate(0.000000, 132.000000)">
+                <g id="✱-/-Color-/-Icons-/-Black-/-Inactive" transform="translate(2.000000, 2.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Mask" fill-rule="nonzero"></g>
+                    <g id="✱-/-Color-/-Primary-/-Black" mask="url(#mask-2)" fill="#383838">
+                        <g transform="translate(-2.000000, -2.000000)" id="Rectangle">
+                            <rect x="0" y="0" width="24" height="24"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

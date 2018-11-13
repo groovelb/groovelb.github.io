@@ -3,24 +3,10 @@
 	font-family: notosans_cjk_regular;
 	src: url(font/NotoSansKR-Regular.otf);
 }
-@font-face{
-	font-family: notosans_cjk_light;
-	src: url(font/NotoSansKR-Light.otf);
-}
+
 @font-face{
 	font-family: notosans_cjk_medium;
 	src: url(font/NotoSansKR-Medium.otf);
-}
-@font-face{
-	font-family: notosans_cjk_bold;
-	src: url(font/NotoSansKR-Bold.otf);
-}
-@font-face{
-	font-family: notosans_cjk_thin;
-	src: url(font/NotoSansKR-Thin.otf);
-}
-body{
-	font-family: notosans_cjk_light;
 }
 h2{
 	display: inline-block;
@@ -28,16 +14,8 @@ h2{
 
 /*Roboto*/
 @font-face{
-	font-family: roboto_bold;
-	src: url(font/Roboto-Bold.ttf);
-}
-@font-face{
 	font-family: roboto_medium;
 	src: url(font/Roboto-Medium.ttf);
-}
-@font-face{
-	font-family: roboto_regular;
-	src: url(font/Roboto-Regular.ttf);
 }
 .text_center{
 	text-align: center;
@@ -54,14 +32,14 @@ h2{
 	line-height: 24px;
 	font-weight: 300;
 	letter-spacing: -0.01rem;
-	font-family: notosans_cjk_light !important;
+	/*font-family: notosans_cjk_light !important;*/
 }
 .body_post{
 	font-size: 15px;
 	line-height: 24px;
 	font-weight: 300;
 	letter-spacing: -0.03rem;
-	font-family: notosans_cjk_light !important;
+	/*font-family: notosans_cjk_light !important;*/
 }
 .body_medium{
 	font-size: 16px;
@@ -73,27 +51,27 @@ h2{
 .body_bold{
 	font-size: 16px;
 	line-height: 24px;
-	font-family: notosans_cjk_bold;
+	font-family: notosans_cjk_medium;
 	font-weight: 300;
 	letter-spacing: -0.01rem;
 }
 .middle_size{
 	font-size: 22px;
 	font-family: notosans_cjk_medium;
-	font-weight: 500;
+	/*font-weight: 700;*/
 	line-height: 28px;
 	letter-spacing: -0.02rem;
 }
 .middle_regular{
 	font-size: 22px;
-	font-family: notosans_cjk_regular;
-	font-weight: 500;
+	/*font-family: notosans_cjk_regular;*/
+	font-weight: 800;
 	line-height: 28px;
 	letter-spacing: -0.02rem;
 }
 .middle_thin{
 	font-size: 22px;
-	font-family: notosans_cjk_thin;
+	/*font-family: notosans_cjk_thin;*/
 	font-weight: 100;
 	line-height: 28px;
 	letter-spacing: -0.02rem;
@@ -103,7 +81,7 @@ h2{
 }
 
 span{
-	font-family: notosans_cjk_bold;
+	/*font-family: notosans_cjk_bold;*/
 }
 .big_size{
 	font-size: 36px;
@@ -113,7 +91,7 @@ span{
 }
 .big_bold{
 	font-size: 36px;
-	font-family: notosans_cjk_bold;
+	font-family: notosans_cjk_medium;
 	line-height: 48px;
 	font-weight: 500;
 }
@@ -121,41 +99,41 @@ span{
 	align-self: flex-start;
 	position: absolute;
 	font-size: 36px;
-	font-family: roboto_medium !important;
+	/*font-family: roboto_medium !important;*/
 	line-height: 36px;
 }
 .big_light{
 	font-size: 36px;
-	font-family: notosans_cjk_light;
+	/*font-family: notosans_cjk_light;*/
 	line-height: 48px;
 	font-weight: 100;
 }
 .big_thin{
 	font-size: 36px;
-	font-family: notosans_cjk_thin;
+	/*font-family: notosans_cjk_thin;*/
 	line-height: 64px;
 	font-weight: 100;
 }
 .caption{
 	font-size: 12px;
 	line-height: 18px;
-	font-family: notosans_cjk_light;
+	/*font-family: notosans_cjk_light;*/
 }
 .caption_bold{
 	font-size: 12px;
 	line-height: 18px;
-	font-family: notosans_cjk_bold;
+	/*font-family: notosans_cjk_bold;*/
 }
 
 .number{
 	font-family: roboto_medium !important;
 }
 .alphabet{
-	font-family: roboto_regular !important;
+	font-family: roboto_medium !important;
 }
 .big_alphabet{
 	font-size: 48px;
-	font-family: roboto_bold !important;
+	font-family: roboto_medium !important;
 }
 
 .card>h2{
@@ -164,4 +142,15 @@ span{
 .answer>p{
 	font-size: 14px;
 	line-height: 26px;
+}
+
+/*헤더 텍스트 메뉴*/
+.text_menu{
+	height: 64px;
+	font-size: 14px;
+	font-weight: 600;
+	/*font-family: notosans_cjk_medium !important;*/
+}
+.black_highlight>div>.text_menu{
+	font-family: notosans_cjk_regular;
 }
