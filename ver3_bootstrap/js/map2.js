@@ -37,7 +37,15 @@ function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
       center: myLatLng,
       zoom: 12,
-    disableDefaultUI: true
+      zoomControl: true,
+      zoomControlOptions: {
+         position: google.maps.ControlPosition.RIGHT_TOP
+      },
+      mapTypeControl: false,
+      scaleControl: false,
+      streetViewControl: false,
+      rotateControl: false,
+      fullscreenControl: false
     });
 
     // Create a marker and set its position.

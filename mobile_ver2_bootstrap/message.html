@@ -70,7 +70,7 @@
 		<div class="flex_row" style="position:absolute; width:720px;">
 			<!--동행아이템-->
 			<div class="card ss_card box_shadow flex_col align_center space_between margin_r_driection mating_card" id="trv6">
-				<div class="card align_center padding_tinny white_bg" id="date">
+				<div class="card align_center padding_tinny white_bg date">
 					<p class="caption_bold primary">2</p>
 					<p class="caption">NOV</p>
 				</div>
@@ -80,7 +80,7 @@
 			</div>
 			<!--동행아이템-->
 			<div class="card ss_card box_shadow flex_col align_center space_between margin_r_driection" id="trv13">
-				<div class="card align_center padding_tinny white_bg" id="date">
+				<div class="card align_center padding_tinny white_bg date">
 					<p class="caption_bold primary">31</p>
 					<p class="caption">OCT</p>
 				</div>
@@ -90,7 +90,7 @@
 			</div>
 			<!--동행아이템-->
 			<div class="card ss_card box_shadow flex_col align_center space_between margin_r_driection" id="trv11">
-				<div class="card align_center padding_tinny white_bg" id="date">
+				<div class="card align_center padding_tinny white_bg date">
 					<p class="caption_bold primary">29</p>
 					<p class="caption">OCT</p>
 				</div>
@@ -141,18 +141,24 @@
 			</div>
 		</div>
 		<!--동행 신청-->
-		<div class="flex_row msg" id="msg_mating1">
+		<div class="flex_row msg" id="opp_msg">
 			<div class="textfield body_size padding_tinny ver_bottom_1x justify_end" style="border-width: 0;">
 				<p>username님이 동행 신청을 하셨습니다.</p>
 				<p class="caption" id="time" style="text-align: right">pm 09:00</p>
 				<!--동행아이템-->
-				<div class="card ss_card box_shadow flex_col align_center space_between ver_margin_1x" id="trv13">
-					<div class="card align_center padding_tinny white_bg" id="date">
-						<p class="caption_bold primary">31</p>
+				<div class="card ss_card box_shadow flex_col align_center space_between ver_margin_1x" id="trv13" style="width:186px; height: auto">
+					<div class="card align_center padding_tinny white_bg date ver_bottom_4x">
+						<p class="body_bold primary">31</p>
 						<p class="caption">OCT</p>
 					</div>
 					<div class="col1 white_bg bottom_radious">
 						<p class="body_bold padding_tinny text_center">"같이 클럽 zouk가실분 찾아요...."</p>
+						<!--동행 수락 거절-->
+						<div class="flex_row col1 space_around ver_bottom_1x">
+							<div class="button primary2_bg box_shadow" id="accept_mating">수락</div>
+							<div class="button black_border box_shadow" id="reject_mating">거절</div>
+						</div>
+						<!--동행 수락 거절 끝-->
 					</div>
 				</div>
 			</div>
@@ -166,7 +172,7 @@
 				<p class="caption" id="time">pm 09:00</p>
 				<!--동행아이템-->
 				<div class="card ss_card box_shadow flex_col align_center space_between ver_margin_1x" id="trv13">
-					<div class="card align_center padding_tinny white_bg" id="date">
+					<div class="card align_center padding_tinny white_bg date">
 						<p class="caption_bold primary">31</p>
 						<p class="caption">OCT</p>
 					</div>
@@ -251,7 +257,7 @@
 		<img src="img/ic_arrow_down_2ndp.svg" style="width:96px; height: 96px; z-index: 999;margin-top: -24px;margin-bottom: -48px;">
 		<!--동행아이템-->
 		<div class="card s_card box_shadow flex_col align_center space_between ver_margin_1x" id="trv13" style="margin-left: -8px; z-index: 1">
-			<div class="card align_center padding_tinny white_bg" id="date">
+			<div class="card align_center padding_tinny white_bg date">
 				<p class="caption_bold primary">31</p>
 				<p class="caption">OCT</p>
 			</div>

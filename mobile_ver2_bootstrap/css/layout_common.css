@@ -61,6 +61,9 @@ li{
 .space_between{
 	justify-content: space-between;
 }
+.space_around{
+	justify-content: space-around;
+}
 .align_center{
 	align-items: center !important;
 }

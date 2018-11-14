@@ -17,6 +17,10 @@
 			width: 100%;
 			height: 100%;
 		}
+		body{
+			background-image: url("img/danang_bg2.jpg");
+			background-size: cover;
+		}
 		.usp_img{
 			width: 80;
 			height: 80px;
@@ -30,6 +34,7 @@
 		h2{
 			width: auto !important;
 			margin: 16px 0;
+			font-size: 48px !important;
 		}
 		@keyframes blink {
 		    0% {opacity: 1;}
@@ -74,30 +79,32 @@
 		}
 	</style>
 </head>
-<body class="flex_col col1 flex_center">
-	<div class="message hide_text flex_col align_center">
-		<img class="usp_img" src="img/usp2_svg.svg">
-		<h2 class="big_size text_center primary_dark">체크인 당일 캐시백(7%) 반드시 신청하세요!</h2>
-	</div>
-	<div class="message hide_text flex_col align_center">
-		<img class="usp_img" src="img/usp3_svg2_2.svg">
-		<h2 class="big_size text_center primary_dark" style="color:#ffffff">여행지의 핫스팟과 동행을 찾으세요!</h2>
-	</div>
-	<div class="flex_col" style="width:768px">
-		<div class="flex_row space_between align_center ver_margin_2x">
-			<img class="j_logo" src="img/logo_ver3.svg">
-			<div class="flex_row" id="progress_bar">
-				<img class="arrow arrow1" src="img/ic_next_p1.svg">
-				<img class="arrow arrow2" src="img/ic_next_p2.svg">
-				<img class="arrow arrow3" src="img/ic_next_p3.svg">
-				<img class="arrow arrow4" src="img/ic_next_p4.svg">
-			</div>
-			<img class="b_logo" src="img/logo_booking.svg">
+<body class="flex_col col1">
+	<div class="bg_filter col1 flex_col flex_center" style="height:100%">
+		<div class="message hide_text flex_col align_center">
+			<img class="usp_img" src="img/usp2_svg.svg">
+			<h2 class="big_size text_center white_highlight text_shadow">체크인 당일 캐시백(7%) 반드시 신청하세요!</h2>
 		</div>
-		<!--
-		<p class="body_size middle_emphasis text_center blink">검색중</p>
-		<img id="back_to_junglian" src="img/arrow_loading.svg" style="align-self: center; margin-top: -32px; opacity: 0;">
-	-->
+		<div class="message hide_text flex_col align_center">
+			<img class="usp_img" src="img/usp3_svg2_2.svg">
+			<h2 class="big_size text_center white_highlight text_shadow">여행지의 핫스팟과 동행을 찾으세요!</h2>
+		</div>
+		<div class="flex_col box_shadow" style="width:836px; border-radius: 8px">
+			<div class="flex_row space_between align_center padding_2x white_bg full_radious">
+				<img class="j_logo" src="img/logo_ver3.svg">
+				<div class="flex_row" id="progress_bar">
+					<img class="arrow arrow1" src="img/ic_next_p1.svg">
+					<img class="arrow arrow2" src="img/ic_next_p2.svg">
+					<img class="arrow arrow3" src="img/ic_next_p3.svg">
+					<img class="arrow arrow4" src="img/ic_next_p4.svg">
+				</div>
+				<img class="b_logo" src="img/logo_booking.svg">
+			</div>
+			<!--
+			<p class="body_size middle_emphasis text_center blink">검색중</p>
+			<img id="back_to_junglian" src="img/arrow_loading.svg" style="align-self: center; margin-top: -32px; opacity: 0;">
+		-->
+		</div>
 	</div>
 </body>
 <script src="js/jquery-3.2.1.min.js"></script>
