@@ -3,6 +3,9 @@
 <head>
 	<title></title>
 	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.css"/>
+	<link rel="stylesheet" href="css/remove_bootstrap.css"/>
 	<link rel="stylesheet" type="text/css" href="css/layout_common.css">
 	<link rel="stylesheet" type="text/css" href="css/layout_main.css">
 	<link rel="stylesheet" type="text/css" href="css/layout_community.css">
@@ -23,7 +26,7 @@
 			<a href="index_loggedin.html">호텔</a>
 		</div>
 		<div class="text_menu flex_row align_center body_size hor_margin_2x">
-			<a href="community_main.html">커뮤니티</a>
+			<a href="community_main.html">핫스팟 & 동행</a>
 		</div>
 	</div>
 	<div class="flex_row col2 align_center justify_end" id="right">
@@ -42,66 +45,39 @@
 <!--컨텐츠 영역-->
 <div class="live_area white_bg" style="padding-top: 128px;">
 	<div class="flex_row col1">
-		<div class="slide_menu">
-			<a href="my_page.html" class="slide_item">
-				<img src="img/ic_my_profile.svg">
-				내 프로필
-			</a>
-			<a href="my_travel.html" class="slide_item" id="selected_slide_item">
-				<img src="img/ic_my_travel_white.svg">
-				내 여행
-			</a>
-			<div class="slide_menu extend_item">
-				<a href="my_travel.html">
-					<div class="slide_item" id="selected_extend_item">
-						<img src="img/ic_calendar_p.svg">
-						내 여행계획
-					</div>
-				</a>
-				<a href="my_community.html">
-					<div class="slide_item">
-						<img src="img/ic_community_black.svg">
-						커뮤니티
-					</div>
-				</a>
-			</div>
-			<a  href="reward.html" class="slide_item">
-				<img src="img/ic_reward.svg">
-				리워드
-			</a>
-
-		</div>
 		<div class="content_col" style="align-items: center;">
 			<!--소개-->
-			<div class="flex_col col1 ver_bottom_4x align_center" style="width:60%; margin-left:20%; margin-right: 20%;">
-				<div class="profile_pic_big" id="pf1"></div>
+			<div class="flex_col col1 ver_bottom_8x align_center">
+				
+				<div class="flex_col col1">
+					<div class="profile_pic_big" id="pf1" style="align-self: center; margin-top: -38px;"></div>
+				</div>
 				<h2 class="middle_size ver_bottom_1x" style="width: auto">Username</h2>
-				<div class="button black_border ver_bottom_2x" id="public_setting"><img src="img/ic_comments.svg">메세지</div>
-				<p class="body_size middle_emphasis text_center col2">
-					맛집탐방 로컬체험 전문 여행가입니다. 안해본거는 다해보는 여행가입니다. 같이 새로운 경험하실분 연락주세요
+				<p class="body_size middle_emphasis text_center col2 ver_bottom_1x">
+					휴양지 전문 여행가입니다. 남미, 남유럽, 미주 12개 도시 휴향지 탐방기 구경하세요! 11/01 ~ 11/23 아르헨티나 여행 예정!
 				</p>
 				<div class="flex_row col1 justify_center" id="user_meta">
 					<p class="flex_row caption_bold middle_emphasis align_center margin_tinny" id="cities"><img src="img/ic_city.svg">12개 도시 방문</p>
 				<p class="flex_row caption_bold middle_emphasis align_center margin_tinny" id="locations"><img src="img/ic_location.svg">25개 장소 등록</p>
 				</div>
-				<div class="flex_row col1 justify_center">
+				<div class="flex_row col1 justify_center ver_bottom_2x">
 					<div class='chip chip_selected margin_tinny'>맛집탐방</div>
-					<div class='chip chip_selected margin_tinny'>어드벤처</div>
-					<div class='chip chip_selected margin_tinny'>로드트립</div>
+					<div class='chip chip_selected margin_tinny'>와인여행</div>
 				</div>
+				<div class="button black_border ver_bottom_2x" id="public_setting"><img src="img/ic_comments.svg">메세지</div>
 			</div>
 			
 			<!--내 여행 섹션 -->
 			<div class="flex_row white_bg col1 space_between ver_bottom_8x">
 				<div class="flex_row col1 space_between align_center ver_bottom_1x">
-					<div class="flex_row align_center">
-						<h2 class="middle_size" style="width:auto">username님의 여행 계획</h2>
+					<div class="flex_row align_end">
+						<h2 class="middle_size" style="width:auto">username님의 여행 일정</h2>
+						<p class="caption_bold primary2" style="margin:0 0 4px 4px;"></p>
 					</div>
 				</div>
-				<p class="body_size ver_bottom_1x">여행계획을 공유하고 여행친구도 찾으세요.</p>
-				<div class="flex_row col1" id="travel_list">
-					<style>#travel_list>.card{margin-right: 16px;}</style>
-					<a class="card card_3" href="travel_page.html">
+				<p class="body_size ver_bottom_2x">여행계획을 공유하고 여행친구도 찾으세요.</p>
+				<div class="flex_row col1">
+					<a class="card card_3 margin_r_driection" href="travel_page.html">
 						<div class="card_img" id="sg">
 						</div>
 						<div class="travel_info margin_1x">
@@ -110,7 +86,7 @@
 							<p class="caption middle_emphasis">OCT 30 ~ NOV 12, 2018</p>
 						</div>
 					</a>
-					<div class="card card_3">
+					<div class="card card_3 margin_r_driection">
 						<div class="card_img" id="kul">
 						</div>
 						<div class="travel_info margin_1x">
@@ -124,8 +100,18 @@
 			<!--내 여행 섹션 종료-->
 			<!--내 트래블 로그 섹션 -->
 			<div class="flex_row col1">
-				<div class="flex_row col1 space_between align_center ver_bottom_1x">
-					<h2 class="middle_size" style="width:auto">username님의 트래블 로그</h2>
+				<div class="flex_row col1 space_between align_center ver_bottom_2x">
+					<h2 class="middle_size" style="width:auto">username님의 포스트</h2>
+				</div>
+				<div class="flex_row flex_item_center align_center" id="filter">
+					<label class="checkbox_container caption">작성 포스트
+					  <input type="checkbox" checked="checked">
+					  <span class="checkmark"></span>
+					</label>
+					<label class="checkbox_container caption">스크랩 포스트
+					  <input type="checkbox" checked="checked">
+					  <span class="checkmark"></span>
+					</label>
 				</div>
 				<div class="flex_row col1">
 					<div class="flex_col col3">
@@ -223,15 +209,18 @@
 		});
 	});
 </script>
-<div class="flex_col align_center s_dialog dialog padding_1x white_bg" id="setting_dialog">
+<!--공개 설정-->
+<div class="flex_col align_center m_dialog dialog padding_2x white_bg" id="setting_dialog">
 	<img class="xbox" src="img/ic_close.svg" id="dg_xbox1">
-	<h2 class="body_bold ver_bottom_2x text_center">공개 설정</h2>
-	<p class="caption text_center ver_margin_1x" style="width:100%;">여행계획을 공개하시면 여행 계획 공유 및 동행을 찾을 수 있습니다.</p>
-	<label class="checkbox_container body_size">여행계획 공개
-	  <input type="checkbox" checked="checked">
-	  <span class="checkmark"></span>
-	</label>
-	<div class="button primary_bg ver_margin_2x">확인</div>
+	<h2 class="middle_size ver_bottom_4x ver_bottom_2x text_center">공개 설정</h2>
+	<p class="body_size text_center ver_margin_1x" style="width:100%;">여행계획을 공개하시면 여행 계획 공유 및 동행을 찾을 수 있습니다.</p>
+	<div class="list under_border col1">
+		<label class="checkbox_container body_medium ver_padding_1x">여행계획 공개
+		  <input type="checkbox" checked="checked">
+		  <span class="checkmark"></span>
+		</label>
+	</div>
+	<div class="button primary_bg ver_margin_2x" style="width:164px;">확인</div>
 </div>
 <div class="flex_col align_center dialog padding_2x white_bg" id="add_travel_dialog">
 	<img class="xbox" src="img/ic_close.svg" id="dg_xbox2">
