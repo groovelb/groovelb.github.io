@@ -488,7 +488,6 @@ select.styled-select{
 	background: rgba(0,0,0,0.32);
 }
 .card_img>.date{
-	width:42px;
 	margin-left: 8px;
 	position: absolute;
 	align-self: flex-start;

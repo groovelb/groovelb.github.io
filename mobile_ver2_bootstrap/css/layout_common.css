@@ -199,6 +199,11 @@ display: none;
 	font-weight: 300;
 	letter-spacing: 0.4px;
 }
+.menu_item{
+	width: 24px;
+	height: 24px;
+	padding:12px;
+}
 .logo_hide{
 	display: none;
 }
@@ -212,6 +217,14 @@ display: none;
 	padding-left: 16px !important;
 	padding-right: 16px !important;
 
+}
+/*** 콘텐츠 슬라이더 ***/
+.content_slide{
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+	overflow: hidden;
+	width: calc(100% - 16px);
 }
 .col1{
 	width: 100% !important;
@@ -322,4 +335,44 @@ display: none;
 /*margin for slider item*/
 .margin_r_driection{
 	margin-right:8px;
+}
+
+/*footer*/
+footer{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: calc(100% - 32px);
+	padding:16px;
+	color: #383838;
+	background-color: #f9f9f9;
+}
+.sitemap_col{
+	display: flex;
+	flex-direction: column;
+	float: left;
+	width: calc(100%/3);
+	margin-top: 16px;
+	color: #383838;
+	font-weight: 300;
+}
+a.footer_item{
+	width: 100%;
+	margin:0 0 16px 0;
+	text-decoration: none;
+	font-weight: 500;
+	color: #383838 !important;
+}
+.link{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-top: 16px;
+	width: 304px;
+}
+.link_item{
+	width: 36px;
+	height: 36px;
+	margin-right: 16px;
+	border-radius: 24px;
 }
