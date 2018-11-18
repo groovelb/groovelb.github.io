@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.css" />
+	<link rel="stylesheet" href="css/remove_bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="css/layout_common.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_community.css">
+	<link rel="stylesheet" type="text/css" href="css/components.css">
+	<link rel="stylesheet" type="text/css" href="css/img.css">
+	<link rel="stylesheet" type="text/css" href="css/type.css">
+	<link rel="stylesheet" type="text/css" href="css/color.css">
+	<link rel="stylesheet" type="text/css" href="css/menu_transition.css">
+</head>
+<body class="body_size">
+<!-- 헤더 -->
+<div class="header">
+	<div class="menu_dark" id="menu">
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	</div>
+	<img id="logo" src="img/logo_ver3.svg">
+	<div class="my_menu">
+		<a href="message_main.html" class="menu_item" id="message">
+			<img src="img/ic_comments.svg">
+		</a>
+		<a href="my_page.html" class="profile_pic_s" id="pf2" style="width:24px; height:24px;">
+		</a>
+	</div>
+</div>
+<!--슬라이드 메뉴-->
+<style>
+	.main_menu>div>hr{
+		margin:0px 32px;
+	}
+</style>
+<div class="main_menu">
+	<div class="flex_col white_middle_bg">
+		<p class="body_bold margin_2x ver_top_4x middle_emphasis">여행</p>
+		<div class="flex_col full_radious box_shadow" style="width:calc(100% - 32px); margin-left:16px; overflow: hidden;">
+			<a href="my_page.html" class="menu_list">
+				<div class="profile_pic_s menu_icon" id="pf2" style="width:24px; height:24px;">
+				</div>
+				마이 페이지
+			</a>
+			<a href="my_travel.html" class="menu_list menu_list_indent">
+				<img class="menu_icon" src="img/ic_my_travel.svg">
+				내 여행 일정
+			</a>
+			<a href="my_community.html" class="menu_list menu_list_indent">
+				<img class="menu_icon" src="img/ic_community_black.svg">
+				내 여행지 핫스팟 & 동행
+			</a>
+			<a href="plan_hotel.html"class="menu_list">
+				<img class="menu_icon" src="img/ic_hotel_black.svg">
+				내 예약 상세 보기
+			</a>
+			<a href="community.html" class="menu_list">
+				<img class="menu_icon" src="img/ic_community_black.svg">
+				핫스팟 & 동행
+			</a>
+		</div>
+		<p class="body_bold margin_2x ver_top_4x middle_emphasis">리워드 프로그램</p>
+		<div class="flex_col full_radious box_shadow" style="width:calc(100% - 32px); margin-left:16px; overflow: hidden;">
+			<a href="cashback.html" class="menu_list menu_list_indent">
+				<img class="menu_icon" src="img/ic_cashback.svg">
+				캐시백 신청
+			</a>
+			<a href="find_point.html" class="menu_list menu_list_indent">
+				<img class="menu_icon" src="img/ic_find_point.svg">
+				적립금 찾기
+			</a>
+			<a href="invite.html" class="menu_list menu_list_indent">
+				<img class="menu_icon" src="img/ic_invite_earn.svg">
+				초대하기
+			</a>
+		</div>
+		<p class="body_bold margin_2x ver_top_4x middle_emphasis">유용한 링크</p>
+		<div class="flex_col full_radious box_shadow ver_bottom_4x" style="width:calc(100% - 32px); margin-left:16px; overflow: hidden;">
+			<a class="menu_list" href="junglian.html">
+				<img class="menu_icon" src="img/ic_monkey.svg">
+				정글리안
+			</a>
+			<a class="menu_list" href="faq.html">
+				<img class="menu_icon" src="img/ic_faq.svg">
+				FAQ
+			</a>
+			<a class="menu_list" href="event.html">
+				<img class="menu_icon" src="img/ic_faq.svg">
+				이벤트
+			</a>
+			<a class="menu_list" href="cs.html">
+				<img class="menu_icon" src="img/ic_reward.svg">
+				고객센터
+			</a>
+			<a class="menu_list" href="terms.html">
+				<img class="menu_icon" src="img/ic_terms_black.svg">
+				이용약관
+			</a>
+			<a class="menu_list" href="personal_data_policy.html">
+				<img class="menu_icon" src="img/ic_personal_policy_black.svg">
+				개인정보 활용방침
+			</a>
+		</div>
+		<a class="menu_list center white_middle_bg">
+			<div class="button primary_border" style="width: calc(100% - 16px); margin:0;">로그아웃</div>
+		</a>
+	</div>
+</div>
+<div class="content_col ver_top_4x">
+	<style>
+		.event_thumb{width: 328px; height: auto;}
+	</style>
+	<div class="flex_row col1 event_list body_size space_between">
+		<!--이벤트 아이템-->
+		<a href="event_page1.html" class="flex_col col1 ver_bottom_4x">
+			<img src="img/event_img1.png" class="event_thumb ver_bottom_1x" id="event1">
+			<h2 class="body_bold">이벤트 타이틀</h2>
+			<p class="body_size">2018-11-31 ~ 2019-01-31</p>
+		</a>
+		<!--이벤트 아이템-->
+		<div class="flex_col col1 ver_bottom_4x">
+			<img src="img/event_img1.png" class="event_thumb ver_bottom_1x" id="event1">
+			<h2 class="body_bold">이벤트 타이틀</h2>
+			<p class="body_size">2018-11-31 ~ 2019-01-31</p>
+		</div>
+		<!--이벤트 아이템-->
+		<div class="flex_col col1 ver_bottom_4x">
+			<img src="img/event_img1.png" class="event_thumb ver_bottom_1x" id="event1">
+			<h2 class="body_bold">이벤트 타이틀</h2>
+			<p class="body_size">2018-11-31 ~ 2019-01-31</p>
+		</div>
+		<!--이벤트 아이템-->
+		<div class="flex_col col1 ver_bottom_4x">
+			<img src="img/event_img1.png" class="event_thumb ver_bottom_1x" id="event1">
+			<h2 class="body_bold">이벤트 타이틀</h2>
+			<p class="body_size">2018-11-31 ~ 2019-01-31</p>
+		</div>
+		<!--이벤트 아이템-->
+		<div class="flex_col col1 ver_bottom_4x">
+			<img src="img/event_img1.png" class="event_thumb ver_bottom_1x" id="event1">
+			<h2 class="body_bold">이벤트 타이틀</h2>
+			<p class="body_size">2018-11-31 ~ 2019-01-31</p>
+		</div>
+		<!--이벤트 아이템-->
+		<div class="flex_col col1 ver_bottom_4x">
+			<img src="img/event_img1.png" class="event_thumb ver_bottom_1x" id="event1">
+			<h2 class="body_bold">이벤트 타이틀</h2>
+			<p class="body_size">2018-11-31 ~ 2019-01-31</p>
+		</div>
+	</div>
+</div>
+</body>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="js/menu_slide2.js"></script>
+<script>
+
+		/*질문 펼치기*/
+		$(".question").on("click",function(){
+			$(this).toggleClass("selected");
+			$(this).siblings(".answer").toggleClass("show");
+		});
+
+		/*쓰기 다이얼로그 탭 이동*/
+		$(".tab_item").on("click",function(){
+			console.log("tab click!");
+			$(".tab_item").removeClass("tab_selected");
+			$(this).addClass("tab_selected");
+			var id = $(this).attr("id");
+			console.log(id);
+			if(id=="reservation_tab"){
+				$("#reservation_qna").removeClass("hide");
+				$("#cashback_qna").addClass("hide");
+				$('#reserve_faq_banner').removeClass("hide");
+				$("#cashback_faq_banner").addClass("hide");
+			}
+			else if(id=="cashback_tab"){
+				$("#reservation_qna").addClass("hide");
+				$("#cashback_qna").removeClass("hide");	
+				$('#reserve_faq_banner').addClass("hide");
+				$("#cashback_faq_banner").removeClass("hide");
+			}
+		});
+</script>
+</html>
