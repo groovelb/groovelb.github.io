@@ -331,6 +331,7 @@ select.styled-select{
 	color: #ffffff !important;
 }
 .square_button {
+	position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -541,6 +542,17 @@ select.styled-select{
     background: rgba(0,0,0,0.32);
     border-radius: 4px;
     position: absolute;
+}
+.btt_pic:before{
+	content: "";
+    display: block;
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top:8px;
+	right:8px;
+	background-image: url(../img/ic_close_circle.svg);
+	background-size: cover;
 }
 
 /*Card_image*/
