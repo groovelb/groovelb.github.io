@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/layout_common.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_main.css">
+	<link rel="stylesheet" type="text/css" href="css/type.css">
+	<link rel="stylesheet" type="text/css" href="css/color.css">
+	<link rel="stylesheet" type="text/css" href="css/components.css">
+	<link rel="stylesheet" type="text/css" href="css/img.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.css" />
+	<link rel="stylesheet" href="css/remove_bootstrap.css" />
+</head>
+<style>
+	.dialog{
+		z-index: 999;
+		position: relative !important; top:auto; margin:16px;
+	}
+	.dialog_bg{
+		position: static !important;
+		z-index: -999;
+		margin-bottom: 128px;
+	}
+</style>
+<body>
+	<!--가입관련모달-->
+	<h2 class="middle_size margin_2x text_center">클래스 /dialog + m_dialog + padding_2x / width:1080px * 0.3</h2>
+	<div class="dialog_bg">
+		<!--가입-->
+		<div class="flex_col align_center dialog m_dialog padding_4x white_middle_bg" id="signup_dialog">
+			<img class="xbox" src="img/ic_close.svg" id="dg_xbox1">
+			<p class="middle_regular text_center">예약후 반드시 <span>캐시백</span>을 신청하세요! <span>체크인날</span> 바로 지급해드립니다!</p>
+			<div class="flex_row col1" style="width:96% !important">
+				<div class="flex_col col2 align_center">
+					<img src="img/usp1_svg2.svg" id="usp" style="width:108; height: 108px;">
+					<p class="body_medium text_center dark_primary" style="margin-top: -4px;">부킹닷컴 가격의 7%</p>
+				</div>
+				<div class="flex_col col2 align_center">
+					<img src="img/usp2_svg.svg" id="usp" style="width:108px; height: 108px;">
+					<p class="body_medium text_center dark_primary" style="margin-top: -4px;">체크인 당일 캐시백</p>
+				</div>
+			</div>
+			<hr class="ver_margin_8x">
+			<h2 class="middle_size ver_bottom_1x text_center" style="margin-top: -80px; background-color: #fafafafa; padding:0 8px; width: auto !important">회원가입</h2>
+			<form class="flex_col col1 ver_bottom_2x ver_top_2x" action="" id="signup_form">
+				<input class="textfield body_bold" type="text" id="name" name="name" placeholder="이메일">
+				<input class="textfield body_bold" type="text" id="name" name="name" placeholder="비밀번호(6자리 이상)">
+			</form>
+			<p class="caption_bold ver_bottom_1x">*가입 메일과 예약시 메일이 동일해야 적립금 지급이 가능합니다.</p>
+			<div class="col1 align_start">
+				<label class="checkbox_container caption ver_bottom_1x flex_row align_center"><a href="">개인정보 정책</a> 및 <a href="">이용 약관</a>에 동의합니다.
+				  <input type="checkbox">
+				  <span class="checkmark"></span>
+				</label>
+				<label class="checkbox_container caption ver_bottom_4x flex_row align_center ver_bottom_2x">정글리안 메일 수신에 동의합니다.
+				  <input type="checkbox" checked="checked">
+				  <span class="checkmark"></span>
+				</label>
+			</div>
+			<div class="button primary_bg box_shadow" id="signup" style="width:164px;">가입하기</div>
+		</div>
+		<!--가입/로그인-->
+		<div class="flex_col align_center dialog m_dialog padding_2x white_middle_bg" id="signup_in_dialog">
+			<img class="xbox" src="img/ic_close.svg" id="dg_xbox1">
+			<div class="tab2 col1 flex_row body_size ver_bottom_2x tab_containner">
+				<div class="tab_item flex_center col2 tab_selected" id="tab_signin">로그인</div>
+				<div class="tab_item flex_center col2" id="tab_signup">가입</div>
+			</div>
+			<form class="flex_col col1 ver_bottom_4x" action="" id="signup_form">
+				<input class="textfield body_bold" type="text" id="name" name="name" placeholder="이메일">
+				<input class="textfield body_bold" type="text" id="name" name="name" placeholder="비밀번호(6자리 이상)">
+			</form>
+			<div class="button primary_bg box_shadow ver_bottom_2x" id="signup" style="width:164px;">가입하기</div>
+			<p class="caption_bold primary2 ver_bottom_2x">비밀번호 찾기</p>
+		</div>
+		<!--가입-->
+		<div class="flex_col align_center dialog m_dialog padding_2x white_middle_bg" id="signup_dialog">
+			<img class="xbox" src="img/ic_close.svg" id="dg_xbox1">
+			<div class="tab2 col1 flex_row body_size ver_bottom_2x tab_containner">
+				<div class="tab_item flex_center col2" id="tab_signin">로그인</div>
+				<div class="tab_item flex_center col2 tab_selected" id="tab_signup">가입</div>
+			</div>
+			<form class="flex_col col1 ver_bottom_2x" action="" id="signup_form">
+				<input class="textfield body_bold" type="text" id="name" name="name" placeholder="이메일">
+				<input class="textfield body_bold" type="text" id="name" name="name" placeholder="비밀번호(6자리 이상)">
+			</form>
+			<p class="caption_bold ver_bottom_1x">*가입 메일과 예약시 메일이 동일해야 적립금 지급이 가능합니다.</p>
+			<div class="col1 align_start">
+				<label class="checkbox_container caption ver_bottom_1x flex_row align_center">개인정보 수집 및 이용에 동의합니다.
+				  <input type="checkbox">
+				  <span class="checkmark"></span>
+				</label>
+				<label class="checkbox_container caption ver_bottom_4x flex_row align_center">정글리안 메일 수신에 동의합니다.
+				  <input type="checkbox" checked="checked">
+				  <span class="checkmark"></span>
+				</label>
+			</div>
+			<div class="button primary_bg box_shadow" id="signup" style="width:164px;">가입하기</div>
+		</div>
+		<!--비밀번호 찾기-->
+		<div class="flex_col align_center dialog m_dialog padding_2x white_middle_bg" id="signup_in_dialog">
+			<img class="xbox" src="img/ic_close.svg" id="dg_xbox1">
+			<p class="middle_regular">비밀번호 찾기</p>
+			<form class="flex_col col1 ver_bottom_4x" action="" id="signup_form">
+				<input class="textfield body_bold" type="text" id="name" name="name" placeholder="가입시 입력한 이메일">
+			</form>
+			<div class="button primary_bg box_shadow ver_bottom_2x" id="signup" style="width:164px;">비밀번호 이메일로 발송</div>
+		</div>
+		<!--공개 설정-->
+		<div class="flex_col align_center m_dialog dialog padding_2x white_bg" id="setting_dialog">
+			<img class="xbox" src="img/ic_close.svg" id="dg_xbox1">
+			<h2 class="middle_size ver_bottom_4x ver_bottom_2x text_center">공개 설정</h2>
+			<p class="body_size text_center ver_margin_1x" style="width:100%;">여행계획을 공개하시면 여행 계획 공유 및 동행을 찾을 수 있습니다.</p>
+			<div class="list under_border col1">
+				<label class="checkbox_container body_medium ver_padding_1x">여행계획 공개
+				  <input type="checkbox" checked="checked">
+				  <span class="checkmark"></span>
+				</label>
+			</div>
+			<div class="list under_border col1 ver_bottom_2x">
+				<label class="checkbox_container body_medium ver_padding_1x">트래블로그 공개
+				  <input type="checkbox" checked="checked">
+				  <span class="checkmark"></span>
+				</label>
+			</div>
+			<div class="button primary_bg ver_margin_2x" style="width:164px;">확인</div>
+		</div>
+		<!--포스트 삭제-->
+		<div class="flex_col align_center m_dialog dialog padding_2x white_bg" id="setting_dialog">
+			<img class="xbox" src="img/ic_close.svg" id="dg_xbox1">
+			<h2 class="middle_size ver_bottom_4x ver_bottom_2x text_center">핫스팟 삭제</h2>
+			<p class="body_size text_center ver_margin_1x" style="width:100%;">'핫스팟 제목....'을 삭제하시겠습니까? 삭제시 복구가 불가능합니다.</p>
+			<div class="flex_row col1 space_around">
+				<div class="button primary_border ver_margin_2x">삭제</div>
+				<div class="button primary_bg primary_border ver_margin_2x">취소</div>
+			</div>
+		</div>
+		<!--포스트 삭제 끝-->
+	</div>
+	<!--내 프로필 설정 && 여행-->
+	<h2 class="middle_size margin_2x text_center">클래스 / dialog + padding_2x / 1080px * 0.6 </h2>
+	<div class="dialog_bg">
+		<!--여행 성향 선택-->
+		<div class="flex_col align_center dialog padding_2x white_bg" id="prf_dialog">
+			<img class="xbox" src="img/ic_close.svg" id="dg_xbox1">
+			<h2 class="middle_size ver_bottom_4x text_center">여행 성향</h2>
+			<div class="profile_pic_middle" id="pf1"></div>
+			<p class="body_size text_center ver_margin_1x" style="width:100%;"><span>username</span>님의 여행 성향을 나타내는 키워드를 선택해주세요!(최대5개)</p>
+			<div class="flex_row col1 ver_bottom_4x" id="preference"></div>
+			<div class="button primary_bg box_shadow" id="add_btt" style="width:164px;">성향 추가하기</div>
+		</div>
+		<!--새 여행 추가-->
+		<div class="flex_col align_center dialog padding_2x white_bg" id="add_travel_dialog">
+			<img class="xbox" src="img/ic_close.svg" id="dg_xbox2">
+			<h2 class="middle_size ver_bottom_4x text_center">새 여행 추가</h2>
+			<div class="flex_row col1 padding_1x ver_bottom_2x">
+				<!--구글 플레이스 연동부분-->
+				<div class="flex_row col1 padding_tinny ver_margin_2x full_radious white_middle_bg">
+					<p class="flex_row col2 align_center caption_bold medium_empasize" id="location"><img src="img/ic_location.svg" class="icon_s">도시 설정</p>
+					<div class="flex_row col2">
+						<p class="flex_row col2 align_center caption_bold medium_empasize" id="date"><img src="img/ic_calendar_p.svg" class="icon_s">도착 날짜</p>
+						<p class="flex_row col2 align_center caption_bold medium_empasize" id="date"><img src="img/ic_calendar_p.svg" class="icon_s">떠나는 날짜</p>
+					</div>
+				</div>
+				<input class="calculator_value number col1 ver_margin_2x" type="text" id="days" placeholder="여행제목" style="margin-left:0; text-align: left;">
+			</div>
+			<a class="button primary_bg" href="new_travel.html" style="align-self: center; width:164px;">새여행 만들기</a>
+		</div>
+		<!--기존 여행 수정-->
+		<div class="flex_col align_center dialog padding_2x white_bg" id="add_travel_dialog">
+			<img class="xbox" src="img/ic_close.svg" id="dg_xbox2">
+			<h2 class="middle_size ver_bottom_4x text_center">여행정보 수정</h2>
+			<div class="flex_row col1 padding_1x ver_bottom_2x">
+				<!--구글 플레이스 연동부분-->
+				<div class="flex_row col1 padding_tinny ver_margin_2x full_radious white_middle_bg">
+					<p class="flex_row col2 align_center caption_bold medium_empasize" id="location"><img src="img/ic_location.svg" class="icon_s">싱가폴</p>
+					<div class="flex_row col2">
+						<p class="flex_row col2 align_center caption_bold medium_empasize" id="date"><img src="img/ic_calendar_p.svg" class="icon_s">2018.10.12</p>
+						<p class="flex_row col2 align_center caption_bold medium_empasize" id="date"><img src="img/ic_calendar_p.svg" class="icon_s">2018.11.02</p>
+					</div>
+				</div>
+				<input class="calculator_value number col1 ver_margin_2x" type="text" id="days" value="싱가폴 여행" style="margin-left:0; text-align: left;">
+			</div>
+			<a class="button primary_bg" href="new_travel.html" style="align-self: center; width:164px;">새여행 만들기</a>
+		</div>
+		<!--쓰기 다이알로그-->
+		<div class="dialog padding_2x card write_dialog white_bg" id="wrt_dialog">
+			<img class="xbox" src="img/ic_close.svg" id="dg_xbox1">
+			<div class="tab3 flex_row body_size tab_containner" style="justify-content: space-between; width: 100%;">
+				<div class="tab_item flex_center col3 tab_selected" id="tab_trv">트래블 로그</div>
+				<div class="tab_item flex_center col3" id="tab_qna">Q&A</div>
+				<div class="tab_item flex_center col3" id="tab_mating">동행찾기</div>
+			</div>
+			<div class="flex_row tabbed_content" id="wrt_travel_log">
+				<style>.square_button{margin-right: 16px;}</style>
+				<div class="text_area col1 padding_1x full_border bottom_radious ver_bottom_2x">
+					<p class="flex_row align_center caption_bold medium_empasize ver_bottom_1x" id="location"><img src="img/ic_location.svg">싱가폴</p>
+					<textarea class="col1 body_size" placeholder="여행기를 적어주세요." class="body_size" style="border-width: 0; height: 104px;"></textarea>
+				</div>
+				<div class="square_button b_square_button" id="trv1">
+				</div>
+				<div class="square_button b_square_button">
+					<img src="img/ic_add.svg" style="width:48px; height:48px">
+				</div>
+				<div class="flex_col col1">
+					<div class="button primary_bg" style="align-self: flex-end; width:164px;">올리기</div>
+				</div>
+			</div>
+		</div>
+		<!--포스트 편집-->
+		<!--쓰기 다이알로그-->
+		<div class="dialog padding_2x card write_dialog white_bg" id="edt_dialog">
+			<img class="xbox" src="img/ic_close.svg" id="dg_xbox1">
+			<div class="tab3 flex_row body_size tab_containner" style="justify-content: space-between; width: 100%;">
+				<div class="tab_item flex_center col1 tab_selected" id="tab_trv">핫스팟 편집</div>
+			</div>
+			<div class="flex_row tabbed_content" id="wrt_travel_log">
+				<style>.square_button{margin-right: 16px;}</style>
+				<div class="text_area col1 padding_1x full_border bottom_radious ver_bottom_2x">
+					<p class="flex_row align_center caption_bold medium_empasize ver_bottom_1x" id="location"><img src="img/ic_location.svg">싱가폴, 보타닉 가든</p>
+					<textarea class="col1 body_size"class="body_size" style="border-width: 0; height: 104px;">싱가폴 갈때마다 방문하는 OOO 이번에 새롭게 바뀌었는데 추가된 메뉴가 좋았다. 가격은 00~00SG로 저렴한 편이고 사람도 많이 붐비지 않아서 좋아. 싱가폴 갈때마다 방문하는 OOO 이번에 새롭게 바뀌었는데 추가된 메뉴가 좋았다. 가격은 00~00SG로 저렴한 편이고 사람도 많이 붐비지 않아서 좋아. 싱가폴 갈때마다 방문하는 OOO 이번에 새롭게 바뀌었는데 추가된 메뉴가 좋았다. 가격은 00~00SG로 저렴한 편이고 사람도 많이 붐비지 않아서 좋아. 싱가폴 갈때마다 방문하는 OOO 이번에 새롭게 바뀌었는데 추가된 메뉴가 좋았다. 가격은 00~00SG로 저렴한 편이고 사람도 많이 붐비지 않아서 좋아</textarea>
+				</div>
+				<div class="square_button b_square_button btt_pic" id="trv1">
+				</div>
+				<div class="square_button b_square_button btt_pic" id="trv2">
+				</div>
+				<div class="square_button b_square_button btt_pic" id="trv3">
+				</div>
+				<div class="square_button b_square_button btt_pic" id="trv4">
+				</div>
+				<div class="square_button b_square_button">
+					<img src="img/ic_add.svg" style="width:48px; height:48px">
+				</div>
+				<div class="flex_col col1 ver_top_2x">
+					<div class="button primary_bg" style="align-self: flex-end; width:164px;">올리기</div>
+				</div>
+			</div>
+		</div>
+		<div class="flex_col align_center dialog padding_2x white_bg" id="mating_dialog">
+			<img class="xbox" src="img/ic_close.svg" id="dg_xbox1">
+			<h2 class="middle_size ver_bottom_4x text_center">동행신청</h2>
+			<div class="flex_row col1 flex_center align_center ver_bottom_1x">
+				<div class="profile_pic_big box_shadow" id="pf2">
+				</div>
+				<!--화살표-->
+				<img src="img/ic_arrow_long_right_2ndp.svg" style="width:96px; height: 96px;" style="z-index: 999;">
+				<!--동행아이템-->
+				<div class="card s_card box_shadow flex_col align_center space_between ver_margin_1x" id="trv13" style="margin-left: -8px; z-index: -1">
+					<div class="card align_center padding_tinny white_bg" id="date">
+						<p class="body_bold primary">31</p>
+						<p class="caption">OCT</p>
+					</div>
+					<div class="col1 white_bg bottom_radious ver_padding_tinny">
+						<!--참여자 프로필-->
+						<div class="flex_row col1 flex_center" id="user_list_thum">
+							<div class="profile_pic_s" id="pf1"></div>
+							<div class="profile_pic_s" id="pf2"></div>
+							<div class="profile_pic_s" id="pf3"></div>
+						</div>
+						<p class="flex_row flex_center caption_bold middle_emphasis" id="location"><img src="img/ic_location.svg">Zouk, Singapore</p>
+					</div>
+				</div>
+			</div>
+			<p class="caption text_center ver_bottom_1x"><span>username</span>외 3명 참여중</p>
+			<p class="body_size text_center ver_bottom_8x" style="width:100%;">동행신청을 하시겠습니까?<br>동행신청 결과는 메세지에서 확인할 수 있습니다.</p>
+			<div class="button primary_bg ver_margin_2x box_shadow" id="confirm_mating" style="width:164px;">동행신청</div>
+		</div>
+	</div>
+	<!--동행관련 모달-->
+	<h2 class="middle_size text_center">dialog + wide dialog / width: 614px;
+    height: calc(96% - 64px);</h2>
+	<div class="dialog_bg">
+		<!--핫스팟 자세히 보기-->
+		<div class="dialog wide_dialog flex_col align_center white_bg box_shadow" id="hotspot_detail">
+			<img class="xbox" src="img/ic_close.svg" id="dg_xbox2">
+			<div class="flex_col white_bg">
+				<h2 class="big_size hor_padding_1x ver_top_4x text_center" style="width:calc(100% - 32px);">싱가포르 최고의 데이트 장소</h2>
+				<div class="flex_row col1 align_center padding_1x space_between border_bottom" style="width:calc(100% - 32px) !important; position: relative;">
+					<!--사용자 인포-->
+					<div class="flex_row align_center" id="poster_info">
+						<div class="profile_pic_middle" id="pf5">
+						</div>
+						<div class="hor_margin_tiny">
+							<p class="body_bold">username</p>
+							<p class="caption middle_emphasis">2018 09/20</p>
+						</div>
+					</div>
+					<img src="img/ic_more.svg" class="hotspot_add_function">
+					<div class="full_radious white_middle_bg box_shadow" style="position:absolute; top:80px; right:16px">
+						<div class="list border_bottom body_post padding_1x">
+							핫스팟 편집
+						</div>
+						<div class="list border_bottom body_post padding_1x">
+							핫스팟 삭제
+						</div>
+					</div>
+				</div>
+				<!--포스트 컨텐츠-->
+				<div class="flex_row col1 justify_center border_bottom">
+					<div class="pic_4_3 ver_bottom_2x" id="hotspot_example">
+					</div> 
+					<div class="flex_row col1 hor_padding_1x justify_center" style="width:calc(100% - 32px);">
+						<div class="square_button selected_pic" id="trv5"></div>
+						<div class="square_button" id="trv6"></div>
+						<div class="square_button" id="trv7"></div>
+						<div class="square_button" id="trv8"></div>
+						<div class="square_button" id="trv9"></div>
+						<div class="square_button" id="map_thumb"></div>
+					</div>
+					<p class="flex_row justify_center align_center body_bold ver_margin_2x hor_padding_1x" id="location" style="width:calc(100% - 32px);"><img class="icon_s" src="img/ic_location_2ndp.svg">Singapore Botanic Garden</p>
+					<div class="big_button grd1_bg white_hightlight box_shadow ver_bottom_4x" id="creat_mating">
+						이 장소로 동행 생성
+					</div>
+					<!--동행 신청-->
+					<div class="flex_col col1 padding_1x white_middle_bg hide" style="width:calc(100% - 32px) !important;" id="extend_popup">
+						<img class="xbox margin_1x" src="img/ic_close.svg" id="xbox_inside" style="align-self: flex-end;">
+						<!-- 동행 다일알로그 탭 -->
+						<div class="flex_row tabbed_content justify_center">
+							<style>.square_button{margin-right: 16px;}</style>
+							<div class="text_area white_bg flex_row col1 padding_1x full_border bottom_radious ver_bottom_2x">
+								<!--구글 플레이스 연동부분-->
+								<p class="flex_row col2 align_center caption ver_bottom_1x" id="location"><img src="img/ic_location.svg">Singapore Botanic Garden</p>
+								<p class="flex_row col2 align_center caption medium_empasize ver_bottom_1x" id="location"><img src="img/ic_calendar_p.svg">날짜 지정</p>
+								<textarea placeholder="동행 일정을 적어주세요." class="body_size" style="border-width: 0; height: 104px;"></textarea>
+							</div>
+							<div class="button primary_bg ver_bottom_2x">올리기</div>
+						</div>
+					</div>
+				</div>
+				<div class="flex_row col1 border_bottom" id="post_text_area">
+					<p class="body_post">
+					싱가폴 갈때마다 방문하는 OOO 이번에 새롭게 바뀌었는데 추가된 메뉴가 좋았다. 가격은 00~00SG로 저렴한 편이고 사람도 많이 붐비지 않아서 좋아. 싱가폴 갈때마다 방문하는 OOO 이번에 새롭게 바뀌었는데 추가된 메뉴가 좋았다. 가격은 00~00SG로 저렴한 편이고 사람도 많이 붐비지 않아서 좋아. 싱가폴 갈때마다 방문하는 OOO 이번에 새롭게 바뀌었는데 추가된 메뉴가 좋았다. 가격은 00~00SG로 저렴한 편이고 사람도 많이 붐비지 않아서 좋아. 싱가폴 갈때마다 방문하는 OOO 이번에 새롭게 바뀌었는데 추가된 메뉴가 좋았다. 가격은 00~00SG로 저렴한 편이고 사람도 많이 붐비지 않아서 좋아.
+					</p>
+					<p class="body_post">
+					싱가폴 갈때마다 방문하는 OOO 이번에 새롭게 바뀌었는데 추가된 메뉴가 좋았다. 가격은 00~00SG로 저렴한 편이고 사람도 많이 붐비지 않아서 좋아. 싱가폴 갈때마다 방문하는 OOO 이번에 새롭게 바뀌었는데 추가된 메뉴가 좋았다. 가격은 00~00SG로 저렴한 편이고 사람도 많이 붐비지 않아서 좋아. 싱가폴 갈때마다 방문하는 OOO 이번에 새롭게 바뀌었는데 추가된 메뉴가 좋았다. 가격은 00~00SG로 저렴한 편이고 사람도 많이 붐비지 않아서 좋아. 싱가폴 갈때마다 방문하는 OOO 이번에 새롭게 바뀌었는데 추가된 메뉴가 좋았다. 가격은 00~00SG로 저렴한 편이고 사람도 많이 붐비지 않아서 좋아.
+					</p>
+				</div>
+				<!--커멘트-->
+				<div class="padding_1x col1" style="width:calc(100% - 32px) !important;" id="comment_area">
+					<div class="flex_row space_between align_center ver_bottom_4x">
+						<div class="flex_row align_center">
+							<img class="icon_s" src="img/ic_like.svg">
+							<p class="caption_bold">좋아요</p>
+						</div>
+						<div class="flex_row align_center">
+							<img class="icon_s" src="img/ic_comments.svg">
+							<p class="caption_bold">댓글 달기</p>
+						</div>
+						<div class="flex_row align_center">
+							<img class="icon_s" src="img/ic_scrap.svg">
+							<p class="caption_bold">스크랩</p>
+						</div>
+					</div>
+					<div class="flex_row margin_1x justify_end" id="opp_cmt" style="align-self: flex-end;">
+						<!--사용자 인포-->
+						<div class="flex_row col1 body_size padding_tinny white_middle_bg full_radious" style="max-width:calc(100% - 96px)">
+							<div class="flex_row space_between col1">
+								<p class="caption_bold">long username</p>
+								<p class="caption low_emphasis">10/31</p>
+							</div>
+							<p class="body_size">아니요 걸어갔어요~</p>
+						</div>
+						<div class="profile_pic_middle hor_margin_tiny" id="pf5">
+						</div>
+					</div>
+					<!--커멘트-->
+					<div class="flex_row margin_1x" id="opp_cmt" style="align-self: flex-start;">
+						<!--사용자 인포-->
+						<div class="profile_pic_middle" id="pf2">
+						</div>
+						<div class="flex_row col1 body_size padding_tinny white_middle_bg full_radious hor_margin_tiny" style="max-width:calc(100% - 96px)">
+							<div class="flex_row space_between col1">
+								<p class="caption_bold">long username</p>
+								<p class="caption low_emphasis">10/31</p>
+							</div>
+							<p class="body_size">오 저도 가보고 싶네요. 전철타고 가셨나요?</p>
+						</div>
+					</div>
+					<!--커멘트 달기-->
+					<div class="flex_row col1 ver_top_1x">
+						<textarea class="body_size full_border full_radious" placeholder="커멘트를 남기세요" style="width: calc(100% - 96px) !important;"></textarea>
+						<div class="profile_pic_middle hor_margin_tiny" id="pf5">
+						</div>
+						<div class="button primary_bg ver_margin_1x" style="align-self: flex-end;">커멘트 달기</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--핫스팟 자세히보기 끝-->
+	</div>
+	<!--여행 삭제-->
+	<div class="flex_col align_center m_dialog dialog padding_2x white_bg" id="setting_dialog">
+		<img class="xbox" src="img/ic_close.svg" id="dg_xbox1">
+		<h2 class="middle_size ver_bottom_4x ver_bottom_2x text_center">여행 삭제</h2>
+		<p class="body_size text_center ver_margin_1x" style="width:100%;">'싱가폴 여행'을 삭제하시겠습니까? 삭제시 모든 여행계획은 복구가 불가능합니다.</p>
+		<div class="button primary_bg ver_margin_2x" style="width:164px;">여행 삭제</div>
+	</div>
+	<!--여행 삭제2-->
+	<div class="flex_col align_center m_dialog dialog padding_2x white_bg" id="setting_dialog">
+		<img class="xbox" src="img/ic_close.svg" id="dg_xbox1">
+		<h2 class="middle_size ver_bottom_4x ver_bottom_2x text_center">여행 삭제</h2>
+		<p class="body_size text_center ver_margin_1x" style="width:100%;">호텔 예약내역이 남아있는 여행은 삭제할 수 없습니다. 여행계획만 삭제하시겠습니까?</p>
+		<div class="flex_row col1 space_around">
+			<div class="button primary_border ver_margin_2x">여행계획 삭제</div>
+			<div class="button primary_bg primary_border ver_margin_2x">취소</div>
+		</div>
+	</div>
+</body>
+<script src="js/preference.js"></script>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+	var selectd = [];
+	$(document).ready(function(){
+		console.log("load");
+
+		/*여행성향 칩 그리기*/
+		preference.forEach(function(item){
+
+			/*선택여부에 따라 성향 색표시*/
+			if(item.check==0){
+				$("#preference").append("<div class='chip margin_1x'>" + item.keyword + "</div>");
+			}
+			else{
+				$("#preference").append("<div class='chip chip_selected margin_1x'>" + item.keyword + "</div>")
+			}		
+		});
+
+		$(".chip").on("click",function(){
+			$(this).toggleClass("chip_selected");
+			if($(this).hasClass("chip_selected")){
+				console.log(this);
+			}
+		});	
+
+		
+		/*쓰기 다이얼로그 탭 이동*/
+		$(".tab_item").on("click",function(){
+			console.log("tab click!");
+			$(".tab_item").removeClass("tab_selected");
+			$(this).addClass("tab_selected");
+
+			var id = $(this).attr("id");
+			var current_cont = $("#wrt_dialog").find(".tabbed_content");
+
+			$("#out_of_screen").append(current_cont);
+			if(id=="tab_trv"){
+				$("#wrt_dialog").append($("#wrt_travel_log"));
+			}
+			else if(id=="tab_qna"){
+				$("#wrt_dialog").append($("#wrt_qna"));
+			}
+			else if(id=="tab_mating"){
+				$("#wrt_dialog").append($("#wrt_mating"));
+			}
+		});
+
+	});
+</script>
+<div id="out_of_screen" style="position: fixed; top:-100%; left:-100%">
+	<!-- 질문 다일알로그 탭 -->
+	<div class="flex_row tabbed_content" id="wrt_qna">
+		<style>.square_button{margin-right: 16px;} textarea{width: 100%;}</style>
+		<div class="text_area col1 padding_1x full_border bottom_radious ver_bottom_2x">
+			<!--구글 플레이스 연동부분-->
+			<p class="flex_row align_center caption_bold medium_empasize ver_bottom_1x" id="location"><img src="img/ic_location.svg">싱가폴</p>
+			<textarea class="col1 body_size q_textarea" placeholder="질문을 적어주세요." class="body_size" style="border-width: 0; height: 104px;"></textarea>
+		</div>
+		<div class="flex_col col1">
+			<div class="button primary_bg" style="align-self: flex-end; width:164px;">질문 등록</div>
+		</div>
+	</div>
+	<!-- 동행 다일알로그 탭 -->
+	<div class="flex_row tabbed_content" id="wrt_mating">
+		<style>.square_button{margin-right: 16px;}</style>
+		<div class="text_area flex_row col1 padding_1x full_border bottom_radious ver_bottom_2x">
+			<!--구글 플레이스 연동부분-->
+			<p class="flex_row col2 align_center caption_bold medium_empasize ver_bottom_1x" id="location"><img src="img/ic_location.svg">장소 찾기</p>
+			<p class="flex_row col2 align_center caption_bold medium_empasize ver_bottom_1x" id="location"><img src="img/ic_calendar_p.svg">날짜 지정</p>
+			<textarea placeholder="동행 일정을 적어주세요." class="body_size" style="border-width: 0; height: 104px;"></textarea>
+		</div>
+		<div class="flex_col col1">
+			<div class="button primary_bg" style="align-self: flex-end; width:164px;">동행찾기 등록</div>
+		</div>
+	</div>
+</div>
+</html>
