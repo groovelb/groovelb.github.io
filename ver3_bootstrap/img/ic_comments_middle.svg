@@ -1,16 +1,16 @@
-<svg id="8acff41a-0a0f-4107-ad69-7c6f6f8df8b0" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+<svg id="cb2f52be-c292-452c-906c-bdf07efd51db" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
   <defs>
     <style>
-      .\39 4e55736-2b85-4c0e-9023-7aa7d02d9f99 {
-        fill: #f6f4fa;
+      .a6726937-4c03-47be-b403-3737ee9324ff {
+        fill: #a0a0a0;
       }
 
-      .\30 c4c84fb-715e-4a78-b373-5351379a5615 {
+      .d53b4193-c282-4b11-b0c2-9431f89acbfd {
         fill: none;
       }
     </style>
   </defs>
   <title>ic_comments_middle</title>
-  <path class="94e55736-2b85-4c0e-9023-7aa7d02d9f99" d="M22,4a2,2,0,0,0-2-2H4A2,2,0,0,0,2,4V16a2,2,0,0,0,2,2H18l4,4Z"/>
-  <path class="0c4c84fb-715e-4a78-b373-5351379a5615" d="M0,0H24V24H0Z"/>
+  <path class="a6726937-4c03-47be-b403-3737ee9324ff" d="M22,4a2,2,0,0,0-2-2H4A2,2,0,0,0,2,4V16a2,2,0,0,0,2,2H18l4,4Z"/>
+  <path class="d53b4193-c282-4b11-b0c2-9431f89acbfd" d="M0,0H24V24H0Z"/>
 </svg>

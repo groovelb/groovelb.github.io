@@ -159,6 +159,9 @@ hr{
 .ver_bottom_4x{
 	margin-bottom: 32px !important;
 }
+.ver_bottom_6x{
+	margin-bottom: 48px !important;
+}
 .ver_bottom_8x{
 	margin-bottom: 64px !important;
 }
@@ -198,6 +201,9 @@ hr{
 }
 .ver_padding_4x{
 	padding: 32px 0;
+}
+.ver_padding_8x{
+	padding: 64px 0;
 }
 .hor_padding_1x{
 	padding: 0 16px;

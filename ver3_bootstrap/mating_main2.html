@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.css" />
+	<link rel="stylesheet" href="css/remove_bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="css/layout_common.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_main.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_community.css">
+	<link rel="stylesheet" type="text/css" href="css/type.css">
+	<link rel="stylesheet" type="text/css" href="css/color.css">
+	<link rel="stylesheet" type="text/css" href="css/components.css">
+	<link rel="stylesheet" type="text/css" href="css/img.css">
+</head>
+<style>
+	#banner{position: relative; width:calc(100% - 32px); padding: 16px; margin:0 !important;}
+	#close{position: absolute; right:16px; top:16px;}
+	#city_list>div>p{
+			text-align: center;
+			margin: 8px 0;
+		}
+	.dot{
+		width: 8px;
+		height: 8px;
+		border-radius: 4px;
+		background-color: #ffffff;
+		margin-right: 4px;
+	}
+	.mating_banner{
+		position: relative;
+	}
+	.evt_containner{
+		left:0%;
+		transition: left 0.5s;
+	}
+</style>
+<body class="white_bg">
+<!-- 헤더 -->
+<div class="header flex_row live_area black_highlight box_shadow" id="header">
+	<div class="flex_row col2  align_center justify_start" id="left">
+		<img id="header_logo" src="img/logo_ver3.svg">
+		<div class="text_menu flex_row align_center hor_margin_2x body_size" id="selected">
+			<a href="index_loggedin.html">호텔</a>
+		</div>
+		<div class="text_menu flex_row align_center body_size hor_margin_2x">
+			<a href="community_main.html">동행</a>
+		</div>
+	</div>
+	<div class="flex_row col2 align_center justify_end" id="right">
+		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="faq.html">FAQ</a>
+		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="reward.html">캐시백 신청</a>
+		<a class="text_menu flex_row align_center body_size hor_margin_2x" href="message_main.html">메세지</a>
+		<a class="flex_row align_center hor_margin_2x" id="user_info" style="margin-right: 0" href="my_page.html">
+			<div class="profile_pic_s" id="pf1"></div>
+			<div class="flex_col">
+				<p class="body_bold hor_margin_tiny">username</p>
+				<p class="caption hor_margin_tiny">23,112₩</p>
+			</div>
+		</a>
+	</div>
+</div>
+<div class="flex_col col1 align_center ver_bottom_4x" style="margin-top: 64px;" id="community_top">
+	<div class="flex_col col1 grd1_bg align_center ver_bottom_2x" id="community_top2" style="z-index: 99; height: 248px; overflow: hidden; position: relative; height: 248px">
+		<div class="next_evt" style="position: absolute; right:5%; top:calc(50% - 32px); opacity: 0.6; z-index: 99">
+			<img src="img/ic_arrow_right_white.svg" style="width:64px; height: 64px;">
+		</div>
+		<div class="prev_evt" style="position: absolute; left:5%; top:calc(50% - 32px); opacity: 0.6; z-index: 99; transform: rotate(180deg);">
+			<img src="img/ic_arrow_right_white.svg" style="width:64px; height: 64px;">
+		</div>
+		<div class="flex_row evt_containner" style="position: absolute; height: 208px; width: 200%; left: 0%;">
+			<div class="flex_col col2 flex_center ver_bottom_1x mating_banner" id="evt1" style="height: 208px;">
+				<img class="ver_top_1x" src="img/ic_mating_casual.svg" style="width:auto; height: 64px;">
+				<p class="middle_bold ver_margin_2x">"함께하면 더 좋은 여행, 여행지의 동행을 찾으세요."</p>
+				<div class="body_size white_highlight">동행 혜택 자세히 보기</div>
+			</div>
+			<div class="flex_col col2 flex_center ver_bottom_1x mating_banner" id="evt2" style="height: 208px;">
+				<img class="ver_top_1x" src="img/ic_evt_taxi2.svg" style="width:auto; height: 96px;">
+				<p class="middle_bold ver_margin_1x">"함께타면 택시가 공짜라고!? 공항에서 택시동행을 찾으세요."</p>
+				<div class="s_button caption white_bg primary_dark" target="_blank">이벤트 자세히 보기</div>
+			</div>
+		</div>
+		<div class="flex_row" style="bottom:40px; position: absolute;">
+			<div class="dot">
+			</div>
+			<div class="dot">
+			</div>
+			<div class="dot">
+			</div>
+		</div>
+	</div>
+	<!--텍스트 필드-->
+	<div class="live_area ver_bottom_4x">
+		<div class="textfield body_size tf_full box_shadow white_bg full_radious" style="position:relative;height: 56px; border-radius: 28px !important; z-index: 99; margin:0; margin-top:-40px">
+			<img class="icon" src="img/ic_search.svg">
+			<input type="text" placeholder="동행 도시를 검색해보세요" style="border-width: 0; width:calc(100% - 64px)" onfocus="show_cityList()" onfocusout="hide_cityList()">
+			<!--시티 리스트 끝-->
+			<div class="flex_row full_radious col1 white_bg padding_1x box_shadow hide" id="city_list" style="position: absolute;top:64px; left:-16px; z-index: 999;">
+				<div class="flex_col col4">
+					<p>도시(3)</p>
+					<p>도시(3)</p>
+					<p>도시(3)</p>
+					<p>도시(3)</p>
+				</div>
+				<div class="flex_col col4">
+					<p>도시(3)</p>
+					<p>도시(3)</p>
+					<p>도시(3)</p>
+					<p>도시(3)</p>
+				</div>
+				<div class="flex_col col4">
+					<p>도시(3)</p>
+					<p>도시(3)</p>
+					<p>도시(3)</p>
+					<p>도시(3)</p>
+				</div>
+				<div class="flex_col col4">
+					<p>도시(3)</p>
+					<p>도시(3)</p>
+					<p>도시(3)</p>
+					<p>도시(3)</p>
+				</div>
+			</div>
+			<!--시티 리스트 끝-->
+		</div>
+	</div>
+	<!--텍스트 필드-->
+	<div class="big_button primary_bg white_highlight" id="write">
+		<img src="img/ic_write_white.svg">
+		동행 올리기
+	</div>
+</div>
+<!-- <div class="live_area white_middle_bg ver_bottom_4x" style="height:144px;z-index: 9; position: relative; margin-top: -80px">
+	<div class="flex_row col1 align_center">
+		<div style="width:calc(100% - 108px)"></div>
+		<div class="button white_bg black_border" id="write">
+			<img src="img/ic_write.svg">
+			올리기
+		</div>
+	</div>
+</div> -->
+<div class="live_area">
+	<style>
+		.card_full{}
+	</style>
+	<!--내 트래블 로그 섹션 -->
+		<div class="flex_row col1">
+			<div class="flex_row col1 space_between align_center" style="margin:8px 0 16px 0">
+				<div class="flex_row flex_item_center align_center" id="filter">
+					<label class="checkbox_container caption">동행
+					  <input type="checkbox" checked="checked">
+					  <span class="checkmark"></span>
+					</label>
+					<label class="checkbox_container caption">핫스팟
+					  <input type="checkbox">
+					  <span class="checkmark"></span>
+					</label>
+				</div>
+				<!-- <div class="button black_border" id="write"><img src="img/ic_write.svg">올리기</div> -->
+			</div>
+			<div class="flex_col col4">
+				<!--포스트-->
+				<style>
+					#location>img{width: 16px; height:16px;margin-left:-4px;}
+					#hot_spot{width:36px; height: 36px;}
+				</style>
+				<!--동행-->
+				<div class="mating card card_full">
+					<div class="card_img top_radious ver_padding_2x align_center padding_tinny" id="trv13">
+						<div class=""></div>
+						<div class="card align_center padding_tinny white_bg date">
+							<p class="body_bold primary">2</p>
+							<p class="caption">NOV</p>
+						</div>
+					</div>
+					<div class="flex_col padding_tinny white_middle_bg card align_center hor_margin_1x text_center bottom_radious" id="mating_info">
+						<div class="profile_pic_middle" id="pf7" style="margin-top:-46px">
+						</div>
+						<h2 class="body_size ver_margin_tiny">"같이 클럽 zouk가실분 찾아요"</h2>
+						<div class="flex_row col1 space_between caption align_center middle_emphasis" style="margin:4px 0;">
+			                <p class="flex_row align_center"><img class="icon_ss" src="img/ic_like_middle.svg">조회수 12</p>
+			                <p class="flex_row align_center"><img class="icon_ss" src="img/ic_people_middle.svg">참가자 2</p>
+			                <p class="flex_row align_center"><img class="icon_ss" src="img/ic_comments_middle.svg">댓글 4</p>
+		                </div>
+					</div>
+					<div class="post_info margin_1x">
+						<p class="flex_row align_center caption_bold ver_margin_tiny" id="location"><img src="img/ic_location.svg">Location, City</p>
+					</div>
+				</div>
+				<!--동행-->
+				<div class="mating card card_full">
+					<div class="card_img long top_radious ver_padding_2x align_center padding_tinny" id="trv13">
+						<div class="card align_center padding_tinny white_bg date">
+							<p class="body_bold primary">2</p>
+							<p class="caption">NOV</p>
+						</div>
+					</div>
+					<div class="flex_col padding_tinny white_middle_bg card align_center hor_margin_1x text_center bottom_radious" id="mating_info">
+						<div class="profile_pic_middle" id="pf7" style="margin-top:-46px">
+						</div>
+						<h2 class="body_size ver_margin_tiny">"같이 클럽 zouk가실분 찾아요"</h2>
+						<div class="flex_row col1 space_between caption align_center middle_emphasis" style="margin:4px 0;">
+			                <p class="flex_row align_center"><img class="icon_ss" src="img/ic_like_middle.svg">조회수 12</p>
+			                <p class="flex_row align_center"><img class="icon_ss" src="img/ic_people_middle.svg">참가자 2</p>
+			                <p class="flex_row align_center"><img class="icon_ss" src="img/ic_comments_middle.svg">댓글 4</p>
+		                </div>
+					</div>
+					<div class="post_info margin_1x">
+						<p class="flex_row align_center caption_bold ver_margin_tiny" id="location"><img src="img/ic_location.svg">Location, City</p>
+					</div>
+				</div>
+			</div>
+			<div class="flex_col col4">
+				<!--동행-->
+				<div class="mating card card_full">
+					<div class="card_img middle top_radious ver_padding_2x align_center padding_tinny" id="trv13">
+						<div class="card align_center padding_tinny white_bg date">
+							<p class="body_bold primary">2</p>
+							<p class="caption">NOV</p>
+						</div>
+					</div>
+					<div class="flex_col padding_tinny white_middle_bg card align_center hor_margin_1x text_center bottom_radious" id="mating_info">
+						<div class="profile_pic_middle" id="pf7" style="margin-top:-46px">
+						</div>
+						<h2 class="body_size ver_margin_tiny">"같이 클럽 zouk가실분 찾아요"</h2>
+						<div class="flex_row col1 space_between caption align_center middle_emphasis" style="margin:4px 0;">
+			                <p class="flex_row align_center"><img class="icon_ss" src="img/ic_like_middle.svg">조회수 12</p>
+			                <p class="flex_row align_center"><img class="icon_ss" src="img/ic_people_middle.svg">참가자 2</p>
+			                <p class="flex_row align_center"><img class="icon_ss" src="img/ic_comments_middle.svg">댓글 4</p>
+		                </div>
+					</div>
+					<div class="post_info margin_1x">
+						<p class="flex_row align_center caption_bold ver_margin_tiny" id="location"><img src="img/ic_location.svg">Location, City</p>
+					</div>
+				</div>
+				<!--동행-->
+				<div class="mating card card_full">
+					<div class="card_img short top_radious ver_padding_2x align_center padding_tinny" id="trv13">
+						<div class="card align_center padding_tinny white_bg date">
+							<p class="body_bold primary">2</p>
+							<p class="caption">NOV</p>
+						</div>
+					</div>
+					<div class="flex_col padding_tinny white_middle_bg card align_center hor_margin_1x text_center bottom_radious" id="mating_info">
+						<div class="profile_pic_middle" id="pf7" style="margin-top:-46px">
+						</div>
+						<h2 class="body_size ver_margin_tiny">"같이 클럽 zouk가실분 찾아요"</h2>
+						<div class="flex_row col1 space_between caption align_center middle_emphasis" style="margin:4px 0;">
+			                <p class="flex_row align_center"><img class="icon_ss" src="img/ic_like_middle.svg">조회수 12</p>
+			                <p class="flex_row align_center"><img class="icon_ss" src="img/ic_people_middle.svg">참가자 2</p>
+			                <p class="flex_row align_center"><img class="icon_ss" src="img/ic_comments_middle.svg">댓글 4</p>
+		                </div>
+					</div>
+					<div class="post_info margin_1x">
+						<p class="flex_row align_center caption_bold ver_margin_tiny" id="location"><img src="img/ic_location.svg">Location, City</p>
+					</div>
+				</div>
+			</div>
+			<div class="flex_col col4">
+				<!--동행-->
+				<div class="mating card card_full">
+					<div class="card_img long top_radious ver_padding_2x align_center padding_tinny" id="trv13">
+						<div class="card align_center padding_tinny white_bg date">
+							<p class="body_bold primary">2</p>
+							<p class="caption">NOV</p>
+						</div>
+					</div>
+					<div class="flex_col padding_tinny white_middle_bg card align_center hor_margin_1x text_center bottom_radious" id="mating_info">
+						<div class="profile_pic_middle" id="pf7" style="margin-top:-46px">
+						</div>
+						<h2 class="body_size ver_margin_tiny">"같이 클럽 zouk가실분 찾아요"</h2>
+						<div class="flex_row col1 space_between caption align_center middle_emphasis" style="margin:4px 0;">
+			                <p class="flex_row align_center"><img class="icon_ss" src="img/ic_like_middle.svg">조회수 12</p>
+			                <p class="flex_row align_center"><img class="icon_ss" src="img/ic_people_middle.svg">참가자 2</p>
+			                <p class="flex_row align_center"><img class="icon_ss" src="img/ic_comments_middle.svg">댓글 4</p>
+		                </div>
+					</div>
+					<div class="post_info margin_1x">
+						<p class="flex_row align_center caption_bold ver_margin_tiny" id="location"><img src="img/ic_location.svg">Location, City</p>
+					</div>
+				</div>
+				<!--동행-->
+				<div class="mating card card_full">
+					<div class="card_img short top_radious ver_padding_2x align_center padding_tinny" id="trv13">
+						<div class="card align_center padding_tinny white_bg date">
+							<p class="body_bold primary">2</p>
+							<p class="caption">NOV</p>
+						</div>
+					</div>
+					<div class="flex_col padding_tinny white_middle_bg card align_center hor_margin_1x text_center bottom_radious" id="mating_info">
+						<div class="profile_pic_middle" id="pf7" style="margin-top:-46px">
+						</div>
+						<h2 class="body_size ver_margin_tiny">"같이 클럽 zouk가실분 찾아요"</h2>
+						<div class="flex_row col1 space_between caption align_center middle_emphasis" style="margin:4px 0;">
+			                <p class="flex_row align_center"><img class="icon_ss" src="img/ic_like_middle.svg">조회수 12</p>
+			                <p class="flex_row align_center"><img class="icon_ss" src="img/ic_people_middle.svg">참가자 2</p>
+			                <p class="flex_row align_center"><img class="icon_ss" src="img/ic_comments_middle.svg">댓글 4</p>
+		                </div>
+					</div>
+					<div class="post_info margin_1x">
+						<p class="flex_row align_center caption_bold ver_margin_tiny" id="location"><img src="img/ic_location.svg">Location, City</p>
+					</div>
+				</div>
+			</div>
+			<div class="flex_col col4">
+				<!--동행-->
+				<div class="mating card card_full">
+					<div class="card_img middle top_radious ver_padding_2x align_center padding_tinny" id="trv13">
+						<div class="card align_center padding_tinny white_bg date">
+							<p class="body_bold primary">2</p>
+							<p class="caption">NOV</p>
+						</div>
+					</div>
+					<div class="flex_col padding_tinny white_middle_bg card align_center hor_margin_1x text_center bottom_radious" id="mating_info">
+						<div class="profile_pic_middle" id="pf7" style="margin-top:-46px">
+						</div>
+						<h2 class="body_size ver_margin_tiny">"같이 클럽 zouk가실분 찾아요"</h2>
+						<div class="flex_row col1 space_between caption align_center middle_emphasis" style="margin:4px 0;">
+			                <p class="flex_row align_center"><img class="icon_ss" src="img/ic_like_middle.svg">조회수 12</p>
+			                <p class="flex_row align_center"><img class="icon_ss" src="img/ic_people_middle.svg">참가자 2</p>
+			                <p class="flex_row align_center"><img class="icon_ss" src="img/ic_comments_middle.svg">댓글 4</p>
+		                </div>
+					</div>
+					<div class="post_info margin_1x">
+						<p class="flex_row align_center caption_bold ver_margin_tiny" id="location"><img src="img/ic_location.svg">Location, City</p>
+					</div>
+				</div>
+				<!--동행-->
+				<div class="mating card card_full">
+					<div class="card_img middle top_radious ver_padding_2x align_center padding_tinny" id="trv13">
+						<div class="card align_center padding_tinny white_bg date">
+							<p class="body_bold primary">2</p>
+							<p class="caption">NOV</p>
+						</div>
+					</div>
+					<div class="flex_col padding_tinny white_middle_bg card align_center hor_margin_1x text_center bottom_radious" id="mating_info">
+						<div class="profile_pic_middle" id="pf7" style="margin-top:-46px">
+						</div>
+						<h2 class="body_size ver_margin_tiny">"같이 클럽 zouk가실분 찾아요"</h2>
+						<div class="flex_row col1 space_between caption align_center middle_emphasis" style="margin:4px 0;">
+			                <p class="flex_row align_center"><img class="icon_ss" src="img/ic_like_middle.svg">조회수 12</p>
+			                <p class="flex_row align_center"><img class="icon_ss" src="img/ic_people_middle.svg">참가자 2</p>
+			                <p class="flex_row align_center"><img class="icon_ss" src="img/ic_comments_middle.svg">댓글 4</p>
+		                </div>
+					</div>
+					<div class="post_info margin_1x">
+						<p class="flex_row align_center caption_bold ver_margin_tiny" id="location"><img src="img/ic_location.svg">Location, City</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--트래블로그 섹션끝-->
+</div>
+</body>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+	function show_cityList(){
+		console.log("show");
+		$("#city_list").removeClass("hide");
+	}
+	function hide_cityList(){
+		console.log("show");
+		$("#city_list").addClass("hide");
+	}
+	$(document).ready(function(){
+
+
+		/*이벤트 슬라이드*/
+		//var total_slides = 2;
+		var current_slide_index = 0;
+		$(".next_evt").on("click",function(){
+			current_slide_index++;
+			slide_pos = (current_slide_index*(-100)) + "%";
+			$(".evt_containner").animate({left: slide_pos},{duration:100});
+		});
+		$(".prev_evt").on("click",function(){
+			current_slide_index--;
+			slide_pos = (current_slide_index*(-100)) + "%";
+			$(".evt_containner").animate({left: slide_pos},{duration:100});
+		});
+
+
+		/*쓰기 버튼 이벤트 핸들러*/
+		$("#write").on("click",function(){
+			console.log("click button");
+			$("body").append("<div class='dialog_bg'></div>");
+			$(".dialog_bg").append($("#wrt_dialog"));
+
+			//Bad code. 배경클릭시 다이얼로그 제거하려는데 안의 div까지 모두 이벤트 발생해버림.
+			/*$(".dialog_bg").on("click",function(){
+				console.log("click");
+				$("body").append($("#wrt_dialog"));
+				$(".dialog_bg").remove();
+			});*/
+
+			$("#dg_xbox1").on("click",function(){
+				console.log("click");
+				$("#out_of_screenut").append($("#wrt_dialog"));
+				$(".dialog_bg").remove();
+			});
+			// /*쓰기 다이얼로그 탭 이동*/
+			// $(".tab_item").on("click",function(){
+			// 	console.log("tab click!");
+			// 	$(".tab_item").removeClass("tab_selected");
+			// 	$(this).addClass("tab_selected");
+
+			// 	var id = $(this).attr("id");
+			// 	var current_cont = $("#wrt_dialog").find(".tabbed_content");
+
+			// 	$("#out_of_screen").append(current_cont);
+			// 	if(id=="tab_hotspot"){
+			// 		$("#wrt_dialog").append($("#wrt_hotspot"));
+			// 	}
+			// 	else if(id=="tab_mating"){
+			// 		$("#wrt_dialog").append($("#wrt_mating"));
+			// 	}
+			// });
+		});
+
+		/*포스트 자세히 보기*/
+		$(".hotspot").on("click",function(){
+			$("body").append("<div class='dialog_bg'></div>");
+			$(".dialog_bg").append($("#hotspot_detail"));
+		});
+		$("#dg_xbox2").on("click", function(){
+			$("body").append($("#hotspot_detail"));
+			$(".dialog_bg").remove();
+		})
+
+		/*질문 자세히 보기*/
+		$(".question").on("click",function(){
+			$("body").append("<div class='dialog_bg'></div>");
+			$(".dialog_bg").append($("#question_detail"));
+		});
+		$("#dg_xbox3").on("click", function(){
+			$("body").append($("#question_detail"));
+			$(".dialog_bg").remove();
+		});
+
+		/*동행 자세히 보기*/
+		$(".mating").on("click",function(){
+			$("body").append("<div class='dialog_bg'></div>");
+			$(".dialog_bg").append($("#mating_detail"));
+		});
+		$("#dg_xbox4").on("click", function(){
+			$("body").append($("#mating_detail"));
+			$(".dialog_bg").remove();
+		});
+
+		/*핫스팟 -> 동행*/
+		$("#creat_mating").on("click",function(){
+			console.log("click");
+			$("#extend_popup").toggleClass("hide");
+			$("#post_text_area").toggleClass("hide");
+			$("#comment_area").toggleClass("hide");
+		});
+		$("#xbox_inside").on("click",function(){
+			console.log("click");
+			$("#extend_popup").toggleClass("hide");
+			$("#post_text_area").toggleClass("hide");
+			$("#comment_area").toggleClass("hide");
+		});
+	});
+</script>
+<!--다이얼로그 섹션-->
+<!--Read Me 원래는 동적으로 생성하는게 맞지만 시간이없어서 화면밖에 위치한 Div를 불러오는 식으로 작업해놓음-->
+
+
+<!--쓰기 다이얼로그 탭-->
+<!-- 팝업에 쓰일 다이얼로그, 컴퍼넌트들, 평소에는 보이지 않음 -->
+<div class="hide" id="out_of_screen" style="position: fixed; top:-100%; left:-100%; z-index: -999;">
+	<!--쓰기 다이알로그-->
+	<div class="dialog padding_1x card write_dialog white_bg" id="wrt_dialog">
+		<img class="xbox" src="img/ic_close.svg" id="dg_xbox1">
+		<div class="tab3 flex_row body_size tab_containner" style="justify-content: space-between; width: 100%;">
+			<div class="tab_item tab_selected flex_center col1 body_bold" id="tab_mating">동행 작성</div>
+		</div>
+		<!-- 동행 다일알로그 탭 -->
+		<div class="flex_row tabbed_content" id="wrt_mating">
+			<style>.square_button{margin-right: 16px;} textarea{width: 100%;}</style>
+			<!--구글 플레이스 연동부분-->
+			<div class="flex_row col1 white_middle_bg ver_bottom_1x" style="width:calc(100%); padding: 8px 0;" id="wrt_mating_info">
+				<style>
+					#wrt_mating_info>.col3{
+						padding:0 8px;
+						width: calc(33% - 16px);
+					}
+				</style>
+				<div class="col3" style="width:calc(36% - 16px)"> 
+					<div class="flex_row col1 ver_bottom_1x align_center body_post white_bg medium_empasize" style="border-radius: 16px; padding:4px 4px 4px 12px; width: calc(100% - 16px) !important; overflow: hidden;"><img class="icon_s" src="img/ic_location.svg"><input class="caption" style="height: 16px; border-width:0;" type="text" placeholder="장소 찾기"></div>
+					<p class="caption" style="margin-left:4px">*도시, 지역, 장소를 동행지로 지정하세요.</p>
+				</div>
+				<div class="col3" style="width:calc(36% - 16px)">
+					<div class="flex_row col1 white_bg ver_bottom_1x align_center body_post medium_empasize" style="border-radius: 16px; padding:4px 4px 4px 12px; width: calc(100% - 16px) !important; overflow: hidden;"><img class="icon_s" src="img/ic_calendar_p.svg">
+						<input class="caption" style="height: 16px; border-width:0;" type="text" placeholder="날짜 지정">
+					</div>
+					<p class="caption" style="margin-left: 4px">*특정 날짜 또는 기간을 동행일로 지정하세요.</p>
+				</div>
+				<div class="col3" style="width:calc(28% - 16px)">
+					<div class="flex_row col1 align_center body_post white_bg medium_empasize ver_bottom_1x" style="border-radius: 16px; padding:4px 4px 4px 12px; width: calc(100% - 16px) !important; overflow: hidden;"><img class="icon_s" src="img/ic_guest_purple.svg">
+						<select class="caption white_bg" id="participants" style="border-width: 0;height: auto; width: calc(100% - 32px)">
+							<option value=1>1명</option>
+							<option value=2>2명</option>
+							<option value=3>3명</option>
+							<option value=4>4명</option>
+							<option value=5>제한 없음</option>
+						</select>
+					</div>
+					<p class="caption" style="margin-left: 4px">*동행 최대 정원을 정하세요.</p>
+				</div>
+			</div>
+			<div class="flex_row col1 ver_margin_1x" id="location_info">
+				<p class="body_bold text_center primary_dark text_center col1 ver_margin_1x" id="location">Zouk, Singapore</p>
+				<div class="col2">
+					<div class="card card_img short" id="place_img" style="border-radius: 4px 0 0 4px !important">
+					</div>
+				</div>
+				<div class="col2">
+					<div class="card card_img short" id="mating_location" style="border-radius: 0 4px 4px 0 !important">
+					</div>
+				</div>
+			</div>
+			<div class="text_area flex_row col1 padding_1x full_border bottom_radious ver_bottom_2x">
+				<textarea class="col1 body_size q_textarea" placeholder="동행 일정을 자세히 적어주세요." class="body_size" style="border-width: 0; height: 104px; padding:0"></textarea>
+			</div>
+			<div class="button primary_bg" style="margin-left: calc(100% - 96px);">올리기</div>
+		</div>
+	</div>
+	<!-- 동행 자세히 보기 -->
+	<div class="dialog wide_dialog flex_col align_center white_bg padding_2x" id="mating_detail">
+		<img class="xbox" src="img/ic_close.svg" id="dg_xbox4">
+		<div class="flex_col white_bg col1">
+			<p class="caption_bold ver_bottom_1x">핫스팟 & 동행찾기</p>
+			<div class="flex_row col1 align_center ver_padding_tinny space_between border_bottom ver_bottom_2x">
+				<!--사용자 인포-->
+				<div class="flex_row align_center" id="poster_info">
+					<div class="profile_pic_middle" id="pf5">
+					</div>
+					<div class="hor_margin_tiny">
+						<p class="body_bold">username</p>
+						<p class="caption">작성일: 2018 09/20</p>
+					</div>
+				</div>
+				<img src="img/ic_more.svg">
+			</div>
+			<!--포스트 컨텐츠-->
+			<div class="flex_row col1 border_bottom">
+				<div class="flex_row col1 space_between ver_bottom_2x">
+					<p class="flex_row align_center big_size primary_dark text_center" id="location"><img src="img/ic_location_dark_primary.svg" style="width:48px; height: 48px">Zouk, Singapore</p>
+					<div class="card align_center padding_tinny primary_dark_bg" id="date" style="width:48px;">
+						<p class="body_bold white">31</p>
+						<p class="caption">OCT</p>
+					</div>
+				</div>
+				<div class="col2">
+					<div class="card card_img short" id="place_img" style="border-radius: 4px 0 0 0">
+					</div>
+				</div>
+				<div class="col2">
+					<div class="card card_img short" id="mating_location" style="border-radius: 0 4px 0 0">
+					</div>
+				</div>
+				<p class="body_size ver_margin_1x ver_bottom_2x">31일날 zouk 같이가실뿐 구해요. 같이 여행온 친구가 클럽 안좋아해서 혼자가기 뻘쭘하네요. 꼭 31일이 아니어도 좋고 일정 변경가능합니다. 2명정도 모이면 같이가려고요!</p>
+				<div class="flex_col col1 align_center ver_bottom_4x">
+					<p class="caption_bold middle_emphasis ver_margin_tiny">동행 참가자(3)</p>
+					<div class="flex_row align_center ver_bottom_1x" style="margin-left: 8px" id="user_list_thum">
+						<div class="profile_pic_s" id="pf1"></div>
+						<div class="profile_pic_s" id="pf2"></div>
+						<div class="profile_pic_s" id="pf3"></div>
+					</div>
+				</div>
+				<div class="flex_row col1 justify_center ver_bottom_2x">
+					<div class="button grd1_bg box_shadow" style="padding-top:1px; padding-bottom: 1px">동행 신청하기</div>
+					<a href="message_main.html" class="button black_border hor_margin_tiny box_shadow">호스트에게 1:1 메세지</a>
+				</div>
+				<div class="flex_row ver_margin_1x">
+					<p class="caption_bold low_emphasis">조회수(12)</p>
+					<p class="caption_bold low_emphasis hor_margin_2x">댓글(2)</p>
+				</div>
+			</div>
+			<div class="flex_row margin_1x" id="opp_cmt" style="align-self: flex-start;">
+				<!--사용자 인포-->
+				<div class="profile_pic_middle" id="pf2">
+				</div>
+				<div class="flex_row col1 body_size padding_tinny white_middle_bg full_radious hor_margin_tiny" style="max-width:calc(100% - 96px)">
+					<div class="flex_row space_between col1">
+						<p class="caption_bold">long username</p>
+						<p class="caption low_emphasis">10/31</p>
+					</div>
+					<p class="body_size">오 저도 가보고 싶어요. 몇시까지 노실건가요?</p>
+				</div>
+			</div>
+			<!--커멘트 달기-->
+			<div class="flex_row col1 ver_top_1x">
+				<textarea class="body_size full_border full_radious" placeholder="커멘트를 남기세요" style="width: calc(100% - 96px) !important;"></textarea>
+				<div class="profile_pic_middle hor_margin_tiny" id="pf5">
+				</div>
+				<div class="button primary_bg ver_margin_1x" style="align-self: flex-end;">댓글 달기</div>
+			</div>
+		</div>
+	</div>
+</div>
+</html>

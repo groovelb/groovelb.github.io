@@ -8,7 +8,7 @@ body{
 	color: #fafafa;
 }
 .white_middle_bg{
-	background-color: #fafafa;
+	background-color: #f6f4fa;
 }
 .search_bg{
 	background-color: #00E676;
@@ -34,6 +34,10 @@ body{
 }
 .primary_dark{
 	color: #311B92 !important;
+}
+.primary_dark_bg {
+    color: #ffffff !important;
+    background-color: #311B92 !important;
 }
 .primary_dark_border{
 	color: #311B92;

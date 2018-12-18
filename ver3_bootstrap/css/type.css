@@ -8,6 +8,10 @@
 	font-family: notosans_cjk_medium;
 	src: url(font/NotoSansKR-Medium.otf);
 }
+@font-face{
+	font-family: notosans_cjk_bold;
+	src: url(font/NotoSansKR-Bold.otf);
+}
 h2{
 	display: inline-block;
 }
@@ -32,13 +36,14 @@ h2{
 	line-height: 24px;
 	font-weight: 300;
 	letter-spacing: -0.01rem;
+	font-family: notosans_cjk_regular;
 }
 .body_post{
 	font-size: 15px;
 	line-height: 24px;
 	font-weight: 300;
 	letter-spacing: -0.03rem;
-	/*font-family: notosans_cjk_light !important;*/
+	font-family: notosans_cjk_regular !important;
 }
 .body_medium{
 	font-size: 16px;
@@ -50,7 +55,7 @@ h2{
 .body_bold{
 	font-size: 16px;
 	line-height: 24px;
-	font-family: notosans_cjk_medium;
+	font-family: notosans_cjk_bold;
 	font-weight: 300;
 	letter-spacing: -0.01rem;
 }
@@ -67,9 +72,15 @@ h2{
 	line-height: 28px;
 	letter-spacing: -0.02rem;
 }
+.middle_bold{
+	font-size: 22px;
+	font-family: notosans_cjk_bold;
+	line-height: 28px;
+	letter-spacing: -0.02rem;
+}
 .middle_thin{
 	font-size: 22px;
-	/*font-family: notosans_cjk_thin;*/
+	font-family: notosans_cjk_thin;
 	font-weight: 100;
 	line-height: 28px;
 	letter-spacing: -0.02rem;
@@ -79,7 +90,7 @@ h2{
 }
 
 span{
-	/*font-family: notosans_cjk_bold;*/
+	font-family: notosans_cjk_bold;
 }
 .big_size{
 	font-size: 36px;
@@ -97,30 +108,29 @@ span{
 	align-self: flex-start;
 	position: absolute;
 	font-size: 36px;
-	/*font-family: roboto_medium !important;*/
+	font-family: roboto_medium !important;
 	line-height: 36px;
 }
 .big_light{
 	font-size: 36px;
-	/*font-family: notosans_cjk_light;*/
+	font-family: notosans_cjk_light;
 	line-height: 48px;
 	font-weight: 100;
 }
 .big_thin{
 	font-size: 36px;
-	/*font-family: notosans_cjk_thin;*/
+	font-family: notosans_cjk_thin;
 	line-height: 64px;
 	font-weight: 100;
 }
 .caption{
 	font-size: 12px;
 	line-height: 18px;
-	/*font-family: notosans_cjk_light;*/
 }
 .caption_bold{
 	font-size: 12px;
 	line-height: 18px;
-	/*font-family: notosans_cjk_bold;*/
+	font-family: notosans_cjk_bold;
 }
 
 .number{
@@ -147,7 +157,7 @@ span{
 	height: 64px;
 	font-size: 14px;
 	font-weight: 600;
-	/*font-family: notosans_cjk_medium !important;*/
+	font-family: notosans_cjk_medium !important;
 }
 .black_highlight>div>.text_menu{
 	font-family: notosans_cjk_regular;
