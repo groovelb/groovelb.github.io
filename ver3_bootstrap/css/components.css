@@ -291,7 +291,7 @@ select.styled-select{
 	justify-content: center;
 	min-width: 64px;
 	height: 36px;
-	border-radius: 8px;
+	border-radius: 4px;
 	cursor: pointer;
 	font-family: notosans_cjk_regular;
 }
@@ -421,6 +421,12 @@ select.styled-select{
 	align-content: flex-start !important;
 	/*box-shadow: 0 4px 16px 0 rgba(0,0,0,.12), 0 0 8px 0 rgba(0,0,0,.12);*/
 }
+.card_disable:before{
+	content: "";
+	width: inherit;
+	height: inherit;
+	background-color: rgba(16,16,16,0.36);
+}
 .sr_card{
 	width: 100%;
 }
@@ -442,20 +448,26 @@ select.styled-select{
 	padding: 32px 0;
 	background: rgba(0,0,0,0.32);
 }
+.date{
+	min-width:42px;
+	min-height: 36px;
+}
 .card_img>.date{
-	width:42px;
-	margin-left: 8px;
+	min-width:42px;
+	min-height: 36px;
 	position: absolute;
+	left: 8px;
 	align-self: flex-start;
+	z-index: 99;
 }
 .card_img>#hot_spot{
 	margin-left: 8px;
 }
 .card>.date{
-	width:42px;
-	margin-top: 8px;
-	margin-left: 8px;
+	min-width:42px;
+	min-height: 36px;
 	align-self: flex-start;
+	z-index: 99;
 }
 .date>p{
 	line-height: 18px;
@@ -584,6 +596,16 @@ select.styled-select{
 	color: #ffffff;
 	text-shadow: 1px 1px 2px #383838;
 }
+.card_img_disable:before{
+	content: "";
+	position: absolute;
+	left:0;
+	top:0;
+	width: inherit;
+	height: 156px;
+	z-index: 1;
+	background-color: rgba(48,16,64,0.6);
+}
 #mating>.card_img{
 	border-radius: 4px 4px 0 0;
 }
@@ -592,7 +614,7 @@ select.styled-select{
 }
 /*image sizes*/
 /*user info height: 34px*/
-.short{
+/*.short{
 	padding: 8px 0 calc(50% - 8px) 0;
 }
 .long{
@@ -600,7 +622,7 @@ select.styled-select{
 }
 .middle{
 	padding: 8px 0 calc(100% - 8px - 34px) 0;
-}
+}*/
 
 /*List*/
 .list {
