@@ -38,21 +38,21 @@
 			<div class="flex_row tabbed_content" id="wrt_mating">
 				<style>.square_button{margin-right: 16px;} textarea{width: 100%;}</style>
 				<!--구글 플레이스 연동부분-->
-				<div class="flex_row col1 white_middle_bg" style="width:calc(100%); padding: 8px 0;" id="wrt_mating_info">
+				<div class="flex_row col1 white_middle_bg space_around" style="width:calc(100%); padding: 8px 0;" id="wrt_mating_info">
 					<style>
 						#wrt_mating_info>.col3{
 							padding:0 4px;
 							width: calc(33% - 8px);
 						}
 					</style>
-					<div class="col3" style="width:calc(36% - 8px)"> 
-						<div class="flex_row col1 ver_bottom_1x align_center body_post white_bg medium_empasize" style="border-radius: 16px; padding:4px 4px 4px 12px; width: calc(100% - 16px) !important; overflow: hidden;"><img class="icon_s" src="img/ic_location.svg"><input class="caption" style="height: 16px; border-width:0;" type="text" placeholder="장소 찾기"></div>
-						<p class="caption" style="margin-left:4px">*도시, 지역, 장소를 동행지로 지정하세요.</p>
+					<input class="middle_size ng-untouched ng-pristine ng-valid ver_bottom_1x" placeholder="동행글 제목" style="text-align: left; width: calc(100% - 32px); margin: 8px !important; padding: 8px 16px;border-width:0; border-radius: 22px; background-color: #ffffff" type="text">
+					<div class="col2" style="width:calc(50% - 8px)"> 
+						<div class="flex_row col1 ver_bottom_1x align_center body_post white_bg medium_empasize" style="border-radius: 16px; padding:4px 4px 4px 12px; width: calc(100% - 16px) !important; overflow: hidden;"><img class="icon_s" src="img/ic_location.svg"><input class="caption" style="height: 16px; border-width:0; width: calc(100% - 32px)" type="text" placeholder="동행지 찾기 (도시,지역,장소 가능)"></div>
 					</div>
-					<div class="col3" style="width:calc(36% - 8px)">
+					<div class="col2" style="width:calc(50% - 8px)">
 						<div class="flex_row col1 white_bg ver_bottom_1x align_center body_post medium_empasize" style="border-radius: 16px; padding:4px 4px 4px 12px; width: calc(100% - 16px) !important; position: relative;"><img class="icon_s" src="img/ic_calender_empty_purple.svg">
-							<p class="caption" style="height: 16px; border-width:0;"id="select_date" >
-							날짜 지정</p>
+							<p class="caption middle_emphasis" style="height: 16px; border-width:0;"id="select_date" >
+							동행 날짜 (특정 날짜 또는 기간)</p>
 							<div class="full_radious white_bg box_shadow hide" style="position:absolute; top:36px; left:0; width: 100%;" id="select_date_type">
 								<div class="list border_bottom caption padding_tinny">
 									<img class="icon_s" style="margin-left:4px;" src="img/ic_calender_day_purple.svg">
@@ -70,9 +70,8 @@
 								</div>
 							</div>
 						</div>
-						<p class="caption" style="margin-left: 4px">*특정 날짜 또는 기간을 동행일로 지정하세요.</p>
 					</div>
-					<div class="col3" style="width:calc(28% - 8px)">
+					<div class="col2" style="width:calc(50% - 8px)">
 						<div class="flex_row col1 align_center body_post white_bg medium_empasize ver_bottom_1x" style="border-radius: 16px; padding:4px 4px 4px 12px; width: calc(100% - 16px) !important; overflow: hidden;"><img class="icon_s" src="img/ic_guest_purple.svg">
 							<select class="caption white_bg" id="participants" style="border-width: 0;height: auto; width: calc(100% - 32px)">
 								<option value=1>1명</option>
@@ -83,10 +82,12 @@
 								<option value=4>6명</option>
 								<option value=4>7명</option>
 								<option value=4>8명</option>
-								<option value=5>제한 없음</option>
+								<option value=5 selected="">제한 없음</option>
 							</select>
 						</div>
-						<p class="caption" style="margin-left: 4px">*동행 최대 정원을 정하세요.</p>
+					</div>
+					<div class="col2" style="width:calc(50% - 8px)"> 
+						<div class="flex_row col1 ver_bottom_1x align_center body_post white_bg medium_empasize" style="border-radius: 16px; padding:4px 4px 4px 12px; width: calc(100% - 16px) !important; overflow: hidden;"><img class="icon_s" src="img/link_kakao_purple.svg"><input class="caption" style="height: 16px; border-width:0; width: calc(100% - 32px)" type="text" placeholder="카톡 오픈챗 URL (*옵션 / 동행 참가자들에게만 공개)"></div>
 					</div>
 				</div>
 				<div class="text_area flex_row col1 padding_1x full_border bottom_radious ver_bottom_2x">
@@ -105,21 +106,40 @@
 			<div class="flex_row tabbed_content" id="wrt_mating">
 				<style>.square_button{margin-right: 16px;} textarea{width: 100%;}</style>
 				<!--구글 플레이스 연동부분-->
-				<div class="flex_row col1 white_middle_bg ver_bottom_1x" style="width:calc(100%); padding: 8px 0;" id="wrt_mating_info">
+				<div class="flex_row col1 white_middle_bg space_around" style="width:calc(100%); padding: 8px 0;" id="wrt_mating_info">
 					<style>
+						#wrt_mating_info>.col3{
+							padding:0 4px;
+							width: calc(33% - 8px);
+						}
 					</style>
-					<div class="col3" style="width:calc(36% - 8px)"> 
-						<div class="flex_row col1 ver_bottom_1x align_center body_post white_bg medium_empasize" style="border-radius: 16px; padding:4px 4px 4px 12px; width: calc(100% - 16px) !important; overflow: hidden;"><img class="icon_s" src="img/ic_location.svg"><input class="caption_bold" style="height: 16px; border-width:0;" type="text" placeholder="장소 찾기" value="Zouk, Singapore"></div>
-						<p class="caption" style="margin-left:4px">*도시, 지역, 장소를 동행지로 지정하세요.</p>
+					<input class="middle_size ng-untouched ng-pristine ng-valid ver_bottom_1x" placeholder="동행글 제목" style="text-align: left; width: calc(100% - 32px); margin: 8px !important; padding: 8px 16px;border-width:0; border-radius: 22px; background-color: #ffffff" type="text">
+					<div class="col2" style="width:calc(50% - 8px)"> 
+						<div class="flex_row col1 ver_bottom_1x align_center body_post white_bg medium_empasize" style="border-radius: 16px; padding:4px 4px 4px 12px; width: calc(100% - 16px) !important; overflow: hidden;"><img class="icon_s" src="img/ic_location.svg"><input class="caption" style="height: 16px; border-width:0; width: calc(100% - 32px)" type="text" value="Zouk, Singapore"></div>
 					</div>
-					<div class="col3" style="width:calc(36% - 8px)">
-						<div class="flex_row col1 white_bg ver_bottom_1x align_center body_post medium_empasize" style="border-radius: 16px; padding:4px 4px 4px 12px; width: calc(100% - 16px) !important; position: relative;"><img class="icon_s" src="img/ic_calender_period_purple.svg">
-							<input class="caption_bold" style="height: 16px; border-width:0; width: calc(100% - 36px)" type="text" placeholder="날짜 지정"
-							value="2018.12.23 ~ 2019.01.02">
+					<div class="col2" style="width:calc(50% - 8px)">
+						<div class="flex_row col1 white_bg ver_bottom_1x align_center body_post medium_empasize" style="border-radius: 16px; padding:4px 4px 4px 12px; width: calc(100% - 16px) !important; position: relative;"><img class="icon_s" src="img/ic_calender_empty_purple.svg">
+							<p class="caption middle_emphasis" style="height: 16px; border-width:0;"id="select_date" >
+							2018.12.24 ~ 2019.01.04</p>
+							<div class="full_radious white_bg box_shadow hide" style="position:absolute; top:36px; left:0; width: 100%;" id="select_date_type">
+								<div class="list border_bottom caption padding_tinny">
+									<img class="icon_s" style="margin-left:4px;" src="img/ic_calender_day_purple.svg">
+									<div>
+										<p class="caption_bold" style="margin:0">특정 날짜 지정</p>
+										<p class="caption middle_emphasis" style="margin:0">동행일 특정 날짜로 지정합니다.</p>
+									</div>
+								</div>
+								<div class="list border_bottom caption padding_tinny">
+									<img class="icon_s" style="margin-left:4px;" src="img/ic_calender_period_purple.svg">
+									<div>
+										<p class="caption_bold" style="margin:0">기간으로 지정</p>
+										<p class="caption middle_emphasis" style="margin:0">동행이 가능한 기간을 지정합니다.</p>
+									</div>
+								</div>
+							</div>
 						</div>
-						<p class="caption" style="margin-left: 4px">*특정 날짜 또는 기간을 동행일로 지정하세요.</p>
 					</div>
-					<div class="col3" style="width:calc(28% - 8px)">
+					<div class="col2" style="width:calc(50% - 8px)">
 						<div class="flex_row col1 align_center body_post white_bg medium_empasize ver_bottom_1x" style="border-radius: 16px; padding:4px 4px 4px 12px; width: calc(100% - 16px) !important; overflow: hidden;"><img class="icon_s" src="img/ic_guest_purple.svg">
 							<select class="caption white_bg" id="participants" style="border-width: 0;height: auto; width: calc(100% - 32px)">
 								<option value=1>1명</option>
@@ -133,7 +153,9 @@
 								<option value=5 selected="">제한 없음</option>
 							</select>
 						</div>
-						<p class="caption" style="margin-left: 4px">*동행 최대 정원을 정하세요.</p>
+					</div>
+					<div class="col2" style="width:calc(50% - 8px)"> 
+						<div class="flex_row col1 ver_bottom_1x align_center body_post white_bg medium_empasize" style="border-radius: 16px; padding:4px 4px 4px 12px; width: calc(100% - 16px) !important; overflow: hidden;"><img class="icon_s" src="img/link_kakao_purple.svg"><input class="caption" style="height: 16px; border-width:0; width: calc(100% - 32px)" type="text" placeholder="카톡 오픈챗 URL (*옵션 / 동행 참가자들에게만 공개)" value="https://open.kakao.com/o/gPuAM67"></div>
 					</div>
 				</div>
 				<div class="flex_row col1" id="location_info">

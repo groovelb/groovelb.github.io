@@ -62,30 +62,34 @@
 	</div>
 </div>
 <div class="flex_col col1 align_center ver_bottom_4x" style="margin-top: 64px;" id="community_top">
-	<div class="col1 flex_col align_center ver_padding_1x">
-		<p class="middle_bold">정글리안 동행</p>
-		<p class="body_post">동행에 참여하고 숙박비의 10% 캐시백을 누리세요!</p>
-	</div>
-	<div class="flex_col col1 grd1_bg align_center ver_bottom_2x" id="community_top2" style="z-index: 99; height: 248px; overflow: hidden; position: relative; height: 248px">
-		<div class="next_evt" style="position: absolute; right:5%; top:calc(50% - 32px); opacity: 0.6; z-index: 99">
-			<img src="img/ic_arrow_right_white.svg" style="width:64px; height: 64px;">
+	<div class="flex_col grd1_bg col1 align_center">
+		<div class="col1 flex_col align_center ver_padding_1x">
+			<p class="middle_bold">정글리안 동행</p>
+			<p class="body_post">동행에 참여하고 숙박비의 10% 캐시백을 누리세요!</p>
 		</div>
-		<div class="prev_evt" style="position: absolute; left:5%; top:calc(50% - 32px); opacity: 0.6; z-index: 99; transform: rotate(180deg);">
-			<img src="img/ic_arrow_right_white.svg" style="width:64px; height: 64px;">
-		</div>
-		<div class="flex_row evt_containner" style="position: absolute; height: 208px; width: 200%; left: 0%;">
-			<div class="flex_col col2 flex_center ver_bottom_1x mating_banner" id="evt1" style="height: 208px;">
-				<img class="ver_top_1x" src="img/ic_mating_casual.svg" style="width:auto; height: 64px;">
-				<p class="middle_bold ver_margin_2x">"함께하면 더 좋은 여행, 여행지의 동행을 찾으세요."</p>
-				<div class="body_size white_highlight">동행 혜택 자세히 보기</div>
+		<div class="banner_frame ver_bottom_2x" style="width: 1080px; border-radius: 8px; overflow: hidden;">
+			<div class="flex_col col1 align_center" id="community_top2" style="z-index: 99; overflow: hidden; position: relative; height: 208px">
+				<div class="next_evt" style="position: absolute; right:5%; top:calc(50% - 32px); opacity: 0.6; z-index: 99">
+					<img src="img/ic_arrow_right.svg" style="width:64px; height: 64px;">
+				</div>
+				<div class="prev_evt" style="position: absolute; left:5%; top:calc(50% - 32px); opacity: 0.6; z-index: 99; transform: rotate(180deg);">
+					<img src="img/ic_arrow_right.svg" style="width:64px; height: 64px;">
+				</div>
+				<div class="flex_row evt_containner white_bg black_highlight" style="position: absolute; height: 208px; width: 200%; left: 0%;">
+					<div class="flex_col col2 flex_center mating_banner" id="evt1" style="height: 208px;">
+						<img class="ver_top_1x" src="img/ic_mating_casual_purple.svg" style="width:auto; height: 64px;">
+						<p class="middle_bold ver_margin_2x">"함께하면 더 좋은 여행, 여행지의 동행을 찾으세요."</p>
+						<div class="body_size">동행 혜택 자세히 보기</div>
+					</div>
+					<div class="flex_col col2 flex_center mating_banner" id="evt2" style="height: 208px;">
+						<img class="ver_top_1x" src="img/ic_evt_taxi2_purple.svg" style="width:auto; height: 96px;">
+						<p class="middle_bold ver_margin_1x">"함께타면 택시가 공짜라고!? 공항에서 택시동행을 찾으세요."</p>
+						<div class="s_button caption white_bg primary_dark" target="_blank">이벤트 자세히 보기</div>
+					</div>
+				</div>
 			</div>
-			<div class="flex_col col2 flex_center ver_bottom_1x mating_banner" id="evt2" style="height: 208px;">
-				<img class="ver_top_1x" src="img/ic_evt_taxi2.svg" style="width:auto; height: 96px;">
-				<p class="middle_bold ver_margin_1x">"함께타면 택시가 공짜라고!? 공항에서 택시동행을 찾으세요."</p>
-				<div class="s_button caption white_bg primary_dark" target="_blank">이벤트 자세히 보기</div>
-			</div>
 		</div>
-		<div class="flex_row" style="bottom:40px; position: absolute;">
+		<div class="flex_row ver_bottom_6x">
 			<div class="dot">
 			</div>
 			<div class="dot">
@@ -96,7 +100,7 @@
 	</div>
 	<!--텍스트 필드-->
 	<div class="live_area ver_bottom_4x">
-		<div class="textfield body_size tf_full box_shadow white_bg full_radious" style="position:relative;height: 56px; border-radius: 28px !important; z-index: 99; margin:0; margin-top:-40px">
+		<div class="textfield body_size tf_full box_shadow white_bg full_radious" style="position:relative;height: 56px; border-radius: 28px !important; z-index: 99; margin:0; margin-top:-32px">
 			<img class="icon" src="img/ic_search.svg">
 			<input type="text" placeholder="동행 도시를 검색해보세요" style="border-width: 0; width:calc(100% - 64px)" onfocus="show_cityList()" onfocusout="hide_cityList()">
 			<!--시티 리스트 끝-->
