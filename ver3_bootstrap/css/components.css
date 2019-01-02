@@ -26,7 +26,6 @@ input:focus {
 .drop_down{
 	display: block !important;
 }
-
 .dropdown-content a {
     color: #383838;
     padding: 8px;

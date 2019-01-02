@@ -39,11 +39,6 @@
 		left:0%;
 		transition: left 0.5s;
 	}
-	iframe{
-		border-width: 0;
-		width: 100% !important;
-		height: 100% !important;
-	}
 </style>
 <body class="white_bg">
 <!-- 헤더 -->
@@ -73,23 +68,8 @@
 <div class="flex_col col1 align_center ver_bottom_4x" style="margin-top: 64px;" id="community_top">
 	<div class="flex_col white_bg col1 align_center">
 		<div class="col1 grd1_bg flex_col align_center ver_padding_1x">
-			<p class="middle_bold">"함께하면 더 좋은 여행, 여행지의 동행을 찾으세요."</p>
-			<div class="flex_row ver_margin_1x">
-				<p class="body_size hor_margin_2x">동행에 참여하고 숙박비의 10% 캐시백을 누리세요!</p>
-				<div class="s_button caption white_bg primary_dark" target="_blank">자세히 보기</div>
-			</div>
-		</div>
-		<div class="live_area border_bottom hide" id="board_title" >
-			<div class="white flex_col align_center ver_padding_1x" style="position: relative; width: 1080px;">
-				<p class="middle_bold">동행 후기 게시판</p>
-				<div class="button white_bg padding_1x" id="close_board" style="position: absolute; right:0">
-					<img class="icon_s" src="img/ic_close.svg">
-					닫기
-				</div>
-			</div>
-		</div>
-		<div class="col1 flex_col align_center white_bg hide" style="height: calc(100% - 148px); margin-top: 166px; position: absolute; z-index: 999" id="board">
-			<iframe id="board_frame" src="http://event.junglian.com"></iframe>
+			<p class="big_size">정글리안 동행</p>
+			<p class="body_size">동행에 참여하고 숙박비의 10% 캐시백을 누리세요!</p>
 		</div>
 		<div class="flex_col col1 align_center" id="community_top2" style="z-index: 99; overflow: hidden; position: relative; height: 196px">
 			<div class="next_evt" style="position: absolute; right:calc(50% - 540px); top:calc(50%); opacity: 0.6; z-index: 99">
@@ -99,6 +79,11 @@
 				<img src="img/ic_arrow_right.svg" style="width:64px; height: 64px;">
 			</div>
 			<div class="flex_row evt_containner" style="position: absolute; height: 196px; width: 200%; left: 0%;">
+				<div class="flex_col col2 flex_center mating_banner" id="evt1" style="height: 196px;">
+					<img class="ver_top_1x" src="img/ic_mating_casual_purple.svg" style="width:auto; height: 64px;">
+					<p class="middle_bold ver_margin_2x">"함께하면 더 좋은 여행, 여행지의 동행을 찾으세요."</p>
+					<div class="body_size">동행 혜택 자세히 보기</div>
+				</div>
 				<div class="flex_col col2 flex_center mating_banner" id="evt2" style="height: 196px;">
 					<img class="ver_top_1x" src="img/ic_evt_taxi2_purple.svg" style="width:auto; height: 96px;">
 					<p class="middle_bold ver_margin_1x">"함께타면 택시가 공짜라고!? 공항에서 택시동행을 찾으세요."</p>
@@ -156,10 +141,10 @@
 			<img class="icon_s" src="img/ic_write_white.svg">
 			동행 올리기
 		</div>
-		<div class="big_button black_border white_highlight hor_margin_2x" id="confirm">
+		<a href="event_board.html" class="big_button black_border white_highlight hor_margin_2x" id="confirm">
 			<img class="icon_s" src="img/ic_check_black.svg">
 			동행 인증하기
-		</div>
+		</a>
 	</div>
 </div>
 <!-- <div class="live_area white_middle_bg ver_bottom_4x" style="height:144px;z-index: 9; position: relative; margin-top: -80px">
@@ -205,6 +190,7 @@
 						<div class="card flex_center padding_tinny white_bg date">
 							<p class="body_bold primary">완료</p>
 						</div>
+						<img src="img/ic_congratulation2.svg" style="width:108px; height:108px; position: absolute; right:calc(50% - 54px); top:92px; z-index: 99"> 
 					</div>
 					<div class="flex_col padding_tinny white_middle_bg card align_center hor_margin_1x text_center bottom_radious" id="mating_info">
 						<div class="profile_pic_middle" id="pf7" style="margin-top:-46px;">
@@ -439,18 +425,6 @@
 			// 		$("#wrt_dialog").append($("#wrt_mating"));
 			// 	}
 			// });
-		});
-
-		/*인증게시판 이벤트 핸들러*/
-		$("#confirm").on("click",function(){
-			$("#board").removeClass("hide");
-			$("#board_title").removeClass("hide");
-			$("#mating_feed").addClass("hide");
-		});
-		$("#close_board").on("click",function(){
-			$("#board").addClass("hide");
-			$("#board_title").addClass("hide");
-			$("#mating_feed").removeClass("hide");
 		});
 
 		/*포스트 자세히 보기*/
